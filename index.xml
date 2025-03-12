@@ -2,32 +2,32 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
     <title>Elite</title>
-    <link>/</link>
+    <link>https://thalnoon.github.io/my-university-project/</link>
     <description>Recent content on Elite</description>
     <generator>Hugo -- 0.145.0</generator>
     <language>en</language>
-    <atom:link href="/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="https://thalnoon.github.io/my-university-project/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Chapter 1: Introduction to Python</title>
-      <link>/chapters/chapter-1/</link>
+      <link>https://thalnoon.github.io/my-university-project/chapters/chapter-1/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>/chapters/chapter-1/</guid>
+      <guid>https://thalnoon.github.io/my-university-project/chapters/chapter-1/</guid>
       <description>This chapter covers the basics of the subject&amp;hellip;</description>
     </item>
     <item>
       <title>Chapter 2: How Python Runs Programs</title>
-      <link>/chapters/chapter-2/</link>
+      <link>https://thalnoon.github.io/my-university-project/chapters/chapter-2/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>/chapters/chapter-2/</guid>
+      <guid>https://thalnoon.github.io/my-university-project/chapters/chapter-2/</guid>
       <description>&lt;h2 id=&#34;introducing-the-python-interpreter&#34;&gt;Introducing the Python Interpreter&lt;/h2&gt;
 &lt;p&gt;Python is a software package called an interpreter—a program that executes other programs. When you write a Python program, the Python interpreter reads your code and carries out the instructions it contains.&lt;/p&gt;
 &lt;p&gt;After installation on your machine, the Python package generates a few components—minimally, an interpreter and a support library. Depending on how you use it, the Python interpreter may be an executable program or a set of libraries linked into another program. The Python code you write must always be run by this interpreter. To enable that, you must install a Python interpreter on your computer.&lt;/p&gt;</description>
     </item>
     <item>
       <title>Chapter 3: How You Run the Programs</title>
-      <link>/chapters/chapter-3/</link>
+      <link>https://thalnoon.github.io/my-university-project/chapters/chapter-3/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>/chapters/chapter-3/</guid>
+      <guid>https://thalnoon.github.io/my-university-project/chapters/chapter-3/</guid>
       <description>&lt;p&gt;There are a variety of ways to tell Python to execute the code you type. Along the way, you’ll learn how to type code interactively and how to save it in files to be run with system command lines, icon clicks, module imports and reloads, &lt;code&gt;exec&lt;/code&gt; calls, menu options in GUIs such as IDLE, and more.&lt;/p&gt;
 &lt;h2 id=&#34;the-interactive-prompt&#34;&gt;The Interactive Prompt&lt;/h2&gt;
 &lt;p&gt;Perhaps the simplest way to run Python programs is to type them at Python’s interactive command line, sometimes called the interactive prompt. There are a variety of ways to start this command line: in an IDE, from a system console, and so on. Assuming the interpreter is installed as an executable program on your system, the most platform-neutral way to start an interactive interpreter session is usually just to type &lt;code&gt;python&lt;/code&gt; at your operating system’s prompt, without any arguments.&lt;br&gt;
@@ -35,9 +35,9 @@ For example:&lt;/p&gt;</description>
     </item>
     <item>
       <title>Chapter 4: Object Types</title>
-      <link>/chapters/chapter-4/</link>
+      <link>https://thalnoon.github.io/my-university-project/chapters/chapter-4/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>/chapters/chapter-4/</guid>
+      <guid>https://thalnoon.github.io/my-university-project/chapters/chapter-4/</guid>
       <description>&lt;p&gt;Python programs can be decomposed into modules, statements, expressions, and objects, as follows:&lt;/p&gt;
 &lt;ol&gt;
 &lt;li&gt;Programs are composed of modules.&lt;/li&gt;
@@ -52,9 +52,9 @@ For example:&lt;/p&gt;</description>
     </item>
     <item>
       <title>Chapter 5: Numeric Types</title>
-      <link>/chapters/chapter-5/</link>
+      <link>https://thalnoon.github.io/my-university-project/chapters/chapter-5/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>/chapters/chapter-5/</guid>
+      <guid>https://thalnoon.github.io/my-university-project/chapters/chapter-5/</guid>
       <description>&lt;p&gt;Let’s get started by exploring our first data type category: Python’s numeric types.&lt;/p&gt;
 &lt;h2 id=&#34;numeric-type-basics&#34;&gt;Numeric Type Basics&lt;/h2&gt;
 &lt;p&gt;A complete inventory of Python’s numeric toolbox includes:&lt;/p&gt;
@@ -74,9 +74,9 @@ For example:&lt;/p&gt;</description>
     </item>
     <item>
       <title>Chapter 6: Strings</title>
-      <link>/chapters/chapter-6/</link>
+      <link>https://thalnoon.github.io/my-university-project/chapters/chapter-6/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>/chapters/chapter-6/</guid>
+      <guid>https://thalnoon.github.io/my-university-project/chapters/chapter-6/</guid>
       <description>&lt;hr&gt;
 &lt;h2 id=&#34;string-literals&#34;&gt;String Literals&lt;/h2&gt;
 &lt;p&gt;There are many ways to write strings in your code:&lt;/p&gt;
@@ -94,9 +94,9 @@ For example:&lt;/p&gt;</description>
     </item>
     <item>
       <title>Chapter 7: Lists &amp; Dictionaries</title>
-      <link>/chapters/chapter-7/</link>
+      <link>https://thalnoon.github.io/my-university-project/chapters/chapter-7/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>/chapters/chapter-7/</guid>
+      <guid>https://thalnoon.github.io/my-university-project/chapters/chapter-7/</guid>
       <description>&lt;p&gt;The list and dictionary object types are the main workhorses in almost all Python scripts. They are used to store, organize, and retrieve data efficiently. In this chapter, we cover how lists and dictionaries work, their basic operations, and how to modify them in-place.&lt;/p&gt;
 &lt;hr&gt;
 &lt;h2 id=&#34;lists&#34;&gt;Lists&lt;/h2&gt;
@@ -104,9 +104,9 @@ For example:&lt;/p&gt;</description>
     </item>
     <item>
       <title>Chapter 8: Tuples, Files, and Everything Else</title>
-      <link>/chapters/chapter-8/</link>
+      <link>https://thalnoon.github.io/my-university-project/chapters/chapter-8/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>/chapters/chapter-8/</guid>
+      <guid>https://thalnoon.github.io/my-university-project/chapters/chapter-8/</guid>
       <description>&lt;hr&gt;
 &lt;p&gt;The file object is a commonly used and full-featured tool for processing files; the basic overview here is supplemented by larger examples in later chapters.&lt;/p&gt;
 &lt;h2 id=&#34;tuples&#34;&gt;Tuples&lt;/h2&gt;
@@ -114,9 +114,9 @@ For example:&lt;/p&gt;</description>
     </item>
     <item>
       <title>Chapter 9: Introducing Python Statements</title>
-      <link>/chapters/chapter-9/</link>
+      <link>https://thalnoon.github.io/my-university-project/chapters/chapter-9/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>/chapters/chapter-9/</guid>
+      <guid>https://thalnoon.github.io/my-university-project/chapters/chapter-9/</guid>
       <description>&lt;hr&gt;
 &lt;p&gt;The statements are the things you write to tell Python what your programs should do. If programs “do things with stuff,” statements are the way you specify what sort of things a program does. Python is a procedural, statement-based language; by combining statements, you specify a procedure that Python performs to satisfy a program’s goals.&lt;/p&gt;
 &lt;h2 id=&#34;python-program-structure-revisited&#34;&gt;Python Program Structure Revisited&lt;/h2&gt;
@@ -124,34 +124,34 @@ For example:&lt;/p&gt;</description>
     </item>
     <item>
       <title>Chapter 10: if Tests and Syntax Rules</title>
-      <link>/chapters/chapter-10/</link>
+      <link>https://thalnoon.github.io/my-university-project/chapters/chapter-10/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>/chapters/chapter-10/</guid>
+      <guid>https://thalnoon.github.io/my-university-project/chapters/chapter-10/</guid>
       <description>&lt;p&gt;This chapter presents the Python &lt;strong&gt;if&lt;/strong&gt; statement, the main tool for selecting from alternative actions based on test results. Because this is our first in-depth look at compound statements—statements that embed other statements—we also explore the general concepts behind Python’s statement syntax model.&lt;/p&gt;
 &lt;h2 id=&#34;if-statements&#34;&gt;if Statements&lt;/h2&gt;
 &lt;p&gt;In simple terms, the Python &lt;strong&gt;if&lt;/strong&gt; statement selects actions to perform. It is the primary selection tool in Python and represents much of the logic a Python program possesses. Being a compound statement, an &lt;strong&gt;if&lt;/strong&gt; statement may contain other statements, including additional &lt;strong&gt;if&lt;/strong&gt; statements. Python lets you combine statements sequentially (so they execute one after another) and nest them arbitrarily (so they execute only under certain conditions).&lt;/p&gt;</description>
     </item>
     <item>
       <title>Chapter 11: While and For loops</title>
-      <link>/chapters/chapter-11/</link>
+      <link>https://thalnoon.github.io/my-university-project/chapters/chapter-11/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>/chapters/chapter-11/</guid>
+      <guid>https://thalnoon.github.io/my-university-project/chapters/chapter-11/</guid>
       <description>&lt;p&gt;This chapter presents two main looping constructs—statements that repeat an action over and over. The first is the &lt;strong&gt;while&lt;/strong&gt; statement, which provides a way to code general loops, and the second is the &lt;strong&gt;for&lt;/strong&gt; statement, which is designed for stepping through the items in a sequence object and running a block of code for each.&lt;/p&gt;
 &lt;h2 id=&#34;while-loops&#34;&gt;while Loops&lt;/h2&gt;
 &lt;p&gt;Python’s &lt;strong&gt;while&lt;/strong&gt; statement is the most general iteration construct in the language. In simple terms, it repeatedly executes a block of indented statements as long as a test at the top keeps evaluating to a true value. Control loops back to the start of the statement until the test becomes false. When the test becomes false, control passes to the statement following the while block. If the test is false from the beginning, the loop body never runs.&lt;/p&gt;</description>
     </item>
     <item>
       <title>Chapter 12: Functions Basics</title>
-      <link>/chapters/chapter-12/</link>
+      <link>https://thalnoon.github.io/my-university-project/chapters/chapter-12/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>/chapters/chapter-12/</guid>
+      <guid>https://thalnoon.github.io/my-university-project/chapters/chapter-12/</guid>
       <description>&lt;p&gt;In the previous part, we looked at basic procedural statements in Python. Here, we move on to explore a set of additional statements that we can use to create functions of our own. In simple terms, a function is a device that groups a set of statements so they can be run more than once in a program. Functions can compute a result value and allow us to specify parameters that serve as function inputs, which may differ each time the code is run. Coding an operation as a function makes it a generally useful tool that can be used in a variety of contexts.&lt;/p&gt;</description>
     </item>
     <item>
       <title>Chapter 13: Scopes &amp; Arguments</title>
-      <link>/chapters/chapter-13/</link>
+      <link>https://thalnoon.github.io/my-university-project/chapters/chapter-13/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>/chapters/chapter-13/</guid>
+      <guid>https://thalnoon.github.io/my-university-project/chapters/chapter-13/</guid>
       <description>&lt;p&gt;We will present the details behind Python’s scopes and arguments—the places where variables are defined and looked up. Like module files, scopes help prevent name clashes across your program’s code; names defined in one program unit don’t interfere with names in another. We’ll also see that scope usage can have a major impact on program maintenance; for example, overuse of globals is generally bad. On the plus side, scopes provide a way to retain state information between function calls and can sometimes offer an alternative to classes.&lt;/p&gt;</description>
     </item>
   </channel>
