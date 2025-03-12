@@ -1,0 +1,377 @@
+<!DOCTYPE html>
+<html lang="en" dir="auto">
+
+<head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script><meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta name="robots" content="noindex, nofollow">
+<title>Chapter 3: How You Run the Programs | Elite</title>
+<meta name="keywords" content="">
+<meta name="description" content="There are a variety of ways to tell Python to execute the code you type. Along the way, you’ll learn how to type code interactively and how to save it in files to be run with system command lines, icon clicks, module imports and reloads, exec calls, menu options in GUIs such as IDLE, and more.
+The Interactive Prompt
+Perhaps the simplest way to run Python programs is to type them at Python’s interactive command line, sometimes called the interactive prompt. There are a variety of ways to start this command line: in an IDE, from a system console, and so on. Assuming the interpreter is installed as an executable program on your system, the most platform-neutral way to start an interactive interpreter session is usually just to type python at your operating system’s prompt, without any arguments.
+For example:">
+<meta name="author" content="">
+<link rel="canonical" href="//localhost:1313/chapters/chapter-3/">
+<link crossorigin="anonymous" href="/assets/css/stylesheet.45e028aa8ce0961349adf411b013ee39406be2c0bc80d4ea3fc04555f7f4611a.css" integrity="sha256-ReAoqozglhNJrfQRsBPuOUBr4sC8gNTqP8BFVff0YRo=" rel="preload stylesheet" as="style">
+<link rel="icon" href="//localhost:1313/favicon.ico">
+<link rel="icon" type="image/png" sizes="16x16" href="//localhost:1313/favicon-16x16.png">
+<link rel="icon" type="image/png" sizes="32x32" href="//localhost:1313/favicon-32x32.png">
+<link rel="apple-touch-icon" href="//localhost:1313/apple-touch-icon.png">
+<link rel="mask-icon" href="//localhost:1313/safari-pinned-tab.svg">
+<meta name="theme-color" content="#2e2e33">
+<meta name="msapplication-TileColor" content="#2e2e33">
+<link rel="alternate" hreflang="en" href="//localhost:1313/chapters/chapter-3/">
+<noscript>
+    <style>
+        #theme-toggle,
+        .top-link {
+            display: none;
+        }
+
+    </style>
+    <style>
+        @media (prefers-color-scheme: dark) {
+            :root {
+                --theme: rgb(29, 30, 32);
+                --entry: rgb(46, 46, 51);
+                --primary: rgb(218, 218, 219);
+                --secondary: rgb(155, 156, 157);
+                --tertiary: rgb(65, 66, 68);
+                --content: rgb(196, 196, 197);
+                --code-block-bg: rgb(46, 46, 51);
+                --code-bg: rgb(55, 56, 62);
+                --border: rgb(51, 51, 51);
+            }
+
+            .list {
+                background: var(--theme);
+            }
+
+            .list:not(.dark)::-webkit-scrollbar-track {
+                background: 0 0;
+            }
+
+            .list:not(.dark)::-webkit-scrollbar-thumb {
+                border-color: var(--theme);
+            }
+        }
+
+    </style>
+</noscript>
+</head>
+
+<body class="" id="top">
+<script>
+    if (localStorage.getItem("pref-theme") === "dark") {
+        document.body.classList.add('dark');
+    } else if (localStorage.getItem("pref-theme") === "light") {
+        document.body.classList.remove('dark')
+    } else if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
+        document.body.classList.add('dark');
+    }
+
+</script>
+
+<header class="header">
+    <nav class="nav">
+        <div class="logo">
+            <a href="//localhost:1313/" accesskey="h" title="Elite (Alt + H)">Elite</a>
+            <div class="logo-switches">
+                <button id="theme-toggle" accesskey="t" title="(Alt + T)" aria-label="Toggle theme">
+                    <svg id="moon" xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 24 24"
+                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+                    </svg>
+                    <svg id="sun" xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 24 24"
+                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <circle cx="12" cy="12" r="5"></circle>
+                        <line x1="12" y1="1" x2="12" y2="3"></line>
+                        <line x1="12" y1="21" x2="12" y2="23"></line>
+                        <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+                        <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+                        <line x1="1" y1="12" x2="3" y2="12"></line>
+                        <line x1="21" y1="12" x2="23" y2="12"></line>
+                        <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+                        <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+                    </svg>
+                </button>
+            </div>
+        </div>
+        <ul id="menu">
+            <li>
+                <a href="//localhost:1313/search/" title="Search (Alt &#43; /)" accesskey=/>
+                    <span>Search</span>
+                </a>
+            </li>
+        </ul>
+    </nav>
+</header>
+<main class="main">
+
+<article class="post-single">
+  <header class="post-header">
+    <div class="breadcrumbs"><a href="//localhost:1313/">Home</a>&nbsp;»&nbsp;<a href="//localhost:1313/chapters/">Chapters</a></div>
+    <h1 class="post-title entry-hint-parent">
+      Chapter 3: How You Run the Programs
+    </h1>
+    <div class="post-meta">6 min
+
+</div>
+  </header> <div class="toc">
+    <details >
+        <summary accesskey="c" title="(Alt + C)">
+            <span class="details">Table of Contents</span>
+        </summary>
+
+        <div class="inner"><ul>
+                <li>
+                    <a href="#the-interactive-prompt" aria-label="The Interactive Prompt">The Interactive Prompt</a></li>
+                <li>
+                    <a href="#running-code-interactively" aria-label="Running Code Interactively">Running Code Interactively</a></li>
+                <li>
+                    <a href="#a-first-script" aria-label="A First Script">A First Script</a></li>
+                <li>
+                    <a href="#running-files-with-command-lines" aria-label="Running Files with Command Lines">Running Files with Command Lines</a></li>
+                <li>
+                    <a href="#the-input-trick" aria-label="The Input Trick">The Input Trick</a></li>
+                <li>
+                    <a href="#the-attributes" aria-label="The Attributes">The Attributes</a></li>
+                <li>
+                    <a href="#the-idle-user-interface" aria-label="The IDLE User Interface">The IDLE User Interface</a></li>
+                <li>
+                    <a href="#idle-basics" aria-label="IDLE Basics">IDLE Basics</a>
+                </li>
+            </ul>
+        </div>
+    </details>
+</div>
+
+  <div class="post-content"><p>There are a variety of ways to tell Python to execute the code you type. Along the way, you’ll learn how to type code interactively and how to save it in files to be run with system command lines, icon clicks, module imports and reloads, <code>exec</code> calls, menu options in GUIs such as IDLE, and more.</p>
+<h2 id="the-interactive-prompt">The Interactive Prompt<a hidden class="anchor" aria-hidden="true" href="#the-interactive-prompt">#</a></h2>
+<p>Perhaps the simplest way to run Python programs is to type them at Python’s interactive command line, sometimes called the interactive prompt. There are a variety of ways to start this command line: in an IDE, from a system console, and so on. Assuming the interpreter is installed as an executable program on your system, the most platform-neutral way to start an interactive interpreter session is usually just to type <code>python</code> at your operating system’s prompt, without any arguments.<br>
+For example:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-sh" data-lang="sh"><span class="line"><span class="cl">% python
+</span></span><span class="line"><span class="cl">Python 3.0.1 <span class="o">(</span>r301:69561, Feb <span class="m">13</span> 2009, 20:04:18<span class="o">)</span> <span class="o">[</span>MSC v.1500 <span class="m">32</span> bit <span class="o">(</span>Intel<span class="o">)]</span> ...
+</span></span><span class="line"><span class="cl">Type <span class="s2">&#34;help&#34;</span>, <span class="s2">&#34;copyright&#34;</span>, <span class="s2">&#34;credits&#34;</span> or <span class="s2">&#34;license&#34;</span> <span class="k">for</span> more information.
+</span></span><span class="line"><span class="cl">&gt;&gt;&gt;
+</span></span></code></pre></div><h2 id="running-code-interactively">Running Code Interactively<a hidden class="anchor" aria-hidden="true" href="#running-code-interactively">#</a></h2>
+<p>However it’s started, the Python interactive session begins by printing two lines of informational text (which I’ll omit from most of this book’s examples to save space), then prompts for input with <code>&gt;&gt;&gt;</code> when it’s waiting for you to type a new Python statement or expression. When working interactively, the results of your code are displayed after the <code>&gt;&gt;&gt;</code> lines after you press the Enter key.<br>
+For instance, here are the results of two Python <code>print</code> statements:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-sh" data-lang="sh"><span class="line"><span class="cl">% python
+</span></span><span class="line"><span class="cl">&gt;&gt;&gt; print<span class="o">(</span><span class="s1">&#39;Hello world!&#39;</span><span class="o">)</span>
+</span></span><span class="line"><span class="cl">Hello world!
+</span></span><span class="line"><span class="cl">&gt;&gt;&gt; print<span class="o">(</span><span class="m">2</span> ** 8<span class="o">)</span>
+</span></span><span class="line"><span class="cl"><span class="m">256</span>
+</span></span></code></pre></div><p>When coding interactively like this, you can type as many Python commands as you like. For example:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-sh" data-lang="sh"><span class="line"><span class="cl">&gt;&gt;&gt; <span class="nv">lumberjack</span> <span class="o">=</span> <span class="s1">&#39;okay&#39;</span>
+</span></span><span class="line"><span class="cl">&gt;&gt;&gt; lumberjack
+</span></span><span class="line"><span class="cl"><span class="s1">&#39;okay&#39;</span>
+</span></span><span class="line"><span class="cl">&gt;&gt;&gt; <span class="m">2</span> ** <span class="m">8</span>
+</span></span><span class="line"><span class="cl"><span class="m">256</span>
+</span></span><span class="line"><span class="cl">&gt;&gt;&gt; &lt;<span class="o">==</span> Use Ctrl-D <span class="o">(</span>on Unix<span class="o">)</span> or Ctrl-Z <span class="o">(</span>on Windows<span class="o">)</span> to <span class="nb">exit</span>
+</span></span><span class="line"><span class="cl">%
+</span></span></code></pre></div><p>In this section, you’ll learn how to run files in the most basic way: by listing their names in a <code>python</code> command line entered at your computer’s system prompt. Though it might seem primitive to some, for many programmers a system shell command line window, together with a text editor window, constitutes as much of an integrated development environment as they will ever need.</p>
+<h2 id="a-first-script">A First Script<a hidden class="anchor" aria-hidden="true" href="#a-first-script">#</a></h2>
+<p>Open your favorite text editor (e.g., <code>vi</code>, Notepad, or the IDLE editor), and type the following statements into a new text file named <code>script1.py</code>:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="c1"># A first Python script</span>
+</span></span><span class="line"><span class="cl"><span class="kn">import</span> <span class="nn">sys</span>  <span class="c1"># Load a library module</span>
+</span></span><span class="line"><span class="cl"><span class="nb">print</span><span class="p">(</span><span class="mi">2</span> <span class="o">**</span> <span class="mi">100</span><span class="p">)</span>  <span class="c1"># Raise 2 to a power</span>
+</span></span><span class="line"><span class="cl"><span class="n">x</span> <span class="o">=</span> <span class="s1">&#39;Spam!&#39;</span>  
+</span></span><span class="line"><span class="cl"><span class="nb">print</span><span class="p">(</span><span class="n">x</span> <span class="o">*</span> <span class="mi">8</span><span class="p">)</span>  <span class="c1"># String repetition</span>
+</span></span><span class="line"><span class="cl"><span class="nb">print</span><span class="p">(</span><span class="n">sys</span><span class="o">.</span><span class="n">platform</span><span class="p">)</span>  <span class="c1"># Print the system platform</span>
+</span></span></code></pre></div><p>You shouldn’t worry too much about this file’s code, but as a brief description, this file:</p>
+<ul>
+<li>Imports a Python module (libraries of additional tools) to fetch the name of the platform.</li>
+<li>Runs three <code>print</code> function calls to display the script’s results.</li>
+<li>Uses a variable named <code>x</code>, created when it’s assigned, to hold onto a string object.</li>
+<li>Applies various object operations that we’ll begin studying.</li>
+</ul>
+<p>The <code>sys.platform</code> here is just a string that identifies the kind of computer you’re working on; it lives in a standard Python module called <code>sys</code>, which you must import to load.</p>
+<h2 id="running-files-with-command-lines">Running Files with Command Lines<a hidden class="anchor" aria-hidden="true" href="#running-files-with-command-lines">#</a></h2>
+<p>You can ask Python to run it by listing its full filename as the first argument to a <code>python</code> command, typed at the system shell prompt:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-sh" data-lang="sh"><span class="line"><span class="cl">% python script1.py
+</span></span><span class="line"><span class="cl">win32
+</span></span><span class="line"><span class="cl"><span class="m">1267650600228229401496703205376</span>
+</span></span><span class="line"><span class="cl">Spam!Spam!Spam!Spam!Spam!Spam!Spam!Spam!
+</span></span></code></pre></div><h2 id="the-input-trick">The Input Trick<a hidden class="anchor" aria-hidden="true" href="#the-input-trick">#</a></h2>
+<p>If you need your script’s output to stick around when you launch it with an icon click, simply put a call to the built-in <code>input</code> function at the very bottom of the script.<br>
+For example:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="c1"># A first Python script</span>
+</span></span><span class="line"><span class="cl"><span class="kn">import</span> <span class="nn">sys</span>  <span class="c1"># Load a library module</span>
+</span></span><span class="line"><span class="cl"><span class="nb">print</span><span class="p">(</span><span class="n">sys</span><span class="o">.</span><span class="n">platform</span><span class="p">)</span>  
+</span></span><span class="line"><span class="cl"><span class="nb">print</span><span class="p">(</span><span class="mi">2</span> <span class="o">**</span> <span class="mi">100</span><span class="p">)</span>  <span class="c1"># Raise 2 to a power</span>
+</span></span><span class="line"><span class="cl"><span class="n">x</span> <span class="o">=</span> <span class="s1">&#39;Spam!&#39;</span>  
+</span></span><span class="line"><span class="cl"><span class="nb">print</span><span class="p">(</span><span class="n">x</span> <span class="o">*</span> <span class="mi">8</span><span class="p">)</span>  <span class="c1"># String repetition</span>
+</span></span><span class="line"><span class="cl"><span class="nb">input</span><span class="p">()</span>  <span class="c1"># &lt;== ADDED</span>
+</span></span></code></pre></div><p>In general, <code>input()</code> reads the next line of standard input, waiting if there is none yet available. The net effect in this context will be to pause the script, thereby keeping the output window shown in Figure 3-2 open until you press the Enter key.</p>
+<p><strong>Figure 3-1:</strong> When you click a program’s icon on Windows, you will be able to see its printed output if you include an <code>input()</code> call at the very end of the script. But you only need to do so in this context!</p>
+<h2 id="the-attributes">The Attributes<a hidden class="anchor" aria-hidden="true" href="#the-attributes">#</a></h2>
+<p>Imports and reloads provide a natural program launch option because import operations execute files as a last step. In the broader scheme of things, though, modules serve the role of libraries of tools. More generally, a module is mostly just a package of variable names, known as a <strong>namespace</strong>. The names within that package are called <strong>attributes</strong>—an attribute is simply a variable name that is attached to a specific object (like a module).</p>
+<p>Externally, a module file’s names can be fetched with two Python statements, <code>import</code> and <code>from</code>, as well as the <code>reload</code> call.<br>
+To illustrate, use a text editor to create a one-line Python module file called <code>myfile.py</code> with the following contents:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="n">title</span> <span class="o">=</span> <span class="s2">&#34;The Meaning of Life&#34;</span>
+</span></span></code></pre></div><p>This may be one of the world’s simplest Python modules (it contains a single assignment statement), but it’s enough to illustrate the point. When this file is imported, its code is run to generate the module’s attribute. The assignment statement creates a module attribute named <code>title</code>.</p>
+<p>You can access this module’s <code>title</code> attribute in other components in two different ways.<br>
+First, you can load the module as a whole with an <code>import</code> statement, and then qualify the module name with the attribute name to fetch it:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-sh" data-lang="sh"><span class="line"><span class="cl">% python
+</span></span><span class="line"><span class="cl">&gt;&gt;&gt; import myfile  <span class="c1"># Run file; load module as a whole</span>
+</span></span><span class="line"><span class="cl">&gt;&gt;&gt; print<span class="o">(</span>myfile.title<span class="o">)</span>  <span class="c1"># Use its attribute names: &#39;.&#39; to qualify</span>
+</span></span><span class="line"><span class="cl">The Meaning of Life
+</span></span></code></pre></div><p>In general, the dot expression syntax <code>object.attribute</code> lets you fetch any attribute attached to any object, and this is a very common operation in Python code. Here, we’ve used it to access the string variable <code>title</code> inside the module <code>myfile</code>—in other words, <code>myfile.title</code>.</p>
+<p>Alternatively, you can fetch (really, copy) names out of a module with <code>from</code> statements:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-sh" data-lang="sh"><span class="line"><span class="cl">% python
+</span></span><span class="line"><span class="cl">&gt;&gt;&gt; from myfile import title  <span class="c1"># Run file; copy its names</span>
+</span></span><span class="line"><span class="cl">&gt;&gt;&gt; print<span class="o">(</span>title<span class="o">)</span>  <span class="c1"># Use name directly: no need to qualify</span>
+</span></span><span class="line"><span class="cl">The Meaning of Life
+</span></span></code></pre></div><h2 id="the-idle-user-interface">The IDLE User Interface<a hidden class="anchor" aria-hidden="true" href="#the-idle-user-interface">#</a></h2>
+<p>So far, we’ve seen how to run Python code with the interactive prompt, system command lines, icon clicks, and module imports and <code>exec</code> calls. If you’re looking for something a bit more visual, <strong>IDLE</strong> provides a graphical user interface for doing Python development, and it’s a standard and free part of the Python system. It is usually referred to as an <strong>integrated development environment (IDE)</strong> because it binds together various development tasks into a single view.</p>
+<p>In short, <strong>IDLE is a GUI</strong> that lets you edit, run, browse, and debug Python programs, all from a single interface. Moreover, because IDLE is a Python program that uses the <code>tkinter</code> GUI toolkit, it runs portably on most Python platforms, including Microsoft Windows and X Windows.</p>
+<h2 id="idle-basics">IDLE Basics<a hidden class="anchor" aria-hidden="true" href="#idle-basics">#</a></h2>
+<p>Let’s jump right into an example. IDLE is easy to start under Windows—it has an entry in the <strong>Start</strong> button menu for Python, and it can also be selected by right-clicking on a Python program icon.</p>
+<p><strong>Figure 3-2:</strong> The main Python shell window of the IDLE development GUI, shown here running on Windows. Use the <strong>File</strong> menu to begin (New Window) or change (Open&hellip;) a source file; use the text edit window’s <strong>Run</strong> menu to run the code in that window (Run Module).</p>
+
+
+  </div>
+
+  <footer class="post-footer">
+    <ul class="post-tags">
+    </ul>
+<nav class="paginav">
+  <a class="prev" href="//localhost:1313/chapters/chapter-2/">
+    <span class="title">« Prev</span>
+    <br>
+    <span>Chapter 2: How Python Runs Programs</span>
+  </a>
+  <a class="next" href="//localhost:1313/chapters/chapter-4/">
+    <span class="title">Next »</span>
+    <br>
+    <span>Chapter 4: Object Types</span>
+  </a>
+</nav>
+
+  </footer>
+</article>
+    </main>
+    
+<footer class="footer">
+        <span>&copy; 2025 <a href="//localhost:1313/">Elite</a></span> · 
+
+    <span>
+        Powered by
+        <a href="https://gohugo.io/" rel="noopener noreferrer" target="_blank">Hugo</a> &
+        <a href="https://github.com/adityatelange/hugo-PaperMod/" rel="noopener" target="_blank">PaperMod</a>
+    </span>
+</footer>
+<a href="#top" aria-label="go to top" title="Go to Top (Alt + G)" class="top-link" id="top-link" accesskey="g">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 12 6" fill="currentColor">
+        <path d="M12 6H0l6-6z" />
+    </svg>
+</a>
+
+<script>
+    let menu = document.getElementById('menu')
+    if (menu) {
+        menu.scrollLeft = localStorage.getItem("menu-scroll-position");
+        menu.onscroll = function () {
+            localStorage.setItem("menu-scroll-position", menu.scrollLeft);
+        }
+    }
+
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener("click", function (e) {
+            e.preventDefault();
+            var id = this.getAttribute("href").substr(1);
+            if (!window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView({
+                    behavior: "smooth"
+                });
+            } else {
+                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView();
+            }
+            if (id === "top") {
+                history.replaceState(null, null, " ");
+            } else {
+                history.pushState(null, null, `#${id}`);
+            }
+        });
+    });
+
+</script>
+<script>
+    var mybutton = document.getElementById("top-link");
+    window.onscroll = function () {
+        if (document.body.scrollTop > 800 || document.documentElement.scrollTop > 800) {
+            mybutton.style.visibility = "visible";
+            mybutton.style.opacity = "1";
+        } else {
+            mybutton.style.visibility = "hidden";
+            mybutton.style.opacity = "0";
+        }
+    };
+
+</script>
+<script>
+    document.getElementById("theme-toggle").addEventListener("click", () => {
+        if (document.body.className.includes("dark")) {
+            document.body.classList.remove('dark');
+            localStorage.setItem("pref-theme", 'light');
+        } else {
+            document.body.classList.add('dark');
+            localStorage.setItem("pref-theme", 'dark');
+        }
+    })
+
+</script>
+<script>
+    document.querySelectorAll('pre > code').forEach((codeblock) => {
+        const container = codeblock.parentNode.parentNode;
+
+        const copybutton = document.createElement('button');
+        copybutton.classList.add('copy-code');
+        copybutton.innerHTML = 'copy';
+
+        function copyingDone() {
+            copybutton.innerHTML = 'copied!';
+            setTimeout(() => {
+                copybutton.innerHTML = 'copy';
+            }, 2000);
+        }
+
+        copybutton.addEventListener('click', (cb) => {
+            if ('clipboard' in navigator) {
+                navigator.clipboard.writeText(codeblock.textContent);
+                copyingDone();
+                return;
+            }
+
+            const range = document.createRange();
+            range.selectNodeContents(codeblock);
+            const selection = window.getSelection();
+            selection.removeAllRanges();
+            selection.addRange(range);
+            try {
+                document.execCommand('copy');
+                copyingDone();
+            } catch (e) { };
+            selection.removeRange(range);
+        });
+
+        if (container.classList.contains("highlight")) {
+            container.appendChild(copybutton);
+        } else if (container.parentNode.firstChild == container) {
+            
+        } else if (codeblock.parentNode.parentNode.parentNode.parentNode.parentNode.nodeName == "TABLE") {
+            
+            codeblock.parentNode.parentNode.parentNode.parentNode.parentNode.appendChild(copybutton);
+        } else {
+            
+            codeblock.parentNode.appendChild(copybutton);
+        }
+    });
+</script>
+</body>
+
+</html>

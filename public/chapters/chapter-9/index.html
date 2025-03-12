@@ -1,0 +1,428 @@
+<!DOCTYPE html>
+<html lang="en" dir="auto">
+
+<head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script><meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta name="robots" content="noindex, nofollow">
+<title>Chapter 9: Introducing Python Statements | Elite</title>
+<meta name="keywords" content="">
+<meta name="description" content="
+The statements are the things you write to tell Python what your programs should do. If programs “do things with stuff,” statements are the way you specify what sort of things a program does. Python is a procedural, statement-based language; by combining statements, you specify a procedure that Python performs to satisfy a program’s goals.
+Python Program Structure Revisited
+Another way to understand the role of statements is to revisit the concept hierarchy, which talked about built-in objects and the expressions used to manipulate them. The hierarchy levels are:">
+<meta name="author" content="">
+<link rel="canonical" href="//localhost:1313/chapters/chapter-9/">
+<link crossorigin="anonymous" href="/assets/css/stylesheet.45e028aa8ce0961349adf411b013ee39406be2c0bc80d4ea3fc04555f7f4611a.css" integrity="sha256-ReAoqozglhNJrfQRsBPuOUBr4sC8gNTqP8BFVff0YRo=" rel="preload stylesheet" as="style">
+<link rel="icon" href="//localhost:1313/favicon.ico">
+<link rel="icon" type="image/png" sizes="16x16" href="//localhost:1313/favicon-16x16.png">
+<link rel="icon" type="image/png" sizes="32x32" href="//localhost:1313/favicon-32x32.png">
+<link rel="apple-touch-icon" href="//localhost:1313/apple-touch-icon.png">
+<link rel="mask-icon" href="//localhost:1313/safari-pinned-tab.svg">
+<meta name="theme-color" content="#2e2e33">
+<meta name="msapplication-TileColor" content="#2e2e33">
+<link rel="alternate" hreflang="en" href="//localhost:1313/chapters/chapter-9/">
+<noscript>
+    <style>
+        #theme-toggle,
+        .top-link {
+            display: none;
+        }
+
+    </style>
+    <style>
+        @media (prefers-color-scheme: dark) {
+            :root {
+                --theme: rgb(29, 30, 32);
+                --entry: rgb(46, 46, 51);
+                --primary: rgb(218, 218, 219);
+                --secondary: rgb(155, 156, 157);
+                --tertiary: rgb(65, 66, 68);
+                --content: rgb(196, 196, 197);
+                --code-block-bg: rgb(46, 46, 51);
+                --code-bg: rgb(55, 56, 62);
+                --border: rgb(51, 51, 51);
+            }
+
+            .list {
+                background: var(--theme);
+            }
+
+            .list:not(.dark)::-webkit-scrollbar-track {
+                background: 0 0;
+            }
+
+            .list:not(.dark)::-webkit-scrollbar-thumb {
+                border-color: var(--theme);
+            }
+        }
+
+    </style>
+</noscript>
+</head>
+
+<body class="" id="top">
+<script>
+    if (localStorage.getItem("pref-theme") === "dark") {
+        document.body.classList.add('dark');
+    } else if (localStorage.getItem("pref-theme") === "light") {
+        document.body.classList.remove('dark')
+    } else if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
+        document.body.classList.add('dark');
+    }
+
+</script>
+
+<header class="header">
+    <nav class="nav">
+        <div class="logo">
+            <a href="//localhost:1313/" accesskey="h" title="Elite (Alt + H)">Elite</a>
+            <div class="logo-switches">
+                <button id="theme-toggle" accesskey="t" title="(Alt + T)" aria-label="Toggle theme">
+                    <svg id="moon" xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 24 24"
+                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+                    </svg>
+                    <svg id="sun" xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 24 24"
+                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <circle cx="12" cy="12" r="5"></circle>
+                        <line x1="12" y1="1" x2="12" y2="3"></line>
+                        <line x1="12" y1="21" x2="12" y2="23"></line>
+                        <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+                        <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+                        <line x1="1" y1="12" x2="3" y2="12"></line>
+                        <line x1="21" y1="12" x2="23" y2="12"></line>
+                        <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+                        <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+                    </svg>
+                </button>
+            </div>
+        </div>
+        <ul id="menu">
+            <li>
+                <a href="//localhost:1313/search/" title="Search (Alt &#43; /)" accesskey=/>
+                    <span>Search</span>
+                </a>
+            </li>
+        </ul>
+    </nav>
+</header>
+<main class="main">
+
+<article class="post-single">
+  <header class="post-header">
+    <div class="breadcrumbs"><a href="//localhost:1313/">Home</a>&nbsp;»&nbsp;<a href="//localhost:1313/chapters/">Chapters</a></div>
+    <h1 class="post-title entry-hint-parent">
+      Chapter 9: Introducing Python Statements
+    </h1>
+    <div class="post-meta">6 min
+
+</div>
+  </header> <div class="toc">
+    <details >
+        <summary accesskey="c" title="(Alt + C)">
+            <span class="details">Table of Contents</span>
+        </summary>
+
+        <div class="inner"><ul>
+                <li>
+                    <a href="#python-program-structure-revisited" aria-label="Python Program Structure Revisited">Python Program Structure Revisited</a></li>
+                <li>
+                    <a href="#pythons-statements" aria-label="Python’s Statements">Python’s Statements</a></li>
+                <li>
+                    <a href="#what-python-adds" aria-label="What Python Adds">What Python Adds</a></li>
+                <li>
+                    <a href="#what-python-removes" aria-label="What Python Removes">What Python Removes</a></li>
+                <li>
+                    <a href="#statement-rule-special-cases" aria-label="Statement Rule Special Cases">Statement Rule Special Cases</a></li>
+                <li>
+                    <a href="#a-quick-example-interactive-loops" aria-label="A Quick Example: Interactive Loops">A Quick Example: Interactive Loops</a><ul>
+                        
+                <li>
+                    <a href="#a-simple-interactive-loop" aria-label="A Simple Interactive Loop">A Simple Interactive Loop</a></li>
+                <li>
+                    <a href="#doing-math-on-user-inputs" aria-label="Doing Math on User Inputs">Doing Math on User Inputs</a></li>
+                <li>
+                    <a href="#handling-errors-by-testing-inputs" aria-label="Handling Errors by Testing Inputs">Handling Errors by Testing Inputs</a></li>
+                <li>
+                    <a href="#nesting-code-three-levels-deep" aria-label="Nesting Code Three Levels Deep">Nesting Code Three Levels Deep</a>
+                </li>
+            </ul>
+            </li>
+            </ul>
+        </div>
+    </details>
+</div>
+
+  <div class="post-content"><hr>
+<p>The statements are the things you write to tell Python what your programs should do. If programs “do things with stuff,” statements are the way you specify what sort of things a program does. Python is a procedural, statement-based language; by combining statements, you specify a procedure that Python performs to satisfy a program’s goals.</p>
+<h2 id="python-program-structure-revisited">Python Program Structure Revisited<a hidden class="anchor" aria-hidden="true" href="#python-program-structure-revisited">#</a></h2>
+<p>Another way to understand the role of statements is to revisit the concept hierarchy, which talked about built-in objects and the expressions used to manipulate them. The hierarchy levels are:</p>
+<ol>
+<li><strong>Programs</strong> are composed of modules.</li>
+<li><strong>Modules</strong> contain statements.</li>
+<li><strong>Statements</strong> contain expressions.</li>
+<li><strong>Expressions</strong> create and process objects.</li>
+</ol>
+<p>At its core, Python syntax is composed of statements and expressions. Expressions process objects and are embedded in statements. Statements code the larger logic of a program’s operation—they use and direct expressions to process the objects we studied in the preceding chapters. Moreover, statements are where objects spring into existence (e.g., in expressions within assignment statements), and some statements create entirely new kinds of objects (functions, classes, and so on). Statements always exist in modules, which themselves are managed with statements.</p>
+<h2 id="pythons-statements">Python’s Statements<a hidden class="anchor" aria-hidden="true" href="#pythons-statements">#</a></h2>
+<p>Table 1 summarizes Python’s statement set. This part of the book deals with entries in the table from the top through <code>break</code> and <code>continue</code>. You’ve informally been introduced to a few of the statements in Table 10-1 already; this part of the book will fill in details that were skipped earlier, introduce the rest of Python’s procedural statement set, and cover the overall syntax model. Statements lower in Table 10-1 that have to do with larger program units—functions, classes, modules, and exceptions—lead to larger programming ideas, so they will each have a section of their own. More focused statements (like <code>del</code>, which deletes various components) are covered elsewhere in the book, or in Python’s standard manuals.</p>
+<p><strong>[Table Placeholder: Python 3.0 statements]</strong></p>
+<h2 id="what-python-adds">What Python Adds<a hidden class="anchor" aria-hidden="true" href="#what-python-adds">#</a></h2>
+<p>The one new syntax component in Python is the colon character (<code>:</code>). All Python compound statements (i.e., statements that have statements nested inside them) follow the same general pattern:</p>
+<ul>
+<li><strong>Header line:</strong> A statement header terminated by a colon.</li>
+<li><strong>Nested statement block:</strong> A block of code indented underneath the header line.</li>
+</ul>
+<p>The colon is required, and omitting it is probably the most common coding mistake among new Python programmers—it’s certainly one I’ve witnessed thousands of times in Python training classes. In fact, if you are new to Python, you’ll almost certainly forget the colon character very soon. Most Python-friendly editors make this mistake easy to spot, and including it eventually becomes an unconscious habit.</p>
+<h2 id="what-python-removes">What Python Removes<a hidden class="anchor" aria-hidden="true" href="#what-python-removes">#</a></h2>
+<p>Although Python requires the extra colon character, there are three things programmers in C-like languages must include that you don’t generally have to in Python:</p>
+<ol>
+<li>
+<p><strong>Parentheses are optional:</strong><br>
+In many C-like languages, tests at the top of statements require parentheses:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-c" data-lang="c"><span class="line"><span class="cl"><span class="k">if</span> <span class="p">(</span><span class="n">x</span> <span class="o">&lt;</span> <span class="n">y</span><span class="p">)</span>
+</span></span></code></pre></div><p>In Python, you simply omit the parentheses, and the statement works the same way:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="k">if</span> <span class="n">x</span> <span class="o">&lt;</span> <span class="n">y</span><span class="p">:</span>
+</span></span></code></pre></div></li>
+<li>
+<p><strong>End of line is end of statement:</strong><br>
+In C-like languages, statements are terminated with semicolons:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-c" data-lang="c"><span class="line"><span class="cl"><span class="n">x</span> <span class="o">=</span> <span class="mi">1</span><span class="p">;</span>
+</span></span></code></pre></div><p>In Python, the end of a line automatically terminates the statement. You can leave off the semicolons:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="n">x</span> <span class="o">=</span> <span class="mi">1</span>
+</span></span></code></pre></div></li>
+<li>
+<p><strong>End of indentation is end of block:</strong><br>
+In C-like languages, you need explicit markers (begin/end, then/endif, or braces) to indicate the start and end of a nested block:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-c" data-lang="c"><span class="line"><span class="cl"><span class="k">if</span> <span class="p">(</span><span class="n">x</span> <span class="o">&gt;</span> <span class="n">y</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="n">x</span> <span class="o">=</span> <span class="mi">1</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">    <span class="n">y</span> <span class="o">=</span> <span class="mi">2</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span></code></pre></div><p>In Python, you consistently indent all the statements in a given nested block, and Python uses that physical indentation to determine where the block starts and stops:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="k">if</span> <span class="n">x</span> <span class="o">&gt;</span> <span class="n">y</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl">    <span class="n">x</span> <span class="o">=</span> <span class="mi">1</span>
+</span></span><span class="line"><span class="cl">    <span class="n">y</span> <span class="o">=</span> <span class="mi">2</span>
+</span></span></code></pre></div></li>
+</ol>
+<h2 id="statement-rule-special-cases">Statement Rule Special Cases<a hidden class="anchor" aria-hidden="true" href="#statement-rule-special-cases">#</a></h2>
+<p>Although statements normally appear one per line, it is possible to squeeze more than one statement onto a single line in Python by separating them with semicolons:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="n">a</span> <span class="o">=</span> <span class="mi">1</span><span class="p">;</span> <span class="n">b</span> <span class="o">=</span> <span class="mi">2</span><span class="p">;</span> <span class="nb">print</span><span class="p">(</span><span class="n">a</span> <span class="o">+</span> <span class="n">b</span><span class="p">)</span>  <span class="c1"># Three statements on one line</span>
+</span></span></code></pre></div><p><em>This is the only place in Python where semicolons are required: as statement separators. This only works if the statements combined are simple statements (like assignments, prints, and function calls). Compound statements must still appear on separate lines.</em></p>
+<p>Another special rule is that you can make a single statement span multiple lines by enclosing part of your statement in a bracketed pair—parentheses <code>()</code>, square brackets <code>[]</code>, or curly braces <code>{}</code>. Any code enclosed in these constructs can cross multiple lines; the statement doesn’t end until Python reaches the closing part of the pair. For instance, to continue a list literal:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="n">mlist</span> <span class="o">=</span> <span class="p">[</span><span class="mi">111</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">         <span class="mi">222</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">         <span class="mi">333</span><span class="p">]</span>
+</span></span></code></pre></div><h2 id="a-quick-example-interactive-loops">A Quick Example: Interactive Loops<a hidden class="anchor" aria-hidden="true" href="#a-quick-example-interactive-loops">#</a></h2>
+<p>We’ll see all these syntax rules in action when we tour Python’s specific compound statements in the next few chapters, but they work the same throughout the language. To get started, let’s work through a brief, realistic example that demonstrates how statement syntax and nesting come together in practice.</p>
+<h3 id="a-simple-interactive-loop">A Simple Interactive Loop<a hidden class="anchor" aria-hidden="true" href="#a-simple-interactive-loop">#</a></h3>
+<p>Suppose you’re asked to write a Python program that interacts with a user in a console window. Whether you’re accepting inputs to send to a database or reading numbers for a calculation, you need to code a loop that reads one or more inputs from a user typing on a keyboard, and prints back a result for each. In Python, typical boilerplate code for such an interactive loop might look like this:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="k">while</span> <span class="kc">True</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl">    <span class="n">reply</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="s1">&#39;Enter text:&#39;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">    <span class="k">if</span> <span class="n">reply</span> <span class="o">==</span> <span class="s1">&#39;stop&#39;</span><span class="p">:</span> <span class="k">break</span>
+</span></span><span class="line"><span class="cl">    <span class="nb">print</span><span class="p">(</span><span class="n">reply</span><span class="o">.</span><span class="n">upper</span><span class="p">())</span>
+</span></span></code></pre></div><p>This code makes use of a few new ideas:</p>
+<ul>
+<li><strong>While Loop:</strong> Uses the <code>while</code> loop, which repeats a block of code as long as its test condition is true.</li>
+<li><strong>Input Function:</strong> Uses the <code>input</code> function to display a prompt and capture user input as a string.</li>
+<li><strong>Single-line If Statement:</strong> Implements a single-line <code>if</code> statement to exit the loop if the reply is <code>'stop'</code>.</li>
+<li><strong>Break Statement:</strong> The <code>break</code> statement exits the loop immediately, so the program can continue after the loop.</li>
+</ul>
+<h3 id="doing-math-on-user-inputs">Doing Math on User Inputs<a hidden class="anchor" aria-hidden="true" href="#doing-math-on-user-inputs">#</a></h3>
+<p>Suppose that instead of converting a text string to uppercase, you want to perform math (e.g., squaring a number). If you try the following:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="o">&gt;&gt;&gt;</span> <span class="n">reply</span> <span class="o">=</span> <span class="s1">&#39;20&#39;</span>
+</span></span><span class="line"><span class="cl"><span class="o">&gt;&gt;&gt;</span> <span class="n">reply</span> <span class="o">**</span> <span class="mi">2</span>
+</span></span><span class="line"><span class="cl"><span class="o">...</span><span class="n">error</span> <span class="n">text</span> <span class="n">omitted</span><span class="o">...</span>
+</span></span><span class="line"><span class="cl"><span class="ne">TypeError</span><span class="p">:</span> <span class="n">unsupported</span> <span class="n">operand</span> <span class="nb">type</span><span class="p">(</span><span class="n">s</span><span class="p">)</span> <span class="k">for</span> <span class="o">**</span> <span class="ow">or</span> <span class="nb">pow</span><span class="p">():</span> <span class="s1">&#39;str&#39;</span> <span class="ow">and</span> <span class="s1">&#39;int&#39;</span>
+</span></span></code></pre></div><p>This error occurs because Python does not automatically convert strings to numbers. You must convert the string to an integer first:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="o">&gt;&gt;&gt;</span> <span class="nb">int</span><span class="p">(</span><span class="n">reply</span><span class="p">)</span> <span class="o">**</span> <span class="mi">2</span>
+</span></span><span class="line"><span class="cl"><span class="mi">400</span>
+</span></span></code></pre></div><p>Armed with this information, you can recode your loop to perform the necessary math. For example, type the following in a file to test it:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="k">while</span> <span class="kc">True</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl">    <span class="n">reply</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="s1">&#39;Enter text:&#39;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">    <span class="k">if</span> <span class="n">reply</span> <span class="o">==</span> <span class="s1">&#39;stop&#39;</span><span class="p">:</span> <span class="k">break</span>
+</span></span><span class="line"><span class="cl">    <span class="nb">print</span><span class="p">(</span><span class="nb">int</span><span class="p">(</span><span class="n">reply</span><span class="p">)</span> <span class="o">**</span> <span class="mi">2</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Bye&#39;</span><span class="p">)</span>
+</span></span></code></pre></div><p>This script exits on <code>&quot;stop&quot;</code> as before, but it also converts inputs to perform the required math.</p>
+<h3 id="handling-errors-by-testing-inputs">Handling Errors by Testing Inputs<a hidden class="anchor" aria-hidden="true" href="#handling-errors-by-testing-inputs">#</a></h3>
+<p>If the input is invalid (for example, non-numeric text), the built-in <code>int</code> function raises an exception:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="n">Enter</span> <span class="n">text</span><span class="p">:</span><span class="n">xxx</span>
+</span></span><span class="line"><span class="cl"><span class="o">...</span><span class="n">error</span> <span class="n">text</span> <span class="n">omitted</span><span class="o">...</span>
+</span></span><span class="line"><span class="cl"><span class="ne">ValueError</span><span class="p">:</span> <span class="n">invalid</span> <span class="n">literal</span> <span class="k">for</span> <span class="nb">int</span><span class="p">()</span> <span class="k">with</span> <span class="n">base</span> <span class="mi">10</span><span class="p">:</span> <span class="s1">&#39;xxx&#39;</span>
+</span></span></code></pre></div><p>To avoid this, you can check the string’s content using the <code>isdigit</code> method:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="o">&gt;&gt;&gt;</span> <span class="n">S</span> <span class="o">=</span> <span class="s1">&#39;123&#39;</span>
+</span></span><span class="line"><span class="cl"><span class="o">&gt;&gt;&gt;</span> <span class="n">T</span> <span class="o">=</span> <span class="s1">&#39;xxx&#39;</span>
+</span></span><span class="line"><span class="cl"><span class="o">&gt;&gt;&gt;</span> <span class="n">S</span><span class="o">.</span><span class="n">isdigit</span><span class="p">(),</span> <span class="n">T</span><span class="o">.</span><span class="n">isdigit</span><span class="p">()</span>
+</span></span><span class="line"><span class="cl"><span class="p">(</span><span class="kc">True</span><span class="p">,</span> <span class="kc">False</span><span class="p">)</span>
+</span></span></code></pre></div><p>Using this, you can further nest your statements. Consider the following revised interactive script that avoids errors:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="k">while</span> <span class="kc">True</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl">    <span class="n">reply</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="s1">&#39;Enter text:&#39;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">    <span class="k">if</span> <span class="n">reply</span> <span class="o">==</span> <span class="s1">&#39;stop&#39;</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl">        <span class="k">break</span>
+</span></span><span class="line"><span class="cl">    <span class="k">elif</span> <span class="ow">not</span> <span class="n">reply</span><span class="o">.</span><span class="n">isdigit</span><span class="p">():</span>
+</span></span><span class="line"><span class="cl">        <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Bad!&#39;</span> <span class="o">*</span> <span class="mi">8</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">    <span class="k">else</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl">        <span class="nb">print</span><span class="p">(</span><span class="nb">int</span><span class="p">(</span><span class="n">reply</span><span class="p">)</span> <span class="o">**</span> <span class="mi">2</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Bye&#39;</span><span class="p">)</span>
+</span></span></code></pre></div><h3 id="nesting-code-three-levels-deep">Nesting Code Three Levels Deep<a hidden class="anchor" aria-hidden="true" href="#nesting-code-three-levels-deep">#</a></h3>
+<p>Finally, consider another version of the script that branches based on the magnitude of valid input:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="k">while</span> <span class="kc">True</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl">    <span class="n">reply</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="s1">&#39;Enter text:&#39;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">    <span class="k">if</span> <span class="n">reply</span> <span class="o">==</span> <span class="s1">&#39;stop&#39;</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl">        <span class="k">break</span>
+</span></span><span class="line"><span class="cl">    <span class="k">elif</span> <span class="ow">not</span> <span class="n">reply</span><span class="o">.</span><span class="n">isdigit</span><span class="p">():</span>
+</span></span><span class="line"><span class="cl">        <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Bad!&#39;</span> <span class="o">*</span> <span class="mi">8</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">    <span class="k">else</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl">        <span class="n">num</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="n">reply</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">        <span class="k">if</span> <span class="n">num</span> <span class="o">&lt;</span> <span class="mi">20</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl">            <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;low&#39;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">        <span class="k">else</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl">            <span class="nb">print</span><span class="p">(</span><span class="n">num</span> <span class="o">**</span> <span class="mi">2</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Bye&#39;</span><span class="p">)</span>
+</span></span></code></pre></div><p>This example shows how you can nest code to multiple levels if needed.</p>
+
+
+  </div>
+
+  <footer class="post-footer">
+    <ul class="post-tags">
+    </ul>
+<nav class="paginav">
+  <a class="prev" href="//localhost:1313/chapters/chapter-8/">
+    <span class="title">« Prev</span>
+    <br>
+    <span>Chapter 8: Tuples, Files, and Everything Else</span>
+  </a>
+  <a class="next" href="//localhost:1313/chapters/chapter-10/">
+    <span class="title">Next »</span>
+    <br>
+    <span>Chapter 10: if Tests and Syntax Rules</span>
+  </a>
+</nav>
+
+  </footer>
+</article>
+    </main>
+    
+<footer class="footer">
+        <span>&copy; 2025 <a href="//localhost:1313/">Elite</a></span> · 
+
+    <span>
+        Powered by
+        <a href="https://gohugo.io/" rel="noopener noreferrer" target="_blank">Hugo</a> &
+        <a href="https://github.com/adityatelange/hugo-PaperMod/" rel="noopener" target="_blank">PaperMod</a>
+    </span>
+</footer>
+<a href="#top" aria-label="go to top" title="Go to Top (Alt + G)" class="top-link" id="top-link" accesskey="g">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 12 6" fill="currentColor">
+        <path d="M12 6H0l6-6z" />
+    </svg>
+</a>
+
+<script>
+    let menu = document.getElementById('menu')
+    if (menu) {
+        menu.scrollLeft = localStorage.getItem("menu-scroll-position");
+        menu.onscroll = function () {
+            localStorage.setItem("menu-scroll-position", menu.scrollLeft);
+        }
+    }
+
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener("click", function (e) {
+            e.preventDefault();
+            var id = this.getAttribute("href").substr(1);
+            if (!window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView({
+                    behavior: "smooth"
+                });
+            } else {
+                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView();
+            }
+            if (id === "top") {
+                history.replaceState(null, null, " ");
+            } else {
+                history.pushState(null, null, `#${id}`);
+            }
+        });
+    });
+
+</script>
+<script>
+    var mybutton = document.getElementById("top-link");
+    window.onscroll = function () {
+        if (document.body.scrollTop > 800 || document.documentElement.scrollTop > 800) {
+            mybutton.style.visibility = "visible";
+            mybutton.style.opacity = "1";
+        } else {
+            mybutton.style.visibility = "hidden";
+            mybutton.style.opacity = "0";
+        }
+    };
+
+</script>
+<script>
+    document.getElementById("theme-toggle").addEventListener("click", () => {
+        if (document.body.className.includes("dark")) {
+            document.body.classList.remove('dark');
+            localStorage.setItem("pref-theme", 'light');
+        } else {
+            document.body.classList.add('dark');
+            localStorage.setItem("pref-theme", 'dark');
+        }
+    })
+
+</script>
+<script>
+    document.querySelectorAll('pre > code').forEach((codeblock) => {
+        const container = codeblock.parentNode.parentNode;
+
+        const copybutton = document.createElement('button');
+        copybutton.classList.add('copy-code');
+        copybutton.innerHTML = 'copy';
+
+        function copyingDone() {
+            copybutton.innerHTML = 'copied!';
+            setTimeout(() => {
+                copybutton.innerHTML = 'copy';
+            }, 2000);
+        }
+
+        copybutton.addEventListener('click', (cb) => {
+            if ('clipboard' in navigator) {
+                navigator.clipboard.writeText(codeblock.textContent);
+                copyingDone();
+                return;
+            }
+
+            const range = document.createRange();
+            range.selectNodeContents(codeblock);
+            const selection = window.getSelection();
+            selection.removeAllRanges();
+            selection.addRange(range);
+            try {
+                document.execCommand('copy');
+                copyingDone();
+            } catch (e) { };
+            selection.removeRange(range);
+        });
+
+        if (container.classList.contains("highlight")) {
+            container.appendChild(copybutton);
+        } else if (container.parentNode.firstChild == container) {
+            
+        } else if (codeblock.parentNode.parentNode.parentNode.parentNode.parentNode.nodeName == "TABLE") {
+            
+            codeblock.parentNode.parentNode.parentNode.parentNode.parentNode.appendChild(copybutton);
+        } else {
+            
+            codeblock.parentNode.appendChild(copybutton);
+        }
+    });
+</script>
+</body>
+
+</html>
