@@ -1,0 +1,657 @@
+<!DOCTYPE html>
+<html lang="en" dir="auto">
+
+<head><meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta name="robots" content="index, follow">
+<title>Chapter 11: While and For loops | Elite</title>
+<meta name="keywords" content="">
+<meta name="description" content="This chapter presents two main looping constructs—statements that repeat an action over and over. The first is the while statement, which provides a way to code general loops, and the second is the for statement, which is designed for stepping through the items in a sequence object and running a block of code for each.
+while Loops
+Python’s while statement is the most general iteration construct in the language. In simple terms, it repeatedly executes a block of indented statements as long as a test at the top keeps evaluating to a true value. Control loops back to the start of the statement until the test becomes false. When the test becomes false, control passes to the statement following the while block. If the test is false from the beginning, the loop body never runs.">
+<meta name="author" content="">
+<link rel="canonical" href="/chapters/chapter-11/">
+<link crossorigin="anonymous" href="/assets/css/stylesheet.45e028aa8ce0961349adf411b013ee39406be2c0bc80d4ea3fc04555f7f4611a.css" integrity="sha256-ReAoqozglhNJrfQRsBPuOUBr4sC8gNTqP8BFVff0YRo=" rel="preload stylesheet" as="style">
+<link rel="icon" href="/favicon.ico">
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<link rel="mask-icon" href="/safari-pinned-tab.svg">
+<meta name="theme-color" content="#2e2e33">
+<meta name="msapplication-TileColor" content="#2e2e33">
+<link rel="alternate" hreflang="en" href="/chapters/chapter-11/">
+<noscript>
+    <style>
+        #theme-toggle,
+        .top-link {
+            display: none;
+        }
+
+    </style>
+    <style>
+        @media (prefers-color-scheme: dark) {
+            :root {
+                --theme: rgb(29, 30, 32);
+                --entry: rgb(46, 46, 51);
+                --primary: rgb(218, 218, 219);
+                --secondary: rgb(155, 156, 157);
+                --tertiary: rgb(65, 66, 68);
+                --content: rgb(196, 196, 197);
+                --code-block-bg: rgb(46, 46, 51);
+                --code-bg: rgb(55, 56, 62);
+                --border: rgb(51, 51, 51);
+            }
+
+            .list {
+                background: var(--theme);
+            }
+
+            .list:not(.dark)::-webkit-scrollbar-track {
+                background: 0 0;
+            }
+
+            .list:not(.dark)::-webkit-scrollbar-thumb {
+                border-color: var(--theme);
+            }
+        }
+
+    </style>
+</noscript><meta property="og:url" content="/chapters/chapter-11/">
+  <meta property="og:site_name" content="Elite">
+  <meta property="og:title" content="Chapter 11: While and For loops">
+  <meta property="og:description" content="This chapter presents two main looping constructs—statements that repeat an action over and over. The first is the while statement, which provides a way to code general loops, and the second is the for statement, which is designed for stepping through the items in a sequence object and running a block of code for each.
+while Loops Python’s while statement is the most general iteration construct in the language. In simple terms, it repeatedly executes a block of indented statements as long as a test at the top keeps evaluating to a true value. Control loops back to the start of the statement until the test becomes false. When the test becomes false, control passes to the statement following the while block. If the test is false from the beginning, the loop body never runs.">
+  <meta property="og:locale" content="en">
+  <meta property="og:type" content="article">
+    <meta property="article:section" content="chapters">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Chapter 11: While and For loops">
+<meta name="twitter:description" content="This chapter presents two main looping constructs—statements that repeat an action over and over. The first is the while statement, which provides a way to code general loops, and the second is the for statement, which is designed for stepping through the items in a sequence object and running a block of code for each.
+while Loops
+Python’s while statement is the most general iteration construct in the language. In simple terms, it repeatedly executes a block of indented statements as long as a test at the top keeps evaluating to a true value. Control loops back to the start of the statement until the test becomes false. When the test becomes false, control passes to the statement following the while block. If the test is false from the beginning, the loop body never runs.">
+
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position":  1 ,
+      "name": "Chapters",
+      "item": "/chapters/"
+    }
+    {
+      "@type": "ListItem",
+      "position":  1 ,
+      "name": "Chapter 11: While and For loops",
+      "item": "/chapters/chapter-11/"
+    }
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "headline": "Chapter 11: While and For loops",
+  "name": "Chapter 11: While and For loops",
+  "description": "This chapter presents two main looping constructs—statements that repeat an action over and over. The first is the while statement, which provides a way to code general loops, and the second is the for statement, which is designed for stepping through the items in a sequence object and running a block of code for each.\nwhile Loops Python’s while statement is the most general iteration construct in the language. In simple terms, it repeatedly executes a block of indented statements as long as a test at the top keeps evaluating to a true value. Control loops back to the start of the statement until the test becomes false. When the test becomes false, control passes to the statement following the while block. If the test is false from the beginning, the loop body never runs.\n",
+  "keywords": [
+    
+  ],
+  "articleBody": "This chapter presents two main looping constructs—statements that repeat an action over and over. The first is the while statement, which provides a way to code general loops, and the second is the for statement, which is designed for stepping through the items in a sequence object and running a block of code for each.\nwhile Loops Python’s while statement is the most general iteration construct in the language. In simple terms, it repeatedly executes a block of indented statements as long as a test at the top keeps evaluating to a true value. Control loops back to the start of the statement until the test becomes false. When the test becomes false, control passes to the statement following the while block. If the test is false from the beginning, the loop body never runs.\nGeneral Format In its most complex form, the while statement consists of:\nA header line with a test expression. A body of one or more indented statements. An optional else part that is executed if control exits the loop without a break statement. while \u003ctest\u003e: # Loop test \u003cstatements1\u003e # Loop body else: # Run if loop didn't exit with break \u003cstatements2\u003e Examples Infinite Loop Example:\nwhile True: print('Type Ctrl-C to stop me!') Slicing Characters from a String:\nx = 'spam' while x: # While x is not empty print(x, end=' ') # Print current value of x on the same line x = x[1:] # Strip first character off x The end=' ' argument places all outputs on the same line separated by a space.\nCounter Loop Example:\na = 0; b = 10 while a \u003c b: print(a, end=' ') # Print a with a trailing space a += 1 # Increment a (or use: a = a + 1) Simulating a “do until” Loop:\nwhile True: # loop body... if exitTest(): break # Exit loop if exitTest() returns True break, continue, pass, and the Loop else Python provides several simple one-word statements that only make sense inside loops.\nbreak: Jumps out of the closest enclosing loop. continue: Jumps to the top of the closest enclosing loop. pass: Does nothing at all; it’s an empty statement placeholder. Loop else block: Runs if and only if the loop is exited normally (i.e., without encountering a break). General Loop Format (with break and continue) while \u003ctest1\u003e: \u003cstatements1\u003e if \u003ctest2\u003e: break # Exit loop now if is true if \u003ctest3\u003e: continue # Skip to next iteration if is true else: # Run if we didn't hit a 'break' \u003cstatements2\u003e Using pass in a Loop To code an infinite loop that does nothing each time through, use:\nwhile True: pass # Type Ctrl-C to stop me! Using continue to Skip Iterations The continue statement causes an immediate jump to the top of the loop. For example, to skip odd numbers when counting down:\nx = 10 while x: x = x - 1 # Or use: x -= 1 if x % 2 != 0: continue # If x is odd, skip printing print(x, end=' ') Using break to Exit a Loop The break statement causes an immediate exit from a loop. For example, an interactive loop that exits when the user enters “stop”:\nwhile True: name = input('Enter name:') # Prompt for a name if name == 'stop': break # Exit loop if name is 'stop' age = input('Enter age: ') # Prompt for age print('Hello', name, '=\u003e', int(age) ** 2) Loop else Clause Example The loop else clause can eliminate the need for search status flags. For example, determining if a positive integer y is prime:\nx = y // 2 # Start checking at half of y while x \u003e 1: if y % x == 0: print(y, 'has factor', x) # A factor is found break # Exit the loop x -= 1 else: print(y, 'is prime') # No factor found; y is prime Another example with string processing:\nwhile x: if match(x[0]): print('Ni') break x = x[1:] else: print('Not found') # Printed only if loop exhausts x without a break for Loops The for loop is a generic sequence iterator in Python that steps through the items in any ordered sequence—such as strings, lists, tuples, and other iterables.\nGeneral Format The for loop begins with a header line that specifies an assignment target and the sequence to step through. This is followed by an indented block of statements.\nfor \u003ctarget\u003e in \u003cobject\u003e: # Assign each item from the sequence to \u003cstatements\u003e # Repeated loop body that uses else: \u003cstatements\u003e # Runs if we didn't hit a 'break' Basic Usage For example, iterating over a list:\nfor x in [\"spam\", \"eggs\", \"ham\"]: print(x, end=' ') This prints each item on the same line.\nSumming and Multiplying Items sum = 0 for x in [1, 2, 3, 4]: sum = sum + x # Add each item to sum print(sum) # Output: 10 prod = 1 for item in [1, 2, 3, 4]: prod *= item # Multiply each item into prod print(prod) # Output: 24 Iterating Over Different Data Types For loops work on strings and tuples as well:\nS = \"lumberjack\" T = (\"and\", \"I'm\", \"okay\") for x in S: print(x, end=' ') # Iterate over a string for x in T: print(x, end=' ') # Iterate over a tuple Tuple Assignment in for Loops When iterating through a sequence of tuples, you can unpack the tuple directly in the loop header:\nT = [(1, 2), (3, 4), (5, 6)] for (a, b) in T: print(a, b) # Tuple assignment at work You can also iterate through dictionary items:\nD = {'a': 1, 'b': 2, 'c': 3} for key in D: print(key, '=\u003e', D[key]) # Using dict keys and indexing print(list(D.items())) # Show list of (key, value) tuples for (key, value) in D.items(): print(key, '=\u003e', value) # Iterate over both keys and values Alternatively, manual unpacking is also possible:\nT = [(1, 2), (3, 4), (5, 6)] for both in T: a, b = both # Manual assignment equivalent to tuple unpacking print(a, b) Nested sequence structures can also be unpacked automatically:\n((a, b), c) = ((1, 2), 3) print(a, b, c) # Output: 1 2 3 for ((a, b), c) in [((1, 2), 3), ((4, 5), 6)]: print(a, b, c) for ((a, b), c) in [([1, 2], 3), ['XY', 6]]: print(a, b, c) Nested for Loops and Loop else Clause The following example searches for each key in a list of items and reports whether it was found:\nitems = [\"aaa\", 111, (4, 5), 2.01] tests = [(4, 5), 3.14] for key in tests: for item in items: if item == key: print(key, \"was found\") break else: print(key, \"not found!\") # Loop else: executed if inner loop did not hit break This example can be simplified by using the in operator:\nfor key in tests: if key in items: print(key, \"was found\") else: print(key, \"not found!\") Collecting Common Items from Sequences seq1 = \"spam\" seq2 = \"scam\" res = [] # Start with an empty list for x in seq1: # Scan first sequence if x in seq2: # If common item is found res.append(x) # Add to result list print(res) Loop Coding Techniques The for loop subsumes most counter-style loops. It is generally simpler to code and quicker to run than a while loop. However, there are cases where you need specialized iterations (e.g., visiting every second or third item, or traversing multiple sequences in parallel). Python provides two built-in functions to help with these tasks: range and zip.\nCounter Loops: while and range The range function generates a series of integers and is commonly used to generate indices in a for loop. In Python 3, range is an iterator, so you may need to convert it to a list to display its results:\nprint(list(range(5)), list(range(2, 5)), list(range(0, 10, 2))) # Output: ([0, 1, 2, 3, 4], [2, 3, 4], [0, 2, 4, 6, 8]) With one argument, it generates integers from zero up to (but not including) the argument’s value. With two arguments, the first is the lower bound. An optional third argument specifies the step:\nprint(list(range(-5, 5))) # Output: [-5, -4, -3, -2, -1, 0, 1, 2, 3, 4] print(list(range(5, -5, -1))) # Output: [5, 4, 3, 2, 1, 0, -1, -2, -3, -4] Ranges are handy within for loops. For example, to print three lines:\nfor i in range(3): print(i, 'Pythons') Range is also used for indirect sequence iteration. For instance, to iterate over a string using indices:\nX = 'spam' for i in range(len(X)): print(X[i], end=' ') However, it is usually best to iterate directly over the sequence:\nfor item in X: print(item) Skipping Items with range and Slices To visit every second item in a string:\nS = 'abcdefghijk' print(list(range(0, len(S), 2))) # Output: [0, 2, 4, 6, 8, 10] for i in range(0, len(S), 2): print(S[i], end=' ') A simpler method is to use slicing:\nfor c in S[::2]: print(c, end=' ') Modifying a List During Iteration A simple for loop that modifies each item does not change the original list:\nL = [1, 2, 3, 4, 5] for x in L: x += 1 print(L) # Output: [1, 2, 3, 4, 5] To change the list in-place, use indexing with range:\nL = [1, 2, 3, 4, 5] for i in range(len(L)): L[i] += 1 # Or L[i] = L[i] + 1 print(L) # Output: [2, 3, 4, 5, 6] A while loop alternative is:\ni = 0 while i \u003c len(L): L[i] += 1 i += 1 print(L) # Output: [3, 4, 5, 6, 7] A list comprehension can also be used to create a modified list without changing the original in-place:\nnew_L = [x + 1 for x in L] Parallel Traversals: zip and map The zip function allows for parallel iteration over multiple sequences. For example, given two lists:\nL1 = [1, 2, 3, 4] L2 = [5, 6, 7, 8] print(list(zip(L1, L2))) # Output: [(1, 5), (2, 6), (3, 7), (4, 8)] Using zip with a for loop:\nfor (x, y) in zip(L1, L2): print(x, y, '--', x + y) Zip can also accept more than two sequences. With three sequences:\nT1, T2, T3 = (1, 2, 3), (4, 5, 6), (7, 8, 9) print(list(zip(T1, T2, T3))) # Output: [(1, 4, 7), (2, 5, 8), (3, 6, 9)] If the sequences differ in length, zip truncates the result to the length of the shortest sequence:\nS1 = 'abc' S2 = 'xyz123' print(list(zip(S1, S2))) # Output: [('a', 'x'), ('b', 'y'), ('c', 'z')] In Python 2.x, the built-in map function could be used to pair items from sequences and would pad shorter sequences with None. (This behavior is not supported in Python 3.x.)\nFor example (Python 2.x only):\nprint(map(None, S1, S2)) # Output: [('a', 'x'), ('b', 'y'), ('c', 'z'), (None, '1'), (None, '2'), (None, '3')] A common usage of map in Python 3.x is to apply a function to every item in a sequence:\nprint(list(map(ord, 'spam'))) # Output: [115, 112, 97, 109] Dictionary Construction with zip When keys and values are obtained as lists at runtime, zip can be used to create a dictionary:\nkeys = ['spam', 'eggs', 'toast'] vals = [1, 3, 5] print(list(zip(keys, vals))) # Output: [('spam', 1), ('eggs', 3), ('toast', 5)] D2 = {} for (k, v) in zip(keys, vals): D2[k] = v print(D2) # Output: {'spam': 1, 'eggs': 3, 'toast': 5} Generating Both Offsets and Items: enumerate The built-in enumerate function provides both the index (offset) and the item during iteration:\nTraditional approach:\nS = 'spam' offset = 0 for item in S: print(item, 'appears at offset', offset) offset += 1 Using enumerate:\nS = 'spam' for (offset, item) in enumerate(S): print(item, 'appears at offset', offset) The enumerate function returns an iterator that yields (index, value) tuples. You can also use the next function to retrieve these tuples manually:\nE = enumerate(S) print(E) # Shows the enumerate object print(next(E)) # Output: (0, 's') print(next(E)) # Output: (1, 'p') print(next(E)) # Output: (2, 'a') ",
+  "wordCount" : "2010",
+  "inLanguage": "en",
+  "datePublished": "0001-01-01T00:00:00Z",
+  "dateModified": "0001-01-01T00:00:00Z",
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "/chapters/chapter-11/"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "Elite",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "/favicon.ico"
+    }
+  }
+}
+</script>
+</head>
+
+<body class="" id="top">
+<script>
+    if (localStorage.getItem("pref-theme") === "dark") {
+        document.body.classList.add('dark');
+    } else if (localStorage.getItem("pref-theme") === "light") {
+        document.body.classList.remove('dark')
+    } else if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
+        document.body.classList.add('dark');
+    }
+
+</script>
+
+<header class="header">
+    <nav class="nav">
+        <div class="logo">
+            <a href="/" accesskey="h" title="Elite (Alt + H)">Elite</a>
+            <div class="logo-switches">
+                <button id="theme-toggle" accesskey="t" title="(Alt + T)" aria-label="Toggle theme">
+                    <svg id="moon" xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 24 24"
+                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+                    </svg>
+                    <svg id="sun" xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 24 24"
+                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <circle cx="12" cy="12" r="5"></circle>
+                        <line x1="12" y1="1" x2="12" y2="3"></line>
+                        <line x1="12" y1="21" x2="12" y2="23"></line>
+                        <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+                        <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+                        <line x1="1" y1="12" x2="3" y2="12"></line>
+                        <line x1="21" y1="12" x2="23" y2="12"></line>
+                        <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+                        <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+                    </svg>
+                </button>
+            </div>
+        </div>
+        <ul id="menu">
+            <li>
+                <a href="/search/" title="Search (Alt &#43; /)" accesskey=/>
+                    <span>Search</span>
+                </a>
+            </li>
+        </ul>
+    </nav>
+</header>
+<main class="main">
+
+<article class="post-single">
+  <header class="post-header">
+    <div class="breadcrumbs"><a href="/">Home</a>&nbsp;»&nbsp;<a href="/chapters/">Chapters</a></div>
+    <h1 class="post-title entry-hint-parent">
+      Chapter 11: While and For loops
+    </h1>
+    <div class="post-meta">10 min
+
+</div>
+  </header> <div class="toc">
+    <details >
+        <summary accesskey="c" title="(Alt + C)">
+            <span class="details">Table of Contents</span>
+        </summary>
+
+        <div class="inner"><ul>
+                <li>
+                    <a href="#while-loops" aria-label="while Loops">while Loops</a><ul>
+                        
+                <li>
+                    <a href="#general-format" aria-label="General Format">General Format</a></li>
+                <li>
+                    <a href="#examples" aria-label="Examples">Examples</a></li></ul>
+                </li>
+                <li>
+                    <a href="#break-continue-pass-and-the-loop-else" aria-label="break, continue, pass, and the Loop else">break, continue, pass, and the Loop else</a><ul>
+                        
+                <li>
+                    <a href="#general-loop-format-with-break-and-continue" aria-label="General Loop Format (with break and continue)">General Loop Format (with break and continue)</a></li>
+                <li>
+                    <a href="#using-pass-in-a-loop" aria-label="Using pass in a Loop">Using pass in a Loop</a></li>
+                <li>
+                    <a href="#using-continue-to-skip-iterations" aria-label="Using continue to Skip Iterations">Using continue to Skip Iterations</a></li>
+                <li>
+                    <a href="#using-break-to-exit-a-loop" aria-label="Using break to Exit a Loop">Using break to Exit a Loop</a></li>
+                <li>
+                    <a href="#loop-else-clause-example" aria-label="Loop else Clause Example">Loop else Clause Example</a></li></ul>
+                </li>
+                <li>
+                    <a href="#for-loops" aria-label="for Loops">for Loops</a><ul>
+                        
+                <li>
+                    <a href="#general-format-1" aria-label="General Format">General Format</a></li>
+                <li>
+                    <a href="#basic-usage" aria-label="Basic Usage">Basic Usage</a></li>
+                <li>
+                    <a href="#summing-and-multiplying-items" aria-label="Summing and Multiplying Items">Summing and Multiplying Items</a></li>
+                <li>
+                    <a href="#iterating-over-different-data-types" aria-label="Iterating Over Different Data Types">Iterating Over Different Data Types</a></li>
+                <li>
+                    <a href="#tuple-assignment-in-for-loops" aria-label="Tuple Assignment in for Loops">Tuple Assignment in for Loops</a></li>
+                <li>
+                    <a href="#nested-for-loops-and-loop-else-clause" aria-label="Nested for Loops and Loop else Clause">Nested for Loops and Loop else Clause</a></li>
+                <li>
+                    <a href="#collecting-common-items-from-sequences" aria-label="Collecting Common Items from Sequences">Collecting Common Items from Sequences</a></li></ul>
+                </li>
+                <li>
+                    <a href="#loop-coding-techniques" aria-label="Loop Coding Techniques">Loop Coding Techniques</a><ul>
+                        
+                <li>
+                    <a href="#counter-loops-while-and-range" aria-label="Counter Loops: while and range">Counter Loops: while and range</a><ul>
+                        
+                <li>
+                    <a href="#skipping-items-with-range-and-slices" aria-label="Skipping Items with range and Slices">Skipping Items with range and Slices</a></li>
+                <li>
+                    <a href="#modifying-a-list-during-iteration" aria-label="Modifying a List During Iteration">Modifying a List During Iteration</a></li></ul>
+                </li>
+                <li>
+                    <a href="#parallel-traversals-zip-and-map" aria-label="Parallel Traversals: zip and map">Parallel Traversals: zip and map</a></li>
+                <li>
+                    <a href="#dictionary-construction-with-zip" aria-label="Dictionary Construction with zip">Dictionary Construction with zip</a></li>
+                <li>
+                    <a href="#generating-both-offsets-and-items-enumerate" aria-label="Generating Both Offsets and Items: enumerate">Generating Both Offsets and Items: enumerate</a>
+                </li>
+            </ul>
+            </li>
+            </ul>
+        </div>
+    </details>
+</div>
+
+  <div class="post-content"><p>This chapter presents two main looping constructs—statements that repeat an action over and over. The first is the <strong>while</strong> statement, which provides a way to code general loops, and the second is the <strong>for</strong> statement, which is designed for stepping through the items in a sequence object and running a block of code for each.</p>
+<h2 id="while-loops">while Loops<a hidden class="anchor" aria-hidden="true" href="#while-loops">#</a></h2>
+<p>Python’s <strong>while</strong> statement is the most general iteration construct in the language. In simple terms, it repeatedly executes a block of indented statements as long as a test at the top keeps evaluating to a true value. Control loops back to the start of the statement until the test becomes false. When the test becomes false, control passes to the statement following the while block. If the test is false from the beginning, the loop body never runs.</p>
+<h3 id="general-format">General Format<a hidden class="anchor" aria-hidden="true" href="#general-format">#</a></h3>
+<p>In its most complex form, the while statement consists of:</p>
+<ul>
+<li>A header line with a test expression.</li>
+<li>A body of one or more indented statements.</li>
+<li>An optional else part that is executed if control exits the loop without a break statement.</li>
+</ul>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="k">while</span> <span class="o">&lt;</span><span class="n">test</span><span class="o">&gt;</span><span class="p">:</span>                 <span class="c1"># Loop test</span>
+</span></span><span class="line"><span class="cl">    <span class="o">&lt;</span><span class="n">statements1</span><span class="o">&gt;</span>             <span class="c1"># Loop body</span>
+</span></span><span class="line"><span class="cl"><span class="k">else</span><span class="p">:</span>                         <span class="c1"># Run if loop didn&#39;t exit with break</span>
+</span></span><span class="line"><span class="cl">    <span class="o">&lt;</span><span class="n">statements2</span><span class="o">&gt;</span>
+</span></span></code></pre></div><h3 id="examples">Examples<a hidden class="anchor" aria-hidden="true" href="#examples">#</a></h3>
+<p><strong>Infinite Loop Example:</strong></p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="k">while</span> <span class="kc">True</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl">    <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Type Ctrl-C to stop me!&#39;</span><span class="p">)</span>
+</span></span></code></pre></div><p><strong>Slicing Characters from a String:</strong></p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="n">x</span> <span class="o">=</span> <span class="s1">&#39;spam&#39;</span>
+</span></span><span class="line"><span class="cl"><span class="k">while</span> <span class="n">x</span><span class="p">:</span>                      <span class="c1"># While x is not empty</span>
+</span></span><span class="line"><span class="cl">    <span class="nb">print</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">end</span><span class="o">=</span><span class="s1">&#39; &#39;</span><span class="p">)</span>         <span class="c1"># Print current value of x on the same line</span>
+</span></span><span class="line"><span class="cl">    <span class="n">x</span> <span class="o">=</span> <span class="n">x</span><span class="p">[</span><span class="mi">1</span><span class="p">:]</span>                 <span class="c1"># Strip first character off x</span>
+</span></span></code></pre></div><p>The <code>end=' '</code> argument places all outputs on the same line separated by a space.</p>
+<p><strong>Counter Loop Example:</strong></p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="n">a</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">b</span> <span class="o">=</span> <span class="mi">10</span>
+</span></span><span class="line"><span class="cl"><span class="k">while</span> <span class="n">a</span> <span class="o">&lt;</span> <span class="n">b</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl">    <span class="nb">print</span><span class="p">(</span><span class="n">a</span><span class="p">,</span> <span class="n">end</span><span class="o">=</span><span class="s1">&#39; &#39;</span><span class="p">)</span>         <span class="c1"># Print a with a trailing space</span>
+</span></span><span class="line"><span class="cl">    <span class="n">a</span> <span class="o">+=</span> <span class="mi">1</span>                    <span class="c1"># Increment a (or use: a = a + 1)</span>
+</span></span></code></pre></div><p><strong>Simulating a “do until” Loop:</strong></p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="k">while</span> <span class="kc">True</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl">    <span class="c1"># loop body...</span>
+</span></span><span class="line"><span class="cl">    <span class="k">if</span> <span class="n">exitTest</span><span class="p">():</span> <span class="k">break</span>      <span class="c1"># Exit loop if exitTest() returns True</span>
+</span></span></code></pre></div><h2 id="break-continue-pass-and-the-loop-else">break, continue, pass, and the Loop else<a hidden class="anchor" aria-hidden="true" href="#break-continue-pass-and-the-loop-else">#</a></h2>
+<p>Python provides several simple one-word statements that only make sense inside loops.</p>
+<ul>
+<li><strong>break</strong>: Jumps out of the closest enclosing loop.</li>
+<li><strong>continue</strong>: Jumps to the top of the closest enclosing loop.</li>
+<li><strong>pass</strong>: Does nothing at all; it’s an empty statement placeholder.</li>
+<li><strong>Loop else block</strong>: Runs if and only if the loop is exited normally (i.e., without encountering a break).</li>
+</ul>
+<h3 id="general-loop-format-with-break-and-continue">General Loop Format (with break and continue)<a hidden class="anchor" aria-hidden="true" href="#general-loop-format-with-break-and-continue">#</a></h3>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="k">while</span> <span class="o">&lt;</span><span class="n">test1</span><span class="o">&gt;</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl">    <span class="o">&lt;</span><span class="n">statements1</span><span class="o">&gt;</span>
+</span></span><span class="line"><span class="cl">    <span class="k">if</span> <span class="o">&lt;</span><span class="n">test2</span><span class="o">&gt;</span><span class="p">:</span> <span class="k">break</span>       <span class="c1"># Exit loop now if &lt;test2&gt; is true</span>
+</span></span><span class="line"><span class="cl">    <span class="k">if</span> <span class="o">&lt;</span><span class="n">test3</span><span class="o">&gt;</span><span class="p">:</span> <span class="k">continue</span>     <span class="c1"># Skip to next iteration if &lt;test3&gt; is true</span>
+</span></span><span class="line"><span class="cl"><span class="k">else</span><span class="p">:</span>                        <span class="c1"># Run if we didn&#39;t hit a &#39;break&#39;</span>
+</span></span><span class="line"><span class="cl">    <span class="o">&lt;</span><span class="n">statements2</span><span class="o">&gt;</span>
+</span></span></code></pre></div><h3 id="using-pass-in-a-loop">Using pass in a Loop<a hidden class="anchor" aria-hidden="true" href="#using-pass-in-a-loop">#</a></h3>
+<p>To code an infinite loop that does nothing each time through, use:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="k">while</span> <span class="kc">True</span><span class="p">:</span> <span class="k">pass</span>  <span class="c1"># Type Ctrl-C to stop me!</span>
+</span></span></code></pre></div><h3 id="using-continue-to-skip-iterations">Using continue to Skip Iterations<a hidden class="anchor" aria-hidden="true" href="#using-continue-to-skip-iterations">#</a></h3>
+<p>The <strong>continue</strong> statement causes an immediate jump to the top of the loop. For example, to skip odd numbers when counting down:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="n">x</span> <span class="o">=</span> <span class="mi">10</span>
+</span></span><span class="line"><span class="cl"><span class="k">while</span> <span class="n">x</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl">    <span class="n">x</span> <span class="o">=</span> <span class="n">x</span> <span class="o">-</span> <span class="mi">1</span>               <span class="c1"># Or use: x -= 1</span>
+</span></span><span class="line"><span class="cl">    <span class="k">if</span> <span class="n">x</span> <span class="o">%</span> <span class="mi">2</span> <span class="o">!=</span> <span class="mi">0</span><span class="p">:</span> <span class="k">continue</span> <span class="c1"># If x is odd, skip printing</span>
+</span></span><span class="line"><span class="cl">    <span class="nb">print</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">end</span><span class="o">=</span><span class="s1">&#39; &#39;</span><span class="p">)</span>
+</span></span></code></pre></div><h3 id="using-break-to-exit-a-loop">Using break to Exit a Loop<a hidden class="anchor" aria-hidden="true" href="#using-break-to-exit-a-loop">#</a></h3>
+<p>The <strong>break</strong> statement causes an immediate exit from a loop. For example, an interactive loop that exits when the user enters &ldquo;stop&rdquo;:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="k">while</span> <span class="kc">True</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl">    <span class="n">name</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="s1">&#39;Enter name:&#39;</span><span class="p">)</span>   <span class="c1"># Prompt for a name</span>
+</span></span><span class="line"><span class="cl">    <span class="k">if</span> <span class="n">name</span> <span class="o">==</span> <span class="s1">&#39;stop&#39;</span><span class="p">:</span> <span class="k">break</span>        <span class="c1"># Exit loop if name is &#39;stop&#39;</span>
+</span></span><span class="line"><span class="cl">    <span class="n">age</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="s1">&#39;Enter age: &#39;</span><span class="p">)</span>      <span class="c1"># Prompt for age</span>
+</span></span><span class="line"><span class="cl">    <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Hello&#39;</span><span class="p">,</span> <span class="n">name</span><span class="p">,</span> <span class="s1">&#39;=&gt;&#39;</span><span class="p">,</span> <span class="nb">int</span><span class="p">(</span><span class="n">age</span><span class="p">)</span> <span class="o">**</span> <span class="mi">2</span><span class="p">)</span>
+</span></span></code></pre></div><h3 id="loop-else-clause-example">Loop else Clause Example<a hidden class="anchor" aria-hidden="true" href="#loop-else-clause-example">#</a></h3>
+<p>The loop else clause can eliminate the need for search status flags. For example, determining if a positive integer <code>y</code> is prime:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="n">x</span> <span class="o">=</span> <span class="n">y</span> <span class="o">//</span> <span class="mi">2</span>                          <span class="c1"># Start checking at half of y</span>
+</span></span><span class="line"><span class="cl"><span class="k">while</span> <span class="n">x</span> <span class="o">&gt;</span> <span class="mi">1</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl">    <span class="k">if</span> <span class="n">y</span> <span class="o">%</span> <span class="n">x</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl">        <span class="nb">print</span><span class="p">(</span><span class="n">y</span><span class="p">,</span> <span class="s1">&#39;has factor&#39;</span><span class="p">,</span> <span class="n">x</span><span class="p">)</span>   <span class="c1"># A factor is found</span>
+</span></span><span class="line"><span class="cl">        <span class="k">break</span>                       <span class="c1"># Exit the loop</span>
+</span></span><span class="line"><span class="cl">    <span class="n">x</span> <span class="o">-=</span> <span class="mi">1</span>
+</span></span><span class="line"><span class="cl"><span class="k">else</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl">    <span class="nb">print</span><span class="p">(</span><span class="n">y</span><span class="p">,</span> <span class="s1">&#39;is prime&#39;</span><span class="p">)</span>            <span class="c1"># No factor found; y is prime</span>
+</span></span></code></pre></div><p>Another example with string processing:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="k">while</span> <span class="n">x</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl">    <span class="k">if</span> <span class="k">match</span><span class="p">(</span><span class="n">x</span><span class="p">[</span><span class="mi">0</span><span class="p">]):</span>
+</span></span><span class="line"><span class="cl">        <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Ni&#39;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">        <span class="k">break</span>
+</span></span><span class="line"><span class="cl">    <span class="n">x</span> <span class="o">=</span> <span class="n">x</span><span class="p">[</span><span class="mi">1</span><span class="p">:]</span>
+</span></span><span class="line"><span class="cl"><span class="k">else</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl">    <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Not found&#39;</span><span class="p">)</span>              <span class="c1"># Printed only if loop exhausts x without a break</span>
+</span></span></code></pre></div><h2 id="for-loops">for Loops<a hidden class="anchor" aria-hidden="true" href="#for-loops">#</a></h2>
+<p>The <strong>for</strong> loop is a generic sequence iterator in Python that steps through the items in any ordered sequence—such as strings, lists, tuples, and other iterables.</p>
+<h3 id="general-format-1">General Format<a hidden class="anchor" aria-hidden="true" href="#general-format-1">#</a></h3>
+<p>The for loop begins with a header line that specifies an assignment target and the sequence to step through. This is followed by an indented block of statements.</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="k">for</span> <span class="o">&lt;</span><span class="n">target</span><span class="o">&gt;</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="nb">object</span><span class="o">&gt;</span><span class="p">:</span>      <span class="c1"># Assign each item from the sequence to &lt;target&gt;</span>
+</span></span><span class="line"><span class="cl">    <span class="o">&lt;</span><span class="n">statements</span><span class="o">&gt;</span>              <span class="c1"># Repeated loop body that uses &lt;target&gt;</span>
+</span></span><span class="line"><span class="cl"><span class="k">else</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl">    <span class="o">&lt;</span><span class="n">statements</span><span class="o">&gt;</span>              <span class="c1"># Runs if we didn&#39;t hit a &#39;break&#39;</span>
+</span></span></code></pre></div><h3 id="basic-usage">Basic Usage<a hidden class="anchor" aria-hidden="true" href="#basic-usage">#</a></h3>
+<p>For example, iterating over a list:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="p">[</span><span class="s2">&#34;spam&#34;</span><span class="p">,</span> <span class="s2">&#34;eggs&#34;</span><span class="p">,</span> <span class="s2">&#34;ham&#34;</span><span class="p">]:</span>
+</span></span><span class="line"><span class="cl">    <span class="nb">print</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">end</span><span class="o">=</span><span class="s1">&#39; &#39;</span><span class="p">)</span>
+</span></span></code></pre></div><p>This prints each item on the same line.</p>
+<h3 id="summing-and-multiplying-items">Summing and Multiplying Items<a hidden class="anchor" aria-hidden="true" href="#summing-and-multiplying-items">#</a></h3>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="nb">sum</span> <span class="o">=</span> <span class="mi">0</span>
+</span></span><span class="line"><span class="cl"><span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">]:</span>
+</span></span><span class="line"><span class="cl">    <span class="nb">sum</span> <span class="o">=</span> <span class="nb">sum</span> <span class="o">+</span> <span class="n">x</span>             <span class="c1"># Add each item to sum</span>
+</span></span><span class="line"><span class="cl"><span class="nb">print</span><span class="p">(</span><span class="nb">sum</span><span class="p">)</span>                    <span class="c1"># Output: 10</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="n">prod</span> <span class="o">=</span> <span class="mi">1</span>
+</span></span><span class="line"><span class="cl"><span class="k">for</span> <span class="n">item</span> <span class="ow">in</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">]:</span>
+</span></span><span class="line"><span class="cl">    <span class="n">prod</span> <span class="o">*=</span> <span class="n">item</span>              <span class="c1"># Multiply each item into prod</span>
+</span></span><span class="line"><span class="cl"><span class="nb">print</span><span class="p">(</span><span class="n">prod</span><span class="p">)</span>                   <span class="c1"># Output: 24</span>
+</span></span></code></pre></div><h3 id="iterating-over-different-data-types">Iterating Over Different Data Types<a hidden class="anchor" aria-hidden="true" href="#iterating-over-different-data-types">#</a></h3>
+<p>For loops work on strings and tuples as well:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="n">S</span> <span class="o">=</span> <span class="s2">&#34;lumberjack&#34;</span>
+</span></span><span class="line"><span class="cl"><span class="n">T</span> <span class="o">=</span> <span class="p">(</span><span class="s2">&#34;and&#34;</span><span class="p">,</span> <span class="s2">&#34;I&#39;m&#34;</span><span class="p">,</span> <span class="s2">&#34;okay&#34;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="n">S</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl">    <span class="nb">print</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">end</span><span class="o">=</span><span class="s1">&#39; &#39;</span><span class="p">)</span>         <span class="c1"># Iterate over a string</span>
+</span></span><span class="line"><span class="cl"><span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="n">T</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl">    <span class="nb">print</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">end</span><span class="o">=</span><span class="s1">&#39; &#39;</span><span class="p">)</span>         <span class="c1"># Iterate over a tuple</span>
+</span></span></code></pre></div><h3 id="tuple-assignment-in-for-loops">Tuple Assignment in for Loops<a hidden class="anchor" aria-hidden="true" href="#tuple-assignment-in-for-loops">#</a></h3>
+<p>When iterating through a sequence of tuples, you can unpack the tuple directly in the loop header:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="n">T</span> <span class="o">=</span> <span class="p">[(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">),</span> <span class="p">(</span><span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">),</span> <span class="p">(</span><span class="mi">5</span><span class="p">,</span> <span class="mi">6</span><span class="p">)]</span>
+</span></span><span class="line"><span class="cl"><span class="k">for</span> <span class="p">(</span><span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">)</span> <span class="ow">in</span> <span class="n">T</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl">    <span class="nb">print</span><span class="p">(</span><span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">)</span>               <span class="c1"># Tuple assignment at work</span>
+</span></span></code></pre></div><p>You can also iterate through dictionary items:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="n">D</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;a&#39;</span><span class="p">:</span> <span class="mi">1</span><span class="p">,</span> <span class="s1">&#39;b&#39;</span><span class="p">:</span> <span class="mi">2</span><span class="p">,</span> <span class="s1">&#39;c&#39;</span><span class="p">:</span> <span class="mi">3</span><span class="p">}</span>
+</span></span><span class="line"><span class="cl"><span class="k">for</span> <span class="n">key</span> <span class="ow">in</span> <span class="n">D</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl">    <span class="nb">print</span><span class="p">(</span><span class="n">key</span><span class="p">,</span> <span class="s1">&#39;=&gt;&#39;</span><span class="p">,</span> <span class="n">D</span><span class="p">[</span><span class="n">key</span><span class="p">])</span>   <span class="c1"># Using dict keys and indexing</span>
+</span></span><span class="line"><span class="cl"><span class="nb">print</span><span class="p">(</span><span class="nb">list</span><span class="p">(</span><span class="n">D</span><span class="o">.</span><span class="n">items</span><span class="p">()))</span>         <span class="c1"># Show list of (key, value) tuples</span>
+</span></span><span class="line"><span class="cl"><span class="k">for</span> <span class="p">(</span><span class="n">key</span><span class="p">,</span> <span class="n">value</span><span class="p">)</span> <span class="ow">in</span> <span class="n">D</span><span class="o">.</span><span class="n">items</span><span class="p">():</span>
+</span></span><span class="line"><span class="cl">    <span class="nb">print</span><span class="p">(</span><span class="n">key</span><span class="p">,</span> <span class="s1">&#39;=&gt;&#39;</span><span class="p">,</span> <span class="n">value</span><span class="p">)</span>     <span class="c1"># Iterate over both keys and values</span>
+</span></span></code></pre></div><p>Alternatively, manual unpacking is also possible:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="n">T</span> <span class="o">=</span> <span class="p">[(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">),</span> <span class="p">(</span><span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">),</span> <span class="p">(</span><span class="mi">5</span><span class="p">,</span> <span class="mi">6</span><span class="p">)]</span>
+</span></span><span class="line"><span class="cl"><span class="k">for</span> <span class="n">both</span> <span class="ow">in</span> <span class="n">T</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl">    <span class="n">a</span><span class="p">,</span> <span class="n">b</span> <span class="o">=</span> <span class="n">both</span>              <span class="c1"># Manual assignment equivalent to tuple unpacking</span>
+</span></span><span class="line"><span class="cl">    <span class="nb">print</span><span class="p">(</span><span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">)</span>
+</span></span></code></pre></div><p>Nested sequence structures can also be unpacked automatically:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="p">((</span><span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">),</span> <span class="n">c</span><span class="p">)</span> <span class="o">=</span> <span class="p">((</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">),</span> <span class="mi">3</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="nb">print</span><span class="p">(</span><span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">,</span> <span class="n">c</span><span class="p">)</span>               <span class="c1"># Output: 1 2 3</span>
+</span></span><span class="line"><span class="cl"><span class="k">for</span> <span class="p">((</span><span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">),</span> <span class="n">c</span><span class="p">)</span> <span class="ow">in</span> <span class="p">[((</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">),</span> <span class="mi">3</span><span class="p">),</span> <span class="p">((</span><span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">),</span> <span class="mi">6</span><span class="p">)]:</span>
+</span></span><span class="line"><span class="cl">    <span class="nb">print</span><span class="p">(</span><span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">,</span> <span class="n">c</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="k">for</span> <span class="p">((</span><span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">),</span> <span class="n">c</span><span class="p">)</span> <span class="ow">in</span> <span class="p">[([</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">],</span> <span class="mi">3</span><span class="p">),</span> <span class="p">[</span><span class="s1">&#39;XY&#39;</span><span class="p">,</span> <span class="mi">6</span><span class="p">]]:</span>
+</span></span><span class="line"><span class="cl">    <span class="nb">print</span><span class="p">(</span><span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">,</span> <span class="n">c</span><span class="p">)</span>
+</span></span></code></pre></div><h3 id="nested-for-loops-and-loop-else-clause">Nested for Loops and Loop else Clause<a hidden class="anchor" aria-hidden="true" href="#nested-for-loops-and-loop-else-clause">#</a></h3>
+<p>The following example searches for each key in a list of items and reports whether it was found:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="n">items</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&#34;aaa&#34;</span><span class="p">,</span> <span class="mi">111</span><span class="p">,</span> <span class="p">(</span><span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">),</span> <span class="mf">2.01</span><span class="p">]</span>
+</span></span><span class="line"><span class="cl"><span class="n">tests</span> <span class="o">=</span> <span class="p">[(</span><span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">),</span> <span class="mf">3.14</span><span class="p">]</span>
+</span></span><span class="line"><span class="cl"><span class="k">for</span> <span class="n">key</span> <span class="ow">in</span> <span class="n">tests</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl">    <span class="k">for</span> <span class="n">item</span> <span class="ow">in</span> <span class="n">items</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl">        <span class="k">if</span> <span class="n">item</span> <span class="o">==</span> <span class="n">key</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl">            <span class="nb">print</span><span class="p">(</span><span class="n">key</span><span class="p">,</span> <span class="s2">&#34;was found&#34;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">            <span class="k">break</span>
+</span></span><span class="line"><span class="cl">    <span class="k">else</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl">        <span class="nb">print</span><span class="p">(</span><span class="n">key</span><span class="p">,</span> <span class="s2">&#34;not found!&#34;</span><span class="p">)</span>   <span class="c1"># Loop else: executed if inner loop did not hit break</span>
+</span></span></code></pre></div><p>This example can be simplified by using the <code>in</code> operator:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="k">for</span> <span class="n">key</span> <span class="ow">in</span> <span class="n">tests</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl">    <span class="k">if</span> <span class="n">key</span> <span class="ow">in</span> <span class="n">items</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl">        <span class="nb">print</span><span class="p">(</span><span class="n">key</span><span class="p">,</span> <span class="s2">&#34;was found&#34;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">    <span class="k">else</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl">        <span class="nb">print</span><span class="p">(</span><span class="n">key</span><span class="p">,</span> <span class="s2">&#34;not found!&#34;</span><span class="p">)</span>
+</span></span></code></pre></div><h3 id="collecting-common-items-from-sequences">Collecting Common Items from Sequences<a hidden class="anchor" aria-hidden="true" href="#collecting-common-items-from-sequences">#</a></h3>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="n">seq1</span> <span class="o">=</span> <span class="s2">&#34;spam&#34;</span>
+</span></span><span class="line"><span class="cl"><span class="n">seq2</span> <span class="o">=</span> <span class="s2">&#34;scam&#34;</span>
+</span></span><span class="line"><span class="cl"><span class="n">res</span> <span class="o">=</span> <span class="p">[]</span>                        <span class="c1"># Start with an empty list</span>
+</span></span><span class="line"><span class="cl"><span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="n">seq1</span><span class="p">:</span>                  <span class="c1"># Scan first sequence</span>
+</span></span><span class="line"><span class="cl">    <span class="k">if</span> <span class="n">x</span> <span class="ow">in</span> <span class="n">seq2</span><span class="p">:</span>               <span class="c1"># If common item is found</span>
+</span></span><span class="line"><span class="cl">        <span class="n">res</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>           <span class="c1"># Add to result list</span>
+</span></span><span class="line"><span class="cl"><span class="nb">print</span><span class="p">(</span><span class="n">res</span><span class="p">)</span>
+</span></span></code></pre></div><h2 id="loop-coding-techniques">Loop Coding Techniques<a hidden class="anchor" aria-hidden="true" href="#loop-coding-techniques">#</a></h2>
+<p>The <strong>for</strong> loop subsumes most counter-style loops. It is generally simpler to code and quicker to run than a while loop. However, there are cases where you need specialized iterations (e.g., visiting every second or third item, or traversing multiple sequences in parallel). Python provides two built-in functions to help with these tasks: <strong>range</strong> and <strong>zip</strong>.</p>
+<h3 id="counter-loops-while-and-range">Counter Loops: while and range<a hidden class="anchor" aria-hidden="true" href="#counter-loops-while-and-range">#</a></h3>
+<p>The <strong>range</strong> function generates a series of integers and is commonly used to generate indices in a for loop. In Python 3, <code>range</code> is an iterator, so you may need to convert it to a list to display its results:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="nb">print</span><span class="p">(</span><span class="nb">list</span><span class="p">(</span><span class="nb">range</span><span class="p">(</span><span class="mi">5</span><span class="p">)),</span> <span class="nb">list</span><span class="p">(</span><span class="nb">range</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span> <span class="mi">5</span><span class="p">)),</span> <span class="nb">list</span><span class="p">(</span><span class="nb">range</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">10</span><span class="p">,</span> <span class="mi">2</span><span class="p">)))</span>
+</span></span><span class="line"><span class="cl"><span class="c1"># Output: ([0, 1, 2, 3, 4], [2, 3, 4], [0, 2, 4, 6, 8])</span>
+</span></span></code></pre></div><p>With one argument, it generates integers from zero up to (but not including) the argument’s value. With two arguments, the first is the lower bound. An optional third argument specifies the step:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="nb">print</span><span class="p">(</span><span class="nb">list</span><span class="p">(</span><span class="nb">range</span><span class="p">(</span><span class="o">-</span><span class="mi">5</span><span class="p">,</span> <span class="mi">5</span><span class="p">)))</span>       <span class="c1"># Output: [-5, -4, -3, -2, -1, 0, 1, 2, 3, 4]</span>
+</span></span><span class="line"><span class="cl"><span class="nb">print</span><span class="p">(</span><span class="nb">list</span><span class="p">(</span><span class="nb">range</span><span class="p">(</span><span class="mi">5</span><span class="p">,</span> <span class="o">-</span><span class="mi">5</span><span class="p">,</span> <span class="o">-</span><span class="mi">1</span><span class="p">)))</span>    <span class="c1"># Output: [5, 4, 3, 2, 1, 0, -1, -2, -3, -4]</span>
+</span></span></code></pre></div><p>Ranges are handy within for loops. For example, to print three lines:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">3</span><span class="p">):</span>
+</span></span><span class="line"><span class="cl">    <span class="nb">print</span><span class="p">(</span><span class="n">i</span><span class="p">,</span> <span class="s1">&#39;Pythons&#39;</span><span class="p">)</span>
+</span></span></code></pre></div><p>Range is also used for indirect sequence iteration. For instance, to iterate over a string using indices:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="n">X</span> <span class="o">=</span> <span class="s1">&#39;spam&#39;</span>
+</span></span><span class="line"><span class="cl"><span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">X</span><span class="p">)):</span>
+</span></span><span class="line"><span class="cl">    <span class="nb">print</span><span class="p">(</span><span class="n">X</span><span class="p">[</span><span class="n">i</span><span class="p">],</span> <span class="n">end</span><span class="o">=</span><span class="s1">&#39; &#39;</span><span class="p">)</span>
+</span></span></code></pre></div><p>However, it is usually best to iterate directly over the sequence:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="k">for</span> <span class="n">item</span> <span class="ow">in</span> <span class="n">X</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl">    <span class="nb">print</span><span class="p">(</span><span class="n">item</span><span class="p">)</span>
+</span></span></code></pre></div><h4 id="skipping-items-with-range-and-slices">Skipping Items with range and Slices<a hidden class="anchor" aria-hidden="true" href="#skipping-items-with-range-and-slices">#</a></h4>
+<p>To visit every second item in a string:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="n">S</span> <span class="o">=</span> <span class="s1">&#39;abcdefghijk&#39;</span>
+</span></span><span class="line"><span class="cl"><span class="nb">print</span><span class="p">(</span><span class="nb">list</span><span class="p">(</span><span class="nb">range</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="nb">len</span><span class="p">(</span><span class="n">S</span><span class="p">),</span> <span class="mi">2</span><span class="p">)))</span>  <span class="c1"># Output: [0, 2, 4, 6, 8, 10]</span>
+</span></span><span class="line"><span class="cl"><span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="nb">len</span><span class="p">(</span><span class="n">S</span><span class="p">),</span> <span class="mi">2</span><span class="p">):</span>
+</span></span><span class="line"><span class="cl">    <span class="nb">print</span><span class="p">(</span><span class="n">S</span><span class="p">[</span><span class="n">i</span><span class="p">],</span> <span class="n">end</span><span class="o">=</span><span class="s1">&#39; &#39;</span><span class="p">)</span>
+</span></span></code></pre></div><p>A simpler method is to use slicing:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="k">for</span> <span class="n">c</span> <span class="ow">in</span> <span class="n">S</span><span class="p">[::</span><span class="mi">2</span><span class="p">]:</span>
+</span></span><span class="line"><span class="cl">    <span class="nb">print</span><span class="p">(</span><span class="n">c</span><span class="p">,</span> <span class="n">end</span><span class="o">=</span><span class="s1">&#39; &#39;</span><span class="p">)</span>
+</span></span></code></pre></div><h4 id="modifying-a-list-during-iteration">Modifying a List During Iteration<a hidden class="anchor" aria-hidden="true" href="#modifying-a-list-during-iteration">#</a></h4>
+<p>A simple for loop that modifies each item does not change the original list:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="n">L</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">]</span>
+</span></span><span class="line"><span class="cl"><span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="n">L</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl">    <span class="n">x</span> <span class="o">+=</span> <span class="mi">1</span>
+</span></span><span class="line"><span class="cl"><span class="nb">print</span><span class="p">(</span><span class="n">L</span><span class="p">)</span>  <span class="c1"># Output: [1, 2, 3, 4, 5]</span>
+</span></span></code></pre></div><p>To change the list in-place, use indexing with range:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="n">L</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">]</span>
+</span></span><span class="line"><span class="cl"><span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">L</span><span class="p">)):</span>
+</span></span><span class="line"><span class="cl">    <span class="n">L</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">+=</span> <span class="mi">1</span>   <span class="c1"># Or L[i] = L[i] + 1</span>
+</span></span><span class="line"><span class="cl"><span class="nb">print</span><span class="p">(</span><span class="n">L</span><span class="p">)</span>        <span class="c1"># Output: [2, 3, 4, 5, 6]</span>
+</span></span></code></pre></div><p>A while loop alternative is:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="n">i</span> <span class="o">=</span> <span class="mi">0</span>
+</span></span><span class="line"><span class="cl"><span class="k">while</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="nb">len</span><span class="p">(</span><span class="n">L</span><span class="p">):</span>
+</span></span><span class="line"><span class="cl">    <span class="n">L</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">+=</span> <span class="mi">1</span>
+</span></span><span class="line"><span class="cl">    <span class="n">i</span> <span class="o">+=</span> <span class="mi">1</span>
+</span></span><span class="line"><span class="cl"><span class="nb">print</span><span class="p">(</span><span class="n">L</span><span class="p">)</span>        <span class="c1"># Output: [3, 4, 5, 6, 7]</span>
+</span></span></code></pre></div><p>A list comprehension can also be used to create a modified list without changing the original in-place:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="n">new_L</span> <span class="o">=</span> <span class="p">[</span><span class="n">x</span> <span class="o">+</span> <span class="mi">1</span> <span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="n">L</span><span class="p">]</span>
+</span></span></code></pre></div><h3 id="parallel-traversals-zip-and-map">Parallel Traversals: zip and map<a hidden class="anchor" aria-hidden="true" href="#parallel-traversals-zip-and-map">#</a></h3>
+<p>The <strong>zip</strong> function allows for parallel iteration over multiple sequences. For example, given two lists:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="n">L1</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">]</span>
+</span></span><span class="line"><span class="cl"><span class="n">L2</span> <span class="o">=</span> <span class="p">[</span><span class="mi">5</span><span class="p">,</span> <span class="mi">6</span><span class="p">,</span> <span class="mi">7</span><span class="p">,</span> <span class="mi">8</span><span class="p">]</span>
+</span></span><span class="line"><span class="cl"><span class="nb">print</span><span class="p">(</span><span class="nb">list</span><span class="p">(</span><span class="nb">zip</span><span class="p">(</span><span class="n">L1</span><span class="p">,</span> <span class="n">L2</span><span class="p">)))</span>  <span class="c1"># Output: [(1, 5), (2, 6), (3, 7), (4, 8)]</span>
+</span></span></code></pre></div><p>Using zip with a for loop:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="k">for</span> <span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">)</span> <span class="ow">in</span> <span class="nb">zip</span><span class="p">(</span><span class="n">L1</span><span class="p">,</span> <span class="n">L2</span><span class="p">):</span>
+</span></span><span class="line"><span class="cl">    <span class="nb">print</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">,</span> <span class="s1">&#39;--&#39;</span><span class="p">,</span> <span class="n">x</span> <span class="o">+</span> <span class="n">y</span><span class="p">)</span>
+</span></span></code></pre></div><p>Zip can also accept more than two sequences. With three sequences:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="n">T1</span><span class="p">,</span> <span class="n">T2</span><span class="p">,</span> <span class="n">T3</span> <span class="o">=</span> <span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">),</span> <span class="p">(</span><span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">6</span><span class="p">),</span> <span class="p">(</span><span class="mi">7</span><span class="p">,</span> <span class="mi">8</span><span class="p">,</span> <span class="mi">9</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="nb">print</span><span class="p">(</span><span class="nb">list</span><span class="p">(</span><span class="nb">zip</span><span class="p">(</span><span class="n">T1</span><span class="p">,</span> <span class="n">T2</span><span class="p">,</span> <span class="n">T3</span><span class="p">)))</span>  <span class="c1"># Output: [(1, 4, 7), (2, 5, 8), (3, 6, 9)]</span>
+</span></span></code></pre></div><p>If the sequences differ in length, zip truncates the result to the length of the shortest sequence:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="n">S1</span> <span class="o">=</span> <span class="s1">&#39;abc&#39;</span>
+</span></span><span class="line"><span class="cl"><span class="n">S2</span> <span class="o">=</span> <span class="s1">&#39;xyz123&#39;</span>
+</span></span><span class="line"><span class="cl"><span class="nb">print</span><span class="p">(</span><span class="nb">list</span><span class="p">(</span><span class="nb">zip</span><span class="p">(</span><span class="n">S1</span><span class="p">,</span> <span class="n">S2</span><span class="p">)))</span>  <span class="c1"># Output: [(&#39;a&#39;, &#39;x&#39;), (&#39;b&#39;, &#39;y&#39;), (&#39;c&#39;, &#39;z&#39;)]</span>
+</span></span></code></pre></div><p>In Python 2.x, the built-in <strong>map</strong> function could be used to pair items from sequences and would pad shorter sequences with <code>None</code>. (This behavior is not supported in Python 3.x.)</p>
+<p>For example (Python 2.x only):</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="nb">print</span><span class="p">(</span><span class="nb">map</span><span class="p">(</span><span class="kc">None</span><span class="p">,</span> <span class="n">S1</span><span class="p">,</span> <span class="n">S2</span><span class="p">))</span>
+</span></span><span class="line"><span class="cl"><span class="c1"># Output: [(&#39;a&#39;, &#39;x&#39;), (&#39;b&#39;, &#39;y&#39;), (&#39;c&#39;, &#39;z&#39;), (None, &#39;1&#39;), (None, &#39;2&#39;), (None, &#39;3&#39;)]</span>
+</span></span></code></pre></div><p>A common usage of <strong>map</strong> in Python 3.x is to apply a function to every item in a sequence:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="nb">print</span><span class="p">(</span><span class="nb">list</span><span class="p">(</span><span class="nb">map</span><span class="p">(</span><span class="nb">ord</span><span class="p">,</span> <span class="s1">&#39;spam&#39;</span><span class="p">)))</span>  <span class="c1"># Output: [115, 112, 97, 109]</span>
+</span></span></code></pre></div><h3 id="dictionary-construction-with-zip">Dictionary Construction with zip<a hidden class="anchor" aria-hidden="true" href="#dictionary-construction-with-zip">#</a></h3>
+<p>When keys and values are obtained as lists at runtime, zip can be used to create a dictionary:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="n">keys</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;spam&#39;</span><span class="p">,</span> <span class="s1">&#39;eggs&#39;</span><span class="p">,</span> <span class="s1">&#39;toast&#39;</span><span class="p">]</span>
+</span></span><span class="line"><span class="cl"><span class="n">vals</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">5</span><span class="p">]</span>
+</span></span><span class="line"><span class="cl"><span class="nb">print</span><span class="p">(</span><span class="nb">list</span><span class="p">(</span><span class="nb">zip</span><span class="p">(</span><span class="n">keys</span><span class="p">,</span> <span class="n">vals</span><span class="p">)))</span>  <span class="c1"># Output: [(&#39;spam&#39;, 1), (&#39;eggs&#39;, 3), (&#39;toast&#39;, 5)]</span>
+</span></span><span class="line"><span class="cl"><span class="n">D2</span> <span class="o">=</span> <span class="p">{}</span>
+</span></span><span class="line"><span class="cl"><span class="k">for</span> <span class="p">(</span><span class="n">k</span><span class="p">,</span> <span class="n">v</span><span class="p">)</span> <span class="ow">in</span> <span class="nb">zip</span><span class="p">(</span><span class="n">keys</span><span class="p">,</span> <span class="n">vals</span><span class="p">):</span>
+</span></span><span class="line"><span class="cl">    <span class="n">D2</span><span class="p">[</span><span class="n">k</span><span class="p">]</span> <span class="o">=</span> <span class="n">v</span>
+</span></span><span class="line"><span class="cl"><span class="nb">print</span><span class="p">(</span><span class="n">D2</span><span class="p">)</span>                     <span class="c1"># Output: {&#39;spam&#39;: 1, &#39;eggs&#39;: 3, &#39;toast&#39;: 5}</span>
+</span></span></code></pre></div><h3 id="generating-both-offsets-and-items-enumerate">Generating Both Offsets and Items: enumerate<a hidden class="anchor" aria-hidden="true" href="#generating-both-offsets-and-items-enumerate">#</a></h3>
+<p>The built-in <strong>enumerate</strong> function provides both the index (offset) and the item during iteration:</p>
+<p>Traditional approach:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="n">S</span> <span class="o">=</span> <span class="s1">&#39;spam&#39;</span>
+</span></span><span class="line"><span class="cl"><span class="n">offset</span> <span class="o">=</span> <span class="mi">0</span>
+</span></span><span class="line"><span class="cl"><span class="k">for</span> <span class="n">item</span> <span class="ow">in</span> <span class="n">S</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl">    <span class="nb">print</span><span class="p">(</span><span class="n">item</span><span class="p">,</span> <span class="s1">&#39;appears at offset&#39;</span><span class="p">,</span> <span class="n">offset</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">    <span class="n">offset</span> <span class="o">+=</span> <span class="mi">1</span>
+</span></span></code></pre></div><p>Using enumerate:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="n">S</span> <span class="o">=</span> <span class="s1">&#39;spam&#39;</span>
+</span></span><span class="line"><span class="cl"><span class="k">for</span> <span class="p">(</span><span class="n">offset</span><span class="p">,</span> <span class="n">item</span><span class="p">)</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="n">S</span><span class="p">):</span>
+</span></span><span class="line"><span class="cl">    <span class="nb">print</span><span class="p">(</span><span class="n">item</span><span class="p">,</span> <span class="s1">&#39;appears at offset&#39;</span><span class="p">,</span> <span class="n">offset</span><span class="p">)</span>
+</span></span></code></pre></div><p>The enumerate function returns an iterator that yields (index, value) tuples. You can also use the <code>next</code> function to retrieve these tuples manually:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="n">E</span> <span class="o">=</span> <span class="nb">enumerate</span><span class="p">(</span><span class="n">S</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="nb">print</span><span class="p">(</span><span class="n">E</span><span class="p">)</span>             <span class="c1"># Shows the enumerate object</span>
+</span></span><span class="line"><span class="cl"><span class="nb">print</span><span class="p">(</span><span class="nb">next</span><span class="p">(</span><span class="n">E</span><span class="p">))</span>       <span class="c1"># Output: (0, &#39;s&#39;)</span>
+</span></span><span class="line"><span class="cl"><span class="nb">print</span><span class="p">(</span><span class="nb">next</span><span class="p">(</span><span class="n">E</span><span class="p">))</span>       <span class="c1"># Output: (1, &#39;p&#39;)</span>
+</span></span><span class="line"><span class="cl"><span class="nb">print</span><span class="p">(</span><span class="nb">next</span><span class="p">(</span><span class="n">E</span><span class="p">))</span>       <span class="c1"># Output: (2, &#39;a&#39;)</span>
+</span></span></code></pre></div>
+
+  </div>
+
+  <footer class="post-footer">
+    <ul class="post-tags">
+    </ul>
+<nav class="paginav">
+  <a class="prev" href="/chapters/chapter-10/">
+    <span class="title">« Prev</span>
+    <br>
+    <span>Chapter 10: if Tests and Syntax Rules</span>
+  </a>
+  <a class="next" href="/chapters/chapter-12/">
+    <span class="title">Next »</span>
+    <br>
+    <span>Chapter 12: Functions Basics</span>
+  </a>
+</nav>
+
+  </footer>
+</article>
+    </main>
+    
+<footer class="footer">
+        <span>&copy; 2025 <a href="/">Elite</a></span> · 
+
+    <span>
+        Powered by
+        <a href="https://gohugo.io/" rel="noopener noreferrer" target="_blank">Hugo</a> &
+        <a href="https://github.com/adityatelange/hugo-PaperMod/" rel="noopener" target="_blank">PaperMod</a>
+    </span>
+</footer>
+<a href="#top" aria-label="go to top" title="Go to Top (Alt + G)" class="top-link" id="top-link" accesskey="g">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 12 6" fill="currentColor">
+        <path d="M12 6H0l6-6z" />
+    </svg>
+</a>
+
+<script>
+    let menu = document.getElementById('menu')
+    if (menu) {
+        menu.scrollLeft = localStorage.getItem("menu-scroll-position");
+        menu.onscroll = function () {
+            localStorage.setItem("menu-scroll-position", menu.scrollLeft);
+        }
+    }
+
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener("click", function (e) {
+            e.preventDefault();
+            var id = this.getAttribute("href").substr(1);
+            if (!window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView({
+                    behavior: "smooth"
+                });
+            } else {
+                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView();
+            }
+            if (id === "top") {
+                history.replaceState(null, null, " ");
+            } else {
+                history.pushState(null, null, `#${id}`);
+            }
+        });
+    });
+
+</script>
+<script>
+    var mybutton = document.getElementById("top-link");
+    window.onscroll = function () {
+        if (document.body.scrollTop > 800 || document.documentElement.scrollTop > 800) {
+            mybutton.style.visibility = "visible";
+            mybutton.style.opacity = "1";
+        } else {
+            mybutton.style.visibility = "hidden";
+            mybutton.style.opacity = "0";
+        }
+    };
+
+</script>
+<script>
+    document.getElementById("theme-toggle").addEventListener("click", () => {
+        if (document.body.className.includes("dark")) {
+            document.body.classList.remove('dark');
+            localStorage.setItem("pref-theme", 'light');
+        } else {
+            document.body.classList.add('dark');
+            localStorage.setItem("pref-theme", 'dark');
+        }
+    })
+
+</script>
+<script>
+    document.querySelectorAll('pre > code').forEach((codeblock) => {
+        const container = codeblock.parentNode.parentNode;
+
+        const copybutton = document.createElement('button');
+        copybutton.classList.add('copy-code');
+        copybutton.innerHTML = 'copy';
+
+        function copyingDone() {
+            copybutton.innerHTML = 'copied!';
+            setTimeout(() => {
+                copybutton.innerHTML = 'copy';
+            }, 2000);
+        }
+
+        copybutton.addEventListener('click', (cb) => {
+            if ('clipboard' in navigator) {
+                navigator.clipboard.writeText(codeblock.textContent);
+                copyingDone();
+                return;
+            }
+
+            const range = document.createRange();
+            range.selectNodeContents(codeblock);
+            const selection = window.getSelection();
+            selection.removeAllRanges();
+            selection.addRange(range);
+            try {
+                document.execCommand('copy');
+                copyingDone();
+            } catch (e) { };
+            selection.removeRange(range);
+        });
+
+        if (container.classList.contains("highlight")) {
+            container.appendChild(copybutton);
+        } else if (container.parentNode.firstChild == container) {
+            
+        } else if (codeblock.parentNode.parentNode.parentNode.parentNode.parentNode.nodeName == "TABLE") {
+            
+            codeblock.parentNode.parentNode.parentNode.parentNode.parentNode.appendChild(copybutton);
+        } else {
+            
+            codeblock.parentNode.appendChild(copybutton);
+        }
+    });
+</script>
+</body>
+
+</html>

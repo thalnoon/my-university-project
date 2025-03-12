@@ -1,0 +1,668 @@
+<!DOCTYPE html>
+<html lang="en" dir="auto">
+
+<head><meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta name="robots" content="index, follow">
+<title>Chapter 5: Numeric Types | Elite</title>
+<meta name="keywords" content="">
+<meta name="description" content="Let’s get started by exploring our first data type category: Python’s numeric types.
+Numeric Type Basics
+A complete inventory of Python’s numeric toolbox includes:
+
+Integers and floating-point numbers
+Complex numbers
+Fixed-precision decimal numbers
+Rational fraction numbers
+Sets
+Booleans
+Unlimited integer precision
+A variety of numeric built-ins and modules
+
+We will present a brief overview of how we write and process numbers in our scripts.
+Numeric Literals
+Among its basic types, Python provides integers (positive and negative whole numbers) and floating-point numbers (numbers with a fractional part, sometimes called &ldquo;floats&rdquo; for economy). Table 1 (not shown) illustrates what Python’s numeric types look like when written as literals.">
+<meta name="author" content="">
+<link rel="canonical" href="/chapters/chapter-5/">
+<link crossorigin="anonymous" href="/assets/css/stylesheet.45e028aa8ce0961349adf411b013ee39406be2c0bc80d4ea3fc04555f7f4611a.css" integrity="sha256-ReAoqozglhNJrfQRsBPuOUBr4sC8gNTqP8BFVff0YRo=" rel="preload stylesheet" as="style">
+<link rel="icon" href="/favicon.ico">
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<link rel="mask-icon" href="/safari-pinned-tab.svg">
+<meta name="theme-color" content="#2e2e33">
+<meta name="msapplication-TileColor" content="#2e2e33">
+<link rel="alternate" hreflang="en" href="/chapters/chapter-5/">
+<noscript>
+    <style>
+        #theme-toggle,
+        .top-link {
+            display: none;
+        }
+
+    </style>
+    <style>
+        @media (prefers-color-scheme: dark) {
+            :root {
+                --theme: rgb(29, 30, 32);
+                --entry: rgb(46, 46, 51);
+                --primary: rgb(218, 218, 219);
+                --secondary: rgb(155, 156, 157);
+                --tertiary: rgb(65, 66, 68);
+                --content: rgb(196, 196, 197);
+                --code-block-bg: rgb(46, 46, 51);
+                --code-bg: rgb(55, 56, 62);
+                --border: rgb(51, 51, 51);
+            }
+
+            .list {
+                background: var(--theme);
+            }
+
+            .list:not(.dark)::-webkit-scrollbar-track {
+                background: 0 0;
+            }
+
+            .list:not(.dark)::-webkit-scrollbar-thumb {
+                border-color: var(--theme);
+            }
+        }
+
+    </style>
+</noscript><meta property="og:url" content="/chapters/chapter-5/">
+  <meta property="og:site_name" content="Elite">
+  <meta property="og:title" content="Chapter 5: Numeric Types">
+  <meta property="og:description" content="Let’s get started by exploring our first data type category: Python’s numeric types.
+Numeric Type Basics A complete inventory of Python’s numeric toolbox includes:
+Integers and floating-point numbers Complex numbers Fixed-precision decimal numbers Rational fraction numbers Sets Booleans Unlimited integer precision A variety of numeric built-ins and modules We will present a brief overview of how we write and process numbers in our scripts.
+Numeric Literals Among its basic types, Python provides integers (positive and negative whole numbers) and floating-point numbers (numbers with a fractional part, sometimes called “floats” for economy). Table 1 (not shown) illustrates what Python’s numeric types look like when written as literals.">
+  <meta property="og:locale" content="en">
+  <meta property="og:type" content="article">
+    <meta property="article:section" content="chapters">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Chapter 5: Numeric Types">
+<meta name="twitter:description" content="Let’s get started by exploring our first data type category: Python’s numeric types.
+Numeric Type Basics
+A complete inventory of Python’s numeric toolbox includes:
+
+Integers and floating-point numbers
+Complex numbers
+Fixed-precision decimal numbers
+Rational fraction numbers
+Sets
+Booleans
+Unlimited integer precision
+A variety of numeric built-ins and modules
+
+We will present a brief overview of how we write and process numbers in our scripts.
+Numeric Literals
+Among its basic types, Python provides integers (positive and negative whole numbers) and floating-point numbers (numbers with a fractional part, sometimes called &ldquo;floats&rdquo; for economy). Table 1 (not shown) illustrates what Python’s numeric types look like when written as literals.">
+
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position":  1 ,
+      "name": "Chapters",
+      "item": "/chapters/"
+    }
+    {
+      "@type": "ListItem",
+      "position":  1 ,
+      "name": "Chapter 5: Numeric Types",
+      "item": "/chapters/chapter-5/"
+    }
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "headline": "Chapter 5: Numeric Types",
+  "name": "Chapter 5: Numeric Types",
+  "description": "Let’s get started by exploring our first data type category: Python’s numeric types.\nNumeric Type Basics A complete inventory of Python’s numeric toolbox includes:\nIntegers and floating-point numbers Complex numbers Fixed-precision decimal numbers Rational fraction numbers Sets Booleans Unlimited integer precision A variety of numeric built-ins and modules We will present a brief overview of how we write and process numbers in our scripts.\nNumeric Literals Among its basic types, Python provides integers (positive and negative whole numbers) and floating-point numbers (numbers with a fractional part, sometimes called \u0026ldquo;floats\u0026rdquo; for economy). Table 1 (not shown) illustrates what Python’s numeric types look like when written as literals.\n",
+  "keywords": [
+    
+  ],
+  "articleBody": "Let’s get started by exploring our first data type category: Python’s numeric types.\nNumeric Type Basics A complete inventory of Python’s numeric toolbox includes:\nIntegers and floating-point numbers Complex numbers Fixed-precision decimal numbers Rational fraction numbers Sets Booleans Unlimited integer precision A variety of numeric built-ins and modules We will present a brief overview of how we write and process numbers in our scripts.\nNumeric Literals Among its basic types, Python provides integers (positive and negative whole numbers) and floating-point numbers (numbers with a fractional part, sometimes called “floats” for economy). Table 1 (not shown) illustrates what Python’s numeric types look like when written as literals.\nBuilt-in Numeric Tools Besides the built-in number literals, Python provides a set of tools for processing numeric objects:\nExpression operators: +, -, *, /, \u003e\u003e, **, \u0026, etc. Built-in mathematical functions: pow, abs, round, int, hex, bin, etc. Utility modules: random, math, etc. Python Expression Operators Table 2 (not shown) lists all the operator expressions available in Python. Many are self-explanatory; for instance, the usual mathematical operators (+, -, *, /, etc.) are supported.\nExamples Below are several example expressions:\nA * B + C * D (X + Y) * Z X + (Y * Z) 40 + 3.14 Interactive examples:\n\u003e\u003e\u003e int(3.1415) 6 \u003e\u003e\u003e float(3) 3.0 \u003e\u003e\u003e a = 3 \u003e\u003e\u003e b = 4 \u003e\u003e\u003e a + 1, a - 1 (4, 2) \u003e\u003e\u003e b * 3, b / 2 # (Results depend on the expression) \u003e\u003e\u003e a % 2, b ** 2 # (Results depend on the expression) \u003e\u003e\u003e 2 + 4.0, 2.0 ** b # (Results depend on the expression) \u003e\u003e\u003e b / (2.0 + a) 0.80000000000000004 \u003e\u003e\u003e print(b / (2.0 + a)) 0.8 \u003e\u003e\u003e 1 / 2.0 0.5 \u003e\u003e\u003e num = 1 / 3.0 \u003e\u003e\u003e num 0.33333333333333331 \u003e\u003e\u003e print(num) 0.333333333333 \u003e\u003e\u003e '%e' % num '3.333333e-01' \u003e\u003e\u003e '%4.2f' % num '0.33' \u003e\u003e\u003e '{0:4.2f}'.format(num) '0.33' The comments above explain:\nConverting a float to an integer and vice versa. Basic arithmetic operations such as addition, subtraction, multiplication, division, modulus, and exponentiation. Mixed-type conversions and string formatting for floating-point numbers. Comparisons: Normal and Chained Numbers can also be compared. Normal comparisons compare the relative magnitudes of their operands and return a Boolean result:\n\u003e\u003e\u003e 1 \u003c 2 True \u003e\u003e\u003e 2.0 \u003e= 1 True \u003e\u003e\u003e 2.0 == 2.0 True \u003e\u003e\u003e 2.0 != 2.0 False Python also supports chained comparisons, which allow range tests:\n\u003e\u003e\u003e Y = 4 \u003e\u003e\u003e Z = 6 \u003e\u003e\u003e X \u003c Y \u003c Z # Equivalent to: X \u003c Y and Y \u003c Z True \u003e\u003e\u003e X \u003c Y and Y \u003c Z True \u003e\u003e\u003e X \u003c Y \u003e Z # Chained comparisons with a false result False \u003e\u003e\u003e 1 \u003c 2 \u003c 3.0 \u003c 4 True \u003e\u003e\u003e 1 \u003e 2 \u003e 3.0 \u003e 4 False \u003e\u003e\u003e 1 == 2 \u003c 3 False Division and Floor Division The division operators behave differently depending on the operands:\nC:\\misc\u003e C:\\Python30\\python \u003e\u003e\u003e 10 / 4 # True division (Python 3.0) 2.5 \u003e\u003e\u003e 10 // 4 # Floor division: truncates the remainder 2 \u003e\u003e\u003e 10 / 4.0 2.5 \u003e\u003e\u003e 10 // 4.0 # Floor division with float result 2.0 C:\\misc\u003e C:\\Python26\\python \u003e\u003e\u003e 10 / 4 2 \u003e\u003e\u003e 10 // 4 2 \u003e\u003e\u003e 10 / 4.0 2.5 \u003e\u003e\u003e 10 // 4.0 2.0 Complex Numbers Complex numbers are represented as two floating-point numbers (the real and imaginary parts). The imaginary part is denoted by a j or J suffix.\n\u003e\u003e\u003e 1j * 1J (-1+0j) \u003e\u003e\u003e 2 + 1j * 3 (2+3j) \u003e\u003e\u003e (2 + 1j) * 3 (6+3j) Hexadecimal, Octal, and Binary Notation Python integers can be written in hexadecimal, octal, and binary notations:\n\u003e\u003e\u003e 0o1, 0o20, 0o377 (1, 16, 255) \u003e\u003e\u003e 0x01, 0x10, 0xFF (1, 16, 255) \u003e\u003e\u003e 0b1, 0b10000, 0b11111111 (1, 16, 255) Conversion functions:\n\u003e\u003e\u003e oct(64), hex(64), bin(64) ('0100', '0x40', '0b1000000') \u003e\u003e\u003e int('64'), int('100', 8), int('40', 16), int('1000000', 2) (64, 64, 64, 64) \u003e\u003e\u003e int('0x40', 16), int('0b1000000', 2) (64, 64) Using eval to process literals:\n\u003e\u003e\u003e eval('64'), eval('0o100'), eval('0x40'), eval('0b1000000') (64, 64, 64, 64) String formatting for other bases:\n\u003e\u003e\u003e '{0:o}, {1:x}, {2:b}'.format(64, 64, 64) '100, 40, 1000000' \u003e\u003e\u003e '%o, %x, %X' % (64, 255, 255) '100, ff, FF' Bitwise Operations Python supports bitwise operations on integers. For example:\n\u003e\u003e\u003e x = 1 # Binary: 0001 \u003e\u003e\u003e x \u003c\u003c 2 # Shift left 2 bits: 0100 4 \u003e\u003e\u003e x | 2 # Bitwise OR: 0001 | 0010 = 0011 3 \u003e\u003e\u003e x \u0026 1 # Bitwise AND: 0001 \u0026 0001 = 0001 1 Additional bitwise examples:\n\u003e\u003e\u003e X = 0b0001 \u003e\u003e\u003e X \u003c\u003c 2 4 \u003e\u003e\u003e bin(X \u003c\u003c 2) '0b100' \u003e\u003e\u003e bin(X | 0b010) '0b11' \u003e\u003e\u003e bin(X \u0026 0b1) '0b1' Hexadecimal and XOR examples:\n\u003e\u003e\u003e X = 0xFF \u003e\u003e\u003e bin(X) '0b11111111' \u003e\u003e\u003e X ^ 0b10101010 85 \u003e\u003e\u003e bin(X ^ 0b10101010) '0b1010101' \u003e\u003e\u003e int('1010101', 2) 85 \u003e\u003e\u003e hex(85) '0x55' Other Built-in Numeric Tools Python provides many built-in functions and standard library modules for numeric processing:\n\u003e\u003e\u003e import math \u003e\u003e\u003e math.pi, math.e (3.1415926535897931, 2.7182818284590451) \u003e\u003e\u003e math.sin(2 * math.pi / 180) 0.034899496702500969 \u003e\u003e\u003e math.sqrt(144), math.sqrt(2) (12.0, 1.4142135623730951) \u003e\u003e\u003e pow(2, 4), 2 ** 4 (16, 16) \u003e\u003e\u003e abs(-42.0), sum((1, 2, 3, 4)) (42.0, 10) \u003e\u003e\u003e min(3, 1, 2, 4), max(3, 1, 2, 4) (1, 4) Rounding and Formatting Truncation and rounding examples:\n\u003e\u003e\u003e math.floor(2.567), math.floor(-2.567) (2, -3) \u003e\u003e\u003e math.trunc(2.567), math.trunc(-2.567) (2, -2) \u003e\u003e\u003e int(2.567), int(-2.567) (2, -2) \u003e\u003e\u003e round(2.567), round(2.467), round(2.567, 2) (3, 2, 2.57) \u003e\u003e\u003e '%.1f' % 2.567, '{0:.2f}'.format(2.567) ('2.6', '2.57') Note the difference between round (which returns a number) and string formatting (which produces a string):\n\u003e\u003e\u003e (1 / 3), round(1 / 3, 2), ('%.2f' % (1 / 3)) (0.33333333333333331, 0.33, '0.33') Square Roots There are three common ways to compute square roots:\n\u003e\u003e\u003e import math \u003e\u003e\u003e math.sqrt(144) 12.0 \u003e\u003e\u003e 144 ** 0.5 12.0 \u003e\u003e\u003e pow(144, 0.5) 12.0 \u003e\u003e\u003e math.sqrt(1234567890) 35136.418286444619 \u003e\u003e\u003e 1234567890 ** 0.5 35136.418286444619 \u003e\u003e\u003e pow(1234567890, 0.5) 35136.418286444619 The Random Module The standard library random module provides tools for generating random numbers:\n\u003e\u003e\u003e import random \u003e\u003e\u003e random.random() 0.44694718823781876 \u003e\u003e\u003e random.random() 0.28970426439292829 \u003e\u003e\u003e random.randint(1, 10) 5 \u003e\u003e\u003e random.randint(1, 10) 4 \u003e\u003e\u003e random.choice(['Life of Brian', 'Holy Grail', 'Meaning of Life']) 'Life of Brian' \u003e\u003e\u003e random.choice(['Life of Brian', 'Holy Grail', 'Meaning of Life']) 'Holy Grail' The random module can be useful for shuffling items, selecting random elements, performing simulations, and more.\nChapter Summary Numeric Types Overview:\nPython supports a wide range of numeric types including integers, floats, complex numbers, decimals, fractions, and more.\nLiterals and Operators:\nNumeric literals can be written in decimal, hexadecimal, octal, and binary formats. Operators and built-in functions (e.g., pow, abs, round) allow for a variety of arithmetic and bitwise operations.\nComparisons and Chaining:\nNumbers can be compared normally or with chained comparisons to perform range tests.\nComplex and Special Numbers:\nPython supports complex numbers and provides various modules (like math and random) for advanced numeric processing.\nUtility Tools:\nBuilt-in functions and modules offer additional tools for numeric conversion, formatting, rounding, and generating random numbers.\n",
+  "wordCount" : "1152",
+  "inLanguage": "en",
+  "datePublished": "0001-01-01T00:00:00Z",
+  "dateModified": "0001-01-01T00:00:00Z",
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "/chapters/chapter-5/"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "Elite",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "/favicon.ico"
+    }
+  }
+}
+</script>
+</head>
+
+<body class="" id="top">
+<script>
+    if (localStorage.getItem("pref-theme") === "dark") {
+        document.body.classList.add('dark');
+    } else if (localStorage.getItem("pref-theme") === "light") {
+        document.body.classList.remove('dark')
+    } else if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
+        document.body.classList.add('dark');
+    }
+
+</script>
+
+<header class="header">
+    <nav class="nav">
+        <div class="logo">
+            <a href="/" accesskey="h" title="Elite (Alt + H)">Elite</a>
+            <div class="logo-switches">
+                <button id="theme-toggle" accesskey="t" title="(Alt + T)" aria-label="Toggle theme">
+                    <svg id="moon" xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 24 24"
+                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+                    </svg>
+                    <svg id="sun" xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 24 24"
+                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <circle cx="12" cy="12" r="5"></circle>
+                        <line x1="12" y1="1" x2="12" y2="3"></line>
+                        <line x1="12" y1="21" x2="12" y2="23"></line>
+                        <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+                        <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+                        <line x1="1" y1="12" x2="3" y2="12"></line>
+                        <line x1="21" y1="12" x2="23" y2="12"></line>
+                        <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+                        <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+                    </svg>
+                </button>
+            </div>
+        </div>
+        <ul id="menu">
+            <li>
+                <a href="/search/" title="Search (Alt &#43; /)" accesskey=/>
+                    <span>Search</span>
+                </a>
+            </li>
+        </ul>
+    </nav>
+</header>
+<main class="main">
+
+<article class="post-single">
+  <header class="post-header">
+    <div class="breadcrumbs"><a href="/">Home</a>&nbsp;»&nbsp;<a href="/chapters/">Chapters</a></div>
+    <h1 class="post-title entry-hint-parent">
+      Chapter 5: Numeric Types
+    </h1>
+    <div class="post-meta">6 min
+
+</div>
+  </header> <div class="toc">
+    <details >
+        <summary accesskey="c" title="(Alt + C)">
+            <span class="details">Table of Contents</span>
+        </summary>
+
+        <div class="inner"><ul>
+                <li>
+                    <a href="#numeric-type-basics" aria-label="Numeric Type Basics">Numeric Type Basics</a></li>
+                <li>
+                    <a href="#numeric-literals" aria-label="Numeric Literals">Numeric Literals</a></li>
+                <li>
+                    <a href="#built-in-numeric-tools" aria-label="Built-in Numeric Tools">Built-in Numeric Tools</a><ul>
+                        
+                <li>
+                    <a href="#python-expression-operators" aria-label="Python Expression Operators">Python Expression Operators</a></li></ul>
+                </li>
+                <li>
+                    <a href="#examples" aria-label="Examples">Examples</a></li>
+                <li>
+                    <a href="#comparisons-normal-and-chained" aria-label="Comparisons: Normal and Chained">Comparisons: Normal and Chained</a></li>
+                <li>
+                    <a href="#division-and-floor-division" aria-label="Division and Floor Division">Division and Floor Division</a></li>
+                <li>
+                    <a href="#complex-numbers" aria-label="Complex Numbers">Complex Numbers</a></li>
+                <li>
+                    <a href="#hexadecimal-octal-and-binary-notation" aria-label="Hexadecimal, Octal, and Binary Notation">Hexadecimal, Octal, and Binary Notation</a></li>
+                <li>
+                    <a href="#bitwise-operations" aria-label="Bitwise Operations">Bitwise Operations</a></li>
+                <li>
+                    <a href="#other-built-in-numeric-tools" aria-label="Other Built-in Numeric Tools">Other Built-in Numeric Tools</a><ul>
+                        
+                <li>
+                    <a href="#rounding-and-formatting" aria-label="Rounding and Formatting">Rounding and Formatting</a></li>
+                <li>
+                    <a href="#square-roots" aria-label="Square Roots">Square Roots</a></li></ul>
+                </li>
+                <li>
+                    <a href="#the-random-module" aria-label="The Random Module">The Random Module</a></li>
+                <li>
+                    <a href="#chapter-summary" aria-label="Chapter Summary">Chapter Summary</a>
+                </li>
+            </ul>
+        </div>
+    </details>
+</div>
+
+  <div class="post-content"><p>Let’s get started by exploring our first data type category: Python’s numeric types.</p>
+<h2 id="numeric-type-basics">Numeric Type Basics<a hidden class="anchor" aria-hidden="true" href="#numeric-type-basics">#</a></h2>
+<p>A complete inventory of Python’s numeric toolbox includes:</p>
+<ul>
+<li>Integers and floating-point numbers</li>
+<li>Complex numbers</li>
+<li>Fixed-precision decimal numbers</li>
+<li>Rational fraction numbers</li>
+<li>Sets</li>
+<li>Booleans</li>
+<li>Unlimited integer precision</li>
+<li>A variety of numeric built-ins and modules</li>
+</ul>
+<p>We will present a brief overview of how we write and process numbers in our scripts.</p>
+<h2 id="numeric-literals">Numeric Literals<a hidden class="anchor" aria-hidden="true" href="#numeric-literals">#</a></h2>
+<p>Among its basic types, Python provides integers (positive and negative whole numbers) and floating-point numbers (numbers with a fractional part, sometimes called &ldquo;floats&rdquo; for economy). Table 1 (not shown) illustrates what Python’s numeric types look like when written as literals.</p>
+<h2 id="built-in-numeric-tools">Built-in Numeric Tools<a hidden class="anchor" aria-hidden="true" href="#built-in-numeric-tools">#</a></h2>
+<p>Besides the built-in number literals, Python provides a set of tools for processing numeric objects:</p>
+<ul>
+<li><strong>Expression operators:</strong> <code>+</code>, <code>-</code>, <code>*</code>, <code>/</code>, <code>&gt;&gt;</code>, <code>**</code>, <code>&amp;</code>, etc.</li>
+<li><strong>Built-in mathematical functions:</strong> <code>pow</code>, <code>abs</code>, <code>round</code>, <code>int</code>, <code>hex</code>, <code>bin</code>, etc.</li>
+<li><strong>Utility modules:</strong> <code>random</code>, <code>math</code>, etc.</li>
+</ul>
+<h3 id="python-expression-operators">Python Expression Operators<a hidden class="anchor" aria-hidden="true" href="#python-expression-operators">#</a></h3>
+<p>Table 2 (not shown) lists all the operator expressions available in Python. Many are self-explanatory; for instance, the usual mathematical operators (<code>+</code>, <code>-</code>, <code>*</code>, <code>/</code>, etc.) are supported.</p>
+<h2 id="examples">Examples<a hidden class="anchor" aria-hidden="true" href="#examples">#</a></h2>
+<p>Below are several example expressions:</p>
+<ol>
+<li><code>A * B + C * D</code></li>
+<li><code>(X + Y) * Z</code></li>
+<li><code>X + (Y * Z)</code></li>
+<li><code>40 + 3.14</code></li>
+</ol>
+<p>Interactive examples:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="o">&gt;&gt;&gt;</span> <span class="nb">int</span><span class="p">(</span><span class="mf">3.1415</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="mi">6</span>
+</span></span><span class="line"><span class="cl"><span class="o">&gt;&gt;&gt;</span> <span class="nb">float</span><span class="p">(</span><span class="mi">3</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="mf">3.0</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="o">&gt;&gt;&gt;</span> <span class="n">a</span> <span class="o">=</span> <span class="mi">3</span>
+</span></span><span class="line"><span class="cl"><span class="o">&gt;&gt;&gt;</span> <span class="n">b</span> <span class="o">=</span> <span class="mi">4</span>
+</span></span><span class="line"><span class="cl"><span class="o">&gt;&gt;&gt;</span> <span class="n">a</span> <span class="o">+</span> <span class="mi">1</span><span class="p">,</span> <span class="n">a</span> <span class="o">-</span> <span class="mi">1</span>
+</span></span><span class="line"><span class="cl"><span class="p">(</span><span class="mi">4</span><span class="p">,</span> <span class="mi">2</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="o">&gt;&gt;&gt;</span> <span class="n">b</span> <span class="o">*</span> <span class="mi">3</span><span class="p">,</span> <span class="n">b</span> <span class="o">/</span> <span class="mi">2</span>
+</span></span><span class="line"><span class="cl"><span class="c1"># (Results depend on the expression)</span>
+</span></span><span class="line"><span class="cl"><span class="o">&gt;&gt;&gt;</span> <span class="n">a</span> <span class="o">%</span> <span class="mi">2</span><span class="p">,</span> <span class="n">b</span> <span class="o">**</span> <span class="mi">2</span>
+</span></span><span class="line"><span class="cl"><span class="c1"># (Results depend on the expression)</span>
+</span></span><span class="line"><span class="cl"><span class="o">&gt;&gt;&gt;</span> <span class="mi">2</span> <span class="o">+</span> <span class="mf">4.0</span><span class="p">,</span> <span class="mf">2.0</span> <span class="o">**</span> <span class="n">b</span>
+</span></span><span class="line"><span class="cl"><span class="c1"># (Results depend on the expression)</span>
+</span></span><span class="line"><span class="cl"><span class="o">&gt;&gt;&gt;</span> <span class="n">b</span> <span class="o">/</span> <span class="p">(</span><span class="mf">2.0</span> <span class="o">+</span> <span class="n">a</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="mf">0.80000000000000004</span>
+</span></span><span class="line"><span class="cl"><span class="o">&gt;&gt;&gt;</span> <span class="nb">print</span><span class="p">(</span><span class="n">b</span> <span class="o">/</span> <span class="p">(</span><span class="mf">2.0</span> <span class="o">+</span> <span class="n">a</span><span class="p">))</span>
+</span></span><span class="line"><span class="cl"><span class="mf">0.8</span>
+</span></span><span class="line"><span class="cl"><span class="o">&gt;&gt;&gt;</span> <span class="mi">1</span> <span class="o">/</span> <span class="mf">2.0</span>
+</span></span><span class="line"><span class="cl"><span class="mf">0.5</span>
+</span></span><span class="line"><span class="cl"><span class="o">&gt;&gt;&gt;</span> <span class="n">num</span> <span class="o">=</span> <span class="mi">1</span> <span class="o">/</span> <span class="mf">3.0</span>
+</span></span><span class="line"><span class="cl"><span class="o">&gt;&gt;&gt;</span> <span class="n">num</span>
+</span></span><span class="line"><span class="cl"><span class="mf">0.33333333333333331</span>
+</span></span><span class="line"><span class="cl"><span class="o">&gt;&gt;&gt;</span> <span class="nb">print</span><span class="p">(</span><span class="n">num</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="mf">0.333333333333</span>
+</span></span><span class="line"><span class="cl"><span class="o">&gt;&gt;&gt;</span> <span class="s1">&#39;</span><span class="si">%e</span><span class="s1">&#39;</span> <span class="o">%</span> <span class="n">num</span>
+</span></span><span class="line"><span class="cl"><span class="s1">&#39;3.333333e-01&#39;</span>
+</span></span><span class="line"><span class="cl"><span class="o">&gt;&gt;&gt;</span> <span class="s1">&#39;</span><span class="si">%4.2f</span><span class="s1">&#39;</span> <span class="o">%</span> <span class="n">num</span>
+</span></span><span class="line"><span class="cl"><span class="s1">&#39;0.33&#39;</span>
+</span></span><span class="line"><span class="cl"><span class="o">&gt;&gt;&gt;</span> <span class="s1">&#39;</span><span class="si">{0:4.2f}</span><span class="s1">&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">num</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="s1">&#39;0.33&#39;</span>
+</span></span></code></pre></div><p>The comments above explain:</p>
+<ul>
+<li>Converting a float to an integer and vice versa.</li>
+<li>Basic arithmetic operations such as addition, subtraction, multiplication, division, modulus, and exponentiation.</li>
+<li>Mixed-type conversions and string formatting for floating-point numbers.</li>
+</ul>
+<h2 id="comparisons-normal-and-chained">Comparisons: Normal and Chained<a hidden class="anchor" aria-hidden="true" href="#comparisons-normal-and-chained">#</a></h2>
+<p>Numbers can also be compared. Normal comparisons compare the relative magnitudes of their operands and return a Boolean result:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="o">&gt;&gt;&gt;</span> <span class="mi">1</span> <span class="o">&lt;</span> <span class="mi">2</span>
+</span></span><span class="line"><span class="cl"><span class="kc">True</span>
+</span></span><span class="line"><span class="cl"><span class="o">&gt;&gt;&gt;</span> <span class="mf">2.0</span> <span class="o">&gt;=</span> <span class="mi">1</span>
+</span></span><span class="line"><span class="cl"><span class="kc">True</span>
+</span></span><span class="line"><span class="cl"><span class="o">&gt;&gt;&gt;</span> <span class="mf">2.0</span> <span class="o">==</span> <span class="mf">2.0</span>
+</span></span><span class="line"><span class="cl"><span class="kc">True</span>
+</span></span><span class="line"><span class="cl"><span class="o">&gt;&gt;&gt;</span> <span class="mf">2.0</span> <span class="o">!=</span> <span class="mf">2.0</span>
+</span></span><span class="line"><span class="cl"><span class="kc">False</span>
+</span></span></code></pre></div><p>Python also supports chained comparisons, which allow range tests:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="o">&gt;&gt;&gt;</span> <span class="n">Y</span> <span class="o">=</span> <span class="mi">4</span>
+</span></span><span class="line"><span class="cl"><span class="o">&gt;&gt;&gt;</span> <span class="n">Z</span> <span class="o">=</span> <span class="mi">6</span>
+</span></span><span class="line"><span class="cl"><span class="o">&gt;&gt;&gt;</span> <span class="n">X</span> <span class="o">&lt;</span> <span class="n">Y</span> <span class="o">&lt;</span> <span class="n">Z</span>       <span class="c1"># Equivalent to: X &lt; Y and Y &lt; Z</span>
+</span></span><span class="line"><span class="cl"><span class="kc">True</span>
+</span></span><span class="line"><span class="cl"><span class="o">&gt;&gt;&gt;</span> <span class="n">X</span> <span class="o">&lt;</span> <span class="n">Y</span> <span class="ow">and</span> <span class="n">Y</span> <span class="o">&lt;</span> <span class="n">Z</span>
+</span></span><span class="line"><span class="cl"><span class="kc">True</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="o">&gt;&gt;&gt;</span> <span class="n">X</span> <span class="o">&lt;</span> <span class="n">Y</span> <span class="o">&gt;</span> <span class="n">Z</span>       <span class="c1"># Chained comparisons with a false result</span>
+</span></span><span class="line"><span class="cl"><span class="kc">False</span>
+</span></span><span class="line"><span class="cl"><span class="o">&gt;&gt;&gt;</span> <span class="mi">1</span> <span class="o">&lt;</span> <span class="mi">2</span> <span class="o">&lt;</span> <span class="mf">3.0</span> <span class="o">&lt;</span> <span class="mi">4</span>
+</span></span><span class="line"><span class="cl"><span class="kc">True</span>
+</span></span><span class="line"><span class="cl"><span class="o">&gt;&gt;&gt;</span> <span class="mi">1</span> <span class="o">&gt;</span> <span class="mi">2</span> <span class="o">&gt;</span> <span class="mf">3.0</span> <span class="o">&gt;</span> <span class="mi">4</span>
+</span></span><span class="line"><span class="cl"><span class="kc">False</span>
+</span></span><span class="line"><span class="cl"><span class="o">&gt;&gt;&gt;</span> <span class="mi">1</span> <span class="o">==</span> <span class="mi">2</span> <span class="o">&lt;</span> <span class="mi">3</span>
+</span></span><span class="line"><span class="cl"><span class="kc">False</span>
+</span></span></code></pre></div><h2 id="division-and-floor-division">Division and Floor Division<a hidden class="anchor" aria-hidden="true" href="#division-and-floor-division">#</a></h2>
+<p>The division operators behave differently depending on the operands:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-sh" data-lang="sh"><span class="line"><span class="cl">C:<span class="se">\m</span>isc&gt; C:<span class="se">\P</span>ython30<span class="se">\p</span>ython
+</span></span><span class="line"><span class="cl">&gt;&gt;&gt; <span class="m">10</span> / <span class="m">4</span>       <span class="c1"># True division (Python 3.0)</span>
+</span></span><span class="line"><span class="cl">2.5
+</span></span><span class="line"><span class="cl">&gt;&gt;&gt; <span class="m">10</span> // <span class="m">4</span>      <span class="c1"># Floor division: truncates the remainder</span>
+</span></span><span class="line"><span class="cl"><span class="m">2</span>
+</span></span><span class="line"><span class="cl">&gt;&gt;&gt; <span class="m">10</span> / 4.0
+</span></span><span class="line"><span class="cl">2.5
+</span></span><span class="line"><span class="cl">&gt;&gt;&gt; <span class="m">10</span> // 4.0   <span class="c1"># Floor division with float result</span>
+</span></span><span class="line"><span class="cl">2.0
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">C:<span class="se">\m</span>isc&gt; C:<span class="se">\P</span>ython26<span class="se">\p</span>ython
+</span></span><span class="line"><span class="cl">&gt;&gt;&gt; <span class="m">10</span> / <span class="m">4</span>
+</span></span><span class="line"><span class="cl"><span class="m">2</span>
+</span></span><span class="line"><span class="cl">&gt;&gt;&gt; <span class="m">10</span> // <span class="m">4</span>
+</span></span><span class="line"><span class="cl"><span class="m">2</span>
+</span></span><span class="line"><span class="cl">&gt;&gt;&gt; <span class="m">10</span> / 4.0
+</span></span><span class="line"><span class="cl">2.5
+</span></span><span class="line"><span class="cl">&gt;&gt;&gt; <span class="m">10</span> // 4.0
+</span></span><span class="line"><span class="cl">2.0
+</span></span></code></pre></div><h2 id="complex-numbers">Complex Numbers<a hidden class="anchor" aria-hidden="true" href="#complex-numbers">#</a></h2>
+<p>Complex numbers are represented as two floating-point numbers (the real and imaginary parts). The imaginary part is denoted by a <code>j</code> or <code>J</code> suffix.</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="o">&gt;&gt;&gt;</span> <span class="mi">1</span><span class="n">j</span> <span class="o">*</span> <span class="mi">1</span><span class="n">J</span>
+</span></span><span class="line"><span class="cl"><span class="p">(</span><span class="o">-</span><span class="mi">1</span><span class="o">+</span><span class="mi">0</span><span class="n">j</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="o">&gt;&gt;&gt;</span> <span class="mi">2</span> <span class="o">+</span> <span class="mi">1</span><span class="n">j</span> <span class="o">*</span> <span class="mi">3</span>
+</span></span><span class="line"><span class="cl"><span class="p">(</span><span class="mi">2</span><span class="o">+</span><span class="mi">3</span><span class="n">j</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="o">&gt;&gt;&gt;</span> <span class="p">(</span><span class="mi">2</span> <span class="o">+</span> <span class="mi">1</span><span class="n">j</span><span class="p">)</span> <span class="o">*</span> <span class="mi">3</span>
+</span></span><span class="line"><span class="cl"><span class="p">(</span><span class="mi">6</span><span class="o">+</span><span class="mi">3</span><span class="n">j</span><span class="p">)</span>
+</span></span></code></pre></div><h2 id="hexadecimal-octal-and-binary-notation">Hexadecimal, Octal, and Binary Notation<a hidden class="anchor" aria-hidden="true" href="#hexadecimal-octal-and-binary-notation">#</a></h2>
+<p>Python integers can be written in hexadecimal, octal, and binary notations:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="o">&gt;&gt;&gt;</span> <span class="mo">0o1</span><span class="p">,</span> <span class="mo">0o20</span><span class="p">,</span> <span class="mo">0o377</span>
+</span></span><span class="line"><span class="cl"><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">16</span><span class="p">,</span> <span class="mi">255</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="o">&gt;&gt;&gt;</span> <span class="mh">0x01</span><span class="p">,</span> <span class="mh">0x10</span><span class="p">,</span> <span class="mh">0xFF</span>
+</span></span><span class="line"><span class="cl"><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">16</span><span class="p">,</span> <span class="mi">255</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="o">&gt;&gt;&gt;</span> <span class="mb">0b1</span><span class="p">,</span> <span class="mb">0b10000</span><span class="p">,</span> <span class="mb">0b11111111</span>
+</span></span><span class="line"><span class="cl"><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">16</span><span class="p">,</span> <span class="mi">255</span><span class="p">)</span>
+</span></span></code></pre></div><p>Conversion functions:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="o">&gt;&gt;&gt;</span> <span class="nb">oct</span><span class="p">(</span><span class="mi">64</span><span class="p">),</span> <span class="nb">hex</span><span class="p">(</span><span class="mi">64</span><span class="p">),</span> <span class="nb">bin</span><span class="p">(</span><span class="mi">64</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="p">(</span><span class="s1">&#39;0100&#39;</span><span class="p">,</span> <span class="s1">&#39;0x40&#39;</span><span class="p">,</span> <span class="s1">&#39;0b1000000&#39;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="o">&gt;&gt;&gt;</span> <span class="nb">int</span><span class="p">(</span><span class="s1">&#39;64&#39;</span><span class="p">),</span> <span class="nb">int</span><span class="p">(</span><span class="s1">&#39;100&#39;</span><span class="p">,</span> <span class="mi">8</span><span class="p">),</span> <span class="nb">int</span><span class="p">(</span><span class="s1">&#39;40&#39;</span><span class="p">,</span> <span class="mi">16</span><span class="p">),</span> <span class="nb">int</span><span class="p">(</span><span class="s1">&#39;1000000&#39;</span><span class="p">,</span> <span class="mi">2</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="p">(</span><span class="mi">64</span><span class="p">,</span> <span class="mi">64</span><span class="p">,</span> <span class="mi">64</span><span class="p">,</span> <span class="mi">64</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="o">&gt;&gt;&gt;</span> <span class="nb">int</span><span class="p">(</span><span class="s1">&#39;0x40&#39;</span><span class="p">,</span> <span class="mi">16</span><span class="p">),</span> <span class="nb">int</span><span class="p">(</span><span class="s1">&#39;0b1000000&#39;</span><span class="p">,</span> <span class="mi">2</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="p">(</span><span class="mi">64</span><span class="p">,</span> <span class="mi">64</span><span class="p">)</span>
+</span></span></code></pre></div><p>Using <code>eval</code> to process literals:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="o">&gt;&gt;&gt;</span> <span class="nb">eval</span><span class="p">(</span><span class="s1">&#39;64&#39;</span><span class="p">),</span> <span class="nb">eval</span><span class="p">(</span><span class="s1">&#39;0o100&#39;</span><span class="p">),</span> <span class="nb">eval</span><span class="p">(</span><span class="s1">&#39;0x40&#39;</span><span class="p">),</span> <span class="nb">eval</span><span class="p">(</span><span class="s1">&#39;0b1000000&#39;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="p">(</span><span class="mi">64</span><span class="p">,</span> <span class="mi">64</span><span class="p">,</span> <span class="mi">64</span><span class="p">,</span> <span class="mi">64</span><span class="p">)</span>
+</span></span></code></pre></div><p>String formatting for other bases:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="o">&gt;&gt;&gt;</span> <span class="s1">&#39;</span><span class="si">{0:o}</span><span class="s1">, </span><span class="si">{1:x}</span><span class="s1">, </span><span class="si">{2:b}</span><span class="s1">&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="mi">64</span><span class="p">,</span> <span class="mi">64</span><span class="p">,</span> <span class="mi">64</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="s1">&#39;100, 40, 1000000&#39;</span>
+</span></span><span class="line"><span class="cl"><span class="o">&gt;&gt;&gt;</span> <span class="s1">&#39;</span><span class="si">%o</span><span class="s1">, </span><span class="si">%x</span><span class="s1">, </span><span class="si">%X</span><span class="s1">&#39;</span> <span class="o">%</span> <span class="p">(</span><span class="mi">64</span><span class="p">,</span> <span class="mi">255</span><span class="p">,</span> <span class="mi">255</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="s1">&#39;100, ff, FF&#39;</span>
+</span></span></code></pre></div><h2 id="bitwise-operations">Bitwise Operations<a hidden class="anchor" aria-hidden="true" href="#bitwise-operations">#</a></h2>
+<p>Python supports bitwise operations on integers. For example:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="o">&gt;&gt;&gt;</span> <span class="n">x</span> <span class="o">=</span> <span class="mi">1</span>  <span class="c1"># Binary: 0001</span>
+</span></span><span class="line"><span class="cl"><span class="o">&gt;&gt;&gt;</span> <span class="n">x</span> <span class="o">&lt;&lt;</span> <span class="mi">2</span>   <span class="c1"># Shift left 2 bits: 0100</span>
+</span></span><span class="line"><span class="cl"><span class="mi">4</span>
+</span></span><span class="line"><span class="cl"><span class="o">&gt;&gt;&gt;</span> <span class="n">x</span> <span class="o">|</span> <span class="mi">2</span>    <span class="c1"># Bitwise OR: 0001 | 0010 = 0011</span>
+</span></span><span class="line"><span class="cl"><span class="mi">3</span>
+</span></span><span class="line"><span class="cl"><span class="o">&gt;&gt;&gt;</span> <span class="n">x</span> <span class="o">&amp;</span> <span class="mi">1</span>    <span class="c1"># Bitwise AND: 0001 &amp; 0001 = 0001</span>
+</span></span><span class="line"><span class="cl"><span class="mi">1</span>
+</span></span></code></pre></div><p>Additional bitwise examples:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="o">&gt;&gt;&gt;</span> <span class="n">X</span> <span class="o">=</span> <span class="mb">0b0001</span>
+</span></span><span class="line"><span class="cl"><span class="o">&gt;&gt;&gt;</span> <span class="n">X</span> <span class="o">&lt;&lt;</span> <span class="mi">2</span>
+</span></span><span class="line"><span class="cl"><span class="mi">4</span>
+</span></span><span class="line"><span class="cl"><span class="o">&gt;&gt;&gt;</span> <span class="nb">bin</span><span class="p">(</span><span class="n">X</span> <span class="o">&lt;&lt;</span> <span class="mi">2</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="s1">&#39;0b100&#39;</span>
+</span></span><span class="line"><span class="cl"><span class="o">&gt;&gt;&gt;</span> <span class="nb">bin</span><span class="p">(</span><span class="n">X</span> <span class="o">|</span> <span class="mb">0b010</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="s1">&#39;0b11&#39;</span>
+</span></span><span class="line"><span class="cl"><span class="o">&gt;&gt;&gt;</span> <span class="nb">bin</span><span class="p">(</span><span class="n">X</span> <span class="o">&amp;</span> <span class="mb">0b1</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="s1">&#39;0b1&#39;</span>
+</span></span></code></pre></div><p>Hexadecimal and XOR examples:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="o">&gt;&gt;&gt;</span> <span class="n">X</span> <span class="o">=</span> <span class="mh">0xFF</span>
+</span></span><span class="line"><span class="cl"><span class="o">&gt;&gt;&gt;</span> <span class="nb">bin</span><span class="p">(</span><span class="n">X</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="s1">&#39;0b11111111&#39;</span>
+</span></span><span class="line"><span class="cl"><span class="o">&gt;&gt;&gt;</span> <span class="n">X</span> <span class="o">^</span> <span class="mb">0b10101010</span>
+</span></span><span class="line"><span class="cl"><span class="mi">85</span>
+</span></span><span class="line"><span class="cl"><span class="o">&gt;&gt;&gt;</span> <span class="nb">bin</span><span class="p">(</span><span class="n">X</span> <span class="o">^</span> <span class="mb">0b10101010</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="s1">&#39;0b1010101&#39;</span>
+</span></span><span class="line"><span class="cl"><span class="o">&gt;&gt;&gt;</span> <span class="nb">int</span><span class="p">(</span><span class="s1">&#39;1010101&#39;</span><span class="p">,</span> <span class="mi">2</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="mi">85</span>
+</span></span><span class="line"><span class="cl"><span class="o">&gt;&gt;&gt;</span> <span class="nb">hex</span><span class="p">(</span><span class="mi">85</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="s1">&#39;0x55&#39;</span>
+</span></span></code></pre></div><h2 id="other-built-in-numeric-tools">Other Built-in Numeric Tools<a hidden class="anchor" aria-hidden="true" href="#other-built-in-numeric-tools">#</a></h2>
+<p>Python provides many built-in functions and standard library modules for numeric processing:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="o">&gt;&gt;&gt;</span> <span class="kn">import</span> <span class="nn">math</span>
+</span></span><span class="line"><span class="cl"><span class="o">&gt;&gt;&gt;</span> <span class="n">math</span><span class="o">.</span><span class="n">pi</span><span class="p">,</span> <span class="n">math</span><span class="o">.</span><span class="n">e</span>
+</span></span><span class="line"><span class="cl"><span class="p">(</span><span class="mf">3.1415926535897931</span><span class="p">,</span> <span class="mf">2.7182818284590451</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="o">&gt;&gt;&gt;</span> <span class="n">math</span><span class="o">.</span><span class="n">sin</span><span class="p">(</span><span class="mi">2</span> <span class="o">*</span> <span class="n">math</span><span class="o">.</span><span class="n">pi</span> <span class="o">/</span> <span class="mi">180</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="mf">0.034899496702500969</span>
+</span></span><span class="line"><span class="cl"><span class="o">&gt;&gt;&gt;</span> <span class="n">math</span><span class="o">.</span><span class="n">sqrt</span><span class="p">(</span><span class="mi">144</span><span class="p">),</span> <span class="n">math</span><span class="o">.</span><span class="n">sqrt</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="p">(</span><span class="mf">12.0</span><span class="p">,</span> <span class="mf">1.4142135623730951</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="o">&gt;&gt;&gt;</span> <span class="nb">pow</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span> <span class="mi">4</span><span class="p">),</span> <span class="mi">2</span> <span class="o">**</span> <span class="mi">4</span>
+</span></span><span class="line"><span class="cl"><span class="p">(</span><span class="mi">16</span><span class="p">,</span> <span class="mi">16</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="o">&gt;&gt;&gt;</span> <span class="nb">abs</span><span class="p">(</span><span class="o">-</span><span class="mf">42.0</span><span class="p">),</span> <span class="nb">sum</span><span class="p">((</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">))</span>
+</span></span><span class="line"><span class="cl"><span class="p">(</span><span class="mf">42.0</span><span class="p">,</span> <span class="mi">10</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="o">&gt;&gt;&gt;</span> <span class="nb">min</span><span class="p">(</span><span class="mi">3</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">4</span><span class="p">),</span> <span class="nb">max</span><span class="p">(</span><span class="mi">3</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">4</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">4</span><span class="p">)</span>
+</span></span></code></pre></div><h3 id="rounding-and-formatting">Rounding and Formatting<a hidden class="anchor" aria-hidden="true" href="#rounding-and-formatting">#</a></h3>
+<p>Truncation and rounding examples:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="o">&gt;&gt;&gt;</span> <span class="n">math</span><span class="o">.</span><span class="n">floor</span><span class="p">(</span><span class="mf">2.567</span><span class="p">),</span> <span class="n">math</span><span class="o">.</span><span class="n">floor</span><span class="p">(</span><span class="o">-</span><span class="mf">2.567</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="p">(</span><span class="mi">2</span><span class="p">,</span> <span class="o">-</span><span class="mi">3</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="o">&gt;&gt;&gt;</span> <span class="n">math</span><span class="o">.</span><span class="n">trunc</span><span class="p">(</span><span class="mf">2.567</span><span class="p">),</span> <span class="n">math</span><span class="o">.</span><span class="n">trunc</span><span class="p">(</span><span class="o">-</span><span class="mf">2.567</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="p">(</span><span class="mi">2</span><span class="p">,</span> <span class="o">-</span><span class="mi">2</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="o">&gt;&gt;&gt;</span> <span class="nb">int</span><span class="p">(</span><span class="mf">2.567</span><span class="p">),</span> <span class="nb">int</span><span class="p">(</span><span class="o">-</span><span class="mf">2.567</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="p">(</span><span class="mi">2</span><span class="p">,</span> <span class="o">-</span><span class="mi">2</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="o">&gt;&gt;&gt;</span> <span class="nb">round</span><span class="p">(</span><span class="mf">2.567</span><span class="p">),</span> <span class="nb">round</span><span class="p">(</span><span class="mf">2.467</span><span class="p">),</span> <span class="nb">round</span><span class="p">(</span><span class="mf">2.567</span><span class="p">,</span> <span class="mi">2</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="p">(</span><span class="mi">3</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mf">2.57</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="o">&gt;&gt;&gt;</span> <span class="s1">&#39;</span><span class="si">%.1f</span><span class="s1">&#39;</span> <span class="o">%</span> <span class="mf">2.567</span><span class="p">,</span> <span class="s1">&#39;</span><span class="si">{0:.2f}</span><span class="s1">&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="mf">2.567</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="p">(</span><span class="s1">&#39;2.6&#39;</span><span class="p">,</span> <span class="s1">&#39;2.57&#39;</span><span class="p">)</span>
+</span></span></code></pre></div><p>Note the difference between <code>round</code> (which returns a number) and string formatting (which produces a string):</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="o">&gt;&gt;&gt;</span> <span class="p">(</span><span class="mi">1</span> <span class="o">/</span> <span class="mi">3</span><span class="p">),</span> <span class="nb">round</span><span class="p">(</span><span class="mi">1</span> <span class="o">/</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">2</span><span class="p">),</span> <span class="p">(</span><span class="s1">&#39;</span><span class="si">%.2f</span><span class="s1">&#39;</span> <span class="o">%</span> <span class="p">(</span><span class="mi">1</span> <span class="o">/</span> <span class="mi">3</span><span class="p">))</span>
+</span></span><span class="line"><span class="cl"><span class="p">(</span><span class="mf">0.33333333333333331</span><span class="p">,</span> <span class="mf">0.33</span><span class="p">,</span> <span class="s1">&#39;0.33&#39;</span><span class="p">)</span>
+</span></span></code></pre></div><h3 id="square-roots">Square Roots<a hidden class="anchor" aria-hidden="true" href="#square-roots">#</a></h3>
+<p>There are three common ways to compute square roots:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="o">&gt;&gt;&gt;</span> <span class="kn">import</span> <span class="nn">math</span>
+</span></span><span class="line"><span class="cl"><span class="o">&gt;&gt;&gt;</span> <span class="n">math</span><span class="o">.</span><span class="n">sqrt</span><span class="p">(</span><span class="mi">144</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="mf">12.0</span>
+</span></span><span class="line"><span class="cl"><span class="o">&gt;&gt;&gt;</span> <span class="mi">144</span> <span class="o">**</span> <span class="mf">0.5</span>
+</span></span><span class="line"><span class="cl"><span class="mf">12.0</span>
+</span></span><span class="line"><span class="cl"><span class="o">&gt;&gt;&gt;</span> <span class="nb">pow</span><span class="p">(</span><span class="mi">144</span><span class="p">,</span> <span class="mf">0.5</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="mf">12.0</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="o">&gt;&gt;&gt;</span> <span class="n">math</span><span class="o">.</span><span class="n">sqrt</span><span class="p">(</span><span class="mi">1234567890</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="mf">35136.418286444619</span>
+</span></span><span class="line"><span class="cl"><span class="o">&gt;&gt;&gt;</span> <span class="mi">1234567890</span> <span class="o">**</span> <span class="mf">0.5</span>
+</span></span><span class="line"><span class="cl"><span class="mf">35136.418286444619</span>
+</span></span><span class="line"><span class="cl"><span class="o">&gt;&gt;&gt;</span> <span class="nb">pow</span><span class="p">(</span><span class="mi">1234567890</span><span class="p">,</span> <span class="mf">0.5</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="mf">35136.418286444619</span>
+</span></span></code></pre></div><h2 id="the-random-module">The Random Module<a hidden class="anchor" aria-hidden="true" href="#the-random-module">#</a></h2>
+<p>The standard library <code>random</code> module provides tools for generating random numbers:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="o">&gt;&gt;&gt;</span> <span class="kn">import</span> <span class="nn">random</span>
+</span></span><span class="line"><span class="cl"><span class="o">&gt;&gt;&gt;</span> <span class="n">random</span><span class="o">.</span><span class="n">random</span><span class="p">()</span>
+</span></span><span class="line"><span class="cl"><span class="mf">0.44694718823781876</span>
+</span></span><span class="line"><span class="cl"><span class="o">&gt;&gt;&gt;</span> <span class="n">random</span><span class="o">.</span><span class="n">random</span><span class="p">()</span>
+</span></span><span class="line"><span class="cl"><span class="mf">0.28970426439292829</span>
+</span></span><span class="line"><span class="cl"><span class="o">&gt;&gt;&gt;</span> <span class="n">random</span><span class="o">.</span><span class="n">randint</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">10</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="mi">5</span>
+</span></span><span class="line"><span class="cl"><span class="o">&gt;&gt;&gt;</span> <span class="n">random</span><span class="o">.</span><span class="n">randint</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">10</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="mi">4</span>
+</span></span><span class="line"><span class="cl"><span class="o">&gt;&gt;&gt;</span> <span class="n">random</span><span class="o">.</span><span class="n">choice</span><span class="p">([</span><span class="s1">&#39;Life of Brian&#39;</span><span class="p">,</span> <span class="s1">&#39;Holy Grail&#39;</span><span class="p">,</span> <span class="s1">&#39;Meaning of Life&#39;</span><span class="p">])</span>
+</span></span><span class="line"><span class="cl"><span class="s1">&#39;Life of Brian&#39;</span>
+</span></span><span class="line"><span class="cl"><span class="o">&gt;&gt;&gt;</span> <span class="n">random</span><span class="o">.</span><span class="n">choice</span><span class="p">([</span><span class="s1">&#39;Life of Brian&#39;</span><span class="p">,</span> <span class="s1">&#39;Holy Grail&#39;</span><span class="p">,</span> <span class="s1">&#39;Meaning of Life&#39;</span><span class="p">])</span>
+</span></span><span class="line"><span class="cl"><span class="s1">&#39;Holy Grail&#39;</span>
+</span></span></code></pre></div><p>The <code>random</code> module can be useful for shuffling items, selecting random elements, performing simulations, and more.</p>
+<h2 id="chapter-summary">Chapter Summary<a hidden class="anchor" aria-hidden="true" href="#chapter-summary">#</a></h2>
+<ul>
+<li>
+<p><strong>Numeric Types Overview:</strong><br>
+Python supports a wide range of numeric types including integers, floats, complex numbers, decimals, fractions, and more.</p>
+</li>
+<li>
+<p><strong>Literals and Operators:</strong><br>
+Numeric literals can be written in decimal, hexadecimal, octal, and binary formats. Operators and built-in functions (e.g., <code>pow</code>, <code>abs</code>, <code>round</code>) allow for a variety of arithmetic and bitwise operations.</p>
+</li>
+<li>
+<p><strong>Comparisons and Chaining:</strong><br>
+Numbers can be compared normally or with chained comparisons to perform range tests.</p>
+</li>
+<li>
+<p><strong>Complex and Special Numbers:</strong><br>
+Python supports complex numbers and provides various modules (like <code>math</code> and <code>random</code>) for advanced numeric processing.</p>
+</li>
+<li>
+<p><strong>Utility Tools:</strong><br>
+Built-in functions and modules offer additional tools for numeric conversion, formatting, rounding, and generating random numbers.</p>
+</li>
+</ul>
+
+
+  </div>
+
+  <footer class="post-footer">
+    <ul class="post-tags">
+    </ul>
+<nav class="paginav">
+  <a class="prev" href="/chapters/chapter-4/">
+    <span class="title">« Prev</span>
+    <br>
+    <span>Chapter 4: Object Types</span>
+  </a>
+  <a class="next" href="/chapters/chapter-6/">
+    <span class="title">Next »</span>
+    <br>
+    <span>Chapter 6: Strings</span>
+  </a>
+</nav>
+
+  </footer>
+</article>
+    </main>
+    
+<footer class="footer">
+        <span>&copy; 2025 <a href="/">Elite</a></span> · 
+
+    <span>
+        Powered by
+        <a href="https://gohugo.io/" rel="noopener noreferrer" target="_blank">Hugo</a> &
+        <a href="https://github.com/adityatelange/hugo-PaperMod/" rel="noopener" target="_blank">PaperMod</a>
+    </span>
+</footer>
+<a href="#top" aria-label="go to top" title="Go to Top (Alt + G)" class="top-link" id="top-link" accesskey="g">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 12 6" fill="currentColor">
+        <path d="M12 6H0l6-6z" />
+    </svg>
+</a>
+
+<script>
+    let menu = document.getElementById('menu')
+    if (menu) {
+        menu.scrollLeft = localStorage.getItem("menu-scroll-position");
+        menu.onscroll = function () {
+            localStorage.setItem("menu-scroll-position", menu.scrollLeft);
+        }
+    }
+
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener("click", function (e) {
+            e.preventDefault();
+            var id = this.getAttribute("href").substr(1);
+            if (!window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView({
+                    behavior: "smooth"
+                });
+            } else {
+                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView();
+            }
+            if (id === "top") {
+                history.replaceState(null, null, " ");
+            } else {
+                history.pushState(null, null, `#${id}`);
+            }
+        });
+    });
+
+</script>
+<script>
+    var mybutton = document.getElementById("top-link");
+    window.onscroll = function () {
+        if (document.body.scrollTop > 800 || document.documentElement.scrollTop > 800) {
+            mybutton.style.visibility = "visible";
+            mybutton.style.opacity = "1";
+        } else {
+            mybutton.style.visibility = "hidden";
+            mybutton.style.opacity = "0";
+        }
+    };
+
+</script>
+<script>
+    document.getElementById("theme-toggle").addEventListener("click", () => {
+        if (document.body.className.includes("dark")) {
+            document.body.classList.remove('dark');
+            localStorage.setItem("pref-theme", 'light');
+        } else {
+            document.body.classList.add('dark');
+            localStorage.setItem("pref-theme", 'dark');
+        }
+    })
+
+</script>
+<script>
+    document.querySelectorAll('pre > code').forEach((codeblock) => {
+        const container = codeblock.parentNode.parentNode;
+
+        const copybutton = document.createElement('button');
+        copybutton.classList.add('copy-code');
+        copybutton.innerHTML = 'copy';
+
+        function copyingDone() {
+            copybutton.innerHTML = 'copied!';
+            setTimeout(() => {
+                copybutton.innerHTML = 'copy';
+            }, 2000);
+        }
+
+        copybutton.addEventListener('click', (cb) => {
+            if ('clipboard' in navigator) {
+                navigator.clipboard.writeText(codeblock.textContent);
+                copyingDone();
+                return;
+            }
+
+            const range = document.createRange();
+            range.selectNodeContents(codeblock);
+            const selection = window.getSelection();
+            selection.removeAllRanges();
+            selection.addRange(range);
+            try {
+                document.execCommand('copy');
+                copyingDone();
+            } catch (e) { };
+            selection.removeRange(range);
+        });
+
+        if (container.classList.contains("highlight")) {
+            container.appendChild(copybutton);
+        } else if (container.parentNode.firstChild == container) {
+            
+        } else if (codeblock.parentNode.parentNode.parentNode.parentNode.parentNode.nodeName == "TABLE") {
+            
+            codeblock.parentNode.parentNode.parentNode.parentNode.parentNode.appendChild(copybutton);
+        } else {
+            
+            codeblock.parentNode.appendChild(copybutton);
+        }
+    });
+</script>
+</body>
+
+</html>
