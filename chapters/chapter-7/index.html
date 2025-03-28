@@ -104,8 +104,8 @@ Lists are ordered collections of arbitrary objects. Unlike strings, lists can co
   "keywords": [
     
   ],
-  "articleBody": "The list and dictionary object types are the main workhorses in almost all Python scripts. They are used to store, organize, and retrieve data efficiently. In this chapter, we cover how lists and dictionaries work, their basic operations, and how to modify them in-place.\nLists Lists are ordered collections of arbitrary objects. Unlike strings, lists can contain any type of object—including numbers, strings, and even other lists. Lists are mutable, meaning you can change their contents in-place using assignment (to individual items or slices), method calls, deletion statements, and more. Key properties include:\nOrdered collections of arbitrary objects Accessed by offset (index) Variable-length, heterogeneous, and arbitrarily nestable Belong to the category “mutable sequence” Arrays of object references Common List Literals and Operations Below is a placeholder for a table summarizing common list literals and operations:\nOperation Description Example [] Empty list literal [] [item1, ...] List literal with items [1, 2, 3] L + M Concatenation of two lists [1, 2] + [3, 4] ['Ni!'] * 4 Repetition of a list element ['Ni!', 'Ni!', 'Ni!', 'Ni!'] Basic List Operations Lists support many of the same operations as strings. For example:\n\u003e\u003e\u003e len([1, 2, 3]) 3 \u003e\u003e\u003e [1, 2, 3] + [4, 5, 6] [1, 2, 3, 4, 5, 6] \u003e\u003e\u003e ['Ni!'] * 4 ['Ni!', 'Ni!', 'Ni!', 'Ni!'] Note: The + operator for lists requires both operands to be sequences. To combine a list and a string, you must convert one of them:\n\u003e\u003e\u003e str([1, 2]) + \"34\" '[1, 2]34' \u003e\u003e\u003e [1, 2] + list(\"34\") [1, 2, '3', '4'] List Iteration and Comprehensions Lists support membership tests and iteration:\n\u003e\u003e\u003e 3 in [1, 2, 3] True \u003e\u003e\u003e for x in [1, 2, 3]: ... print(x, end=' ') 1 2 3 List comprehensions offer a concise way to build new lists:\n\u003e\u003e\u003e res = [c * 4 for c in 'SPAM'] \u003e\u003e\u003e res ['SSSS', 'PPPP', 'AAAA', 'MMMM'] This is equivalent to:\n\u003e\u003e\u003e res = [] \u003e\u003e\u003e for c in 'SPAM': ... res.append(c * 4) \u003e\u003e\u003e res ['SSSS', 'PPPP', 'AAAA', 'MMMM'] Indexing, Slicing, and Matrixes Since lists are sequences, you can index and slice them just like strings. However, indexing a list returns the object at that position, while slicing always returns a new list.\n\u003e\u003e\u003e L = ['spam', 'Spam', 'SPAM!'] \u003e\u003e\u003e L[2] 'SPAM!' \u003e\u003e\u003e L[-2] 'Spam' \u003e\u003e\u003e L[1:] ['Spam', 'SPAM!'] Lists can be nested. For example, a simple 3×3 matrix can be represented as:\n\u003e\u003e\u003e matrix = [[1, 2, 3], [4, 5, 6], [7, 8, 9]] \u003e\u003e\u003e matrix[1] # Get the second row [4, 5, 6] \u003e\u003e\u003e matrix[1][1] # Get the middle element 5 Changing Lists In-Place Because lists are mutable, you can modify them by assigning new values to individual items or slices:\n\u003e\u003e\u003e L = ['spam', 'Spam', 'SPAM!'] \u003e\u003e\u003e L[1] = 'eggs' \u003e\u003e\u003e L ['spam', 'eggs', 'SPAM!'] \u003e\u003e\u003e L[0:2] = ['eat', 'more'] \u003e\u003e\u003e L ['eat', 'more', 'SPAM!'] Slice assignment works in two steps:\nThe specified slice is deleted. New items are inserted in its place. For example, given L = [1, 2, 3], the assignment L[1:2] = [4, 5] results in [1, 4, 5, 3].\nList Method Calls List objects provide many methods that modify the list in-place. Some common methods include:\nappend(): Add an element to the end. extend(): Add multiple elements. pop(): Remove and return an element (default is the last item). insert(): Insert an element at a specified index. remove(): Remove the first occurrence of a value. sort(): Sort the list in-place. reverse(): Reverse the list in-place. reversed(): Returns an iterator that yields the list in reverse order. Examples:\n\u003e\u003e\u003e L = ['spam', 'eggs', 'ham'] \u003e\u003e\u003e L.append('please') \u003e\u003e\u003e L ['spam', 'eggs', 'ham', 'please'] \u003e\u003e\u003e L.sort() \u003e\u003e\u003e L ['SPAM!', 'eat', 'more', 'please'] # Example output after sort \u003e\u003e\u003e L.extend([1, 2, 3]) \u003e\u003e\u003e L ['spam', 'eggs', 'ham', 'please', 1, 2, 3] \u003e\u003e\u003e L.pop() 3 \u003e\u003e\u003e L ['spam', 'eggs', 'ham', 'please'] For stack-like behavior:\n\u003e\u003e\u003e stack = [] \u003e\u003e\u003e stack.append(1) \u003e\u003e\u003e stack.append(2) \u003e\u003e\u003e stack.pop() 2 To reverse a list without modifying it, use the reversed built-in wrapped in list():\n\u003e\u003e\u003e list(reversed(L)) Dictionaries Dictionaries are mutable mappings that store key–value pairs. Unlike lists, they are unordered and are accessed by key rather than by numerical index. Dictionaries are implemented as hash tables, which means that lookups are very fast.\nCommon Dictionary Literals and Operations Below is a placeholder for a table summarizing common dictionary literals and operations:\nOperation Description Example {} Empty dictionary literal {} {'key': value} Dictionary literal with a key–value pair {'a': 1, 'b': 2} D[key] Access value by key D['spam'] D[key] = value Set or update value for a key D['eggs'] = 3 del D[key] Delete a key–value pair del D['ham'] Basic Dictionary Operations Dictionaries are created using curly braces with key–value pairs:\n\u003e\u003e\u003e D = {'spam': 2, 'ham': 1, 'eggs': 3} \u003e\u003e\u003e D['spam'] 2 \u003e\u003e\u003e len(D) 3 \u003e\u003e\u003e 'ham' in D True \u003e\u003e\u003e list(D.keys()) ['eggs', 'ham', 'spam'] Note: The order of keys is not guaranteed. If you need a specific order, you can sort the keys.\nChanging Dictionaries In-Place Since dictionaries are mutable, you can change their contents by assigning to keys or using the del statement:\n\u003e\u003e\u003e D = {'eggs': 3, 'ham': 1, 'spam': 2} \u003e\u003e\u003e D['ham'] = ['grill', 'bake', 'fry'] \u003e\u003e\u003e D {'eggs': 3, 'ham': ['grill', 'bake', 'fry'], 'spam': 2} \u003e\u003e\u003e del D['eggs'] \u003e\u003e\u003e D {'ham': ['grill', 'bake', 'fry'], 'spam': 2} \u003e\u003e\u003e D['brunch'] = 'Bacon' \u003e\u003e\u003e D {'ham': ['grill', 'bake', 'fry'], 'spam': 2, 'brunch': 'Bacon'} Using Dictionaries to Simulate Flexible Lists Unlike lists, dictionaries do not require pre-allocation of space. For example, you can assign a value to a key without needing every index to exist:\n\u003e\u003e\u003e D = {} \u003e\u003e\u003e D[99] = 'spam' \u003e\u003e\u003e D[99] 'spam' Using Dictionaries for Sparse Data Structures Dictionaries can represent sparse data structures. For example, a three-dimensional array where only a few positions are nonempty can be stored as:\n\u003e\u003e\u003e Matrix = {} \u003e\u003e\u003e Matrix[(2, 3, 4)] = 88 \u003e\u003e\u003e Matrix[(7, 8, 9)] = 99 \u003e\u003e\u003e Matrix[(2, 3, 4)] 88 Attempting to access a non-existent key results in a KeyError:\n\u003e\u003e\u003e Matrix[(2, 3, 6)] # Raises KeyError To avoid such errors, use one of these methods:\nCheck key existence with in Use a try/except block Use the get() method with a default value: \u003e\u003e\u003e Matrix.get((2, 3, 6), 0) 0 Using Dictionaries as “Records” Dictionaries are ideal for representing structured data similar to records or structs in other languages. For example:\n\u003e\u003e\u003e rec = {} \u003e\u003e\u003e rec['name'] = 'mel' \u003e\u003e\u003e rec['age'] = 45 \u003e\u003e\u003e rec['job'] = 'trainer/writer' \u003e\u003e\u003e print(rec['name']) Mel They can also be nested to represent more complex information:\n\u003e\u003e\u003e mel = { ... 'name': 'Mark', ... 'jobs': ['trainer', 'writer'], ... 'web': 'www.rmi.net/~lutz', ... 'home': {'state': 'CO', 'zip': 80513} ... } \u003e\u003e\u003e mel['home']['zip'] 80513 Sorting Dictionary Keys Since dictionaries are unordered, you can obtain a sorted list of keys when iterating:\n\u003e\u003e\u003e D = {'a': 1, 'c': 3, 'b': 2} \u003e\u003e\u003e for key in sorted(D): ... print(key, D[key]) a 1 b 2 c 3 Note: In Python 3, D.keys() returns a view object, so you may need to convert it to a list before sorting, or simply use the sorted() function directly on the dictionary.\nChapter Summary Lists are mutable, ordered collections that support indexing, slicing, concatenation, and repetition. They can store heterogeneous data and be nested arbitrarily. List comprehensions offer a concise syntax for creating new lists from existing sequences. Changing lists in-place can be done via index or slice assignments and with methods such as append(), extend(), pop(), insert(), remove(), sort(), and reverse(). Dictionaries are mutable mappings that store key–value pairs, offering fast lookup by key. They are unordered by default. Basic dictionary operations include accessing, updating, deleting keys, and testing membership. They are ideal for representing sparse data, flexible lists, and structured records. Sorting dictionary keys and using methods like get() help manage dictionaries effectively. Together, lists and dictionaries provide powerful and flexible data structures that form the backbone of Python programming. They enable efficient data manipulation and are widely used in virtually every Python application.\n",
-  "wordCount" : "1330",
+  "articleBody": "The list and dictionary object types are the main workhorses in almost all Python scripts. They are used to store, organize, and retrieve data efficiently. In this chapter, we cover how lists and dictionaries work, their basic operations, and how to modify them in-place.\nLists Lists are ordered collections of arbitrary objects. Unlike strings, lists can contain any type of object—including numbers, strings, and even other lists. Lists are mutable, meaning you can change their contents in-place using assignment (to individual items or slices), method calls, deletion statements, and more. Key properties include:\nOrdered collections of arbitrary objects Accessed by offset (index) Variable-length, heterogeneous, and arbitrarily nestable Belong to the category “mutable sequence” Arrays of object references Common List Literals and Operations Operation Interpretation L1 + L2 Concatenate, repeat L * 3 for x in L: print(x) Iteration, membership 3 in L L.append(4) Methods: growing L.extend([5,6,7]) L.insert(I, X) L.index(1) Methods: searching L.count(X) L.sort() Methods: sorting, reversing, etc. L.reverse() del L[k] Methods, statement: shrinking del L[i:j] L.pop() L.remove(2) L[i:j] = [] L[i] = 1 Index assignment L[i:j] = [4,5,6] slice assignment L = [x**2 for x in range(5)] List comprehensions list(map(ord, ‘spam’)) maps L = [] An empty list L = [0, 1, 2, 3] Four items: indexes 0..3 L = [‘abc’, [‘def’, ‘ghi’]] Nested sublists L = list(‘spam’) Lists of an iterable’s items L = list(range(-4, 4)) list of successive integers L[i] Index L[i][j] Index of index L[i:j] Slice len(L) Length Basic List Operations Lists support many of the same operations as strings. For example:\n\u003e\u003e\u003e len([1, 2, 3]) 3 \u003e\u003e\u003e [1, 2, 3] + [4, 5, 6] [1, 2, 3, 4, 5, 6] \u003e\u003e\u003e ['Ni!'] * 4 ['Ni!', 'Ni!', 'Ni!', 'Ni!'] Note: The + operator for lists requires both operands to be sequences. To combine a list and a string, you must convert one of them:\n\u003e\u003e\u003e str([1, 2]) + \"34\" '[1, 2]34' \u003e\u003e\u003e [1, 2] + list(\"34\") [1, 2, '3', '4'] List Iteration and Comprehensions Lists support membership tests and iteration:\n\u003e\u003e\u003e 3 in [1, 2, 3] True \u003e\u003e\u003e for x in [1, 2, 3]: ... print(x, end=' ') 1 2 3 List comprehensions offer a concise way to build new lists:\n\u003e\u003e\u003e res = [c * 4 for c in 'SPAM'] \u003e\u003e\u003e res ['SSSS', 'PPPP', 'AAAA', 'MMMM'] This is equivalent to:\n\u003e\u003e\u003e res = [] \u003e\u003e\u003e for c in 'SPAM': ... res.append(c * 4) \u003e\u003e\u003e res ['SSSS', 'PPPP', 'AAAA', 'MMMM'] Indexing, Slicing, and Matrixes Since lists are sequences, you can index and slice them just like strings. However, indexing a list returns the object at that position, while slicing always returns a new list.\n\u003e\u003e\u003e L = ['spam', 'Spam', 'SPAM!'] \u003e\u003e\u003e L[2] 'SPAM!' \u003e\u003e\u003e L[-2] 'Spam' \u003e\u003e\u003e L[1:] ['Spam', 'SPAM!'] Lists can be nested. For example, a simple 3×3 matrix can be represented as:\n\u003e\u003e\u003e matrix = [[1, 2, 3], [4, 5, 6], [7, 8, 9]] \u003e\u003e\u003e matrix[1] # Get the second row [4, 5, 6] \u003e\u003e\u003e matrix[1][1] # Get the middle element 5 Changing Lists In-Place Because lists are mutable, you can modify them by assigning new values to individual items or slices:\n\u003e\u003e\u003e L = ['spam', 'Spam', 'SPAM!'] \u003e\u003e\u003e L[1] = 'eggs' \u003e\u003e\u003e L ['spam', 'eggs', 'SPAM!'] \u003e\u003e\u003e L[0:2] = ['eat', 'more'] \u003e\u003e\u003e L ['eat', 'more', 'SPAM!'] Slice assignment works in two steps:\nThe specified slice is deleted. New items are inserted in its place. For example, given L = [1, 2, 3], the assignment L[1:2] = [4, 5] results in [1, 4, 5, 3].\nList Method Calls List objects provide many methods that modify the list in-place. Some common methods include:\nappend(): Add an element to the end. extend(): Add multiple elements. pop(): Remove and return an element (default is the last item). insert(): Insert an element at a specified index. remove(): Remove the first occurrence of a value. sort(): Sort the list in-place. reverse(): Reverse the list in-place. reversed(): Returns an iterator that yields the list in reverse order. Examples:\n\u003e\u003e\u003e L = ['spam', 'eggs', 'ham'] \u003e\u003e\u003e L.append('please') \u003e\u003e\u003e L ['spam', 'eggs', 'ham', 'please'] \u003e\u003e\u003e L.sort() \u003e\u003e\u003e L ['SPAM!', 'eat', 'more', 'please'] # Example output after sort \u003e\u003e\u003e L.extend([1, 2, 3]) \u003e\u003e\u003e L ['spam', 'eggs', 'ham', 'please', 1, 2, 3] \u003e\u003e\u003e L.pop() 3 \u003e\u003e\u003e L ['spam', 'eggs', 'ham', 'please'] For stack-like behavior:\n\u003e\u003e\u003e stack = [] \u003e\u003e\u003e stack.append(1) \u003e\u003e\u003e stack.append(2) \u003e\u003e\u003e stack.pop() 2 To reverse a list without modifying it, use the reversed built-in wrapped in list():\n\u003e\u003e\u003e list(reversed(L)) Dictionaries Dictionaries are mutable mappings that store key–value pairs. Unlike lists, they are unordered and are accessed by key rather than by numerical index. Dictionaries are implemented as hash tables, which means that lookups are very fast.\nCommon Dictionary Literals and Operations Operation Interpretation D.items() keys+values, D.copy() copies, D.get(key, default) defaults, D.update(D2) merge, D.pop(key) delete, etc. len(D) Length: number of stored entries D[key] = 42 Adding/changing keys del D[key] Deleting entries by key list(D.keys()) Dictionary views (Python 3.0) D1.keys() \u0026 D2.keys() D = {x: x*2 for x in range(10)} Dictionary comprehensions (Python 3.0) D = {} Empty dictionary D = {‘spam’: 2, ’eggs’: 3} Two-item dictionary D = {‘food’: {‘ham’: 1, ’egg’: 2}} Nesting D = dict(name=‘Bob’, age=40) Alternative construction techniques: keywords, zipped pairs, key lists D = dict(zip(keyslist, valslist)) D = dict.fromkeys([‘a’, ‘b’]) D[’eggs’] Indexing by key D[‘food’][‘ham’] ’eggs’ in D Membership: key present test D.keys() Methods: keys, D.values() values, Basic Dictionary Operations Dictionaries are created using curly braces with key–value pairs:\n\u003e\u003e\u003e D = {'spam': 2, 'ham': 1, 'eggs': 3} \u003e\u003e\u003e D['spam'] 2 \u003e\u003e\u003e len(D) 3 \u003e\u003e\u003e 'ham' in D True \u003e\u003e\u003e list(D.keys()) ['eggs', 'ham', 'spam'] Note: The order of keys is not guaranteed. If you need a specific order, you can sort the keys.\nChanging Dictionaries In-Place Since dictionaries are mutable, you can change their contents by assigning to keys or using the del statement:\n\u003e\u003e\u003e D = {'eggs': 3, 'ham': 1, 'spam': 2} \u003e\u003e\u003e D['ham'] = ['grill', 'bake', 'fry'] \u003e\u003e\u003e D {'eggs': 3, 'ham': ['grill', 'bake', 'fry'], 'spam': 2} \u003e\u003e\u003e del D['eggs'] \u003e\u003e\u003e D {'ham': ['grill', 'bake', 'fry'], 'spam': 2} \u003e\u003e\u003e D['brunch'] = 'Bacon' \u003e\u003e\u003e D {'ham': ['grill', 'bake', 'fry'], 'spam': 2, 'brunch': 'Bacon'} Using Dictionaries to Simulate Flexible Lists Unlike lists, dictionaries do not require pre-allocation of space. For example, you can assign a value to a key without needing every index to exist:\n\u003e\u003e\u003e D = {} \u003e\u003e\u003e D[99] = 'spam' \u003e\u003e\u003e D[99] 'spam' Using Dictionaries for Sparse Data Structures Dictionaries can represent sparse data structures. For example, a three-dimensional array where only a few positions are nonempty can be stored as:\n\u003e\u003e\u003e Matrix = {} \u003e\u003e\u003e Matrix[(2, 3, 4)] = 88 \u003e\u003e\u003e Matrix[(7, 8, 9)] = 99 \u003e\u003e\u003e Matrix[(2, 3, 4)] 88 Attempting to access a non-existent key results in a KeyError:\n\u003e\u003e\u003e Matrix[(2, 3, 6)] # Raises KeyError To avoid such errors, use one of these methods:\nCheck key existence with in Use a try/except block Use the get() method with a default value: \u003e\u003e\u003e Matrix.get((2, 3, 6), 0) 0 Using Dictionaries as “Records” Dictionaries are ideal for representing structured data similar to records or structs in other languages. For example:\n\u003e\u003e\u003e rec = {} \u003e\u003e\u003e rec['name'] = 'mel' \u003e\u003e\u003e rec['age'] = 45 \u003e\u003e\u003e rec['job'] = 'trainer/writer' \u003e\u003e\u003e print(rec['name']) Mel They can also be nested to represent more complex information:\n\u003e\u003e\u003e mel = { ... 'name': 'Mark', ... 'jobs': ['trainer', 'writer'], ... 'web': 'www.rmi.net/~lutz', ... 'home': {'state': 'CO', 'zip': 80513} ... } \u003e\u003e\u003e mel['home']['zip'] 80513 Sorting Dictionary Keys Since dictionaries are unordered, you can obtain a sorted list of keys when iterating:\n\u003e\u003e\u003e D = {'a': 1, 'c': 3, 'b': 2} \u003e\u003e\u003e for key in sorted(D): ... print(key, D[key]) a 1 b 2 c 3 Note: In Python 3, D.keys() returns a view object, so you may need to convert it to a list before sorting, or simply use the sorted() function directly on the dictionary.\n",
+  "wordCount" : "1300",
   "inLanguage": "en",
   "datePublished": "0001-01-01T00:00:00Z",
   "dateModified": "0001-01-01T00:00:00Z",
@@ -223,11 +223,10 @@ Lists are ordered collections of arbitrary objects. Unlike strings, lists can co
                 <li>
                     <a href="#using-dictionaries-as-records" aria-label="Using Dictionaries as “Records”">Using Dictionaries as “Records”</a></li>
                 <li>
-                    <a href="#sorting-dictionary-keys" aria-label="Sorting Dictionary Keys">Sorting Dictionary Keys</a></li></ul>
+                    <a href="#sorting-dictionary-keys" aria-label="Sorting Dictionary Keys">Sorting Dictionary Keys</a>
                 </li>
-                <li>
-                    <a href="#chapter-summary" aria-label="Chapter Summary">Chapter Summary</a>
-                </li>
+            </ul>
+            </li>
             </ul>
         </div>
     </details>
@@ -245,35 +244,129 @@ Lists are ordered collections of arbitrary objects. Unlike strings, lists can co
 <li><strong>Arrays of object references</strong></li>
 </ul>
 <h3 id="common-list-literals-and-operations">Common List Literals and Operations<a hidden class="anchor" aria-hidden="true" href="#common-list-literals-and-operations">#</a></h3>
-<p>Below is a placeholder for a table summarizing common list literals and operations:</p>
 <table>
   <thead>
       <tr>
           <th>Operation</th>
-          <th>Description</th>
-          <th>Example</th>
+          <th>Interpretation</th>
       </tr>
   </thead>
   <tbody>
       <tr>
-          <td><code>[]</code></td>
-          <td>Empty list literal</td>
-          <td><code>[]</code></td>
+          <td>L1 + L2</td>
+          <td>Concatenate, repeat</td>
       </tr>
       <tr>
-          <td><code>[item1, ...]</code></td>
-          <td>List literal with items</td>
-          <td><code>[1, 2, 3]</code></td>
+          <td>L * 3</td>
+          <td></td>
       </tr>
       <tr>
-          <td><code>L + M</code></td>
-          <td>Concatenation of two lists</td>
-          <td><code>[1, 2] + [3, 4]</code></td>
+          <td>for x in L: print(x)</td>
+          <td>Iteration, membership</td>
       </tr>
       <tr>
-          <td><code>['Ni!'] * 4</code></td>
-          <td>Repetition of a list element</td>
-          <td><code>['Ni!', 'Ni!', 'Ni!', 'Ni!']</code></td>
+          <td>3 in L</td>
+          <td></td>
+      </tr>
+      <tr>
+          <td>L.append(4)</td>
+          <td>Methods: growing</td>
+      </tr>
+      <tr>
+          <td>L.extend([5,6,7])</td>
+          <td></td>
+      </tr>
+      <tr>
+          <td>L.insert(I, X)</td>
+          <td></td>
+      </tr>
+      <tr>
+          <td>L.index(1)</td>
+          <td>Methods: searching</td>
+      </tr>
+      <tr>
+          <td>L.count(X)</td>
+          <td></td>
+      </tr>
+      <tr>
+          <td>L.sort()</td>
+          <td>Methods: sorting, reversing, etc.</td>
+      </tr>
+      <tr>
+          <td>L.reverse()</td>
+          <td></td>
+      </tr>
+      <tr>
+          <td>del L[k]</td>
+          <td>Methods, statement: shrinking</td>
+      </tr>
+      <tr>
+          <td>del L[i:j]</td>
+          <td></td>
+      </tr>
+      <tr>
+          <td>L.pop()</td>
+          <td></td>
+      </tr>
+      <tr>
+          <td>L.remove(2)</td>
+          <td></td>
+      </tr>
+      <tr>
+          <td>L[i:j] = []</td>
+          <td></td>
+      </tr>
+      <tr>
+          <td>L[i] = 1</td>
+          <td>Index assignment</td>
+      </tr>
+      <tr>
+          <td>L[i:j] = [4,5,6]</td>
+          <td>slice assignment</td>
+      </tr>
+      <tr>
+          <td>L = [x**2 for x in range(5)]</td>
+          <td>List comprehensions</td>
+      </tr>
+      <tr>
+          <td>list(map(ord, &lsquo;spam&rsquo;))</td>
+          <td>maps</td>
+      </tr>
+      <tr>
+          <td>L = []</td>
+          <td>An empty list</td>
+      </tr>
+      <tr>
+          <td>L = [0, 1, 2, 3]</td>
+          <td>Four items: indexes 0..3</td>
+      </tr>
+      <tr>
+          <td>L = [&lsquo;abc&rsquo;, [&lsquo;def&rsquo;, &lsquo;ghi&rsquo;]]</td>
+          <td>Nested sublists</td>
+      </tr>
+      <tr>
+          <td>L = list(&lsquo;spam&rsquo;)</td>
+          <td>Lists of an iterable&rsquo;s items</td>
+      </tr>
+      <tr>
+          <td>L = list(range(-4, 4))</td>
+          <td>list of successive integers</td>
+      </tr>
+      <tr>
+          <td>L[i]</td>
+          <td>Index</td>
+      </tr>
+      <tr>
+          <td>L[i][j]</td>
+          <td>Index of index</td>
+      </tr>
+      <tr>
+          <td>L[i:j]</td>
+          <td>Slice</td>
+      </tr>
+      <tr>
+          <td>len(L)</td>
+          <td>Length</td>
       </tr>
   </tbody>
 </table>
@@ -381,40 +474,101 @@ Lists are ordered collections of arbitrary objects. Unlike strings, lists can co
 <h2 id="dictionaries">Dictionaries<a hidden class="anchor" aria-hidden="true" href="#dictionaries">#</a></h2>
 <p>Dictionaries are mutable mappings that store key–value pairs. Unlike lists, they are unordered and are accessed by key rather than by numerical index. Dictionaries are implemented as hash tables, which means that lookups are very fast.</p>
 <h3 id="common-dictionary-literals-and-operations">Common Dictionary Literals and Operations<a hidden class="anchor" aria-hidden="true" href="#common-dictionary-literals-and-operations">#</a></h3>
-<p>Below is a placeholder for a table summarizing common dictionary literals and operations:</p>
 <table>
   <thead>
       <tr>
           <th>Operation</th>
-          <th>Description</th>
-          <th>Example</th>
+          <th>Interpretation</th>
       </tr>
   </thead>
   <tbody>
       <tr>
-          <td><code>{}</code></td>
-          <td>Empty dictionary literal</td>
-          <td><code>{}</code></td>
+          <td>D.items()</td>
+          <td>keys+values,</td>
       </tr>
       <tr>
-          <td><code>{'key': value}</code></td>
-          <td>Dictionary literal with a key–value pair</td>
-          <td><code>{'a': 1, 'b': 2}</code></td>
+          <td>D.copy()</td>
+          <td>copies,</td>
       </tr>
       <tr>
-          <td><code>D[key]</code></td>
-          <td>Access value by key</td>
-          <td><code>D['spam']</code></td>
+          <td>D.get(key, default)</td>
+          <td>defaults,</td>
       </tr>
       <tr>
-          <td><code>D[key] = value</code></td>
-          <td>Set or update value for a key</td>
-          <td><code>D['eggs'] = 3</code></td>
+          <td>D.update(D2)</td>
+          <td>merge,</td>
       </tr>
       <tr>
-          <td><code>del D[key]</code></td>
-          <td>Delete a key–value pair</td>
-          <td><code>del D['ham']</code></td>
+          <td>D.pop(key)</td>
+          <td>delete, etc.</td>
+      </tr>
+      <tr>
+          <td>len(D)</td>
+          <td>Length: number of stored entries</td>
+      </tr>
+      <tr>
+          <td>D[key] = 42</td>
+          <td>Adding/changing keys</td>
+      </tr>
+      <tr>
+          <td>del D[key]</td>
+          <td>Deleting entries by key</td>
+      </tr>
+      <tr>
+          <td>list(D.keys())</td>
+          <td>Dictionary views (Python 3.0)</td>
+      </tr>
+      <tr>
+          <td>D1.keys() &amp; D2.keys()</td>
+          <td></td>
+      </tr>
+      <tr>
+          <td>D = {x: x*2 for x in range(10)}</td>
+          <td>Dictionary comprehensions (Python 3.0)</td>
+      </tr>
+      <tr>
+          <td>D = {}</td>
+          <td>Empty dictionary</td>
+      </tr>
+      <tr>
+          <td>D = {&lsquo;spam&rsquo;: 2, &rsquo;eggs&rsquo;: 3}</td>
+          <td>Two-item dictionary</td>
+      </tr>
+      <tr>
+          <td>D = {&lsquo;food&rsquo;: {&lsquo;ham&rsquo;: 1, &rsquo;egg&rsquo;: 2}}</td>
+          <td>Nesting</td>
+      </tr>
+      <tr>
+          <td>D = dict(name=&lsquo;Bob&rsquo;, age=40)</td>
+          <td>Alternative construction techniques: keywords, zipped pairs, key lists</td>
+      </tr>
+      <tr>
+          <td>D = dict(zip(keyslist, valslist))</td>
+          <td></td>
+      </tr>
+      <tr>
+          <td>D = dict.fromkeys([&lsquo;a&rsquo;, &lsquo;b&rsquo;])</td>
+          <td></td>
+      </tr>
+      <tr>
+          <td>D[&rsquo;eggs&rsquo;]</td>
+          <td>Indexing by key</td>
+      </tr>
+      <tr>
+          <td>D[&lsquo;food&rsquo;][&lsquo;ham&rsquo;]</td>
+          <td></td>
+      </tr>
+      <tr>
+          <td>&rsquo;eggs&rsquo; in D</td>
+          <td>Membership: key present test</td>
+      </tr>
+      <tr>
+          <td>D.keys()</td>
+          <td>Methods: keys,</td>
+      </tr>
+      <tr>
+          <td>D.values()</td>
+          <td>values,</td>
       </tr>
   </tbody>
 </table>
@@ -495,16 +649,6 @@ Lists are ordered collections of arbitrary objects. Unlike strings, lists can co
 </span></span><span class="line"><span class="cl"><span class="n">c</span> <span class="mi">3</span>
 </span></span></code></pre></div><p><em>Note:</em> In Python 3, <code>D.keys()</code> returns a view object, so you may need to convert it to a list before sorting, or simply use the <code>sorted()</code> function directly on the dictionary.</p>
 <hr>
-<h2 id="chapter-summary">Chapter Summary<a hidden class="anchor" aria-hidden="true" href="#chapter-summary">#</a></h2>
-<ul>
-<li><strong>Lists</strong> are mutable, ordered collections that support indexing, slicing, concatenation, and repetition. They can store heterogeneous data and be nested arbitrarily.</li>
-<li><strong>List comprehensions</strong> offer a concise syntax for creating new lists from existing sequences.</li>
-<li><strong>Changing lists in-place</strong> can be done via index or slice assignments and with methods such as <code>append()</code>, <code>extend()</code>, <code>pop()</code>, <code>insert()</code>, <code>remove()</code>, <code>sort()</code>, and <code>reverse()</code>.</li>
-<li><strong>Dictionaries</strong> are mutable mappings that store key–value pairs, offering fast lookup by key. They are unordered by default.</li>
-<li><strong>Basic dictionary operations</strong> include accessing, updating, deleting keys, and testing membership. They are ideal for representing sparse data, flexible lists, and structured records.</li>
-<li><strong>Sorting dictionary keys</strong> and using methods like <code>get()</code> help manage dictionaries effectively.</li>
-</ul>
-<p>Together, lists and dictionaries provide powerful and flexible data structures that form the backbone of Python programming. They enable efficient data manipulation and are widely used in virtually every Python application.</p>
 
 
   </div>

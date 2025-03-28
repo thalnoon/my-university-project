@@ -193,11 +193,10 @@ For example:
   </header>
   <div class="entry-content">
     <p>Python programs can be decomposed into modules, statements, expressions, and objects, as follows:
-Programs are composed of modules. Modules contain statements. Statements contain expressions. Expressions create and process objects. Python’s Core Data Types Table 1 previews Python’s built-in object types and some of the syntax used to code their literals—that is, the expressions that generate these objects.
-Numbers Numbers in Python support the normal mathematical operations. For instance, the plus sign (&#43;) performs addition, a star (*) is used for multiplication, and two stars (**) are used for exponentiation:
+Programs are composed of modules. Modules contain statements. Statements contain expressions. Expressions create and process objects. Python’s Core Data Types Object type Example literals/creation Numbers 1234, 3.1415, 3&#43;4j, Decimal, Fraction Strings ‘spam’, “guido’s”, b’a\x01c’ Lists [1, [2, ’three’], 4] Dictionaries {‘food’: ‘spam’, ’taste’: ‘yum’} Tuples (1, ‘spam’, 4, ‘U’) Files myfile = open(’eggs’, ‘r’) Sets set(‘abc’), {‘a’, ‘b’, ‘c’} Other core types Booleans, types, None Program unit types Functions, modules, classes Implementation-related types Compiled code, stack tracebacks Numbers Numbers in Python support the normal mathematical operations. For instance, the plus sign (&#43;) performs addition, a star (*) is used for multiplication, and two stars (**) are used for exponentiation:
 ...</p>
   </div>
-  <footer class="entry-footer">11 min</footer>
+  <footer class="entry-footer">10 min</footer>
   <a class="entry-link" aria-label="post link to Chapter 4: Object Types" href="https://thalnoon.github.io/my-university-project/chapters/chapter-4/"></a>
 </article>
 
@@ -213,7 +212,7 @@ Integers and floating-point numbers Complex numbers Fixed-precision decimal numb
 Numeric Literals Among its basic types, Python provides integers (positive and negative whole numbers) and floating-point numbers (numbers with a fractional part, sometimes called “floats” for economy). Table 1 (not shown) illustrates what Python’s numeric types look like when written as literals.
 ...</p>
   </div>
-  <footer class="entry-footer">6 min</footer>
+  <footer class="entry-footer">7 min</footer>
   <a class="entry-link" aria-label="post link to Chapter 5: Numeric Types" href="https://thalnoon.github.io/my-university-project/chapters/chapter-5/"></a>
 </article>
 
@@ -224,8 +223,8 @@ Numeric Literals Among its basic types, Python provides integers (positive and n
   </header>
   <div class="entry-content">
     <p> String Literals There are many ways to write strings in your code:
-Single quotes: &#39;spa&#34;m&#39; Double quotes: &#34;spa&#39;m&#34; Triple quotes: &#39;&#39;&#39;... spam ...&#39;&#39;&#39; or &#34;&#34;&#34;... spam ...&#34;&#34;&#34; Escape sequences: &#34;s\tp\na\0m&#34; Raw strings: r&#34;C:\new\test.spm&#34; The single- and double-quoted forms are by far the most common.
-Single- and Double-Quoted Strings Are the Same Around Python strings, single and double quote characters are interchangeable. That is, string literals can be written enclosed in either single or double quotes; the two forms work the same and return the same type of object.
+Single quotes: &#39;spa&#34;m&#39; Double quotes: &#34;spa&#39;m&#34; Triple quotes: &#39;&#39;&#39;... spam ...&#39;&#39;&#39; or &#34;&#34;&#34;... spam ...&#34;&#34;&#34; Escape sequences: &#34;s\tp\na\0m&#34; Raw strings: r&#34;C:\new\test.spm&#34; And the following is a list of all the possible operations that utilize or benefit the use of string literals
+Operation Interpretation S = &#39;&#39; Empty string S = “spam’s” Double quotes, same as single S = ’s\np\ta\x00m&#39; Escape sequences S = “”&#34;…&#34;&#34;&#34; Triple-quoted block strings S = r’\temp\spam&#39; Raw strings S = b’spam&#39; Byte strings in 3.0 S = u’spam&#39; Unicode strings in 2.6 only S1 &#43; S2 Concatenate, repeat S * 3 S[i] Index, slice, length S[i:j] len(S) “a %s parrot” % kind String formatting expression “a {0} parrot”.format(kind) String formatting method in 2.6 and 3.0 S.find(‘pa’) String method calls: search, S.rstrip() remove whitespace, S.replace(‘pa’, ‘xx’) replacement, S.split(’,’) split on delimiter, S.isdigit() content test, S.lower() case conversion, S.endswith(‘spam’) end test, ‘spam’.join(strlist) delimiter join, S.encode(’latin-1’) Unicode encoding, etc. for x in S: print(x) Iteration, membership ‘spam’ in S [c* 2 for c in S] map(ord, S) Unicode The single- and double-quoted forms are by far the most common.
 ...</p>
   </div>
   <footer class="entry-footer">6 min</footer>
@@ -256,7 +255,7 @@ Lists Lists are ordered collections of arbitrary objects. Unlike strings, lists 
 Tuples The last collection type in our survey is the Python tuple. Tuples construct simple groups of objects. They work exactly like lists, except that tuples can’t be changed in-place (they’re immutable) and are usually written as a series of items in parentheses, not square brackets. Although they don’t support as many methods, tuples share most of their properties with lists. Here’s a quick look at the basics.
 ...</p>
   </div>
-  <footer class="entry-footer">12 min</footer>
+  <footer class="entry-footer">13 min</footer>
   <a class="entry-link" aria-label="post link to Chapter 8: Tuples, Files, and Everything Else" href="https://thalnoon.github.io/my-university-project/chapters/chapter-8/"></a>
 </article>
 
@@ -270,7 +269,7 @@ Tuples The last collection type in our survey is the Python tuple. Tuples constr
 Python Program Structure Revisited Another way to understand the role of statements is to revisit the concept hierarchy, which talked about built-in objects and the expressions used to manipulate them. The hierarchy levels are:
 ...</p>
   </div>
-  <footer class="entry-footer">6 min</footer>
+  <footer class="entry-footer">7 min</footer>
   <a class="entry-link" aria-label="post link to Chapter 9: Introducing Python Statements" href="https://thalnoon.github.io/my-university-project/chapters/chapter-9/"></a>
 </article>
 

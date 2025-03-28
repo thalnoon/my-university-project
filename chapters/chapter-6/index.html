@@ -17,10 +17,126 @@ Triple quotes: &#39;&#39;&#39;... spam ...&#39;&#39;&#39; or &quot;&quot;&quot;.
 Escape sequences: &quot;s\tp\na\0m&quot;
 Raw strings: r&quot;C:\new\test.spm&quot;
 
-The single- and double-quoted forms are by far the most common.
+And the following is a list of all the possible operations that utilize or benefit the use of string literals
 
-Single- and Double-Quoted Strings Are the Same
-Around Python strings, single and double quote characters are interchangeable. That is, string literals can be written enclosed in either single or double quotes; the two forms work the same and return the same type of object.">
+  
+      
+          Operation
+          Interpretation
+      
+  
+  
+      
+          S = &#39;&#39;
+          Empty string
+      
+      
+          S = &ldquo;spam&rsquo;s&rdquo;
+          Double quotes, same as single
+      
+      
+          S = &rsquo;s\np\ta\x00m&#39;
+          Escape sequences
+      
+      
+          S = &ldquo;&rdquo;&quot;&hellip;&quot;&quot;&quot;
+          Triple-quoted block strings
+      
+      
+          S = r&rsquo;\temp\spam&#39;
+          Raw strings
+      
+      
+          S = b&rsquo;spam&#39;
+          Byte strings in 3.0
+      
+      
+          S = u&rsquo;spam&#39;
+          Unicode strings in 2.6 only
+      
+      
+          S1 &#43; S2
+          Concatenate, repeat
+      
+      
+          S * 3
+          
+      
+      
+          S[i]
+          Index, slice, length
+      
+      
+          S[i:j]
+          
+      
+      
+          len(S)
+          
+      
+      
+          &ldquo;a %s parrot&rdquo; % kind
+          String formatting expression
+      
+      
+          &ldquo;a {0} parrot&rdquo;.format(kind)
+          String formatting method in 2.6 and 3.0
+      
+      
+          S.find(&lsquo;pa&rsquo;)
+          String method calls: search,
+      
+      
+          S.rstrip()
+          remove whitespace,
+      
+      
+          S.replace(&lsquo;pa&rsquo;, &lsquo;xx&rsquo;)
+          replacement,
+      
+      
+          S.split(&rsquo;,&rsquo;)
+          split on delimiter,
+      
+      
+          S.isdigit()
+          content test,
+      
+      
+          S.lower()
+          case conversion,
+      
+      
+          S.endswith(&lsquo;spam&rsquo;)
+          end test,
+      
+      
+          &lsquo;spam&rsquo;.join(strlist)
+          delimiter join,
+      
+      
+          S.encode(&rsquo;latin-1&rsquo;)
+          Unicode encoding, etc.
+      
+      
+          for x in S: print(x)
+          Iteration, membership
+      
+      
+          &lsquo;spam&rsquo; in S
+          
+      
+      
+          [c* 2 for c in S]
+          
+      
+      
+          map(ord, S)
+          Unicode
+      
+  
+
+The single- and double-quoted forms are by far the most common.">
 <meta name="author" content="">
 <link rel="canonical" href="https://thalnoon.github.io/my-university-project/chapters/chapter-6/">
 <link crossorigin="anonymous" href="/my-university-project/assets/css/stylesheet.45e028aa8ce0961349adf411b013ee39406be2c0bc80d4ea3fc04555f7f4611a.css" integrity="sha256-ReAoqozglhNJrfQRsBPuOUBr4sC8gNTqP8BFVff0YRo=" rel="preload stylesheet" as="style">
@@ -72,8 +188,8 @@ Around Python strings, single and double quote characters are interchangeable. T
   <meta property="og:site_name" content="Elite">
   <meta property="og:title" content="Chapter 6: Strings">
   <meta property="og:description" content=" String Literals There are many ways to write strings in your code:
-Single quotes: &#39;spa&#34;m&#39; Double quotes: &#34;spa&#39;m&#34; Triple quotes: &#39;&#39;&#39;... spam ...&#39;&#39;&#39; or &#34;&#34;&#34;... spam ...&#34;&#34;&#34; Escape sequences: &#34;s\tp\na\0m&#34; Raw strings: r&#34;C:\new\test.spm&#34; The single- and double-quoted forms are by far the most common.
-Single- and Double-Quoted Strings Are the Same Around Python strings, single and double quote characters are interchangeable. That is, string literals can be written enclosed in either single or double quotes; the two forms work the same and return the same type of object.">
+Single quotes: &#39;spa&#34;m&#39; Double quotes: &#34;spa&#39;m&#34; Triple quotes: &#39;&#39;&#39;... spam ...&#39;&#39;&#39; or &#34;&#34;&#34;... spam ...&#34;&#34;&#34; Escape sequences: &#34;s\tp\na\0m&#34; Raw strings: r&#34;C:\new\test.spm&#34; And the following is a list of all the possible operations that utilize or benefit the use of string literals
+Operation Interpretation S = &#39;&#39; Empty string S = “spam’s” Double quotes, same as single S = ’s\np\ta\x00m&#39; Escape sequences S = “”&#34;…&#34;&#34;&#34; Triple-quoted block strings S = r’\temp\spam&#39; Raw strings S = b’spam&#39; Byte strings in 3.0 S = u’spam&#39; Unicode strings in 2.6 only S1 &#43; S2 Concatenate, repeat S * 3 S[i] Index, slice, length S[i:j] len(S) “a %s parrot” % kind String formatting expression “a {0} parrot”.format(kind) String formatting method in 2.6 and 3.0 S.find(‘pa’) String method calls: search, S.rstrip() remove whitespace, S.replace(‘pa’, ‘xx’) replacement, S.split(’,’) split on delimiter, S.isdigit() content test, S.lower() case conversion, S.endswith(‘spam’) end test, ‘spam’.join(strlist) delimiter join, S.encode(’latin-1’) Unicode encoding, etc. for x in S: print(x) Iteration, membership ‘spam’ in S [c* 2 for c in S] map(ord, S) Unicode The single- and double-quoted forms are by far the most common.">
   <meta property="og:locale" content="en">
   <meta property="og:type" content="article">
     <meta property="article:section" content="chapters">
@@ -89,10 +205,126 @@ Triple quotes: &#39;&#39;&#39;... spam ...&#39;&#39;&#39; or &quot;&quot;&quot;.
 Escape sequences: &quot;s\tp\na\0m&quot;
 Raw strings: r&quot;C:\new\test.spm&quot;
 
-The single- and double-quoted forms are by far the most common.
+And the following is a list of all the possible operations that utilize or benefit the use of string literals
 
-Single- and Double-Quoted Strings Are the Same
-Around Python strings, single and double quote characters are interchangeable. That is, string literals can be written enclosed in either single or double quotes; the two forms work the same and return the same type of object.">
+  
+      
+          Operation
+          Interpretation
+      
+  
+  
+      
+          S = &#39;&#39;
+          Empty string
+      
+      
+          S = &ldquo;spam&rsquo;s&rdquo;
+          Double quotes, same as single
+      
+      
+          S = &rsquo;s\np\ta\x00m&#39;
+          Escape sequences
+      
+      
+          S = &ldquo;&rdquo;&quot;&hellip;&quot;&quot;&quot;
+          Triple-quoted block strings
+      
+      
+          S = r&rsquo;\temp\spam&#39;
+          Raw strings
+      
+      
+          S = b&rsquo;spam&#39;
+          Byte strings in 3.0
+      
+      
+          S = u&rsquo;spam&#39;
+          Unicode strings in 2.6 only
+      
+      
+          S1 &#43; S2
+          Concatenate, repeat
+      
+      
+          S * 3
+          
+      
+      
+          S[i]
+          Index, slice, length
+      
+      
+          S[i:j]
+          
+      
+      
+          len(S)
+          
+      
+      
+          &ldquo;a %s parrot&rdquo; % kind
+          String formatting expression
+      
+      
+          &ldquo;a {0} parrot&rdquo;.format(kind)
+          String formatting method in 2.6 and 3.0
+      
+      
+          S.find(&lsquo;pa&rsquo;)
+          String method calls: search,
+      
+      
+          S.rstrip()
+          remove whitespace,
+      
+      
+          S.replace(&lsquo;pa&rsquo;, &lsquo;xx&rsquo;)
+          replacement,
+      
+      
+          S.split(&rsquo;,&rsquo;)
+          split on delimiter,
+      
+      
+          S.isdigit()
+          content test,
+      
+      
+          S.lower()
+          case conversion,
+      
+      
+          S.endswith(&lsquo;spam&rsquo;)
+          end test,
+      
+      
+          &lsquo;spam&rsquo;.join(strlist)
+          delimiter join,
+      
+      
+          S.encode(&rsquo;latin-1&rsquo;)
+          Unicode encoding, etc.
+      
+      
+          for x in S: print(x)
+          Iteration, membership
+      
+      
+          &lsquo;spam&rsquo; in S
+          
+      
+      
+          [c* 2 for c in S]
+          
+      
+      
+          map(ord, S)
+          Unicode
+      
+  
+
+The single- and double-quoted forms are by far the most common.">
 
 
 <script type="application/ld+json">
@@ -121,12 +353,12 @@ Around Python strings, single and double quote characters are interchangeable. T
   "@type": "BlogPosting",
   "headline": "Chapter 6: Strings",
   "name": "Chapter 6: Strings",
-  "description": " String Literals There are many ways to write strings in your code:\nSingle quotes: 'spa\u0026quot;m' Double quotes: \u0026quot;spa'm\u0026quot; Triple quotes: '''... spam ...''' or \u0026quot;\u0026quot;\u0026quot;... spam ...\u0026quot;\u0026quot;\u0026quot; Escape sequences: \u0026quot;s\\tp\\na\\0m\u0026quot; Raw strings: r\u0026quot;C:\\new\\test.spm\u0026quot; The single- and double-quoted forms are by far the most common.\nSingle- and Double-Quoted Strings Are the Same Around Python strings, single and double quote characters are interchangeable. That is, string literals can be written enclosed in either single or double quotes; the two forms work the same and return the same type of object.\n",
+  "description": " String Literals There are many ways to write strings in your code:\nSingle quotes: 'spa\u0026quot;m' Double quotes: \u0026quot;spa'm\u0026quot; Triple quotes: '''... spam ...''' or \u0026quot;\u0026quot;\u0026quot;... spam ...\u0026quot;\u0026quot;\u0026quot; Escape sequences: \u0026quot;s\\tp\\na\\0m\u0026quot; Raw strings: r\u0026quot;C:\\new\\test.spm\u0026quot; And the following is a list of all the possible operations that utilize or benefit the use of string literals\nOperation Interpretation S = '' Empty string S = \u0026ldquo;spam\u0026rsquo;s\u0026rdquo; Double quotes, same as single S = \u0026rsquo;s\\np\\ta\\x00m' Escape sequences S = \u0026ldquo;\u0026rdquo;\u0026quot;\u0026hellip;\u0026quot;\u0026quot;\u0026quot; Triple-quoted block strings S = r\u0026rsquo;\\temp\\spam' Raw strings S = b\u0026rsquo;spam' Byte strings in 3.0 S = u\u0026rsquo;spam' Unicode strings in 2.6 only S1 + S2 Concatenate, repeat S * 3 S[i] Index, slice, length S[i:j] len(S) \u0026ldquo;a %s parrot\u0026rdquo; % kind String formatting expression \u0026ldquo;a {0} parrot\u0026rdquo;.format(kind) String formatting method in 2.6 and 3.0 S.find(\u0026lsquo;pa\u0026rsquo;) String method calls: search, S.rstrip() remove whitespace, S.replace(\u0026lsquo;pa\u0026rsquo;, \u0026lsquo;xx\u0026rsquo;) replacement, S.split(\u0026rsquo;,\u0026rsquo;) split on delimiter, S.isdigit() content test, S.lower() case conversion, S.endswith(\u0026lsquo;spam\u0026rsquo;) end test, \u0026lsquo;spam\u0026rsquo;.join(strlist) delimiter join, S.encode(\u0026rsquo;latin-1\u0026rsquo;) Unicode encoding, etc. for x in S: print(x) Iteration, membership \u0026lsquo;spam\u0026rsquo; in S [c* 2 for c in S] map(ord, S) Unicode The single- and double-quoted forms are by far the most common.\n",
   "keywords": [
     
   ],
-  "articleBody": " String Literals There are many ways to write strings in your code:\nSingle quotes: 'spa\"m' Double quotes: \"spa'm\" Triple quotes: '''... spam ...''' or \"\"\"... spam ...\"\"\" Escape sequences: \"s\\tp\\na\\0m\" Raw strings: r\"C:\\new\\test.spm\" The single- and double-quoted forms are by far the most common.\nSingle- and Double-Quoted Strings Are the Same Around Python strings, single and double quote characters are interchangeable. That is, string literals can be written enclosed in either single or double quotes; the two forms work the same and return the same type of object.\n\u003e\u003e\u003e 'shrubbery', \"shrubbery\" ('shrubbery', 'shrubbery') They allow you to embed a quote character of the other variety without escaping it:\n\u003e\u003e\u003e 'knight\"s', \"knight's\" ('knight\"s', \"knight's\") Python automatically concatenates adjacent string literals:\n\u003e\u003e\u003e title = \"Meaning \" 'of' \" Life\" \u003e\u003e\u003e title 'Meaning of Life' Escape Sequences Represent Special Bytes Backslashes are used to introduce escape sequences which represent special byte values. For example:\n\u003e\u003e\u003e s = 'a\\nb\\tc' \u003e\u003e\u003e s 'a\\nb\\tc' \u003e\u003e\u003e print(s) a b\tc \u003e\u003e\u003e len(s) 5 Another example with binary zero bytes:\n\u003e\u003e\u003e s = 'a\\0b\\0c' \u003e\u003e\u003e s 'a\\x00b\\x00c' \u003e\u003e\u003e len(s) 5 And a string with absolute binary escape codes:\n\u003e\u003e\u003e s = '\\001\\002\\x03' \u003e\u003e\u003e s '\\x01\\x02\\x03' \u003e\u003e\u003e len(s) 3 Basic Operations on Strings Strings can be concatenated using the + operator and repeated using the * operator:\n\u003e\u003e\u003e len('abc') 3 \u003e\u003e\u003e 'abc' + 'def' 'abcdef' \u003e\u003e\u003e 'Ni!' * 4 'Ni!Ni!Ni!Ni!' Adding two string objects creates a new string, while repetition concatenates a string to itself multiple times.\nString Methods Methods are functions attached to string objects that perform higher-level operations. For example, some common string methods include:\nS.capitalize() S.ljust(width [, fill]) S.center(width [, fill]) S.lower() S.count(sub [, start [, end]]) S.lstrip([chars]) S.encode([encoding [,errors]]) S.maketrans(x[, y[, z]]) S.endswith(suffix [, start [, end]]) S.partition(sep) S.expandtabs([tabsize]) S.replace(old, new [, count]) S.find(sub [, start [, end]]) S.rfind(sub [, start [, end]]) S.format(fmtstr, *args, **kwargs) S.rindex(sub [, start [, end]]) S.index(sub [, start [, end]]) S.rjust(width [, fill]) S.isalnum() S.rpartition(sep) S.isalpha() S.rsplit([sep[, maxsplit]]) S.isdecimal() S.rstrip([chars]) S.isdigit() S.split([sep [,maxsplit]]) S.isidentifier() S.splitlines([keepends]) S.islower() S.startswith(prefix [, start [, end]]) S.isnumeric() S.strip([chars]) S.isprintable() S.swapcase() S.isspace() S.title() S.istitle() S.translate(map) S.isupper() S.upper() S.join(iterable) S.zfill(width) String Method Examples: Changing Strings Since strings are immutable, you must create a new string when making changes.\nUsing slicing and concatenation:\n\u003e\u003e\u003e S = 'spammy' \u003e\u003e\u003e S = S[:3] + 'xx' + S[5:] \u003e\u003e\u003e S 'spaxxy' Using the replace method:\n\u003e\u003e\u003e S = 'spammy' \u003e\u003e\u003e S = S.replace('mm', 'xx') \u003e\u003e\u003e S 'spaxxy' Global replacement example:\n\u003e\u003e\u003e 'aa$bb$cc$dd'.replace('$', 'SPAM') 'aaSPAMbbSPAMccSPAMdd' To modify a string in-place, convert it to a list, modify, then join back:\n\u003e\u003e\u003e S = 'spammy' \u003e\u003e\u003e L = list(S) \u003e\u003e\u003e L ['s', 'p', 'a', 'm', 'm', 'y'] \u003e\u003e\u003e L[3] = 'x' \u003e\u003e\u003e L[4] = 'x' \u003e\u003e\u003e L ['s', 'p', 'a', 'x', 'x', 'y'] \u003e\u003e\u003e S = ''.join(L) \u003e\u003e\u003e S 'spaxxy' Joining Strings The join method concatenates an iterable of strings with a delimiter:\n\u003e\u003e\u003e 'SPAM'.join(['eggs', 'sausage', 'ham', 'toast']) 'eggsSPAMsausageSPAMhamSPAMtoast' Slicing and Splitting Strings Slicing extracts fixed substrings:\n\u003e\u003e\u003e line = 'aaa bbb ccc' \u003e\u003e\u003e col1 = line[0:3] \u003e\u003e\u003e col3 = line[8:] \u003e\u003e\u003e col1 'aaa' \u003e\u003e\u003e col3 'ccc' Splitting divides a string into substrings based on a delimiter (whitespace by default):\n\u003e\u003e\u003e line = 'aaa bbb ccc' \u003e\u003e\u003e cols = line.split() \u003e\u003e\u003e cols ['aaa', 'bbb', 'ccc'] For other delimiters, pass the delimiter to split().\nOther Common String Methods in Action Examples of other string methods:\n\u003e\u003e\u003e line = \"The knights who say Ni!\\n\" \u003e\u003e\u003e line.rstrip() 'The knights who say Ni!' \u003e\u003e\u003e line.upper() 'THE KNIGHTS WHO SAY NI!\\n' \u003e\u003e\u003e line.isalpha() False \u003e\u003e\u003e line.endswith('Ni!\\n') True \u003e\u003e\u003e line.startswith('The') True Alternative techniques:\n\u003e\u003e\u003e line 'The knights who say Ni!\\n' \u003e\u003e\u003e line.find('Ni') != -1 True \u003e\u003e\u003e 'Ni' in line True \u003e\u003e\u003e sub = 'Ni!\\n' \u003e\u003e\u003e line.endswith(sub) True \u003e\u003e\u003e line[-len(sub):] == sub True String Formatting Expressions String formatting allows multiple type-specific substitutions in a single step. The original technique uses the % operator:\n\u003e\u003e\u003e 'That is %d %s bird!' % (1, 'dead') 'That is 1 dead bird!' More examples:\n\u003e\u003e\u003e exclamation = \"Ni\" \u003e\u003e\u003e \"The knights who say %s!\" % exclamation 'The knights who say Ni!' \u003e\u003e\u003e \"%d %s %d you\" % (1, 'spam', 4) '1 spam 4 you' \u003e\u003e\u003e \"%s -- %s -- %s\" % (42, 3.14159, [1, 2, 3]) '42 -- 3.14159 -- [1, 2, 3]' Advanced String Formatting Expressions Conversion type codes can be used in formatting expressions. The general structure is:\n%[(name)][flags][width][.precision]typecode Below is a table of common type codes:\nCode Meaning s String (or any object’s str() string) r Same as s, but uses repr() instead c Character d Decimal (integer) i Integer u Same as d (obsolete) o Octal integer x Hex integer X Hex integer (uppercase) e Floating-point exponent, lowercase E Floating-point exponent, uppercase f Floating-point decimal F Floating-point decimal g Floating-point (uses e or f, whichever is shorter) G Floating-point (uses E or F, whichever is shorter) % Literal % Examples:\n\u003e\u003e\u003e x = 1234 \u003e\u003e\u003e res = \"integers: ...%d...%-6d...%06d\" % (x, x, x) \u003e\u003e\u003e res 'integers: ...1234...1234 ...001234' Floating-point formatting:\n\u003e\u003e\u003e x = 1.23456789 \u003e\u003e\u003e x 1.2345678899999999 \u003e\u003e\u003e '%e | %f | %g' % (x, x, x) '1.234568e+00 | 1.234568 | 1.23457' \u003e\u003e\u003e '%E' % x '1.234568E+00' More formatting examples:\n\u003e\u003e\u003e '%-6.2f | %05.2f | %+06.1f' % (x, x, x) '1.23 | 01.23 | +001.2' \u003e\u003e\u003e \"%s\" % x, str(x) ('1.23456789', '1.23456789') Dynamic width and precision:\n\u003e\u003e\u003e '%f, %.2f, %.*f' % (1/3.0, 1/3.0, 4, 1/3.0) '0.333333, 0.33, 0.3333' Examples (Strings) Find the length of a word: len(word) Convert a string to upper case: word.upper() Capitalize the first word (first letter uppercase, rest lowercase): print(word.capitalize()) Convert a string to lower case: word.lower() Concatenate first name and surname without a space: name = firstname + surname Convert a phrase to title case: word.title() Remove extra spaces from the start and end of a string: text = \" This is some text. \" print(text.strip(\" \")) Slice a string: print(\"Hello world\"[7:10]) (This displays “orl” from “Hello world” where indexing starts at 0.) Prompt the user for their first name and display its length. Prompt for first name and surname, join them with a space, and display the full name and its length. Prompt for first name and surname in lower case, convert to title case, join them, and display the result. Prompt for the first line of a nursery rhyme, display its length, then ask for a starting and ending number and display that substring. Prompt the user to enter any word and display it in upper case. Prompt for the user’s first name. If its length is under five characters, ask for their surname, join them without a space, and display the result in upper case; otherwise, display the first name in lower case. Pig Latin Conversion: If a word begins with a consonant, move the first consonant to the end and add “ay”. If a word begins with a vowel, add “way” to the end.\nDisplay the resulting word in lower case. Chapter Summary String Literals:\nVarious ways to define strings include single, double, and triple quotes, along with escape sequences and raw strings.\nEscape Sequences:\nSpecial sequences using backslashes allow embedding non-printable or special characters in strings.\nBasic Operations:\nStrings support concatenation with +, repetition with *, slicing, and length determination using len().\nString Methods:\nBuilt-in methods offer operations such as case conversion, searching, splitting, joining, and replacing substrings.\nString Formatting:\nBoth old-style (%) formatting and advanced formatting expressions provide flexible ways to format strings.\nPractical Examples:\nNumerous examples illustrate how to manipulate and format strings, perform substring operations, and convert between mutable and immutable types.\n",
-  "wordCount" : "1254",
+  "articleBody": " String Literals There are many ways to write strings in your code:\nSingle quotes: 'spa\"m' Double quotes: \"spa'm\" Triple quotes: '''... spam ...''' or \"\"\"... spam ...\"\"\" Escape sequences: \"s\\tp\\na\\0m\" Raw strings: r\"C:\\new\\test.spm\" And the following is a list of all the possible operations that utilize or benefit the use of string literals\nOperation Interpretation S = '' Empty string S = “spam’s” Double quotes, same as single S = ’s\\np\\ta\\x00m' Escape sequences S = “”\"…\"\"\" Triple-quoted block strings S = r’\\temp\\spam' Raw strings S = b’spam' Byte strings in 3.0 S = u’spam' Unicode strings in 2.6 only S1 + S2 Concatenate, repeat S * 3 S[i] Index, slice, length S[i:j] len(S) “a %s parrot” % kind String formatting expression “a {0} parrot”.format(kind) String formatting method in 2.6 and 3.0 S.find(‘pa’) String method calls: search, S.rstrip() remove whitespace, S.replace(‘pa’, ‘xx’) replacement, S.split(’,’) split on delimiter, S.isdigit() content test, S.lower() case conversion, S.endswith(‘spam’) end test, ‘spam’.join(strlist) delimiter join, S.encode(’latin-1’) Unicode encoding, etc. for x in S: print(x) Iteration, membership ‘spam’ in S [c* 2 for c in S] map(ord, S) Unicode The single- and double-quoted forms are by far the most common.\nSingle- and Double-Quoted Strings Are the Same Around Python strings, single and double quote characters are interchangeable. That is, string literals can be written enclosed in either single or double quotes; the two forms work the same and return the same type of object.\n\u003e\u003e\u003e 'shrubbery', \"shrubbery\" ('shrubbery', 'shrubbery') They allow you to embed a quote character of the other variety without escaping it:\n\u003e\u003e\u003e 'knight\"s', \"knight's\" ('knight\"s', \"knight's\") Python automatically concatenates adjacent string literals:\n\u003e\u003e\u003e title = \"Meaning \" 'of' \" Life\" \u003e\u003e\u003e title 'Meaning of Life' Escape Sequences Represent Special Bytes Escape Meaning \\newline Ignored (continuation line) \\ Backslash (stores one ) ' Single quote (stores ‘) \" Double quote (stores “) \\a Bell \\b Backspace \\f Formfeed \\n Newline (linefeed) \\r Carriage return \\t Horizontal tab \\v Vertical tab \\xhh Character with hex value hh (at most 2 digits) \\ooo Character with octal value ooo (up to 3 digits) \\0 Null: binary 0 character (doesn’t end string) \\N{ id } Unicode database ID \\uhhhh Unicode 16-bit hex \\Uhhhhhhhh Unicode 32-bit hex \\other Not an escape (keeps both \\ and other) Backslashes are used to introduce escape sequences which represent special byte values. For example:\n\u003e\u003e\u003e s = 'a\\nb\\tc' \u003e\u003e\u003e s 'a\\nb\\tc' \u003e\u003e\u003e print(s) a b\tc \u003e\u003e\u003e len(s) 5 Another example with binary zero bytes:\n\u003e\u003e\u003e s = 'a\\0b\\0c' \u003e\u003e\u003e s 'a\\x00b\\x00c' \u003e\u003e\u003e len(s) 5 And a string with absolute binary escape codes:\n\u003e\u003e\u003e s = '\\001\\002\\x03' \u003e\u003e\u003e s '\\x01\\x02\\x03' \u003e\u003e\u003e len(s) 3 Basic Operations on Strings Strings can be concatenated using the + operator and repeated using the * operator:\n\u003e\u003e\u003e len('abc') 3 \u003e\u003e\u003e 'abc' + 'def' 'abcdef' \u003e\u003e\u003e 'Ni!' * 4 'Ni!Ni!Ni!Ni!' Adding two string objects creates a new string, while repetition concatenates a string to itself multiple times.\nString Methods Methods are functions attached to string objects that perform higher-level operations. For example, some common string methods include:\nS.find(sub [, start [, end]]) S.rfind(sub [, start [, end]]) S.format(fmtstr, *args, **kwargs) S.rindex(sub [, start [, end]]) S.index(sub [, start [, end]]) S.rjust(width [, fill]) S.isalnum() S.rpartition(sep) S.isalpha() S.rsplit([sep[, maxsplit]]) S.isdecimal() S.rstrip([chars]) S.isdigit() S.split([sep [, maxsplit]]) S.isidentifier() S.splitlines([keepends]) S.islower() S.startswith(prefix [, start [, end]]) S.isnumeric() S.strip([chars]) S.isprintable() S.swapcase() S.isspace() S.title() S.istitle() S.translate(map) S.isupper() S.upper() S.join(iterable) S.zfill(width) S.center(width [, fill]) S.lower() S.count(sub [, start [, end]]) S.lstrip([chars]) S.encode([encoding [,errors]]) S.maketrans(x[, y[, z]]) S.endswith(suffix [, start [, end]]) S.partition(sep) S.expandtabs([tabsize]) S.replace(old, new [, count]) String Method Examples: Changing Strings Since strings are immutable, you must create a new string when making changes.\nUsing slicing and concatenation:\n\u003e\u003e\u003e S = 'spammy' \u003e\u003e\u003e S = S[:3] + 'xx' + S[5:] \u003e\u003e\u003e S 'spaxxy' Using the replace method:\n\u003e\u003e\u003e S = 'spammy' \u003e\u003e\u003e S = S.replace('mm', 'xx') \u003e\u003e\u003e S 'spaxxy' Global replacement example:\n\u003e\u003e\u003e 'aa$bb$cc$dd'.replace('$', 'SPAM') 'aaSPAMbbSPAMccSPAMdd' To modify a string in-place, convert it to a list, modify, then join back:\n\u003e\u003e\u003e S = 'spammy' \u003e\u003e\u003e L = list(S) \u003e\u003e\u003e L ['s', 'p', 'a', 'm', 'm', 'y'] \u003e\u003e\u003e L[3] = 'x' \u003e\u003e\u003e L[4] = 'x' \u003e\u003e\u003e L ['s', 'p', 'a', 'x', 'x', 'y'] \u003e\u003e\u003e S = ''.join(L) \u003e\u003e\u003e S 'spaxxy' Joining Strings The join method concatenates an iterable of strings with a delimiter:\n\u003e\u003e\u003e 'SPAM'.join(['eggs', 'sausage', 'ham', 'toast']) 'eggsSPAMsausageSPAMhamSPAMtoast' Slicing and Splitting Strings Slicing extracts fixed substrings:\n\u003e\u003e\u003e line = 'aaa bbb ccc' \u003e\u003e\u003e col1 = line[0:3] \u003e\u003e\u003e col3 = line[8:] \u003e\u003e\u003e col1 'aaa' \u003e\u003e\u003e col3 'ccc' Splitting divides a string into substrings based on a delimiter (whitespace by default):\n\u003e\u003e\u003e line = 'aaa bbb ccc' \u003e\u003e\u003e cols = line.split() \u003e\u003e\u003e cols ['aaa', 'bbb', 'ccc'] For other delimiters, pass the delimiter to split().\nOther Common String Methods in Action Examples of other string methods:\n\u003e\u003e\u003e line = \"The knights who say Ni!\\n\" \u003e\u003e\u003e line.rstrip() 'The knights who say Ni!' \u003e\u003e\u003e line.upper() 'THE KNIGHTS WHO SAY NI!\\n' \u003e\u003e\u003e line.isalpha() False \u003e\u003e\u003e line.endswith('Ni!\\n') True \u003e\u003e\u003e line.startswith('The') True Alternative techniques:\n\u003e\u003e\u003e line 'The knights who say Ni!\\n' \u003e\u003e\u003e line.find('Ni') != -1 True \u003e\u003e\u003e 'Ni' in line True \u003e\u003e\u003e sub = 'Ni!\\n' \u003e\u003e\u003e line.endswith(sub) True \u003e\u003e\u003e line[-len(sub):] == sub True String Formatting Expressions String formatting allows multiple type-specific substitutions in a single step. The original technique uses the % operator:\n\u003e\u003e\u003e 'That is %d %s bird!' % (1, 'dead') 'That is 1 dead bird!' More examples:\n\u003e\u003e\u003e exclamation = \"Ni\" \u003e\u003e\u003e \"The knights who say %s!\" % exclamation 'The knights who say Ni!' \u003e\u003e\u003e \"%d %s %d you\" % (1, 'spam', 4) '1 spam 4 you' \u003e\u003e\u003e \"%s -- %s -- %s\" % (42, 3.14159, [1, 2, 3]) '42 -- 3.14159 -- [1, 2, 3]' Advanced String Formatting Expressions Conversion type codes can be used in formatting expressions. The general structure is:\n%[(name)][flags][width][.precision]typecode Below is a table of common type codes:\nCode Meaning s String (or any object’s str() string) r Same as s, but uses repr() instead c Character d Decimal (integer) i Integer u Same as d (obsolete) o Octal integer x Hex integer X Hex integer (uppercase) e Floating-point exponent, lowercase E Floating-point exponent, uppercase f Floating-point decimal F Floating-point decimal g Floating-point (uses e or f, whichever is shorter) G Floating-point (uses E or F, whichever is shorter) % Literal % Examples:\n\u003e\u003e\u003e x = 1234 \u003e\u003e\u003e res = \"integers: ...%d...%-6d...%06d\" % (x, x, x) \u003e\u003e\u003e res 'integers: ...1234...1234 ...001234' Floating-point formatting:\n\u003e\u003e\u003e x = 1.23456789 \u003e\u003e\u003e x 1.2345678899999999 \u003e\u003e\u003e '%e | %f | %g' % (x, x, x) '1.234568e+00 | 1.234568 | 1.23457' \u003e\u003e\u003e '%E' % x '1.234568E+00' More formatting examples:\n\u003e\u003e\u003e '%-6.2f | %05.2f | %+06.1f' % (x, x, x) '1.23 | 01.23 | +001.2' \u003e\u003e\u003e \"%s\" % x, str(x) ('1.23456789', '1.23456789') Dynamic width and precision:\n\u003e\u003e\u003e '%f, %.2f, %.*f' % (1/3.0, 1/3.0, 4, 1/3.0) '0.333333, 0.33, 0.3333' Examples (Strings) Find the length of a word: len(word) Convert a string to upper case: word.upper() Capitalize the first word (first letter uppercase, rest lowercase): print(word.capitalize()) Convert a string to lower case: word.lower() Concatenate first name and surname without a space: name = firstname + surname Convert a phrase to title case: word.title() Remove extra spaces from the start and end of a string: text = \" This is some text. \" print(text.strip(\" \")) Slice a string: print(\"Hello world\"[7:10]) (This displays “orl” from “Hello world” where indexing starts at 0.) ",
+  "wordCount" : "1222",
   "inLanguage": "en",
   "datePublished": "0001-01-01T00:00:00Z",
   "dateModified": "0001-01-01T00:00:00Z",
@@ -235,9 +467,7 @@ Around Python strings, single and double quote characters are interchangeable. T
                 <li>
                     <a href="#advanced-string-formatting-expressions" aria-label="Advanced String Formatting Expressions">Advanced String Formatting Expressions</a></li>
                 <li>
-                    <a href="#examples-strings" aria-label="Examples (Strings)">Examples (Strings)</a></li>
-                <li>
-                    <a href="#chapter-summary" aria-label="Chapter Summary">Chapter Summary</a>
+                    <a href="#examples-strings" aria-label="Examples (Strings)">Examples (Strings)</a>
                 </li>
             </ul>
         </div>
@@ -254,6 +484,125 @@ Around Python strings, single and double quote characters are interchangeable. T
 <li><strong>Escape sequences:</strong> <code>&quot;s\tp\na\0m&quot;</code></li>
 <li><strong>Raw strings:</strong> <code>r&quot;C:\new\test.spm&quot;</code></li>
 </ul>
+<p>And the following is a list of all the possible operations that utilize or benefit the use of string literals</p>
+<table>
+  <thead>
+      <tr>
+          <th>Operation</th>
+          <th>Interpretation</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td>S = ''</td>
+          <td>Empty string</td>
+      </tr>
+      <tr>
+          <td>S = &ldquo;spam&rsquo;s&rdquo;</td>
+          <td>Double quotes, same as single</td>
+      </tr>
+      <tr>
+          <td>S = &rsquo;s\np\ta\x00m'</td>
+          <td>Escape sequences</td>
+      </tr>
+      <tr>
+          <td>S = &ldquo;&rdquo;&quot;&hellip;&quot;&quot;&quot;</td>
+          <td>Triple-quoted block strings</td>
+      </tr>
+      <tr>
+          <td>S = r&rsquo;\temp\spam'</td>
+          <td>Raw strings</td>
+      </tr>
+      <tr>
+          <td>S = b&rsquo;spam'</td>
+          <td>Byte strings in 3.0</td>
+      </tr>
+      <tr>
+          <td>S = u&rsquo;spam'</td>
+          <td>Unicode strings in 2.6 only</td>
+      </tr>
+      <tr>
+          <td>S1 + S2</td>
+          <td>Concatenate, repeat</td>
+      </tr>
+      <tr>
+          <td>S * 3</td>
+          <td></td>
+      </tr>
+      <tr>
+          <td>S[i]</td>
+          <td>Index, slice, length</td>
+      </tr>
+      <tr>
+          <td>S[i:j]</td>
+          <td></td>
+      </tr>
+      <tr>
+          <td>len(S)</td>
+          <td></td>
+      </tr>
+      <tr>
+          <td>&ldquo;a %s parrot&rdquo; % kind</td>
+          <td>String formatting expression</td>
+      </tr>
+      <tr>
+          <td>&ldquo;a {0} parrot&rdquo;.format(kind)</td>
+          <td>String formatting method in 2.6 and 3.0</td>
+      </tr>
+      <tr>
+          <td>S.find(&lsquo;pa&rsquo;)</td>
+          <td>String method calls: search,</td>
+      </tr>
+      <tr>
+          <td>S.rstrip()</td>
+          <td>remove whitespace,</td>
+      </tr>
+      <tr>
+          <td>S.replace(&lsquo;pa&rsquo;, &lsquo;xx&rsquo;)</td>
+          <td>replacement,</td>
+      </tr>
+      <tr>
+          <td>S.split(&rsquo;,&rsquo;)</td>
+          <td>split on delimiter,</td>
+      </tr>
+      <tr>
+          <td>S.isdigit()</td>
+          <td>content test,</td>
+      </tr>
+      <tr>
+          <td>S.lower()</td>
+          <td>case conversion,</td>
+      </tr>
+      <tr>
+          <td>S.endswith(&lsquo;spam&rsquo;)</td>
+          <td>end test,</td>
+      </tr>
+      <tr>
+          <td>&lsquo;spam&rsquo;.join(strlist)</td>
+          <td>delimiter join,</td>
+      </tr>
+      <tr>
+          <td>S.encode(&rsquo;latin-1&rsquo;)</td>
+          <td>Unicode encoding, etc.</td>
+      </tr>
+      <tr>
+          <td>for x in S: print(x)</td>
+          <td>Iteration, membership</td>
+      </tr>
+      <tr>
+          <td>&lsquo;spam&rsquo; in S</td>
+          <td></td>
+      </tr>
+      <tr>
+          <td>[c* 2 for c in S]</td>
+          <td></td>
+      </tr>
+      <tr>
+          <td>map(ord, S)</td>
+          <td>Unicode</td>
+      </tr>
+  </tbody>
+</table>
 <p>The single- and double-quoted forms are by far the most common.</p>
 <hr>
 <h2 id="single--and-double-quoted-strings-are-the-same">Single- and Double-Quoted Strings Are the Same<a hidden class="anchor" aria-hidden="true" href="#single--and-double-quoted-strings-are-the-same">#</a></h2>
@@ -269,6 +618,88 @@ Around Python strings, single and double quote characters are interchangeable. T
 </span></span><span class="line"><span class="cl"><span class="s1">&#39;Meaning of Life&#39;</span>
 </span></span></code></pre></div><hr>
 <h2 id="escape-sequences-represent-special-bytes">Escape Sequences Represent Special Bytes<a hidden class="anchor" aria-hidden="true" href="#escape-sequences-represent-special-bytes">#</a></h2>
+<table>
+  <thead>
+      <tr>
+          <th>Escape</th>
+          <th>Meaning</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td>\newline</td>
+          <td>Ignored (continuation line)</td>
+      </tr>
+      <tr>
+          <td>\</td>
+          <td>Backslash (stores one )</td>
+      </tr>
+      <tr>
+          <td>'</td>
+          <td>Single quote (stores &lsquo;)</td>
+      </tr>
+      <tr>
+          <td>&quot;</td>
+          <td>Double quote (stores &ldquo;)</td>
+      </tr>
+      <tr>
+          <td>\a</td>
+          <td>Bell</td>
+      </tr>
+      <tr>
+          <td>\b</td>
+          <td>Backspace</td>
+      </tr>
+      <tr>
+          <td>\f</td>
+          <td>Formfeed</td>
+      </tr>
+      <tr>
+          <td>\n</td>
+          <td>Newline (linefeed)</td>
+      </tr>
+      <tr>
+          <td>\r</td>
+          <td>Carriage return</td>
+      </tr>
+      <tr>
+          <td>\t</td>
+          <td>Horizontal tab</td>
+      </tr>
+      <tr>
+          <td>\v</td>
+          <td>Vertical tab</td>
+      </tr>
+      <tr>
+          <td>\xhh</td>
+          <td>Character with hex value <em>hh</em> (at most 2 digits)</td>
+      </tr>
+      <tr>
+          <td>\ooo</td>
+          <td>Character with octal value <em>ooo</em> (up to 3 digits)</td>
+      </tr>
+      <tr>
+          <td>\0</td>
+          <td>Null: binary 0 character (doesn&rsquo;t end string)</td>
+      </tr>
+      <tr>
+          <td>\N{ id }</td>
+          <td>Unicode database ID</td>
+      </tr>
+      <tr>
+          <td>\uhhhh</td>
+          <td>Unicode 16-bit hex</td>
+      </tr>
+      <tr>
+          <td>\Uhhhhhhhh</td>
+          <td>Unicode 32-bit hex</td>
+      </tr>
+      <tr>
+          <td>\other</td>
+          <td>Not an escape (keeps both \ and <em>other</em>)</td>
+      </tr>
+  </tbody>
+</table>
 <p>Backslashes are used to introduce escape sequences which represent special byte values. For example:</p>
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="o">&gt;&gt;&gt;</span> <span class="n">s</span> <span class="o">=</span> <span class="s1">&#39;a</span><span class="se">\n</span><span class="s1">b</span><span class="se">\t</span><span class="s1">c&#39;</span>
 </span></span><span class="line"><span class="cl"><span class="o">&gt;&gt;&gt;</span> <span class="n">s</span>
@@ -303,50 +734,92 @@ Around Python strings, single and double quote characters are interchangeable. T
 <hr>
 <h2 id="string-methods">String Methods<a hidden class="anchor" aria-hidden="true" href="#string-methods">#</a></h2>
 <p>Methods are functions attached to string objects that perform higher-level operations. For example, some common string methods include:</p>
-<ul>
-<li><code>S.capitalize()</code></li>
-<li><code>S.ljust(width [, fill])</code></li>
-<li><code>S.center(width [, fill])</code></li>
-<li><code>S.lower()</code></li>
-<li><code>S.count(sub [, start [, end]])</code></li>
-<li><code>S.lstrip([chars])</code></li>
-<li><code>S.encode([encoding [,errors]])</code></li>
-<li><code>S.maketrans(x[, y[, z]])</code></li>
-<li><code>S.endswith(suffix [, start [, end]])</code></li>
-<li><code>S.partition(sep)</code></li>
-<li><code>S.expandtabs([tabsize])</code></li>
-<li><code>S.replace(old, new [, count])</code></li>
-<li><code>S.find(sub [, start [, end]])</code></li>
-<li><code>S.rfind(sub [, start [, end]])</code></li>
-<li><code>S.format(fmtstr, *args, **kwargs)</code></li>
-<li><code>S.rindex(sub [, start [, end]])</code></li>
-<li><code>S.index(sub [, start [, end]])</code></li>
-<li><code>S.rjust(width [, fill])</code></li>
-<li><code>S.isalnum()</code></li>
-<li><code>S.rpartition(sep)</code></li>
-<li><code>S.isalpha()</code></li>
-<li><code>S.rsplit([sep[, maxsplit]])</code></li>
-<li><code>S.isdecimal()</code></li>
-<li><code>S.rstrip([chars])</code></li>
-<li><code>S.isdigit()</code></li>
-<li><code>S.split([sep [,maxsplit]])</code></li>
-<li><code>S.isidentifier()</code></li>
-<li><code>S.splitlines([keepends])</code></li>
-<li><code>S.islower()</code></li>
-<li><code>S.startswith(prefix [, start [, end]])</code></li>
-<li><code>S.isnumeric()</code></li>
-<li><code>S.strip([chars])</code></li>
-<li><code>S.isprintable()</code></li>
-<li><code>S.swapcase()</code></li>
-<li><code>S.isspace()</code></li>
-<li><code>S.title()</code></li>
-<li><code>S.istitle()</code></li>
-<li><code>S.translate(map)</code></li>
-<li><code>S.isupper()</code></li>
-<li><code>S.upper()</code></li>
-<li><code>S.join(iterable)</code></li>
-<li><code>S.zfill(width)</code></li>
-</ul>
+<table>
+  <thead>
+      <tr>
+          <th>S.find(sub [, start [, end]])</th>
+          <th>S.rfind(sub [, start [, end]])</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td>S.format(fmtstr, *args, **kwargs)</td>
+          <td>S.rindex(sub [, start [, end]])</td>
+      </tr>
+      <tr>
+          <td>S.index(sub [, start [, end]])</td>
+          <td>S.rjust(width [, fill])</td>
+      </tr>
+      <tr>
+          <td>S.isalnum()</td>
+          <td>S.rpartition(sep)</td>
+      </tr>
+      <tr>
+          <td>S.isalpha()</td>
+          <td>S.rsplit([sep[, maxsplit]])</td>
+      </tr>
+      <tr>
+          <td>S.isdecimal()</td>
+          <td>S.rstrip([chars])</td>
+      </tr>
+      <tr>
+          <td>S.isdigit()</td>
+          <td>S.split([sep [, maxsplit]])</td>
+      </tr>
+      <tr>
+          <td>S.isidentifier()</td>
+          <td>S.splitlines([keepends])</td>
+      </tr>
+      <tr>
+          <td>S.islower()</td>
+          <td>S.startswith(prefix [, start [, end]])</td>
+      </tr>
+      <tr>
+          <td>S.isnumeric()</td>
+          <td>S.strip([chars])</td>
+      </tr>
+      <tr>
+          <td>S.isprintable()</td>
+          <td>S.swapcase()</td>
+      </tr>
+      <tr>
+          <td>S.isspace()</td>
+          <td>S.title()</td>
+      </tr>
+      <tr>
+          <td>S.istitle()</td>
+          <td>S.translate(map)</td>
+      </tr>
+      <tr>
+          <td>S.isupper()</td>
+          <td>S.upper()</td>
+      </tr>
+      <tr>
+          <td>S.join(iterable)</td>
+          <td>S.zfill(width)</td>
+      </tr>
+      <tr>
+          <td>S.center(width [, fill])</td>
+          <td>S.lower()</td>
+      </tr>
+      <tr>
+          <td>S.count(sub [, start [, end]])</td>
+          <td>S.lstrip([chars])</td>
+      </tr>
+      <tr>
+          <td>S.encode([encoding [,errors]])</td>
+          <td>S.maketrans(x[, y[, z]])</td>
+      </tr>
+      <tr>
+          <td>S.endswith(suffix [, start [, end]])</td>
+          <td>S.partition(sep)</td>
+      </tr>
+      <tr>
+          <td>S.expandtabs([tabsize])</td>
+          <td>S.replace(old, new [, count])</td>
+      </tr>
+  </tbody>
+</table>
 <hr>
 <h2 id="string-method-examples-changing-strings">String Method Examples: Changing Strings<a hidden class="anchor" aria-hidden="true" href="#string-method-examples-changing-strings">#</a></h2>
 <p>Since strings are immutable, you must create a new string when making changes.</p>
@@ -563,48 +1036,7 @@ Around Python strings, single and double quote characters are interchangeable. T
 <li><strong>Slice a string:</strong>
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="nb">print</span><span class="p">(</span><span class="s2">&#34;Hello world&#34;</span><span class="p">[</span><span class="mi">7</span><span class="p">:</span><span class="mi">10</span><span class="p">])</span>
 </span></span></code></pre></div>(This displays &ldquo;orl&rdquo; from &ldquo;Hello world&rdquo; where indexing starts at 0.)</li>
-<li><strong>Prompt the user for their first name and display its length.</strong></li>
-<li><strong>Prompt for first name and surname, join them with a space, and display the full name and its length.</strong></li>
-<li><strong>Prompt for first name and surname in lower case, convert to title case, join them, and display the result.</strong></li>
-<li><strong>Prompt for the first line of a nursery rhyme, display its length, then ask for a starting and ending number and display that substring.</strong></li>
-<li><strong>Prompt the user to enter any word and display it in upper case.</strong></li>
-<li><strong>Prompt for the user&rsquo;s first name. If its length is under five characters, ask for their surname, join them without a space, and display the result in upper case; otherwise, display the first name in lower case.</strong></li>
-<li><strong>Pig Latin Conversion:</strong>
-<ul>
-<li>If a word begins with a consonant, move the first consonant to the end and add &ldquo;ay&rdquo;.</li>
-<li>If a word begins with a vowel, add &ldquo;way&rdquo; to the end.<br>
-Display the resulting word in lower case.</li>
-</ul>
-</li>
 </ol>
-<hr>
-<h2 id="chapter-summary">Chapter Summary<a hidden class="anchor" aria-hidden="true" href="#chapter-summary">#</a></h2>
-<ul>
-<li>
-<p><strong>String Literals:</strong><br>
-Various ways to define strings include single, double, and triple quotes, along with escape sequences and raw strings.</p>
-</li>
-<li>
-<p><strong>Escape Sequences:</strong><br>
-Special sequences using backslashes allow embedding non-printable or special characters in strings.</p>
-</li>
-<li>
-<p><strong>Basic Operations:</strong><br>
-Strings support concatenation with <code>+</code>, repetition with <code>*</code>, slicing, and length determination using <code>len()</code>.</p>
-</li>
-<li>
-<p><strong>String Methods:</strong><br>
-Built-in methods offer operations such as case conversion, searching, splitting, joining, and replacing substrings.</p>
-</li>
-<li>
-<p><strong>String Formatting:</strong><br>
-Both old-style (<code>%</code>) formatting and advanced formatting expressions provide flexible ways to format strings.</p>
-</li>
-<li>
-<p><strong>Practical Examples:</strong><br>
-Numerous examples illustrate how to manipulate and format strings, perform substring operations, and convert between mutable and immutable types.</p>
-</li>
-</ul>
 
 
   </div>
