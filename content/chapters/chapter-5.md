@@ -33,9 +33,49 @@ Besides the built-in number literals, Python provides a set of tools for process
 - **Built-in mathematical functions:** `pow`, `abs`, `round`, `int`, `hex`, `bin`, etc.
 - **Utility modules:** `random`, `math`, etc.
 
+And this is a list of all the available numeric tools
+
+| Literal                                 | Interpretation                                   |
+|------------------------------------------|--------------------------------------------------|
+| 1234, -24, 0, 99999999999999           | Integers (unlimited size)                        |
+| 1.23, 1., 3.14e-10, 4E210, 4.0e+210    | Floating-point numbers                           |
+| 0177, 0x9ff, 0b101010                  | Octal, hex, and binary literals in 2.6           |
+| 0o177, 0x9ff, 0b101010                 | Octal, hex, and binary literals in 3.0           |
+| 3+4j, 3.0+4.0j, 3j                     | Complex number literals                          |
+
 ### Python Expression Operators
 
-Table 2 (not shown) lists all the operator expressions available in Python. Many are self-explanatory; for instance, the usual mathematical operators (`+`, `-`, `*`, `/`, etc.) are supported.
+| Operators                       | Description                                                     |
+|---------------------------------|-----------------------------------------------------------------|
+| yield x                       | Generator function send protocol                                 |
+| lambda args: expression       | Anonymous function generation                                    |
+| x if y else z                 | Ternary selection (x is evaluated only if y is true)            |
+| x or y                        | Logical OR (y is evaluated only if x is false)                   |
+| x and y                       | Logical AND (y is evaluated only if x is true)                  |
+| not x                         | Logical negation                                                |
+| x in y, x not in y            | Membership (iterables, sets)                                   |
+| x is y, x is not y            | Object identity tests                                           |
+| x < y, x <= y, x > y, x >= y | Magnitude comparison, set subset and superset;                  |
+| x == y, x != y                | Value equality operators                                        |
+| x | y                         | Bitwise OR, set union                                           |
+| x ^ y                         | Bitwise XOR, set symmetric difference                          |
+| x & y                         | Bitwise AND, set intersection                                   |
+| x << y, x >> y                | Shift x left or right by y bits                               |
+| x + y                         | Addition, concatenation;                                        |
+| x - y                         | Subtraction, set difference                                     |
+| x * y                         | Multiplication, repetition;                                     |
+| x % y                         | Remainder, format;                                              |
+| x / y, x // y                 | Division: true and floor                                         |
+| -x, +x                        | Negation, identity                                              |
+| ~x                            | Bitwise NOT (inversion)                                         |
+| x ** y                        | Power (exponentiation)                                          |
+| x[i]                          | Indexing (sequence, mapping, others)                            |
+| x[i:j:k]                      | Slicing                                                         |
+| x(...)                        | Call (function, method, class, other callable)                  |
+| x.attr                        | Attribute reference                                             |
+| (...)                         | Tuple, expression, generator expression                         |
+| [...]                         | List, list comprehension                                        |
+| {...}                         | Dictionary, set, set and dictionary comprehensions              |
 
 ## Examples
 
@@ -333,19 +373,3 @@ The standard library `random` module provides tools for generating random number
 
 The `random` module can be useful for shuffling items, selecting random elements, performing simulations, and more.
 
-## Chapter Summary
-
-- **Numeric Types Overview:**  
-  Python supports a wide range of numeric types including integers, floats, complex numbers, decimals, fractions, and more.
-
-- **Literals and Operators:**  
-  Numeric literals can be written in decimal, hexadecimal, octal, and binary formats. Operators and built-in functions (e.g., `pow`, `abs`, `round`) allow for a variety of arithmetic and bitwise operations.
-
-- **Comparisons and Chaining:**  
-  Numbers can be compared normally or with chained comparisons to perform range tests.
-
-- **Complex and Special Numbers:**  
-  Python supports complex numbers and provides various modules (like `math` and `random`) for advanced numeric processing.
-
-- **Utility Tools:**  
-  Built-in functions and modules offer additional tools for numeric conversion, formatting, rounding, and generating random numbers.

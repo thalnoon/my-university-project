@@ -8,7 +8,14 @@ In the previous part, we looked at basic procedural statements in Python. Here, 
 
 More fundamentally, functions are the alternative to programming by cutting and pasting—rather than having multiple redundant copies of an operation’s code, we can factor it into a single function. In so doing, we reduce our future work radically: if the operation must be changed later, we update only one copy rather than many. Functions are the most basic program structure Python provides for maximizing code reuse and minimizing redundancy, and they are also a design tool that lets us split complex systems into manageable parts.
 
-**[Table Placeholder: Primary function-related tools]**
+| Statement  | Examples                                                                    |
+|----------------------|------------------------------------------------------------------------------------|
+| Calls      | myfunc('spam', 'eggs', meat=ham)                                                  |
+| def, return          | def adder(a, b=1, *c): return a + b + c[0]                                        |
+| global               | def changer(): global x; x = 'new'                                                |
+| nonlocal             | def changer(): nonlocal x; x = 'new'                                              |
+| yield                | def squares(x): for i in range(x): yield i ** 2                                    |
+| lambda               | funcs = [lambda x: x**2, lambda x: x*3]                                              |
 
 ## Why Use Functions?
 

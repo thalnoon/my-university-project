@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en" dir="auto">
 
-<head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script><meta charset="utf-8">
+<head><script src="/my-university-project/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=my-university-project/livereload" data-no-instant defer></script><meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 <meta name="robots" content="noindex, nofollow">
@@ -9,16 +9,16 @@
 <meta name="keywords" content="">
 <meta name="description" content="In the previous part, we looked at basic procedural statements in Python. Here, we move on to explore a set of additional statements that we can use to create functions of our own. In simple terms, a function is a device that groups a set of statements so they can be run more than once in a program. Functions can compute a result value and allow us to specify parameters that serve as function inputs, which may differ each time the code is run. Coding an operation as a function makes it a generally useful tool that can be used in a variety of contexts.">
 <meta name="author" content="">
-<link rel="canonical" href="//localhost:1313/chapters/chapter-12/">
-<link crossorigin="anonymous" href="/assets/css/stylesheet.45e028aa8ce0961349adf411b013ee39406be2c0bc80d4ea3fc04555f7f4611a.css" integrity="sha256-ReAoqozglhNJrfQRsBPuOUBr4sC8gNTqP8BFVff0YRo=" rel="preload stylesheet" as="style">
-<link rel="icon" href="//localhost:1313/favicon.ico">
-<link rel="icon" type="image/png" sizes="16x16" href="//localhost:1313/favicon-16x16.png">
-<link rel="icon" type="image/png" sizes="32x32" href="//localhost:1313/favicon-32x32.png">
-<link rel="apple-touch-icon" href="//localhost:1313/apple-touch-icon.png">
-<link rel="mask-icon" href="//localhost:1313/safari-pinned-tab.svg">
+<link rel="canonical" href="http://localhost:1313/my-university-project/chapters/chapter-12/">
+<link crossorigin="anonymous" href="/my-university-project/assets/css/stylesheet.45e028aa8ce0961349adf411b013ee39406be2c0bc80d4ea3fc04555f7f4611a.css" integrity="sha256-ReAoqozglhNJrfQRsBPuOUBr4sC8gNTqP8BFVff0YRo=" rel="preload stylesheet" as="style">
+<link rel="icon" href="http://localhost:1313/my-university-project/favicon.ico">
+<link rel="icon" type="image/png" sizes="16x16" href="http://localhost:1313/my-university-project/favicon-16x16.png">
+<link rel="icon" type="image/png" sizes="32x32" href="http://localhost:1313/my-university-project/favicon-32x32.png">
+<link rel="apple-touch-icon" href="http://localhost:1313/my-university-project/apple-touch-icon.png">
+<link rel="mask-icon" href="http://localhost:1313/my-university-project/safari-pinned-tab.svg">
 <meta name="theme-color" content="#2e2e33">
 <meta name="msapplication-TileColor" content="#2e2e33">
-<link rel="alternate" hreflang="en" href="//localhost:1313/chapters/chapter-12/">
+<link rel="alternate" hreflang="en" href="http://localhost:1313/my-university-project/chapters/chapter-12/">
 <noscript>
     <style>
         #theme-toggle,
@@ -73,7 +73,7 @@
 <header class="header">
     <nav class="nav">
         <div class="logo">
-            <a href="//localhost:1313/" accesskey="h" title="Elite (Alt + H)">Elite</a>
+            <a href="http://localhost:1313/my-university-project/" accesskey="h" title="Elite (Alt + H)">Elite</a>
             <div class="logo-switches">
                 <button id="theme-toggle" accesskey="t" title="(Alt + T)" aria-label="Toggle theme">
                     <svg id="moon" xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 24 24"
@@ -99,7 +99,7 @@
         </div>
         <ul id="menu">
             <li>
-                <a href="//localhost:1313/search/" title="Search (Alt &#43; /)" accesskey=/>
+                <a href="http://localhost:1313/my-university-project/search/" title="Search (Alt &#43; /)" accesskey=/>
                     <span>Search</span>
                 </a>
             </li>
@@ -110,7 +110,7 @@
 
 <article class="post-single">
   <header class="post-header">
-    <div class="breadcrumbs"><a href="//localhost:1313/">Home</a>&nbsp;»&nbsp;<a href="//localhost:1313/chapters/">Chapters</a></div>
+    <div class="breadcrumbs"><a href="http://localhost:1313/my-university-project/">Home</a>&nbsp;»&nbsp;<a href="http://localhost:1313/my-university-project/chapters/">Chapters</a></div>
     <h1 class="post-title entry-hint-parent">
       Chapter 12: Functions Basics
     </h1>
@@ -162,7 +162,40 @@
 
   <div class="post-content"><p>In the previous part, we looked at basic procedural statements in Python. Here, we move on to explore a set of additional statements that we can use to create functions of our own. In simple terms, a function is a device that groups a set of statements so they can be run more than once in a program. Functions can compute a result value and allow us to specify parameters that serve as function inputs, which may differ each time the code is run. Coding an operation as a function makes it a generally useful tool that can be used in a variety of contexts.</p>
 <p>More fundamentally, functions are the alternative to programming by cutting and pasting—rather than having multiple redundant copies of an operation’s code, we can factor it into a single function. In so doing, we reduce our future work radically: if the operation must be changed later, we update only one copy rather than many. Functions are the most basic program structure Python provides for maximizing code reuse and minimizing redundancy, and they are also a design tool that lets us split complex systems into manageable parts.</p>
-<p><strong>[Table Placeholder: Primary function-related tools]</strong></p>
+<table>
+  <thead>
+      <tr>
+          <th>Statement</th>
+          <th>Examples</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td>Calls</td>
+          <td>myfunc(&lsquo;spam&rsquo;, &rsquo;eggs&rsquo;, meat=ham)</td>
+      </tr>
+      <tr>
+          <td>def, return</td>
+          <td>def adder(a, b=1, *c): return a + b + c[0]</td>
+      </tr>
+      <tr>
+          <td>global</td>
+          <td>def changer(): global x; x = &rsquo;new&rsquo;</td>
+      </tr>
+      <tr>
+          <td>nonlocal</td>
+          <td>def changer(): nonlocal x; x = &rsquo;new'</td>
+      </tr>
+      <tr>
+          <td>yield</td>
+          <td>def squares(x): for i in range(x): yield i ** 2</td>
+      </tr>
+      <tr>
+          <td>lambda</td>
+          <td>funcs = [lambda x: x**2, lambda x: x*3]</td>
+      </tr>
+  </tbody>
+</table>
 <h2 id="why-use-functions">Why Use Functions?<a hidden class="anchor" aria-hidden="true" href="#why-use-functions">#</a></h2>
 <p>Functions are a nearly universal program-structuring device. You may have encountered them before in other languages, where they may have been called subroutines or procedures. In Python, functions serve two primary roles:</p>
 <ul>
@@ -290,12 +323,12 @@ Python does not require type declarations. A single function can be applied to d
     <ul class="post-tags">
     </ul>
 <nav class="paginav">
-  <a class="prev" href="//localhost:1313/chapters/chapter-11/">
+  <a class="prev" href="http://localhost:1313/my-university-project/chapters/chapter-11/">
     <span class="title">« Prev</span>
     <br>
     <span>Chapter 11: While and For loops</span>
   </a>
-  <a class="next" href="//localhost:1313/chapters/chapter-13/">
+  <a class="next" href="http://localhost:1313/my-university-project/chapters/chapter-13/">
     <span class="title">Next »</span>
     <br>
     <span>Chapter 13: Scopes &amp; Arguments</span>
@@ -307,7 +340,7 @@ Python does not require type declarations. A single function can be applied to d
     </main>
     
 <footer class="footer">
-        <span>&copy; 2025 <a href="//localhost:1313/">Elite</a></span> · 
+        <span>&copy; 2025 <a href="http://localhost:1313/my-university-project/">Elite</a></span> · 
 
     <span>
         Powered by

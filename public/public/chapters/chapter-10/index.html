@@ -1,0 +1,614 @@
+<!DOCTYPE html>
+<html lang="en" dir="auto">
+
+<head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script><meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta name="robots" content="noindex, nofollow">
+<title>Chapter 10: if Tests and Syntax Rules | Elite</title>
+<meta name="keywords" content="">
+<meta name="description" content="This chapter presents the Python if statement, the main tool for selecting from alternative actions based on test results. Because this is our first in-depth look at compound statements—statements that embed other statements—we also explore the general concepts behind Python’s statement syntax model.
+if Statements
+In simple terms, the Python if statement selects actions to perform. It is the primary selection tool in Python and represents much of the logic a Python program possesses. Being a compound statement, an if statement may contain other statements, including additional if statements. Python lets you combine statements sequentially (so they execute one after another) and nest them arbitrarily (so they execute only under certain conditions).">
+<meta name="author" content="">
+<link rel="canonical" href="//localhost:1313/chapters/chapter-10/">
+<link crossorigin="anonymous" href="/assets/css/stylesheet.45e028aa8ce0961349adf411b013ee39406be2c0bc80d4ea3fc04555f7f4611a.css" integrity="sha256-ReAoqozglhNJrfQRsBPuOUBr4sC8gNTqP8BFVff0YRo=" rel="preload stylesheet" as="style">
+<link rel="icon" href="//localhost:1313/favicon.ico">
+<link rel="icon" type="image/png" sizes="16x16" href="//localhost:1313/favicon-16x16.png">
+<link rel="icon" type="image/png" sizes="32x32" href="//localhost:1313/favicon-32x32.png">
+<link rel="apple-touch-icon" href="//localhost:1313/apple-touch-icon.png">
+<link rel="mask-icon" href="//localhost:1313/safari-pinned-tab.svg">
+<meta name="theme-color" content="#2e2e33">
+<meta name="msapplication-TileColor" content="#2e2e33">
+<link rel="alternate" hreflang="en" href="//localhost:1313/chapters/chapter-10/">
+<noscript>
+    <style>
+        #theme-toggle,
+        .top-link {
+            display: none;
+        }
+
+    </style>
+    <style>
+        @media (prefers-color-scheme: dark) {
+            :root {
+                --theme: rgb(29, 30, 32);
+                --entry: rgb(46, 46, 51);
+                --primary: rgb(218, 218, 219);
+                --secondary: rgb(155, 156, 157);
+                --tertiary: rgb(65, 66, 68);
+                --content: rgb(196, 196, 197);
+                --code-block-bg: rgb(46, 46, 51);
+                --code-bg: rgb(55, 56, 62);
+                --border: rgb(51, 51, 51);
+            }
+
+            .list {
+                background: var(--theme);
+            }
+
+            .list:not(.dark)::-webkit-scrollbar-track {
+                background: 0 0;
+            }
+
+            .list:not(.dark)::-webkit-scrollbar-thumb {
+                border-color: var(--theme);
+            }
+        }
+
+    </style>
+</noscript>
+</head>
+
+<body class="" id="top">
+<script>
+    if (localStorage.getItem("pref-theme") === "dark") {
+        document.body.classList.add('dark');
+    } else if (localStorage.getItem("pref-theme") === "light") {
+        document.body.classList.remove('dark')
+    } else if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
+        document.body.classList.add('dark');
+    }
+
+</script>
+
+<header class="header">
+    <nav class="nav">
+        <div class="logo">
+            <a href="//localhost:1313/" accesskey="h" title="Elite (Alt + H)">Elite</a>
+            <div class="logo-switches">
+                <button id="theme-toggle" accesskey="t" title="(Alt + T)" aria-label="Toggle theme">
+                    <svg id="moon" xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 24 24"
+                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+                    </svg>
+                    <svg id="sun" xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 24 24"
+                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <circle cx="12" cy="12" r="5"></circle>
+                        <line x1="12" y1="1" x2="12" y2="3"></line>
+                        <line x1="12" y1="21" x2="12" y2="23"></line>
+                        <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+                        <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+                        <line x1="1" y1="12" x2="3" y2="12"></line>
+                        <line x1="21" y1="12" x2="23" y2="12"></line>
+                        <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+                        <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+                    </svg>
+                </button>
+            </div>
+        </div>
+        <ul id="menu">
+            <li>
+                <a href="//localhost:1313/search/" title="Search (Alt &#43; /)" accesskey=/>
+                    <span>Search</span>
+                </a>
+            </li>
+        </ul>
+    </nav>
+</header>
+<main class="main">
+
+<article class="post-single">
+  <header class="post-header">
+    <div class="breadcrumbs"><a href="//localhost:1313/">Home</a>&nbsp;»&nbsp;<a href="//localhost:1313/chapters/">Chapters</a></div>
+    <h1 class="post-title entry-hint-parent">
+      Chapter 10: if Tests and Syntax Rules
+    </h1>
+    <div class="post-meta">10 min
+
+</div>
+  </header> <div class="toc">
+    <details >
+        <summary accesskey="c" title="(Alt + C)">
+            <span class="details">Table of Contents</span>
+        </summary>
+
+        <div class="inner"><ul>
+                <li>
+                    <a href="#if-statements" aria-label="if Statements">if Statements</a></li>
+                <li>
+                    <a href="#general-format" aria-label="General Format">General Format</a></li>
+                <li>
+                    <a href="#multiway-branching" aria-label="Multiway Branching">Multiway Branching</a></li>
+                <li>
+                    <a href="#truth-tests" aria-label="Truth Tests">Truth Tests</a></li>
+                <li>
+                    <a href="#examples-if-statements" aria-label="Examples (if Statements)">Examples (if Statements)</a></li>
+                <li>
+                    <a href="#chapter-10-summary-if-tests-and-syntax-rules" aria-label="Chapter 10 Summary: if Tests and Syntax Rules">Chapter 10 Summary: if Tests and Syntax Rules</a>
+                </li>
+            </ul>
+        </div>
+    </details>
+</div>
+
+  <div class="post-content"><p>This chapter presents the Python <strong>if</strong> statement, the main tool for selecting from alternative actions based on test results. Because this is our first in-depth look at compound statements—statements that embed other statements—we also explore the general concepts behind Python’s statement syntax model.</p>
+<h2 id="if-statements">if Statements<a hidden class="anchor" aria-hidden="true" href="#if-statements">#</a></h2>
+<p>In simple terms, the Python <strong>if</strong> statement selects actions to perform. It is the primary selection tool in Python and represents much of the logic a Python program possesses. Being a compound statement, an <strong>if</strong> statement may contain other statements, including additional <strong>if</strong> statements. Python lets you combine statements sequentially (so they execute one after another) and nest them arbitrarily (so they execute only under certain conditions).</p>
+<h2 id="general-format">General Format<a hidden class="anchor" aria-hidden="true" href="#general-format">#</a></h2>
+<p>The Python <strong>if</strong> statement is typical of those in most procedural languages. It takes the form of an <strong>if</strong> test, followed by one or more optional <strong>elif</strong> (&ldquo;else if&rdquo;) tests and a final optional <strong>else</strong> block. Each test and the <strong>else</strong> part has an associated block of nested statements indented under a header line. When the <strong>if</strong> statement runs, Python executes the block associated with the first test that evaluates to true, or the <strong>else</strong> block if all tests prove false.</p>
+<p>The general form is:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="k">if</span> <span class="o">&lt;</span><span class="n">test1</span><span class="o">&gt;</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl">    <span class="o">&lt;</span><span class="n">statements1</span><span class="o">&gt;</span>
+</span></span><span class="line"><span class="cl"><span class="k">elif</span> <span class="o">&lt;</span><span class="n">test2</span><span class="o">&gt;</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl">    <span class="o">&lt;</span><span class="n">statements2</span><span class="o">&gt;</span>
+</span></span><span class="line"><span class="cl"><span class="k">else</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl">    <span class="o">&lt;</span><span class="n">statements3</span><span class="o">&gt;</span>
+</span></span></code></pre></div><p><em># if test  (Associated block, Optional elifs, Optional else)</em></p>
+<h2 id="multiway-branching">Multiway Branching<a hidden class="anchor" aria-hidden="true" href="#multiway-branching">#</a></h2>
+<p>Consider this example of a more complex <strong>if</strong> statement with all its optional parts present:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="o">&gt;&gt;&gt;</span> <span class="n">x</span> <span class="o">=</span> <span class="s1">&#39;killer rabbit&#39;</span>
+</span></span><span class="line"><span class="cl"><span class="o">&gt;&gt;&gt;</span> <span class="k">if</span> <span class="n">x</span> <span class="o">==</span> <span class="s1">&#39;roger&#39;</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl"><span class="o">...</span>     <span class="nb">print</span><span class="p">(</span><span class="s2">&#34;how&#39;s jessica?&#34;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="o">...</span> <span class="k">elif</span> <span class="n">x</span> <span class="o">==</span> <span class="s1">&#39;bugs&#39;</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl"><span class="o">...</span>     <span class="nb">print</span><span class="p">(</span><span class="s2">&#34;what&#39;s up doc?&#34;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="o">...</span> <span class="k">else</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl"><span class="o">...</span>     <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Run away! Run away!&#39;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="o">...</span>
+</span></span><span class="line"><span class="cl"><span class="n">Run</span> <span class="n">away</span><span class="err">!</span> <span class="n">Run</span> <span class="n">away</span><span class="err">!</span>
+</span></span></code></pre></div><p>This multiline statement extends from the <strong>if</strong> line through the <strong>else</strong> block. When executed, Python runs the block under the first test that is true, or the <strong>else</strong> block if all tests are false. In practice, both the <strong>elif</strong> and <strong>else</strong> parts may be omitted, and each section may contain more than one statement. Note that the keywords <strong>if</strong>, <strong>elif</strong>, and <strong>else</strong> are aligned vertically by virtue of their identical indentation.</p>
+<p>Multiway branching can also be coded by indexing dictionaries or searching lists. Because dictionaries and lists can be built at runtime, they are sometimes more flexible than hardcoded <strong>if</strong> logic. For example:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="o">&gt;&gt;&gt;</span> <span class="n">choice</span> <span class="o">=</span> <span class="s1">&#39;ham&#39;</span>
+</span></span><span class="line"><span class="cl"><span class="o">&gt;&gt;&gt;</span> <span class="nb">print</span><span class="p">({</span><span class="s1">&#39;spam&#39;</span><span class="p">:</span> <span class="mf">1.25</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl"><span class="o">...</span>        <span class="s1">&#39;ham&#39;</span><span class="p">:</span> <span class="mf">1.99</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl"><span class="o">...</span>        <span class="s1">&#39;eggs&#39;</span><span class="p">:</span> <span class="mf">0.99</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl"><span class="o">...</span>        <span class="s1">&#39;bacon&#39;</span><span class="p">:</span> <span class="mf">1.10</span><span class="p">}[</span><span class="n">choice</span><span class="p">])</span>
+</span></span><span class="line"><span class="cl"><span class="mf">1.99</span>
+</span></span></code></pre></div><p><em># A dictionary-based &lsquo;switch&rsquo; – Use has_key or get for default</em></p>
+<p>Although it might take a few moments to sink in, this dictionary indexing is a multiway branch—indexing on the key <code>choice</code> branches to one of a set of values, much like a switch in C. An equivalent but more verbose <strong>if</strong> statement might look like this:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="o">&gt;&gt;&gt;</span> <span class="k">if</span> <span class="n">choice</span> <span class="o">==</span> <span class="s1">&#39;spam&#39;</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl"><span class="o">...</span>     <span class="nb">print</span><span class="p">(</span><span class="mf">1.25</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="o">...</span> <span class="k">elif</span> <span class="n">choice</span> <span class="o">==</span> <span class="s1">&#39;ham&#39;</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl"><span class="o">...</span>     <span class="nb">print</span><span class="p">(</span><span class="mf">1.99</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="o">...</span> <span class="k">elif</span> <span class="n">choice</span> <span class="o">==</span> <span class="s1">&#39;eggs&#39;</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl"><span class="o">...</span>     <span class="nb">print</span><span class="p">(</span><span class="mf">0.99</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="o">...</span> <span class="k">elif</span> <span class="n">choice</span> <span class="o">==</span> <span class="s1">&#39;bacon&#39;</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl"><span class="o">...</span>     <span class="nb">print</span><span class="p">(</span><span class="mf">1.10</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="o">...</span> <span class="k">else</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl"><span class="o">...</span>     <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Bad choice&#39;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="o">...</span>
+</span></span><span class="line"><span class="cl"><span class="mf">1.99</span>
+</span></span></code></pre></div><p>Notice the <strong>else</strong> clause to handle the default case when no key matches. The same technique can be used with dictionary methods to supply a default. For example, using <code>get</code>:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="o">&gt;&gt;&gt;</span> <span class="n">branch</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;spam&#39;</span><span class="p">:</span> <span class="mf">1.25</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl"><span class="o">...</span>           <span class="s1">&#39;ham&#39;</span><span class="p">:</span> <span class="mf">1.99</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl"><span class="o">...</span>           <span class="s1">&#39;eggs&#39;</span><span class="p">:</span> <span class="mf">0.99</span><span class="p">}</span>
+</span></span><span class="line"><span class="cl"><span class="o">&gt;&gt;&gt;</span> <span class="nb">print</span><span class="p">(</span><span class="n">branch</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;spam&#39;</span><span class="p">,</span> <span class="s1">&#39;Bad choice&#39;</span><span class="p">))</span>
+</span></span><span class="line"><span class="cl"><span class="mf">1.25</span>
+</span></span><span class="line"><span class="cl"><span class="o">&gt;&gt;&gt;</span> <span class="nb">print</span><span class="p">(</span><span class="n">branch</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;bacon&#39;</span><span class="p">,</span> <span class="s1">&#39;Bad choice&#39;</span><span class="p">))</span>
+</span></span><span class="line"><span class="cl"><span class="n">Bad</span> <span class="n">choice</span>
+</span></span></code></pre></div><p>An in-membership test in an <strong>if</strong> statement can have the same effect:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="o">&gt;&gt;&gt;</span> <span class="n">choice</span> <span class="o">=</span> <span class="s1">&#39;bacon&#39;</span>
+</span></span><span class="line"><span class="cl"><span class="o">&gt;&gt;&gt;</span> <span class="k">if</span> <span class="n">choice</span> <span class="ow">in</span> <span class="n">branch</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl"><span class="o">...</span>     <span class="nb">print</span><span class="p">(</span><span class="n">branch</span><span class="p">[</span><span class="n">choice</span><span class="p">])</span>
+</span></span><span class="line"><span class="cl"><span class="o">...</span> <span class="k">else</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl"><span class="o">...</span>     <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Bad choice&#39;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="o">...</span>
+</span></span><span class="line"><span class="cl"><span class="n">Bad</span> <span class="n">choice</span>
+</span></span></code></pre></div><h2 id="truth-tests">Truth Tests<a hidden class="anchor" aria-hidden="true" href="#truth-tests">#</a></h2>
+<p>Since the <strong>if</strong> statement is the first statement that directly uses test results, it is important to understand Python’s Boolean logic. In Python:</p>
+<ul>
+<li><strong>Any nonzero number or nonempty object is true.</strong></li>
+<li><strong>Zero numbers, empty objects, and the special object <code>None</code> are considered false.</strong></li>
+<li><strong>Comparisons and equality tests are applied recursively to data structures and return <code>True</code> or <code>False</code>.</strong></li>
+<li><strong>Boolean operators <code>and</code>, <code>or</code>, and <code>not</code> combine truth values or expressions that return truth values.</strong></li>
+</ul>
+<p>There are three Boolean expression operators in Python:</p>
+<ul>
+<li>
+<p><strong><code>X and Y</code></strong><br>
+<em>Is true if both X and Y are true.</em></p>
+</li>
+<li>
+<p><strong><code>X or Y</code></strong><br>
+<em>Is true if either X or Y is true.</em></p>
+</li>
+<li>
+<p><strong><code>not X</code></strong><br>
+<em>Is true if X is false (the expression returns <code>True</code> or <code>False</code>).</em></p>
+</li>
+</ul>
+<p>Here, <strong>X</strong> and <strong>Y</strong> can be any truth value or any expression that returns a truth value (for example, an equality test or a range comparison). Note that these operators are spelled out as words (instead of symbols like <code>&amp;&amp;</code>, <code>||</code>, and <code>!</code> in C).</p>
+<p>Consider these examples:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="o">&gt;&gt;&gt;</span> <span class="mi">2</span> <span class="o">&lt;</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">3</span> <span class="o">&lt;</span> <span class="mi">2</span>
+</span></span><span class="line"><span class="cl"><span class="p">(</span><span class="kc">True</span><span class="p">,</span> <span class="kc">False</span><span class="p">)</span>
+</span></span></code></pre></div><p><em># Less-than: returns True or False (1 or 0)</em></p>
+<p>The <strong>and</strong> and <strong>or</strong> operators do not always return <code>True</code> or <code>False</code>—they return one of their operands, based on short-circuit evaluation. For instance:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="o">&gt;&gt;&gt;</span> <span class="mi">2</span> <span class="ow">or</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">3</span> <span class="ow">or</span> <span class="mi">2</span>
+</span></span><span class="line"><span class="cl"><span class="p">(</span><span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="o">&gt;&gt;&gt;</span> <span class="p">[]</span> <span class="ow">or</span> <span class="mi">3</span>
+</span></span><span class="line"><span class="cl"><span class="mi">3</span>
+</span></span><span class="line"><span class="cl"><span class="o">&gt;&gt;&gt;</span> <span class="p">[]</span> <span class="ow">or</span> <span class="p">{}</span>
+</span></span><span class="line"><span class="cl"><span class="p">{}</span>
+</span></span></code></pre></div><p><em># Return left operand if true; else, return right operand (which is inherently true or false)</em></p>
+<p>Similarly, <strong>and</strong> operations stop as soon as the result is known. Python evaluates operands from left to right and stops at the first false operand:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="o">&gt;&gt;&gt;</span> <span class="mi">2</span> <span class="ow">and</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">3</span> <span class="ow">and</span> <span class="mi">2</span>
+</span></span><span class="line"><span class="cl"><span class="p">(</span><span class="mi">3</span><span class="p">,</span> <span class="mi">2</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="o">&gt;&gt;&gt;</span> <span class="p">[]</span> <span class="ow">and</span> <span class="p">{}</span>
+</span></span><span class="line"><span class="cl"><span class="p">[]</span>
+</span></span><span class="line"><span class="cl"><span class="o">&gt;&gt;&gt;</span> <span class="mi">3</span> <span class="ow">and</span> <span class="p">[]</span>
+</span></span><span class="line"><span class="cl"><span class="p">[]</span>
+</span></span></code></pre></div><p><em># In an &ldquo;and&rdquo; operation, if the left operand is false, it is returned immediately; otherwise, the right operand is returned.</em></p>
+<h2 id="examples-if-statements">Examples (if Statements)<a hidden class="anchor" aria-hidden="true" href="#examples-if-statements">#</a></h2>
+<ol>
+<li>
+<p><strong>Simple if/else test:</strong><br>
+If <code>num</code> is over 10, display “This is over 10”, otherwise display “This is not over 10”.</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="k">if</span> <span class="n">num</span> <span class="o">&gt;</span> <span class="mi">10</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl">    <span class="nb">print</span><span class="p">(</span><span class="s2">&#34;This is over 10&#34;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="k">else</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl">    <span class="nb">print</span><span class="p">(</span><span class="s2">&#34;This is not over 10&#34;</span><span class="p">)</span>
+</span></span></code></pre></div></li>
+<li>
+<p><strong>if/elif/else test:</strong><br>
+If <code>num</code> is over 10, display “This is over 10”; if <code>num</code> is equal to 10, display “This is equal to 10”; otherwise, display “This is under 10”.</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="k">if</span> <span class="n">num</span> <span class="o">&gt;</span> <span class="mi">10</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl">    <span class="nb">print</span><span class="p">(</span><span class="s2">&#34;This is over 10&#34;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="k">elif</span> <span class="n">num</span> <span class="o">==</span> <span class="mi">10</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl">    <span class="nb">print</span><span class="p">(</span><span class="s2">&#34;This is equal to 10&#34;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="k">else</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl">    <span class="nb">print</span><span class="p">(</span><span class="s2">&#34;This is under 10&#34;</span><span class="p">)</span>
+</span></span></code></pre></div></li>
+<li>
+<p><strong>Nested if statement:</strong><br>
+If <code>num</code> is 10 or more, test further to see if <code>num</code> is less than or equal to 20.</p>
+<ul>
+<li>If yes, display “This is between 10 and 20”.</li>
+<li>If not, display “This is over 20”.<br>
+If <code>num</code> is not over 10, display “This is under 10”.</li>
+</ul>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="k">if</span> <span class="n">num</span> <span class="o">&gt;=</span> <span class="mi">10</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl">    <span class="k">if</span> <span class="n">num</span> <span class="o">&lt;=</span> <span class="mi">20</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl">        <span class="nb">print</span><span class="p">(</span><span class="s2">&#34;This is between 10 and 20&#34;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">    <span class="k">else</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl">        <span class="nb">print</span><span class="p">(</span><span class="s2">&#34;This is over 20&#34;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="k">else</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl">    <span class="nb">print</span><span class="p">(</span><span class="s2">&#34;This is under 10&#34;</span><span class="p">)</span>
+</span></span></code></pre></div></li>
+<li>
+<p><strong>Changing text to lower case:</strong><br>
+Python is case sensitive. This converts the user input to lower case for easier comparison.</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="n">text</span> <span class="o">=</span> <span class="nb">str</span><span class="o">.</span><span class="n">lower</span><span class="p">(</span><span class="n">text</span><span class="p">)</span>
+</span></span></code></pre></div></li>
+<li>
+<p><strong>Using <code>and</code> to test multiple conditions:</strong><br>
+Both conditions must be met to produce the output “Thank you”.</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="n">num</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="nb">input</span><span class="p">(</span><span class="s2">&#34;Enter a number between 10 and 20: &#34;</span><span class="p">))</span>
+</span></span><span class="line"><span class="cl"><span class="k">if</span> <span class="n">num</span> <span class="o">&gt;=</span> <span class="mi">10</span> <span class="ow">and</span> <span class="n">num</span> <span class="o">&lt;=</span> <span class="mi">20</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl">    <span class="nb">print</span><span class="p">(</span><span class="s2">&#34;Thank you&#34;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="k">else</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl">    <span class="nb">print</span><span class="p">(</span><span class="s2">&#34;Out of range&#34;</span><span class="p">)</span>
+</span></span></code></pre></div></li>
+<li>
+<p><strong>Using <code>or</code> to test conditions:</strong><br>
+Just one condition must be met to display “Thank you”.</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="n">num</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="nb">input</span><span class="p">(</span><span class="s2">&#34;Enter an EVEN number between 1 and 5: &#34;</span><span class="p">))</span>
+</span></span><span class="line"><span class="cl"><span class="k">if</span> <span class="n">num</span> <span class="o">==</span> <span class="mi">2</span> <span class="ow">or</span> <span class="n">num</span> <span class="o">==</span> <span class="mi">4</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl">    <span class="nb">print</span><span class="p">(</span><span class="s2">&#34;Thank you&#34;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="k">else</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl">    <span class="nb">print</span><span class="p">(</span><span class="s2">&#34;Incorrect&#34;</span><span class="p">)</span>
+</span></span></code></pre></div></li>
+<li>
+<p><strong>Comparing two numbers:</strong><br>
+Ask for two numbers. If the first is larger than the second, display the second number first; otherwise, display the first number first.</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="n">num1</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="nb">input</span><span class="p">(</span><span class="s2">&#34;Enter the first number: &#34;</span><span class="p">))</span>
+</span></span><span class="line"><span class="cl"><span class="n">num2</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="nb">input</span><span class="p">(</span><span class="s2">&#34;Enter the second number: &#34;</span><span class="p">))</span>
+</span></span><span class="line"><span class="cl"><span class="k">if</span> <span class="n">num1</span> <span class="o">&gt;</span> <span class="n">num2</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl">    <span class="nb">print</span><span class="p">(</span><span class="n">num2</span><span class="p">,</span> <span class="n">num1</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="k">else</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl">    <span class="nb">print</span><span class="p">(</span><span class="n">num1</span><span class="p">,</span> <span class="n">num2</span><span class="p">)</span>
+</span></span></code></pre></div></li>
+<li>
+<p><strong>Number under 20 check:</strong><br>
+Ask the user to enter a number under 20. If they enter a number that is 20 or more, display “Too high”; otherwise, display “Thank you”.</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="n">num</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="nb">input</span><span class="p">(</span><span class="s2">&#34;Enter a number under 20: &#34;</span><span class="p">))</span>
+</span></span><span class="line"><span class="cl"><span class="k">if</span> <span class="n">num</span> <span class="o">&gt;=</span> <span class="mi">20</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl">    <span class="nb">print</span><span class="p">(</span><span class="s2">&#34;Too high&#34;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="k">else</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl">    <span class="nb">print</span><span class="p">(</span><span class="s2">&#34;Thank you&#34;</span><span class="p">)</span>
+</span></span></code></pre></div></li>
+<li>
+<p><strong>Number between 10 and 20 check:</strong><br>
+Ask the user to enter a number between 10 and 20 (inclusive).</p>
+<ul>
+<li>If the number is within this range, display “Thank you”.</li>
+<li>Otherwise, display “Incorrect answer”.</li>
+</ul>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="n">num</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="nb">input</span><span class="p">(</span><span class="s2">&#34;Enter a number between 10 and 20: &#34;</span><span class="p">))</span>
+</span></span><span class="line"><span class="cl"><span class="k">if</span> <span class="n">num</span> <span class="o">&gt;=</span> <span class="mi">10</span> <span class="ow">and</span> <span class="n">num</span> <span class="o">&lt;=</span> <span class="mi">20</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl">    <span class="nb">print</span><span class="p">(</span><span class="s2">&#34;Thank you&#34;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="k">else</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl">    <span class="nb">print</span><span class="p">(</span><span class="s2">&#34;Incorrect answer&#34;</span><span class="p">)</span>
+</span></span></code></pre></div></li>
+<li>
+<p><strong>Favorite color check:</strong><br>
+Ask the user to enter their favorite color.</p>
+<ul>
+<li>If they enter “red”, “RED”, or “Red”, display “I like red too”.</li>
+<li>Otherwise, display “I don’t like [colour], I prefer red”.</li>
+</ul>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="n">color</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="s2">&#34;Enter your favorite color: &#34;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="k">if</span> <span class="n">color</span> <span class="o">==</span> <span class="s2">&#34;red&#34;</span> <span class="ow">or</span> <span class="n">color</span> <span class="o">==</span> <span class="s2">&#34;RED&#34;</span> <span class="ow">or</span> <span class="n">color</span> <span class="o">==</span> <span class="s2">&#34;Red&#34;</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl">    <span class="nb">print</span><span class="p">(</span><span class="s2">&#34;I like red too&#34;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="k">else</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl">    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&#34;I don&#39;t like </span><span class="si">{</span><span class="n">color</span><span class="si">}</span><span class="s2">, I prefer red&#34;</span><span class="p">)</span>
+</span></span></code></pre></div></li>
+<li>
+<p><strong>Raining and windy check:</strong><br>
+Ask the user if it is raining and convert the answer to lower case.</p>
+<ul>
+<li>If the answer is “yes”, ask if it is windy.
+<ul>
+<li>If it is windy, display “It is too windy for an umbrella”.</li>
+<li>Otherwise, display “Take an umbrella”.</li>
+</ul>
+</li>
+<li>If it is not raining, display “Enjoy your day”.</li>
+</ul>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="n">raining</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="s2">&#34;Is it raining? &#34;</span><span class="p">)</span><span class="o">.</span><span class="n">lower</span><span class="p">()</span>
+</span></span><span class="line"><span class="cl"><span class="k">if</span> <span class="n">raining</span> <span class="o">==</span> <span class="s2">&#34;yes&#34;</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl">    <span class="n">windy</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="s2">&#34;Is it windy? &#34;</span><span class="p">)</span><span class="o">.</span><span class="n">lower</span><span class="p">()</span>
+</span></span><span class="line"><span class="cl">    <span class="k">if</span> <span class="n">windy</span> <span class="o">==</span> <span class="s2">&#34;yes&#34;</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl">        <span class="nb">print</span><span class="p">(</span><span class="s2">&#34;It is too windy for an umbrella&#34;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">    <span class="k">else</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl">        <span class="nb">print</span><span class="p">(</span><span class="s2">&#34;Take an umbrella&#34;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="k">else</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl">    <span class="nb">print</span><span class="p">(</span><span class="s2">&#34;Enjoy your day&#34;</span><span class="p">)</span>
+</span></span></code></pre></div></li>
+<li>
+<p><strong>Age-based messages:</strong><br>
+Ask the user for their age.</p>
+<ul>
+<li>If they are 18 or over, display “You can vote”.</li>
+<li>If they are 17, display “You can learn to drive”.</li>
+<li>If they are 16, display “You can buy a lottery ticket”.</li>
+<li>If they are under 16, display “You can go Trick-or-Treating”.</li>
+</ul>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="n">age</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="nb">input</span><span class="p">(</span><span class="s2">&#34;Enter your age: &#34;</span><span class="p">))</span>
+</span></span><span class="line"><span class="cl"><span class="k">if</span> <span class="n">age</span> <span class="o">&gt;=</span> <span class="mi">18</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl">    <span class="nb">print</span><span class="p">(</span><span class="s2">&#34;You can vote&#34;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="k">elif</span> <span class="n">age</span> <span class="o">==</span> <span class="mi">17</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl">    <span class="nb">print</span><span class="p">(</span><span class="s2">&#34;You can learn to drive&#34;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="k">elif</span> <span class="n">age</span> <span class="o">==</span> <span class="mi">16</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl">    <span class="nb">print</span><span class="p">(</span><span class="s2">&#34;You can buy a lottery ticket&#34;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="k">else</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl">    <span class="nb">print</span><span class="p">(</span><span class="s2">&#34;You can go Trick-or-Treating&#34;</span><span class="p">)</span>
+</span></span></code></pre></div></li>
+<li>
+<p><strong>Number range evaluation:</strong><br>
+Ask the user to enter a number.</p>
+<ul>
+<li>If it is under 10, display “Too low”.</li>
+<li>If the number is between 10 and 20, display “Correct”.</li>
+<li>Otherwise, display “Too high”.</li>
+</ul>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="n">num</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="nb">input</span><span class="p">(</span><span class="s2">&#34;Enter a number: &#34;</span><span class="p">))</span>
+</span></span><span class="line"><span class="cl"><span class="k">if</span> <span class="n">num</span> <span class="o">&lt;</span> <span class="mi">10</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl">    <span class="nb">print</span><span class="p">(</span><span class="s2">&#34;Too low&#34;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="k">elif</span> <span class="mi">10</span> <span class="o">&lt;=</span> <span class="n">num</span> <span class="o">&lt;=</span> <span class="mi">20</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl">    <span class="nb">print</span><span class="p">(</span><span class="s2">&#34;Correct&#34;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="k">else</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl">    <span class="nb">print</span><span class="p">(</span><span class="s2">&#34;Too high&#34;</span><span class="p">)</span>
+</span></span></code></pre></div></li>
+<li>
+<p><strong>Choice selection:</strong><br>
+Ask the user to enter 1, 2, or 3.</p>
+<ul>
+<li>If they enter 1, display “Thank you”.</li>
+<li>If they enter 2, display “Well done”.</li>
+<li>If they enter 3, display “Correct”.</li>
+<li>If they enter anything else, display “Error message”.</li>
+</ul>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="n">choice</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="nb">input</span><span class="p">(</span><span class="s2">&#34;Enter 1, 2, or 3: &#34;</span><span class="p">))</span>
+</span></span><span class="line"><span class="cl"><span class="k">if</span> <span class="n">choice</span> <span class="o">==</span> <span class="mi">1</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl">    <span class="nb">print</span><span class="p">(</span><span class="s2">&#34;Thank you&#34;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="k">elif</span> <span class="n">choice</span> <span class="o">==</span> <span class="mi">2</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl">    <span class="nb">print</span><span class="p">(</span><span class="s2">&#34;Well done&#34;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="k">elif</span> <span class="n">choice</span> <span class="o">==</span> <span class="mi">3</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl">    <span class="nb">print</span><span class="p">(</span><span class="s2">&#34;Correct&#34;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="k">else</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl">    <span class="nb">print</span><span class="p">(</span><span class="s2">&#34;Error message&#34;</span><span class="p">)</span>
+</span></span></code></pre></div></li>
+</ol>
+<h2 id="chapter-10-summary-if-tests-and-syntax-rules">Chapter 10 Summary: if Tests and Syntax Rules<a hidden class="anchor" aria-hidden="true" href="#chapter-10-summary-if-tests-and-syntax-rules">#</a></h2>
+<p>This chapter introduces the Python <strong>if</strong> statement as the fundamental tool for making decisions in a program. It explains how conditional tests are used to determine which block of code executes, forming the basis of program logic.</p>
+<p>Key points include:</p>
+<ul>
+<li>
+<p><strong>Compound Statements:</strong><br>
+The <strong>if</strong> statement is the first compound statement discussed. It can include nested statements and even other <strong>if</strong> statements, allowing for complex decision structures.</p>
+</li>
+<li>
+<p><strong>General Structure:</strong><br>
+The chapter describes the standard format for an <strong>if</strong> statement, which consists of:</p>
+<ul>
+<li>An <strong>if</strong> test followed by a block of associated statements.</li>
+<li>Optional <strong>elif</strong> (&ldquo;else if&rdquo;) tests with their own blocks.</li>
+<li>An optional <strong>else</strong> block that executes if none of the tests are true.<br>
+Each block is defined by its indentation rather than explicit markers.</li>
+</ul>
+</li>
+<li>
+<p><strong>Multiway Branching:</strong><br>
+It explains how to implement multiway branching by combining multiple conditions, either through a series of <strong>if/elif/else</strong> statements or by using alternative structures like dictionary indexing for selecting among several options.</p>
+</li>
+<li>
+<p><strong>Default Actions:</strong><br>
+The chapter discusses methods for handling default cases when none of the specified conditions are met, emphasizing the use of an <strong>else</strong> clause or dictionary methods (like <code>get</code>) to supply fallback values.</p>
+</li>
+<li>
+<p><strong>Truth Tests and Boolean Logic:</strong><br>
+The chapter outlines Python’s approach to evaluating truth values:</p>
+<ul>
+<li>Any nonzero number or nonempty object is considered true.</li>
+<li>Zero, empty objects, and <code>None</code> are considered false.</li>
+<li>Comparisons and equality tests produce boolean results.</li>
+<li>Boolean operators (<code>and</code>, <code>or</code>, and <code>not</code>) are used to combine tests and support short-circuit evaluation, meaning that evaluation stops as soon as the outcome is determined.</li>
+</ul>
+</li>
+</ul>
+<p>Overall, the chapter lays a foundation for understanding how Python makes decisions based on conditions, providing the basis for controlling program flow through well-structured, readable syntax.</p>
+
+
+  </div>
+
+  <footer class="post-footer">
+    <ul class="post-tags">
+    </ul>
+<nav class="paginav">
+  <a class="prev" href="//localhost:1313/chapters/chapter-9/">
+    <span class="title">« Prev</span>
+    <br>
+    <span>Chapter 9: Introducing Python Statements</span>
+  </a>
+  <a class="next" href="//localhost:1313/chapters/chapter-11/">
+    <span class="title">Next »</span>
+    <br>
+    <span>Chapter 11: While and For loops</span>
+  </a>
+</nav>
+
+  </footer>
+</article>
+    </main>
+    
+<footer class="footer">
+        <span>&copy; 2025 <a href="//localhost:1313/">Elite</a></span> · 
+
+    <span>
+        Powered by
+        <a href="https://gohugo.io/" rel="noopener noreferrer" target="_blank">Hugo</a> &
+        <a href="https://github.com/adityatelange/hugo-PaperMod/" rel="noopener" target="_blank">PaperMod</a>
+    </span>
+</footer>
+<a href="#top" aria-label="go to top" title="Go to Top (Alt + G)" class="top-link" id="top-link" accesskey="g">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 12 6" fill="currentColor">
+        <path d="M12 6H0l6-6z" />
+    </svg>
+</a>
+
+<script>
+    let menu = document.getElementById('menu')
+    if (menu) {
+        menu.scrollLeft = localStorage.getItem("menu-scroll-position");
+        menu.onscroll = function () {
+            localStorage.setItem("menu-scroll-position", menu.scrollLeft);
+        }
+    }
+
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener("click", function (e) {
+            e.preventDefault();
+            var id = this.getAttribute("href").substr(1);
+            if (!window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView({
+                    behavior: "smooth"
+                });
+            } else {
+                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView();
+            }
+            if (id === "top") {
+                history.replaceState(null, null, " ");
+            } else {
+                history.pushState(null, null, `#${id}`);
+            }
+        });
+    });
+
+</script>
+<script>
+    var mybutton = document.getElementById("top-link");
+    window.onscroll = function () {
+        if (document.body.scrollTop > 800 || document.documentElement.scrollTop > 800) {
+            mybutton.style.visibility = "visible";
+            mybutton.style.opacity = "1";
+        } else {
+            mybutton.style.visibility = "hidden";
+            mybutton.style.opacity = "0";
+        }
+    };
+
+</script>
+<script>
+    document.getElementById("theme-toggle").addEventListener("click", () => {
+        if (document.body.className.includes("dark")) {
+            document.body.classList.remove('dark');
+            localStorage.setItem("pref-theme", 'light');
+        } else {
+            document.body.classList.add('dark');
+            localStorage.setItem("pref-theme", 'dark');
+        }
+    })
+
+</script>
+<script>
+    document.querySelectorAll('pre > code').forEach((codeblock) => {
+        const container = codeblock.parentNode.parentNode;
+
+        const copybutton = document.createElement('button');
+        copybutton.classList.add('copy-code');
+        copybutton.innerHTML = 'copy';
+
+        function copyingDone() {
+            copybutton.innerHTML = 'copied!';
+            setTimeout(() => {
+                copybutton.innerHTML = 'copy';
+            }, 2000);
+        }
+
+        copybutton.addEventListener('click', (cb) => {
+            if ('clipboard' in navigator) {
+                navigator.clipboard.writeText(codeblock.textContent);
+                copyingDone();
+                return;
+            }
+
+            const range = document.createRange();
+            range.selectNodeContents(codeblock);
+            const selection = window.getSelection();
+            selection.removeAllRanges();
+            selection.addRange(range);
+            try {
+                document.execCommand('copy');
+                copyingDone();
+            } catch (e) { };
+            selection.removeRange(range);
+        });
+
+        if (container.classList.contains("highlight")) {
+            container.appendChild(copybutton);
+        } else if (container.parentNode.firstChild == container) {
+            
+        } else if (codeblock.parentNode.parentNode.parentNode.parentNode.parentNode.nodeName == "TABLE") {
+            
+            codeblock.parentNode.parentNode.parentNode.parentNode.parentNode.appendChild(copybutton);
+        } else {
+            
+            codeblock.parentNode.appendChild(copybutton);
+        }
+    });
+</script>
+</body>
+
+</html>

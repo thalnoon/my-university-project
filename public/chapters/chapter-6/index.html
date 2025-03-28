@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en" dir="auto">
 
-<head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script><meta charset="utf-8">
+<head><script src="/my-university-project/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=my-university-project/livereload" data-no-instant defer></script><meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 <meta name="robots" content="noindex, nofollow">
@@ -17,21 +17,137 @@ Triple quotes: &#39;&#39;&#39;... spam ...&#39;&#39;&#39; or &quot;&quot;&quot;.
 Escape sequences: &quot;s\tp\na\0m&quot;
 Raw strings: r&quot;C:\new\test.spm&quot;
 
-The single- and double-quoted forms are by far the most common.
+And the following is a list of all the possible operations that utilize or benefit the use of string literals
 
-Single- and Double-Quoted Strings Are the Same
-Around Python strings, single and double quote characters are interchangeable. That is, string literals can be written enclosed in either single or double quotes; the two forms work the same and return the same type of object.">
+  
+      
+          Operation
+          Interpretation
+      
+  
+  
+      
+          S = &#39;&#39;
+          Empty string
+      
+      
+          S = &ldquo;spam&rsquo;s&rdquo;
+          Double quotes, same as single
+      
+      
+          S = &rsquo;s\np\ta\x00m&#39;
+          Escape sequences
+      
+      
+          S = &ldquo;&rdquo;&quot;&hellip;&quot;&quot;&quot;
+          Triple-quoted block strings
+      
+      
+          S = r&rsquo;\temp\spam&#39;
+          Raw strings
+      
+      
+          S = b&rsquo;spam&#39;
+          Byte strings in 3.0
+      
+      
+          S = u&rsquo;spam&#39;
+          Unicode strings in 2.6 only
+      
+      
+          S1 &#43; S2
+          Concatenate, repeat
+      
+      
+          S * 3
+          
+      
+      
+          S[i]
+          Index, slice, length
+      
+      
+          S[i:j]
+          
+      
+      
+          len(S)
+          
+      
+      
+          &ldquo;a %s parrot&rdquo; % kind
+          String formatting expression
+      
+      
+          &ldquo;a {0} parrot&rdquo;.format(kind)
+          String formatting method in 2.6 and 3.0
+      
+      
+          S.find(&lsquo;pa&rsquo;)
+          String method calls: search,
+      
+      
+          S.rstrip()
+          remove whitespace,
+      
+      
+          S.replace(&lsquo;pa&rsquo;, &lsquo;xx&rsquo;)
+          replacement,
+      
+      
+          S.split(&rsquo;,&rsquo;)
+          split on delimiter,
+      
+      
+          S.isdigit()
+          content test,
+      
+      
+          S.lower()
+          case conversion,
+      
+      
+          S.endswith(&lsquo;spam&rsquo;)
+          end test,
+      
+      
+          &lsquo;spam&rsquo;.join(strlist)
+          delimiter join,
+      
+      
+          S.encode(&rsquo;latin-1&rsquo;)
+          Unicode encoding, etc.
+      
+      
+          for x in S: print(x)
+          Iteration, membership
+      
+      
+          &lsquo;spam&rsquo; in S
+          
+      
+      
+          [c* 2 for c in S]
+          
+      
+      
+          map(ord, S)
+          Unicode
+      
+  
+
+The single- and double-quoted forms are by far the most common.">
 <meta name="author" content="">
-<link rel="canonical" href="//localhost:1313/chapters/chapter-6/">
-<link crossorigin="anonymous" href="/assets/css/stylesheet.45e028aa8ce0961349adf411b013ee39406be2c0bc80d4ea3fc04555f7f4611a.css" integrity="sha256-ReAoqozglhNJrfQRsBPuOUBr4sC8gNTqP8BFVff0YRo=" rel="preload stylesheet" as="style">
-<link rel="icon" href="//localhost:1313/favicon.ico">
-<link rel="icon" type="image/png" sizes="16x16" href="//localhost:1313/favicon-16x16.png">
-<link rel="icon" type="image/png" sizes="32x32" href="//localhost:1313/favicon-32x32.png">
-<link rel="apple-touch-icon" href="//localhost:1313/apple-touch-icon.png">
-<link rel="mask-icon" href="//localhost:1313/safari-pinned-tab.svg">
+<link rel="canonical" href="http://localhost:1313/my-university-project/chapters/chapter-6/">
+<link crossorigin="anonymous" href="/my-university-project/assets/css/stylesheet.45e028aa8ce0961349adf411b013ee39406be2c0bc80d4ea3fc04555f7f4611a.css" integrity="sha256-ReAoqozglhNJrfQRsBPuOUBr4sC8gNTqP8BFVff0YRo=" rel="preload stylesheet" as="style">
+<link rel="icon" href="http://localhost:1313/my-university-project/favicon.ico">
+<link rel="icon" type="image/png" sizes="16x16" href="http://localhost:1313/my-university-project/favicon-16x16.png">
+<link rel="icon" type="image/png" sizes="32x32" href="http://localhost:1313/my-university-project/favicon-32x32.png">
+<link rel="apple-touch-icon" href="http://localhost:1313/my-university-project/apple-touch-icon.png">
+<link rel="mask-icon" href="http://localhost:1313/my-university-project/safari-pinned-tab.svg">
 <meta name="theme-color" content="#2e2e33">
 <meta name="msapplication-TileColor" content="#2e2e33">
-<link rel="alternate" hreflang="en" href="//localhost:1313/chapters/chapter-6/">
+<link rel="alternate" hreflang="en" href="http://localhost:1313/my-university-project/chapters/chapter-6/">
 <noscript>
     <style>
         #theme-toggle,
@@ -86,7 +202,7 @@ Around Python strings, single and double quote characters are interchangeable. T
 <header class="header">
     <nav class="nav">
         <div class="logo">
-            <a href="//localhost:1313/" accesskey="h" title="Elite (Alt + H)">Elite</a>
+            <a href="http://localhost:1313/my-university-project/" accesskey="h" title="Elite (Alt + H)">Elite</a>
             <div class="logo-switches">
                 <button id="theme-toggle" accesskey="t" title="(Alt + T)" aria-label="Toggle theme">
                     <svg id="moon" xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 24 24"
@@ -112,7 +228,7 @@ Around Python strings, single and double quote characters are interchangeable. T
         </div>
         <ul id="menu">
             <li>
-                <a href="//localhost:1313/search/" title="Search (Alt &#43; /)" accesskey=/>
+                <a href="http://localhost:1313/my-university-project/search/" title="Search (Alt &#43; /)" accesskey=/>
                     <span>Search</span>
                 </a>
             </li>
@@ -123,7 +239,7 @@ Around Python strings, single and double quote characters are interchangeable. T
 
 <article class="post-single">
   <header class="post-header">
-    <div class="breadcrumbs"><a href="//localhost:1313/">Home</a>&nbsp;»&nbsp;<a href="//localhost:1313/chapters/">Chapters</a></div>
+    <div class="breadcrumbs"><a href="http://localhost:1313/my-university-project/">Home</a>&nbsp;»&nbsp;<a href="http://localhost:1313/my-university-project/chapters/">Chapters</a></div>
     <h1 class="post-title entry-hint-parent">
       Chapter 6: Strings
     </h1>
@@ -160,9 +276,7 @@ Around Python strings, single and double quote characters are interchangeable. T
                 <li>
                     <a href="#advanced-string-formatting-expressions" aria-label="Advanced String Formatting Expressions">Advanced String Formatting Expressions</a></li>
                 <li>
-                    <a href="#examples-strings" aria-label="Examples (Strings)">Examples (Strings)</a></li>
-                <li>
-                    <a href="#chapter-summary" aria-label="Chapter Summary">Chapter Summary</a>
+                    <a href="#examples-strings" aria-label="Examples (Strings)">Examples (Strings)</a>
                 </li>
             </ul>
         </div>
@@ -179,6 +293,125 @@ Around Python strings, single and double quote characters are interchangeable. T
 <li><strong>Escape sequences:</strong> <code>&quot;s\tp\na\0m&quot;</code></li>
 <li><strong>Raw strings:</strong> <code>r&quot;C:\new\test.spm&quot;</code></li>
 </ul>
+<p>And the following is a list of all the possible operations that utilize or benefit the use of string literals</p>
+<table>
+  <thead>
+      <tr>
+          <th>Operation</th>
+          <th>Interpretation</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td>S = ''</td>
+          <td>Empty string</td>
+      </tr>
+      <tr>
+          <td>S = &ldquo;spam&rsquo;s&rdquo;</td>
+          <td>Double quotes, same as single</td>
+      </tr>
+      <tr>
+          <td>S = &rsquo;s\np\ta\x00m'</td>
+          <td>Escape sequences</td>
+      </tr>
+      <tr>
+          <td>S = &ldquo;&rdquo;&quot;&hellip;&quot;&quot;&quot;</td>
+          <td>Triple-quoted block strings</td>
+      </tr>
+      <tr>
+          <td>S = r&rsquo;\temp\spam'</td>
+          <td>Raw strings</td>
+      </tr>
+      <tr>
+          <td>S = b&rsquo;spam'</td>
+          <td>Byte strings in 3.0</td>
+      </tr>
+      <tr>
+          <td>S = u&rsquo;spam'</td>
+          <td>Unicode strings in 2.6 only</td>
+      </tr>
+      <tr>
+          <td>S1 + S2</td>
+          <td>Concatenate, repeat</td>
+      </tr>
+      <tr>
+          <td>S * 3</td>
+          <td></td>
+      </tr>
+      <tr>
+          <td>S[i]</td>
+          <td>Index, slice, length</td>
+      </tr>
+      <tr>
+          <td>S[i:j]</td>
+          <td></td>
+      </tr>
+      <tr>
+          <td>len(S)</td>
+          <td></td>
+      </tr>
+      <tr>
+          <td>&ldquo;a %s parrot&rdquo; % kind</td>
+          <td>String formatting expression</td>
+      </tr>
+      <tr>
+          <td>&ldquo;a {0} parrot&rdquo;.format(kind)</td>
+          <td>String formatting method in 2.6 and 3.0</td>
+      </tr>
+      <tr>
+          <td>S.find(&lsquo;pa&rsquo;)</td>
+          <td>String method calls: search,</td>
+      </tr>
+      <tr>
+          <td>S.rstrip()</td>
+          <td>remove whitespace,</td>
+      </tr>
+      <tr>
+          <td>S.replace(&lsquo;pa&rsquo;, &lsquo;xx&rsquo;)</td>
+          <td>replacement,</td>
+      </tr>
+      <tr>
+          <td>S.split(&rsquo;,&rsquo;)</td>
+          <td>split on delimiter,</td>
+      </tr>
+      <tr>
+          <td>S.isdigit()</td>
+          <td>content test,</td>
+      </tr>
+      <tr>
+          <td>S.lower()</td>
+          <td>case conversion,</td>
+      </tr>
+      <tr>
+          <td>S.endswith(&lsquo;spam&rsquo;)</td>
+          <td>end test,</td>
+      </tr>
+      <tr>
+          <td>&lsquo;spam&rsquo;.join(strlist)</td>
+          <td>delimiter join,</td>
+      </tr>
+      <tr>
+          <td>S.encode(&rsquo;latin-1&rsquo;)</td>
+          <td>Unicode encoding, etc.</td>
+      </tr>
+      <tr>
+          <td>for x in S: print(x)</td>
+          <td>Iteration, membership</td>
+      </tr>
+      <tr>
+          <td>&lsquo;spam&rsquo; in S</td>
+          <td></td>
+      </tr>
+      <tr>
+          <td>[c* 2 for c in S]</td>
+          <td></td>
+      </tr>
+      <tr>
+          <td>map(ord, S)</td>
+          <td>Unicode</td>
+      </tr>
+  </tbody>
+</table>
 <p>The single- and double-quoted forms are by far the most common.</p>
 <hr>
 <h2 id="single--and-double-quoted-strings-are-the-same">Single- and Double-Quoted Strings Are the Same<a hidden class="anchor" aria-hidden="true" href="#single--and-double-quoted-strings-are-the-same">#</a></h2>
@@ -194,6 +427,88 @@ Around Python strings, single and double quote characters are interchangeable. T
 </span></span><span class="line"><span class="cl"><span class="s1">&#39;Meaning of Life&#39;</span>
 </span></span></code></pre></div><hr>
 <h2 id="escape-sequences-represent-special-bytes">Escape Sequences Represent Special Bytes<a hidden class="anchor" aria-hidden="true" href="#escape-sequences-represent-special-bytes">#</a></h2>
+<table>
+  <thead>
+      <tr>
+          <th>Escape</th>
+          <th>Meaning</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td>\newline</td>
+          <td>Ignored (continuation line)</td>
+      </tr>
+      <tr>
+          <td>\</td>
+          <td>Backslash (stores one )</td>
+      </tr>
+      <tr>
+          <td>'</td>
+          <td>Single quote (stores &lsquo;)</td>
+      </tr>
+      <tr>
+          <td>&quot;</td>
+          <td>Double quote (stores &ldquo;)</td>
+      </tr>
+      <tr>
+          <td>\a</td>
+          <td>Bell</td>
+      </tr>
+      <tr>
+          <td>\b</td>
+          <td>Backspace</td>
+      </tr>
+      <tr>
+          <td>\f</td>
+          <td>Formfeed</td>
+      </tr>
+      <tr>
+          <td>\n</td>
+          <td>Newline (linefeed)</td>
+      </tr>
+      <tr>
+          <td>\r</td>
+          <td>Carriage return</td>
+      </tr>
+      <tr>
+          <td>\t</td>
+          <td>Horizontal tab</td>
+      </tr>
+      <tr>
+          <td>\v</td>
+          <td>Vertical tab</td>
+      </tr>
+      <tr>
+          <td>\xhh</td>
+          <td>Character with hex value <em>hh</em> (at most 2 digits)</td>
+      </tr>
+      <tr>
+          <td>\ooo</td>
+          <td>Character with octal value <em>ooo</em> (up to 3 digits)</td>
+      </tr>
+      <tr>
+          <td>\0</td>
+          <td>Null: binary 0 character (doesn&rsquo;t end string)</td>
+      </tr>
+      <tr>
+          <td>\N{ id }</td>
+          <td>Unicode database ID</td>
+      </tr>
+      <tr>
+          <td>\uhhhh</td>
+          <td>Unicode 16-bit hex</td>
+      </tr>
+      <tr>
+          <td>\Uhhhhhhhh</td>
+          <td>Unicode 32-bit hex</td>
+      </tr>
+      <tr>
+          <td>\other</td>
+          <td>Not an escape (keeps both \ and <em>other</em>)</td>
+      </tr>
+  </tbody>
+</table>
 <p>Backslashes are used to introduce escape sequences which represent special byte values. For example:</p>
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="o">&gt;&gt;&gt;</span> <span class="n">s</span> <span class="o">=</span> <span class="s1">&#39;a</span><span class="se">\n</span><span class="s1">b</span><span class="se">\t</span><span class="s1">c&#39;</span>
 </span></span><span class="line"><span class="cl"><span class="o">&gt;&gt;&gt;</span> <span class="n">s</span>
@@ -228,50 +543,92 @@ Around Python strings, single and double quote characters are interchangeable. T
 <hr>
 <h2 id="string-methods">String Methods<a hidden class="anchor" aria-hidden="true" href="#string-methods">#</a></h2>
 <p>Methods are functions attached to string objects that perform higher-level operations. For example, some common string methods include:</p>
-<ul>
-<li><code>S.capitalize()</code></li>
-<li><code>S.ljust(width [, fill])</code></li>
-<li><code>S.center(width [, fill])</code></li>
-<li><code>S.lower()</code></li>
-<li><code>S.count(sub [, start [, end]])</code></li>
-<li><code>S.lstrip([chars])</code></li>
-<li><code>S.encode([encoding [,errors]])</code></li>
-<li><code>S.maketrans(x[, y[, z]])</code></li>
-<li><code>S.endswith(suffix [, start [, end]])</code></li>
-<li><code>S.partition(sep)</code></li>
-<li><code>S.expandtabs([tabsize])</code></li>
-<li><code>S.replace(old, new [, count])</code></li>
-<li><code>S.find(sub [, start [, end]])</code></li>
-<li><code>S.rfind(sub [, start [, end]])</code></li>
-<li><code>S.format(fmtstr, *args, **kwargs)</code></li>
-<li><code>S.rindex(sub [, start [, end]])</code></li>
-<li><code>S.index(sub [, start [, end]])</code></li>
-<li><code>S.rjust(width [, fill])</code></li>
-<li><code>S.isalnum()</code></li>
-<li><code>S.rpartition(sep)</code></li>
-<li><code>S.isalpha()</code></li>
-<li><code>S.rsplit([sep[, maxsplit]])</code></li>
-<li><code>S.isdecimal()</code></li>
-<li><code>S.rstrip([chars])</code></li>
-<li><code>S.isdigit()</code></li>
-<li><code>S.split([sep [,maxsplit]])</code></li>
-<li><code>S.isidentifier()</code></li>
-<li><code>S.splitlines([keepends])</code></li>
-<li><code>S.islower()</code></li>
-<li><code>S.startswith(prefix [, start [, end]])</code></li>
-<li><code>S.isnumeric()</code></li>
-<li><code>S.strip([chars])</code></li>
-<li><code>S.isprintable()</code></li>
-<li><code>S.swapcase()</code></li>
-<li><code>S.isspace()</code></li>
-<li><code>S.title()</code></li>
-<li><code>S.istitle()</code></li>
-<li><code>S.translate(map)</code></li>
-<li><code>S.isupper()</code></li>
-<li><code>S.upper()</code></li>
-<li><code>S.join(iterable)</code></li>
-<li><code>S.zfill(width)</code></li>
-</ul>
+<table>
+  <thead>
+      <tr>
+          <th>S.find(sub [, start [, end]])</th>
+          <th>S.rfind(sub [, start [, end]])</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td>S.format(fmtstr, *args, **kwargs)</td>
+          <td>S.rindex(sub [, start [, end]])</td>
+      </tr>
+      <tr>
+          <td>S.index(sub [, start [, end]])</td>
+          <td>S.rjust(width [, fill])</td>
+      </tr>
+      <tr>
+          <td>S.isalnum()</td>
+          <td>S.rpartition(sep)</td>
+      </tr>
+      <tr>
+          <td>S.isalpha()</td>
+          <td>S.rsplit([sep[, maxsplit]])</td>
+      </tr>
+      <tr>
+          <td>S.isdecimal()</td>
+          <td>S.rstrip([chars])</td>
+      </tr>
+      <tr>
+          <td>S.isdigit()</td>
+          <td>S.split([sep [, maxsplit]])</td>
+      </tr>
+      <tr>
+          <td>S.isidentifier()</td>
+          <td>S.splitlines([keepends])</td>
+      </tr>
+      <tr>
+          <td>S.islower()</td>
+          <td>S.startswith(prefix [, start [, end]])</td>
+      </tr>
+      <tr>
+          <td>S.isnumeric()</td>
+          <td>S.strip([chars])</td>
+      </tr>
+      <tr>
+          <td>S.isprintable()</td>
+          <td>S.swapcase()</td>
+      </tr>
+      <tr>
+          <td>S.isspace()</td>
+          <td>S.title()</td>
+      </tr>
+      <tr>
+          <td>S.istitle()</td>
+          <td>S.translate(map)</td>
+      </tr>
+      <tr>
+          <td>S.isupper()</td>
+          <td>S.upper()</td>
+      </tr>
+      <tr>
+          <td>S.join(iterable)</td>
+          <td>S.zfill(width)</td>
+      </tr>
+      <tr>
+          <td>S.center(width [, fill])</td>
+          <td>S.lower()</td>
+      </tr>
+      <tr>
+          <td>S.count(sub [, start [, end]])</td>
+          <td>S.lstrip([chars])</td>
+      </tr>
+      <tr>
+          <td>S.encode([encoding [,errors]])</td>
+          <td>S.maketrans(x[, y[, z]])</td>
+      </tr>
+      <tr>
+          <td>S.endswith(suffix [, start [, end]])</td>
+          <td>S.partition(sep)</td>
+      </tr>
+      <tr>
+          <td>S.expandtabs([tabsize])</td>
+          <td>S.replace(old, new [, count])</td>
+      </tr>
+  </tbody>
+</table>
 <hr>
 <h2 id="string-method-examples-changing-strings">String Method Examples: Changing Strings<a hidden class="anchor" aria-hidden="true" href="#string-method-examples-changing-strings">#</a></h2>
 <p>Since strings are immutable, you must create a new string when making changes.</p>
@@ -488,48 +845,7 @@ Around Python strings, single and double quote characters are interchangeable. T
 <li><strong>Slice a string:</strong>
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="nb">print</span><span class="p">(</span><span class="s2">&#34;Hello world&#34;</span><span class="p">[</span><span class="mi">7</span><span class="p">:</span><span class="mi">10</span><span class="p">])</span>
 </span></span></code></pre></div>(This displays &ldquo;orl&rdquo; from &ldquo;Hello world&rdquo; where indexing starts at 0.)</li>
-<li><strong>Prompt the user for their first name and display its length.</strong></li>
-<li><strong>Prompt for first name and surname, join them with a space, and display the full name and its length.</strong></li>
-<li><strong>Prompt for first name and surname in lower case, convert to title case, join them, and display the result.</strong></li>
-<li><strong>Prompt for the first line of a nursery rhyme, display its length, then ask for a starting and ending number and display that substring.</strong></li>
-<li><strong>Prompt the user to enter any word and display it in upper case.</strong></li>
-<li><strong>Prompt for the user&rsquo;s first name. If its length is under five characters, ask for their surname, join them without a space, and display the result in upper case; otherwise, display the first name in lower case.</strong></li>
-<li><strong>Pig Latin Conversion:</strong>
-<ul>
-<li>If a word begins with a consonant, move the first consonant to the end and add &ldquo;ay&rdquo;.</li>
-<li>If a word begins with a vowel, add &ldquo;way&rdquo; to the end.<br>
-Display the resulting word in lower case.</li>
-</ul>
-</li>
 </ol>
-<hr>
-<h2 id="chapter-summary">Chapter Summary<a hidden class="anchor" aria-hidden="true" href="#chapter-summary">#</a></h2>
-<ul>
-<li>
-<p><strong>String Literals:</strong><br>
-Various ways to define strings include single, double, and triple quotes, along with escape sequences and raw strings.</p>
-</li>
-<li>
-<p><strong>Escape Sequences:</strong><br>
-Special sequences using backslashes allow embedding non-printable or special characters in strings.</p>
-</li>
-<li>
-<p><strong>Basic Operations:</strong><br>
-Strings support concatenation with <code>+</code>, repetition with <code>*</code>, slicing, and length determination using <code>len()</code>.</p>
-</li>
-<li>
-<p><strong>String Methods:</strong><br>
-Built-in methods offer operations such as case conversion, searching, splitting, joining, and replacing substrings.</p>
-</li>
-<li>
-<p><strong>String Formatting:</strong><br>
-Both old-style (<code>%</code>) formatting and advanced formatting expressions provide flexible ways to format strings.</p>
-</li>
-<li>
-<p><strong>Practical Examples:</strong><br>
-Numerous examples illustrate how to manipulate and format strings, perform substring operations, and convert between mutable and immutable types.</p>
-</li>
-</ul>
 
 
   </div>
@@ -538,12 +854,12 @@ Numerous examples illustrate how to manipulate and format strings, perform subst
     <ul class="post-tags">
     </ul>
 <nav class="paginav">
-  <a class="prev" href="//localhost:1313/chapters/chapter-5/">
+  <a class="prev" href="http://localhost:1313/my-university-project/chapters/chapter-5/">
     <span class="title">« Prev</span>
     <br>
     <span>Chapter 5: Numeric Types</span>
   </a>
-  <a class="next" href="//localhost:1313/chapters/chapter-7/">
+  <a class="next" href="http://localhost:1313/my-university-project/chapters/chapter-7/">
     <span class="title">Next »</span>
     <br>
     <span>Chapter 7: Lists &amp; Dictionaries</span>
@@ -555,7 +871,7 @@ Numerous examples illustrate how to manipulate and format strings, perform subst
     </main>
     
 <footer class="footer">
-        <span>&copy; 2025 <a href="//localhost:1313/">Elite</a></span> · 
+        <span>&copy; 2025 <a href="http://localhost:1313/my-university-project/">Elite</a></span> · 
 
     <span>
         Powered by

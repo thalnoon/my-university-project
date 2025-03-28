@@ -21,7 +21,25 @@ Tuples are:
 
 Like lists, tuples are best thought of as object reference arrays; they store access points to other objects (references), and indexing a tuple is relatively quick. Table 9-1 highlights common tuple operations. A tuple is written as a series of objects (technically, expressions that generate objects), separated by commas and normally enclosed in parentheses. An empty tuple is just a pair of parentheses with nothing inside.
 
-**[Table 1 Placeholder: Common tuple literals and operations]**
+| Operation                  | Interpretation                                     |
+|---------------------------|----------------------------------------------------|
+| ()                        | An empty tuple                                     |
+| T = (0,)                 | A one-item tuple (not an expression)              |
+| T = (0, 'Ni', 1.2, 3)    | A four-item tuple                                  |
+| T = 0, 'Ni', 1.2, 3      | Another four-item tuple (same as prior line)      |
+| T = ('abc', ('def', 'ghi')) | Nested tuples                                      |
+| T = tuple('spam')        | Tuple of items in an iterable                      |
+| T[i]                      | Index, index of index, slice, length              |
+| T[i][j]                   |                                                    |
+| T[i:j]                    |                                                    |
+| len(T)                    |                                                    |
+| T1 + T2                   | Concatenate, repeat                                |
+| T * 3                     |                                                    |
+| for x in T: print(x)      | Iteration, membership                              |
+| 'spam' in T               |                                                    |
+| [x ** 2 for x in T]       |                                                    |
+| T.index('Ni')            | Methods in 2.6 and 3.0: search, count              |
+| T.count('Ni')            |                                                    |
 
 ### Tuples in Action
 
@@ -109,7 +127,23 @@ A common question for beginners is: why do we need tuples if we have lists? Hist
 
 You may already be familiar with files—named storage compartments on your computer managed by the operating system. The built-in `open` function creates a file object that links your Python program to an external file. Once opened, you can transfer strings of data to and from the file using its methods. File objects differ from numbers, sequences, or mappings because they primarily provide methods for common file-processing tasks (such as reading, writing, seeking, and flushing output buffers).
 
-**[Table 2 Placeholder: Common file operations]**
+| Operation                                 | Interpretation                                                                 |
+|-------------------------------------------|--------------------------------------------------------------------------------|
+| output = open(r'C:\spam', 'w')          | Create output file ('w' means write)                                          |
+| input = open('data', 'r')              | Create input file ('r' means read)                                            |
+| input = open('data')                   | Same as prior line ('r' is the default)                                       |
+| aString = input.read()                  | Read entire file into a single string                                         |
+| aString = input.read(N)                 | Read up to next N characters (or bytes) into a string                          |
+| aString = input.readline()              | Read next line (including \n newline) into a string                          |
+| alist = input.readlines()               | Read entire file into list of line strings (with \n)                          |
+| output.write(aString)                 | Write a string of characters (or bytes) into file                               |
+| output.writelines(alist)               | Write all line strings in a list into file                                     |
+| output.close()                        | Manual close (done for you when file is collected)                             |
+| output.flush()                        | Flush output buffer to disk without closing                                    |
+| anyFile.seek(N)                        | Change file position to offset N for next operation                            |
+| for line in open('data'): use line      | File iterators read line by line                                              |
+| open('f.txt', encoding='latin-1')     | Python 3.0 Unicode text files (str strings)                                   |
+| open('f.bin', 'rb')                    | Python 3.0 binary bytes files (bytes strings)                                 |
 
 ### Opening Files
 

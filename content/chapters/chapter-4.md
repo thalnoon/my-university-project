@@ -13,7 +13,18 @@ Python programs can be decomposed into modules, statements, expressions, and obj
 
 ## Python’s Core Data Types
 
-Table 1 previews Python’s built-in object types and some of the syntax used to code their literals—that is, the expressions that generate these objects.
+| Object type                 | Example literals/creation        |
+|-----------------------------|---------------------------------|
+| Numbers                     | 1234, 3.1415, 3+4j, Decimal, Fraction |
+| Strings                     | 'spam', "guido's", b'a\x01c'     |
+| Lists                       | [1, [2, 'three'], 4]             |
+| Dictionaries                | {'food': 'spam', 'taste': 'yum'} |
+| Tuples                      | (1, 'spam', 4, 'U')              |
+| Files                       | myfile = open('eggs', 'r')      |
+| Sets                        | set('abc'), {'a', 'b', 'c'}      |
+| Other core types            | Booleans, types, None           |
+| Program unit types          | Functions, modules, classes     |
+| Implementation-related types | Compiled code, stack tracebacks |
 
 ## Numbers
 
@@ -616,28 +627,3 @@ None
    ```python
    x % y
    ```
-7. **Ask the user to enter a number with lots of decimal places, multiply it by two, and display the answer.**
-8. **Update program 7 so that it displays the answer to two decimal places.**
-9. **Ask the user to enter an integer over 500, compute the square root, and display it to two decimal places.**
-10. **Display pi (π) to five decimal places.**
-11. **Ask the user to enter the radius of a circle and compute its area (`π * radius^2`).**
-12. **Ask for the radius and the depth of a cylinder and compute the total volume (circle area * depth) rounded to three decimal places.**
-13. **Ask the user to enter two numbers. Use whole number division to divide the first by the second and display the quotient and remainder in a user-friendly way.**
-14. **Display a message based on user input: if the user enters 1, prompt for the side length of a square and display its area; if 2, prompt for the base and height of a triangle and display its area; otherwise, display an error message.**
-
-## Chapter Summary
-
-- **Object Composition:**  
-  Python programs are structured into modules, statements, expressions, and objects.
-
-- **Core Data Types:**  
-  The chapter covers numbers, strings, lists, dictionaries, sets, and other types, including decimals, fractions, Booleans, and `None`.
-
-- **Operations and Methods:**  
-  It explains arithmetic operations, string manipulations, sequence operations, and type-specific methods.
-
-- **Data Structures:**  
-  Detailed discussion of lists, dictionaries, and sets including indexing, slicing, nesting, comprehensions, and iteration.
-
-- **Examples:**  
-  A series of examples demonstrate practical applications of these types and operations.

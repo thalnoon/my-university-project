@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en" dir="auto">
 
-<head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script><meta charset="utf-8">
+<head><script src="/my-university-project/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=my-university-project/livereload" data-no-instant defer></script><meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 <meta name="robots" content="noindex, nofollow">
@@ -12,16 +12,16 @@ The file object is a commonly used and full-featured tool for processing files; 
 Tuples
 The last collection type in our survey is the Python tuple. Tuples construct simple groups of objects. They work exactly like lists, except that tuples can’t be changed in-place (they’re immutable) and are usually written as a series of items in parentheses, not square brackets. Although they don’t support as many methods, tuples share most of their properties with lists. Here’s a quick look at the basics.">
 <meta name="author" content="">
-<link rel="canonical" href="//localhost:1313/chapters/chapter-8/">
-<link crossorigin="anonymous" href="/assets/css/stylesheet.45e028aa8ce0961349adf411b013ee39406be2c0bc80d4ea3fc04555f7f4611a.css" integrity="sha256-ReAoqozglhNJrfQRsBPuOUBr4sC8gNTqP8BFVff0YRo=" rel="preload stylesheet" as="style">
-<link rel="icon" href="//localhost:1313/favicon.ico">
-<link rel="icon" type="image/png" sizes="16x16" href="//localhost:1313/favicon-16x16.png">
-<link rel="icon" type="image/png" sizes="32x32" href="//localhost:1313/favicon-32x32.png">
-<link rel="apple-touch-icon" href="//localhost:1313/apple-touch-icon.png">
-<link rel="mask-icon" href="//localhost:1313/safari-pinned-tab.svg">
+<link rel="canonical" href="http://localhost:1313/my-university-project/chapters/chapter-8/">
+<link crossorigin="anonymous" href="/my-university-project/assets/css/stylesheet.45e028aa8ce0961349adf411b013ee39406be2c0bc80d4ea3fc04555f7f4611a.css" integrity="sha256-ReAoqozglhNJrfQRsBPuOUBr4sC8gNTqP8BFVff0YRo=" rel="preload stylesheet" as="style">
+<link rel="icon" href="http://localhost:1313/my-university-project/favicon.ico">
+<link rel="icon" type="image/png" sizes="16x16" href="http://localhost:1313/my-university-project/favicon-16x16.png">
+<link rel="icon" type="image/png" sizes="32x32" href="http://localhost:1313/my-university-project/favicon-32x32.png">
+<link rel="apple-touch-icon" href="http://localhost:1313/my-university-project/apple-touch-icon.png">
+<link rel="mask-icon" href="http://localhost:1313/my-university-project/safari-pinned-tab.svg">
 <meta name="theme-color" content="#2e2e33">
 <meta name="msapplication-TileColor" content="#2e2e33">
-<link rel="alternate" hreflang="en" href="//localhost:1313/chapters/chapter-8/">
+<link rel="alternate" hreflang="en" href="http://localhost:1313/my-university-project/chapters/chapter-8/">
 <noscript>
     <style>
         #theme-toggle,
@@ -76,7 +76,7 @@ The last collection type in our survey is the Python tuple. Tuples construct sim
 <header class="header">
     <nav class="nav">
         <div class="logo">
-            <a href="//localhost:1313/" accesskey="h" title="Elite (Alt + H)">Elite</a>
+            <a href="http://localhost:1313/my-university-project/" accesskey="h" title="Elite (Alt + H)">Elite</a>
             <div class="logo-switches">
                 <button id="theme-toggle" accesskey="t" title="(Alt + T)" aria-label="Toggle theme">
                     <svg id="moon" xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 24 24"
@@ -102,7 +102,7 @@ The last collection type in our survey is the Python tuple. Tuples construct sim
         </div>
         <ul id="menu">
             <li>
-                <a href="//localhost:1313/search/" title="Search (Alt &#43; /)" accesskey=/>
+                <a href="http://localhost:1313/my-university-project/search/" title="Search (Alt &#43; /)" accesskey=/>
                     <span>Search</span>
                 </a>
             </li>
@@ -113,11 +113,11 @@ The last collection type in our survey is the Python tuple. Tuples construct sim
 
 <article class="post-single">
   <header class="post-header">
-    <div class="breadcrumbs"><a href="//localhost:1313/">Home</a>&nbsp;»&nbsp;<a href="//localhost:1313/chapters/">Chapters</a></div>
+    <div class="breadcrumbs"><a href="http://localhost:1313/my-university-project/">Home</a>&nbsp;»&nbsp;<a href="http://localhost:1313/my-university-project/chapters/">Chapters</a></div>
     <h1 class="post-title entry-hint-parent">
       Chapter 8: Tuples, Files, and Everything Else
     </h1>
-    <div class="post-meta">12 min
+    <div class="post-meta">13 min
 
 </div>
   </header> <div class="toc">
@@ -176,7 +176,84 @@ The last collection type in our survey is the Python tuple. Tuples construct sim
 <li><strong>Arrays of object references:</strong> Tuples are best thought of as object reference arrays; they store references to other objects, and indexing a tuple is relatively quick.</li>
 </ul>
 <p>Like lists, tuples are best thought of as object reference arrays; they store access points to other objects (references), and indexing a tuple is relatively quick. Table 9-1 highlights common tuple operations. A tuple is written as a series of objects (technically, expressions that generate objects), separated by commas and normally enclosed in parentheses. An empty tuple is just a pair of parentheses with nothing inside.</p>
-<p><strong>[Table 1 Placeholder: Common tuple literals and operations]</strong></p>
+<table>
+  <thead>
+      <tr>
+          <th>Operation</th>
+          <th>Interpretation</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td>()</td>
+          <td>An empty tuple</td>
+      </tr>
+      <tr>
+          <td>T = (0,)</td>
+          <td>A one-item tuple (not an expression)</td>
+      </tr>
+      <tr>
+          <td>T = (0, &lsquo;Ni&rsquo;, 1.2, 3)</td>
+          <td>A four-item tuple</td>
+      </tr>
+      <tr>
+          <td>T = 0, &lsquo;Ni&rsquo;, 1.2, 3</td>
+          <td>Another four-item tuple (same as prior line)</td>
+      </tr>
+      <tr>
+          <td>T = (&lsquo;abc&rsquo;, (&lsquo;def&rsquo;, &lsquo;ghi&rsquo;))</td>
+          <td>Nested tuples</td>
+      </tr>
+      <tr>
+          <td>T = tuple(&lsquo;spam&rsquo;)</td>
+          <td>Tuple of items in an iterable</td>
+      </tr>
+      <tr>
+          <td>T[i]</td>
+          <td>Index, index of index, slice, length</td>
+      </tr>
+      <tr>
+          <td>T[i][j]</td>
+          <td></td>
+      </tr>
+      <tr>
+          <td>T[i:j]</td>
+          <td></td>
+      </tr>
+      <tr>
+          <td>len(T)</td>
+          <td></td>
+      </tr>
+      <tr>
+          <td>T1 + T2</td>
+          <td>Concatenate, repeat</td>
+      </tr>
+      <tr>
+          <td>T * 3</td>
+          <td></td>
+      </tr>
+      <tr>
+          <td>for x in T: print(x)</td>
+          <td>Iteration, membership</td>
+      </tr>
+      <tr>
+          <td>&lsquo;spam&rsquo; in T</td>
+          <td></td>
+      </tr>
+      <tr>
+          <td>[x ** 2 for x in T]</td>
+          <td></td>
+      </tr>
+      <tr>
+          <td>T.index(&lsquo;Ni&rsquo;)</td>
+          <td>Methods in 2.6 and 3.0: search, count</td>
+      </tr>
+      <tr>
+          <td>T.count(&lsquo;Ni&rsquo;)</td>
+          <td></td>
+      </tr>
+  </tbody>
+</table>
 <h3 id="tuples-in-action">Tuples in Action<a hidden class="anchor" aria-hidden="true" href="#tuples-in-action">#</a></h3>
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="o">&gt;&gt;&gt;</span> <span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">)</span> <span class="o">+</span> <span class="p">(</span><span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">)</span>  <span class="c1"># Concatenation</span>
 </span></span><span class="line"><span class="cl"><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">)</span>
@@ -232,7 +309,76 @@ The last collection type in our survey is the Python tuple. Tuples construct sim
 <p>A common question for beginners is: why do we need tuples if we have lists? Historically, Python’s creator viewed a tuple as a simple association of objects (constant by nature) and a list as a data structure that changes over time. The immutability of tuples provides integrity—once created, a tuple won’t be changed through another reference in a program. This makes tuples useful for roles similar to constant declarations and allows their use as dictionary keys. In general, use lists for ordered collections that might need to change and tuples for fixed associations.</p>
 <h2 id="files">Files<a hidden class="anchor" aria-hidden="true" href="#files">#</a></h2>
 <p>You may already be familiar with files—named storage compartments on your computer managed by the operating system. The built-in <code>open</code> function creates a file object that links your Python program to an external file. Once opened, you can transfer strings of data to and from the file using its methods. File objects differ from numbers, sequences, or mappings because they primarily provide methods for common file-processing tasks (such as reading, writing, seeking, and flushing output buffers).</p>
-<p><strong>[Table 2 Placeholder: Common file operations]</strong></p>
+<table>
+  <thead>
+      <tr>
+          <th>Operation</th>
+          <th>Interpretation</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td>output = open(r&rsquo;C:\spam&rsquo;, &lsquo;w&rsquo;)</td>
+          <td>Create output file (&lsquo;w&rsquo; means write)</td>
+      </tr>
+      <tr>
+          <td>input = open(&lsquo;data&rsquo;, &lsquo;r&rsquo;)</td>
+          <td>Create input file (&lsquo;r&rsquo; means read)</td>
+      </tr>
+      <tr>
+          <td>input = open(&lsquo;data&rsquo;)</td>
+          <td>Same as prior line (&lsquo;r&rsquo; is the default)</td>
+      </tr>
+      <tr>
+          <td>aString = input.read()</td>
+          <td>Read entire file into a single string</td>
+      </tr>
+      <tr>
+          <td>aString = input.read(N)</td>
+          <td>Read up to next N characters (or bytes) into a string</td>
+      </tr>
+      <tr>
+          <td>aString = input.readline()</td>
+          <td>Read next line (including \n newline) into a string</td>
+      </tr>
+      <tr>
+          <td>alist = input.readlines()</td>
+          <td>Read entire file into list of line strings (with \n)</td>
+      </tr>
+      <tr>
+          <td>output.write(aString)</td>
+          <td>Write a string of characters (or bytes) into file</td>
+      </tr>
+      <tr>
+          <td>output.writelines(alist)</td>
+          <td>Write all line strings in a list into file</td>
+      </tr>
+      <tr>
+          <td>output.close()</td>
+          <td>Manual close (done for you when file is collected)</td>
+      </tr>
+      <tr>
+          <td>output.flush()</td>
+          <td>Flush output buffer to disk without closing</td>
+      </tr>
+      <tr>
+          <td>anyFile.seek(N)</td>
+          <td>Change file position to offset N for next operation</td>
+      </tr>
+      <tr>
+          <td>for line in open(&lsquo;data&rsquo;): use line</td>
+          <td>File iterators read line by line</td>
+      </tr>
+      <tr>
+          <td>open(&lsquo;f.txt&rsquo;, encoding=&lsquo;latin-1&rsquo;)</td>
+          <td>Python 3.0 Unicode text files (str strings)</td>
+      </tr>
+      <tr>
+          <td>open(&lsquo;f.bin&rsquo;, &lsquo;rb&rsquo;)</td>
+          <td>Python 3.0 binary bytes files (bytes strings)</td>
+      </tr>
+  </tbody>
+</table>
 <h3 id="opening-files">Opening Files<a hidden class="anchor" aria-hidden="true" href="#opening-files">#</a></h3>
 <p>To open a file, call the built-in <code>open</code> function with the filename and a processing mode. The mode is typically:</p>
 <ul>
@@ -393,12 +539,12 @@ The last collection type in our survey is the Python tuple. Tuples construct sim
     <ul class="post-tags">
     </ul>
 <nav class="paginav">
-  <a class="prev" href="//localhost:1313/chapters/chapter-7/">
+  <a class="prev" href="http://localhost:1313/my-university-project/chapters/chapter-7/">
     <span class="title">« Prev</span>
     <br>
     <span>Chapter 7: Lists &amp; Dictionaries</span>
   </a>
-  <a class="next" href="//localhost:1313/chapters/chapter-9/">
+  <a class="next" href="http://localhost:1313/my-university-project/chapters/chapter-9/">
     <span class="title">Next »</span>
     <br>
     <span>Chapter 9: Introducing Python Statements</span>
@@ -410,7 +556,7 @@ The last collection type in our survey is the Python tuple. Tuples construct sim
     </main>
     
 <footer class="footer">
-        <span>&copy; 2025 <a href="//localhost:1313/">Elite</a></span> · 
+        <span>&copy; 2025 <a href="http://localhost:1313/my-university-project/">Elite</a></span> · 
 
     <span>
         Powered by

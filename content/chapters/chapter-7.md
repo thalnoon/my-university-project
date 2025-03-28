@@ -21,14 +21,37 @@ Lists are ordered collections of arbitrary objects. Unlike strings, lists can co
 
 ### Common List Literals and Operations
 
-Below is a placeholder for a table summarizing common list literals and operations:
-
-| Operation      | Description                          | Example                       |
-|----------------|--------------------------------------|-------------------------------|
-| `[]`           | Empty list literal                   | `[]`                          |
-| `[item1, ...]` | List literal with items              | `[1, 2, 3]`                   |
-| `L + M`        | Concatenation of two lists           | `[1, 2] + [3, 4]`             |
-| `['Ni!'] * 4`  | Repetition of a list element         | `['Ni!', 'Ni!', 'Ni!', 'Ni!']`|
+| Operation                  | Interpretation                                |
+|---------------------------|-----------------------------------------------|
+| L1 + L2                   | Concatenate, repeat                            |
+| L * 3                     |                                               |
+| for x in L: print(x)      | Iteration, membership                          |
+| 3 in L                    |                                               |
+| L.append(4)              | Methods: growing                               |
+| L.extend([5,6,7])        |                                               |
+| L.insert(I, X)           |                                               |
+| L.index(1)               | Methods: searching                             |
+| L.count(X)               |                                               |
+| L.sort()                 | Methods: sorting, reversing, etc.              |
+| L.reverse()              |                                               |
+| del L[k]                 | Methods, statement: shrinking                 |
+| del L[i:j]               |                                               |
+| L.pop()                  |                                               |
+| L.remove(2)              |                                               |
+| L[i:j] = []              |                                               |
+| L[i] = 1                 | Index assignment            |
+| L[i:j] = [4,5,6]         |                  slice assignment                              |
+| L = [x**2 for x in range(5)] | List comprehensions                  |
+| list(map(ord, 'spam'))    |                       maps                        |
+| L = []                    | An empty list                                         |
+| L = [0, 1, 2, 3]         | Four items: indexes 0..3                             |
+| L = ['abc', ['def', 'ghi']] | Nested sublists                                       |
+| L = list('spam')          | Lists of an iterable's items |
+| L = list(range(-4, 4))    |                               list of successive integers                         |
+| L[i]                      | Index                  |
+| L[i][j]                   | Index of index                                                  |
+| L[i:j]                    | Slice                                                     |
+| len(L)                    | Length                                               |
 
 ### Basic List Operations
 
@@ -187,15 +210,30 @@ Dictionaries are mutable mappings that store key–value pairs. Unlike lists, th
 
 ### Common Dictionary Literals and Operations
 
-Below is a placeholder for a table summarizing common dictionary literals and operations:
-
-| Operation             | Description                                  | Example                           |
-|-----------------------|----------------------------------------------|-----------------------------------|
-| `{}`                  | Empty dictionary literal                     | `{}`                              |
-| `{'key': value}`      | Dictionary literal with a key–value pair     | `{'a': 1, 'b': 2}`                |
-| `D[key]`              | Access value by key                          | `D['spam']`                       |
-| `D[key] = value`      | Set or update value for a key                | `D['eggs'] = 3`                   |
-| `del D[key]`          | Delete a key–value pair                      | `del D['ham']`                    |
+| Operation                             | Interpretation                                    |
+|--------------------------------------|---------------------------------------------------|
+| D.items()                          | keys+values,                                       |
+| D.copy()                           | copies,                                           |
+| D.get(key, default)                | defaults,                                          |
+| D.update(D2)                       | merge,                                            |
+| D.pop(key)                         | delete, etc.                                      |
+| len(D)                             | Length: number of stored entries                   |
+| D[key] = 42                        | Adding/changing keys                               |
+| del D[key]                         | Deleting entries by key                            |
+| list(D.keys())                     | Dictionary views (Python 3.0)                       |
+| D1.keys() & D2.keys()              |                                                   |
+| D = {x: x*2 for x in range(10)}   | Dictionary comprehensions (Python 3.0)            |
+| D = {}                                  | Empty dictionary                                                                 |
+| D = {'spam': 2, 'eggs': 3}              | Two-item dictionary                                                              |
+| D = {'food': {'ham': 1, 'egg': 2}}      | Nesting                                                                          |
+| D = dict(name='Bob', age=40)             | Alternative construction techniques: keywords, zipped pairs, key lists           |
+| D = dict(zip(keyslist, valslist))       |                                                                                  |
+| D = dict.fromkeys(['a', 'b'])           |                                                                                  |
+| D['eggs']                               | Indexing by key                                                                  |
+| D['food']['ham']                          |                                                                                  |
+| 'eggs' in D                             | Membership: key present test                                                     |
+| D.keys()                                | Methods: keys,                                                                   |
+| D.values()                              | values,                                                                          |
 
 ### Basic Dictionary Operations
 
@@ -317,13 +355,3 @@ c 3
 
 ---
 
-## Chapter Summary
-
-- **Lists** are mutable, ordered collections that support indexing, slicing, concatenation, and repetition. They can store heterogeneous data and be nested arbitrarily.
-- **List comprehensions** offer a concise syntax for creating new lists from existing sequences.
-- **Changing lists in-place** can be done via index or slice assignments and with methods such as `append()`, `extend()`, `pop()`, `insert()`, `remove()`, `sort()`, and `reverse()`.
-- **Dictionaries** are mutable mappings that store key–value pairs, offering fast lookup by key. They are unordered by default.
-- **Basic dictionary operations** include accessing, updating, deleting keys, and testing membership. They are ideal for representing sparse data, flexible lists, and structured records.
-- **Sorting dictionary keys** and using methods like `get()` help manage dictionaries effectively.
-
-Together, lists and dictionaries provide powerful and flexible data structures that form the backbone of Python programming. They enable efficient data manipulation and are widely used in virtually every Python application.
