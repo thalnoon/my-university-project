@@ -117,7 +117,7 @@ Lists are ordered collections of arbitrary objects. Unlike strings, lists can co
     <h1 class="post-title entry-hint-parent">
       Chapter 7: Lists &amp; Dictionaries
     </h1>
-    <div class="post-meta">7 min
+    <div class="post-meta">8 min
 
 </div>
   </header> <div class="toc">
@@ -159,7 +159,25 @@ Lists are ordered collections of arbitrary objects. Unlike strings, lists can co
                 <li>
                     <a href="#using-dictionaries-as-records" aria-label="Using Dictionaries as “Records”">Using Dictionaries as “Records”</a></li>
                 <li>
-                    <a href="#sorting-dictionary-keys" aria-label="Sorting Dictionary Keys">Sorting Dictionary Keys</a>
+                    <a href="#sorting-dictionary-keys" aria-label="Sorting Dictionary Keys">Sorting Dictionary Keys</a></li></ul>
+                </li>
+                <li>
+                    <a href="#chapter-summary" aria-label="Chapter Summary">Chapter Summary</a><ul>
+                        
+                <li>
+                    <a href="#overview" aria-label="Overview">Overview</a></li>
+                <li>
+                    <a href="#creating-strings" aria-label="Creating Strings">Creating Strings</a></li>
+                <li>
+                    <a href="#string-indexing-and-slicing" aria-label="String Indexing and Slicing">String Indexing and Slicing</a></li>
+                <li>
+                    <a href="#common-string-methods" aria-label="Common String Methods">Common String Methods</a></li>
+                <li>
+                    <a href="#string-concatenation-joining-strings" aria-label="String Concatenation (Joining Strings)">String Concatenation (Joining Strings)</a></li>
+                <li>
+                    <a href="#checking-string-membership" aria-label="Checking String Membership">Checking String Membership</a></li>
+                <li>
+                    <a href="#chapter-7-quiz" aria-label="Chapter 7 Quiz">Chapter 7 Quiz</a>
                 </li>
             </ul>
             </li>
@@ -585,6 +603,40 @@ Lists are ordered collections of arbitrary objects. Unlike strings, lists can co
 </span></span><span class="line"><span class="cl"><span class="n">c</span> <span class="mi">3</span>
 </span></span></code></pre></div><p><em>Note:</em> In Python 3, <code>D.keys()</code> returns a view object, so you may need to convert it to a list before sorting, or simply use the <code>sorted()</code> function directly on the dictionary.</p>
 <hr>
+<h2 id="chapter-summary">Chapter Summary<a hidden class="anchor" aria-hidden="true" href="#chapter-summary">#</a></h2>
+<h3 id="overview">Overview<a hidden class="anchor" aria-hidden="true" href="#overview">#</a></h3>
+<p>Strings are sequences of characters used to store and manipulate text in Python. Python provides various methods for handling and processing strings efficiently.</p>
+<h3 id="creating-strings">Creating Strings<a hidden class="anchor" aria-hidden="true" href="#creating-strings">#</a></h3>
+<p>Strings in Python can be created using:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="n">text1</span> <span class="o">=</span> <span class="s2">&#34;Hello, Python!&#34;</span>  <span class="c1"># Using double quotes</span>
+</span></span><span class="line"><span class="cl"><span class="n">text2</span> <span class="o">=</span> <span class="s1">&#39;Hello, World!&#39;</span>    <span class="c1"># Using single quotes</span>
+</span></span><span class="line"><span class="cl"><span class="n">text3</span> <span class="o">=</span> <span class="s1">&#39;&#39;&#39;This is a
+</span></span></span><span class="line"><span class="cl"><span class="s1">multiline string.&#39;&#39;&#39;</span>  <span class="c1"># Using triple quotes</span>
+</span></span></code></pre></div><h3 id="string-indexing-and-slicing">String Indexing and Slicing<a hidden class="anchor" aria-hidden="true" href="#string-indexing-and-slicing">#</a></h3>
+<p>Strings are <strong>indexed</strong>, meaning each character has a position starting from <code>0</code>.</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="n">text</span> <span class="o">=</span> <span class="s2">&#34;Python&#34;</span>
+</span></span><span class="line"><span class="cl"><span class="nb">print</span><span class="p">(</span><span class="n">text</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span>   <span class="c1"># P</span>
+</span></span><span class="line"><span class="cl"><span class="nb">print</span><span class="p">(</span><span class="n">text</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">])</span>  <span class="c1"># n</span>
+</span></span><span class="line"><span class="cl"><span class="nb">print</span><span class="p">(</span><span class="n">text</span><span class="p">[</span><span class="mi">0</span><span class="p">:</span><span class="mi">4</span><span class="p">])</span> <span class="c1"># Pyth (slicing from index 0 to 3)</span>
+</span></span></code></pre></div><h3 id="common-string-methods">Common String Methods<a hidden class="anchor" aria-hidden="true" href="#common-string-methods">#</a></h3>
+<p>Python provides several built-in string methods:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="n">text</span> <span class="o">=</span> <span class="s2">&#34;hello world&#34;</span>
+</span></span><span class="line"><span class="cl"><span class="nb">print</span><span class="p">(</span><span class="n">text</span><span class="o">.</span><span class="n">upper</span><span class="p">())</span>      <span class="c1"># HELLO WORLD (convert to uppercase)</span>
+</span></span><span class="line"><span class="cl"><span class="nb">print</span><span class="p">(</span><span class="n">text</span><span class="o">.</span><span class="n">lower</span><span class="p">())</span>      <span class="c1"># hello world (convert to lowercase)</span>
+</span></span><span class="line"><span class="cl"><span class="nb">print</span><span class="p">(</span><span class="n">text</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="s2">&#34;hello&#34;</span><span class="p">,</span> <span class="s2">&#34;Hi&#34;</span><span class="p">))</span>  <span class="c1"># Hi world (replace text)</span>
+</span></span><span class="line"><span class="cl"><span class="nb">print</span><span class="p">(</span><span class="n">text</span><span class="o">.</span><span class="n">split</span><span class="p">())</span>      <span class="c1"># [&#39;hello&#39;, &#39;world&#39;] (split into a list)</span>
+</span></span></code></pre></div><h3 id="string-concatenation-joining-strings">String Concatenation (Joining Strings)<a hidden class="anchor" aria-hidden="true" href="#string-concatenation-joining-strings">#</a></h3>
+<p>Strings can be combined using the <code>+</code> operator or formatted using <code>f-strings</code>.</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="n">name</span> <span class="o">=</span> <span class="s2">&#34;Alice&#34;</span>
+</span></span><span class="line"><span class="cl"><span class="n">age</span> <span class="o">=</span> <span class="mi">25</span>
+</span></span><span class="line"><span class="cl"><span class="nb">print</span><span class="p">(</span><span class="s2">&#34;My name is &#34;</span> <span class="o">+</span> <span class="n">name</span> <span class="o">+</span> <span class="s2">&#34; and I am &#34;</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">age</span><span class="p">)</span> <span class="o">+</span> <span class="s2">&#34; years old.&#34;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&#34;My name is </span><span class="si">{</span><span class="n">name</span><span class="si">}</span><span class="s2"> and I am </span><span class="si">{</span><span class="n">age</span><span class="si">}</span><span class="s2"> years old.&#34;</span><span class="p">)</span>
+</span></span></code></pre></div><h3 id="checking-string-membership">Checking String Membership<a hidden class="anchor" aria-hidden="true" href="#checking-string-membership">#</a></h3>
+<p>Use <code>in</code> and <code>not in</code> operators to check if a substring exists within a string.</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="n">sentence</span> <span class="o">=</span> <span class="s2">&#34;Python is fun!&#34;</span>
+</span></span><span class="line"><span class="cl"><span class="nb">print</span><span class="p">(</span><span class="s2">&#34;Python&#34;</span> <span class="ow">in</span> <span class="n">sentence</span><span class="p">)</span>  <span class="c1"># True</span>
+</span></span><span class="line"><span class="cl"><span class="nb">print</span><span class="p">(</span><span class="s2">&#34;Java&#34;</span> <span class="ow">not</span> <span class="ow">in</span> <span class="n">sentence</span><span class="p">)</span> <span class="c1"># True</span>
+</span></span></code></pre></div><h3 id="chapter-7-quiz"><a href="https://docs.google.com/forms/d/e/1FAIpQLSeuDBFsVJBohHcRE4_gU40X6oQ3NAL7cCZA9_iepQNAs5E0rQ/viewform">Chapter 7 Quiz</a><a hidden class="anchor" aria-hidden="true" href="#chapter-7-quiz">#</a></h3>
 
 
   </div>

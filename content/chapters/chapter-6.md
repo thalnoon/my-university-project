@@ -429,3 +429,61 @@ Dynamic width and precision:
    print("Hello world"[7:10])
    ```
    (This displays "orl" from "Hello world" where indexing starts at 0.)
+
+## Chapter Summary
+
+### Overview
+
+Python uses **dynamic typing**, meaning you do not need to specify the type of a variable when declaring it. The type is assigned at runtime based on the value assigned to the variable.
+
+### How Dynamic Typing Works
+
+- In Python, variables are **references to objects**.
+- A variable’s type is determined **at runtime**, not before execution.
+- The same variable can hold different types of data at different times.
+
+Example:
+
+```python
+x = 10       # x is an integer
+print(type(x))  # <class 'int'>
+
+x = "Hello"  # Now x is a string!
+print(type(x))  # <class 'str'>
+```
+
+### Dynamic vs. Static Typing
+
+| **Feature**      | **Dynamic Typing (Python)** | **Static Typing (C++, Java)** |
+| ---------------- | --------------------------- | ----------------------------- |
+| Type Declaration | Not required                | Required                      |
+| Flexibility      | High                        | Low                           |
+| Error Detection  | At runtime                  | At compile time               |
+
+### Advantages of Dynamic Typing
+
+✅ **Easier to write and read** – No need to declare variable types.\
+✅ **More flexible** – Variables can hold different data types.\
+✅ **Faster development** – Reduces boilerplate code.
+
+### Disadvantages of Dynamic Typing
+
+❌ **Runtime Errors** – Type mismatches are only detected during execution.\
+❌ **Slower Performance** – Type checking is done at runtime.\
+❌ **Harder to Debug** – Bugs may appear later during execution.
+
+Example of a Type Error:
+
+```python
+x = "5"
+y = x + 10  # ❌ TypeError: can’t add str and int
+```
+
+✅ **Fix:** Convert string to integer:
+
+```python
+y = int(x) + 10  # ✅ Works fine now
+```
+
+
+### [Chapter 6 Quiz](https://docs.google.com/forms/d/e/1FAIpQLScSKg9UHd_YSsMaWOoVHvFmg42bW-3J-4O447NmFKRg9TJQgA/viewform)

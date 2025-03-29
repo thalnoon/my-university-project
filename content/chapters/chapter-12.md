@@ -192,3 +192,54 @@ x = intersect([1, 2, 3], (1, 4))  # Works with a list and a tuple
 print(x)  # Outputs the common elements (if any)
 ```
 
+---
+## Chapter Summary
+
+### Overview
+Functions allow code reuse by grouping statements into callable blocks. Python supports **built-in functions** and **user-defined functions**.
+
+### 1. Defining Functions
+A function is defined using the `def` keyword.
+```python
+def greet():
+    print("Hello, Python!")
+
+greet()  # Calls the function
+```
+
+### 2. Function Parameters
+Functions can take arguments to process values.
+```python
+def greet(name):
+    print(f"Hello, {name}!")
+
+greet("Alice")  # Output: Hello, Alice!
+```
+
+### 3. Returning Values
+Functions can return results using `return`.
+```python
+def add(a, b):
+    return a + b
+
+result = add(3, 5)
+print(result)  # Output: 8
+```
+
+### 4. Default Parameters
+Default values can be set for parameters.
+```python
+def greet(name="Guest"):
+    print(f"Hello, {name}!")
+
+greet()  # Output: Hello, Guest!
+```
+
+### 5. Lambda Functions
+Short anonymous functions using `lambda`.
+```python
+square = lambda x: x ** 2
+print(square(4))  # Output: 16
+```
+
+### [Chapter 12 Quiz](https://docs.google.com/forms/d/e/1FAIpQLSe6BXMTrTozJvNgHztY2lXYGvLfPsUa5ccYAS_pWAArAa_Fng/viewform)

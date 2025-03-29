@@ -348,33 +348,68 @@ Similarly, **and** operations stop as soon as the result is known. Python evalua
         print("Error message")
     ```
 
-## Chapter 10 Summary: if Tests and Syntax Rules
+## Chapter Summary
 
-This chapter introduces the Python **if** statement as the fundamental tool for making decisions in a program. It explains how conditional tests are used to determine which block of code executes, forming the basis of program logic.
+### Overview
 
-Key points include:
+Conditional statements allow Python programs to make decisions based on conditions. The key conditional statements in Python are `if`, `elif`, and `else`.
 
-- **Compound Statements:**  
-  The **if** statement is the first compound statement discussed. It can include nested statements and even other **if** statements, allowing for complex decision structures.
+### 1. `if` Statement
 
-- **General Structure:**  
-  The chapter describes the standard format for an **if** statement, which consists of:
-  - An **if** test followed by a block of associated statements.
-  - Optional **elif** ("else if") tests with their own blocks.
-  - An optional **else** block that executes if none of the tests are true.  
-  Each block is defined by its indentation rather than explicit markers.
+The `if` statement executes a block of code only if a condition is `True`.
 
-- **Multiway Branching:**  
-  It explains how to implement multiway branching by combining multiple conditions, either through a series of **if/elif/else** statements or by using alternative structures like dictionary indexing for selecting among several options.
+```python
+age = 18
+if age >= 18:
+    print("You are an adult.")
+```
 
-- **Default Actions:**  
-  The chapter discusses methods for handling default cases when none of the specified conditions are met, emphasizing the use of an **else** clause or dictionary methods (like `get`) to supply fallback values.
+### 2. `if-else` Statement
 
-- **Truth Tests and Boolean Logic:**  
-  The chapter outlines Python’s approach to evaluating truth values:
-  - Any nonzero number or nonempty object is considered true.
-  - Zero, empty objects, and `None` are considered false.
-  - Comparisons and equality tests produce boolean results.
-  - Boolean operators (`and`, `or`, and `not`) are used to combine tests and support short-circuit evaluation, meaning that evaluation stops as soon as the outcome is determined.
+The `else` block executes if the `if` condition is `False`.
 
-Overall, the chapter lays a foundation for understanding how Python makes decisions based on conditions, providing the basis for controlling program flow through well-structured, readable syntax.
+```python
+age = 16
+if age >= 18:
+    print("You are an adult.")
+else:
+    print("You are a minor.")
+```
+
+### 3. `if-elif-else` Statement
+
+Allows checking multiple conditions.
+
+```python
+score = 75
+if score >= 90:
+    print("Grade: A")
+elif score >= 80:
+    print("Grade: B")
+elif score >= 70:
+    print("Grade: C")
+else:
+    print("Grade: F")
+```
+
+### 4. Logical Operators
+
+Python supports logical operators for combining conditions.
+
+| Operator | Description                                      |
+| -------- | ------------------------------------------------ |
+| `and`    | Returns `True` if both conditions are true       |
+| `or`     | Returns `True` if at least one condition is true |
+| `not`    | Reverses the logical value                       |
+
+Example:
+
+```python
+x = 10
+y = 20
+if x > 5 and y > 15:
+    print("Both conditions are True")
+```
+
+
+### [Chapter 10 Quiz](https://docs.google.com/forms/d/e/1FAIpQLSfciqI9X5nkYGHTjG3lB5PHv3cM4QG6-QRel6uOvB3o1IuepA/viewform)

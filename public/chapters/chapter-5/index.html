@@ -129,7 +129,7 @@ Among its basic types, Python provides integers (positive and negative whole num
     <h1 class="post-title entry-hint-parent">
       Chapter 5: Numeric Types
     </h1>
-    <div class="post-meta">7 min
+    <div class="post-meta">8 min
 
 </div>
   </header> <div class="toc">
@@ -170,8 +170,31 @@ Among its basic types, Python provides integers (positive and negative whole num
                     <a href="#square-roots" aria-label="Square Roots">Square Roots</a></li></ul>
                 </li>
                 <li>
-                    <a href="#the-random-module" aria-label="The Random Module">The Random Module</a>
+                    <a href="#the-random-module" aria-label="The Random Module">The Random Module</a></li>
+                <li>
+                    <a href="#chapter-summary" aria-label="Chapter Summary">Chapter Summary</a><ul>
+                        
+                <li>
+                    <a href="#overview" aria-label="Overview">Overview</a></li>
+                <li>
+                    <a href="#numeric-types-in-python" aria-label="Numeric Types in Python">Numeric Types in Python</a></li>
+                <li>
+                    <a href="#1-integer-type-int" aria-label="1. Integer Type (int)">1. Integer Type (int)</a></li>
+                <li>
+                    <a href="#2-floating-point-type-float" aria-label="2. Floating-Point Type (float)">2. Floating-Point Type (float)</a></li>
+                <li>
+                    <a href="#3-complex-numbers-complex" aria-label="3. Complex Numbers (complex)">3. Complex Numbers (complex)</a></li>
+                <li>
+                    <a href="#4-fractions-fractionsfraction" aria-label="4. Fractions (fractions.Fraction)">4. Fractions (fractions.Fraction)</a></li>
+                <li>
+                    <a href="#5-decimals-decimaldecimal" aria-label="5. Decimals (decimal.Decimal)">5. Decimals (decimal.Decimal)</a></li>
+                <li>
+                    <a href="#arithmetic-operations-in-python" aria-label="Arithmetic Operations in Python">Arithmetic Operations in Python</a></li>
+                <li>
+                    <a href="#chapter-5-quiz" aria-label="Chapter 5 Quiz">Chapter 5 Quiz</a>
                 </li>
+            </ul>
+            </li>
             </ul>
         </div>
     </details>
@@ -576,6 +599,99 @@ Among its basic types, Python provides integers (positive and negative whole num
 </span></span><span class="line"><span class="cl"><span class="o">&gt;&gt;&gt;</span> <span class="n">random</span><span class="o">.</span><span class="n">choice</span><span class="p">([</span><span class="s1">&#39;Life of Brian&#39;</span><span class="p">,</span> <span class="s1">&#39;Holy Grail&#39;</span><span class="p">,</span> <span class="s1">&#39;Meaning of Life&#39;</span><span class="p">])</span>
 </span></span><span class="line"><span class="cl"><span class="s1">&#39;Holy Grail&#39;</span>
 </span></span></code></pre></div><p>The <code>random</code> module can be useful for shuffling items, selecting random elements, performing simulations, and more.</p>
+<h2 id="chapter-summary">Chapter Summary<a hidden class="anchor" aria-hidden="true" href="#chapter-summary">#</a></h2>
+<h3 id="overview">Overview<a hidden class="anchor" aria-hidden="true" href="#overview">#</a></h3>
+<p>Python provides various numeric types to handle different mathematical operations efficiently. These types include integers, floating-point numbers, and complex numbers. Additionally, Python offers specialized numeric types such as fractions and decimals for precise calculations.</p>
+<h3 id="numeric-types-in-python">Numeric Types in Python<a hidden class="anchor" aria-hidden="true" href="#numeric-types-in-python">#</a></h3>
+<ol>
+<li><strong>Integers (</strong><strong><strong><strong><code>int</code></strong></strong></strong><strong>)</strong> – Whole numbers without a decimal point (e.g., <code>10</code>, <code>-5</code>).</li>
+<li><strong>Floating-Point Numbers (</strong><strong><strong><strong><code>float</code></strong></strong></strong><strong>)</strong> – Numbers with a decimal point (e.g., <code>3.14</code>, <code>-2.7</code>).</li>
+<li><strong>Complex Numbers (</strong><strong><strong><strong><code>complex</code></strong></strong></strong><strong>)</strong> – Numbers with real and imaginary parts (e.g., <code>2 + 3j</code>).</li>
+<li><strong>Fractions (</strong><strong><strong><strong><code>Fraction</code></strong></strong></strong><strong>)</strong> – Rational numbers represented as fractions (e.g., <code>Fraction(3, 4)</code>).</li>
+<li><strong>Decimals (</strong><strong><strong><strong><code>Decimal</code></strong></strong></strong><strong>)</strong> – High-precision decimal values for financial calculations.</li>
+</ol>
+<h3 id="1-integer-type-int">1. Integer Type (<code>int</code>)<a hidden class="anchor" aria-hidden="true" href="#1-integer-type-int">#</a></h3>
+<p>Python supports arbitrary-precision integers, meaning the size of an integer is only limited by available memory.</p>
+<p>Example:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="n">x</span> <span class="o">=</span> <span class="mi">100</span>
+</span></span><span class="line"><span class="cl"><span class="nb">print</span><span class="p">(</span><span class="nb">type</span><span class="p">(</span><span class="n">x</span><span class="p">))</span>  <span class="c1"># &lt;class &#39;int&#39;&gt;</span>
+</span></span></code></pre></div><h3 id="2-floating-point-type-float">2. Floating-Point Type (<code>float</code>)<a hidden class="anchor" aria-hidden="true" href="#2-floating-point-type-float">#</a></h3>
+<p>Floating-point numbers represent real numbers with decimal points.</p>
+<p>Example:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="n">pi</span> <span class="o">=</span> <span class="mf">3.14159</span>
+</span></span><span class="line"><span class="cl"><span class="nb">print</span><span class="p">(</span><span class="nb">type</span><span class="p">(</span><span class="n">pi</span><span class="p">))</span>  <span class="c1"># &lt;class &#39;float&#39;&gt;</span>
+</span></span></code></pre></div><h3 id="3-complex-numbers-complex">3. Complex Numbers (<code>complex</code>)<a hidden class="anchor" aria-hidden="true" href="#3-complex-numbers-complex">#</a></h3>
+<p>Python supports complex numbers with real and imaginary parts.</p>
+<p>Example:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="n">z</span> <span class="o">=</span> <span class="mi">2</span> <span class="o">+</span> <span class="mi">3</span><span class="n">j</span>
+</span></span><span class="line"><span class="cl"><span class="nb">print</span><span class="p">(</span><span class="n">z</span><span class="o">.</span><span class="n">real</span><span class="p">)</span>  <span class="c1"># 2.0</span>
+</span></span><span class="line"><span class="cl"><span class="nb">print</span><span class="p">(</span><span class="n">z</span><span class="o">.</span><span class="n">imag</span><span class="p">)</span>  <span class="c1"># 3.0</span>
+</span></span></code></pre></div><h3 id="4-fractions-fractionsfraction">4. Fractions (<code>fractions.Fraction</code>)<a hidden class="anchor" aria-hidden="true" href="#4-fractions-fractionsfraction">#</a></h3>
+<p>The <code>fractions</code> module allows precise representation of rational numbers.</p>
+<p>Example:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="kn">from</span> <span class="nn">fractions</span> <span class="kn">import</span> <span class="n">Fraction</span>
+</span></span><span class="line"><span class="cl"><span class="n">f</span> <span class="o">=</span> <span class="n">Fraction</span><span class="p">(</span><span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="nb">print</span><span class="p">(</span><span class="n">f</span><span class="p">)</span>  <span class="c1"># 3/4</span>
+</span></span></code></pre></div><h3 id="5-decimals-decimaldecimal">5. Decimals (<code>decimal.Decimal</code>)<a hidden class="anchor" aria-hidden="true" href="#5-decimals-decimaldecimal">#</a></h3>
+<p>The <code>decimal</code> module provides precise arithmetic for financial and scientific applications.</p>
+<p>Example:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="kn">from</span> <span class="nn">decimal</span> <span class="kn">import</span> <span class="n">Decimal</span>
+</span></span><span class="line"><span class="cl"><span class="n">x</span> <span class="o">=</span> <span class="n">Decimal</span><span class="p">(</span><span class="s2">&#34;0.1&#34;</span><span class="p">)</span> <span class="o">+</span> <span class="n">Decimal</span><span class="p">(</span><span class="s2">&#34;0.2&#34;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="nb">print</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>  <span class="c1"># 0.3</span>
+</span></span></code></pre></div><h3 id="arithmetic-operations-in-python">Arithmetic Operations in Python<a hidden class="anchor" aria-hidden="true" href="#arithmetic-operations-in-python">#</a></h3>
+<table>
+  <thead>
+      <tr>
+          <th><strong>Operation</strong></th>
+          <th><strong>Symbol</strong></th>
+          <th><strong>Example</strong></th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td>Addition</td>
+          <td><code>+</code></td>
+          <td><code>x + y</code></td>
+      </tr>
+      <tr>
+          <td>Subtraction</td>
+          <td><code>-</code></td>
+          <td><code>x - y</code></td>
+      </tr>
+      <tr>
+          <td>Multiplication</td>
+          <td><code>*</code></td>
+          <td><code>x * y</code></td>
+      </tr>
+      <tr>
+          <td>Division</td>
+          <td><code>/</code></td>
+          <td><code>x / y</code> (returns float)</td>
+      </tr>
+      <tr>
+          <td>Floor Division</td>
+          <td><code>//</code></td>
+          <td><code>x // y</code> (integer result)</td>
+      </tr>
+      <tr>
+          <td>Modulus</td>
+          <td><code>%</code></td>
+          <td><code>x % y</code> (remainder)</td>
+      </tr>
+      <tr>
+          <td>Exponentiation</td>
+          <td><code>**</code></td>
+          <td><code>x ** y</code></td>
+      </tr>
+  </tbody>
+</table>
+<p>Example:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="n">a</span> <span class="o">=</span> <span class="mi">10</span>
+</span></span><span class="line"><span class="cl"><span class="n">b</span> <span class="o">=</span> <span class="mi">3</span>
+</span></span><span class="line"><span class="cl"><span class="nb">print</span><span class="p">(</span><span class="n">a</span> <span class="o">+</span> <span class="n">b</span><span class="p">)</span>  <span class="c1"># 13</span>
+</span></span><span class="line"><span class="cl"><span class="nb">print</span><span class="p">(</span><span class="n">a</span> <span class="o">//</span> <span class="n">b</span><span class="p">)</span>  <span class="c1"># 3</span>
+</span></span><span class="line"><span class="cl"><span class="nb">print</span><span class="p">(</span><span class="n">a</span> <span class="o">**</span> <span class="n">b</span><span class="p">)</span>  <span class="c1"># 1000</span>
+</span></span></code></pre></div><h3 id="chapter-5-quiz"><a href="https://docs.google.com/forms/d/e/1FAIpQLSdPttezc_GcTmo0KFJa9u_xngUC1xTRqY1RhPFds5VGOWsE-A/viewform">Chapter 5 Quiz</a><a hidden class="anchor" aria-hidden="true" href="#chapter-5-quiz">#</a></h3>
 
 
   </div>

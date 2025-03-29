@@ -626,4 +626,110 @@ None
 6. **Find the remainder (e.g., `15 % 2` yields `1`):**
    ```python
    x % y
+
    ```
+## Chapter Summary
+
+### Overview
+
+Python supports multiple data types, each serving a unique purpose. Understanding these object types is essential for efficient programming and data manipulation.
+
+### Common Object Types in Python
+
+1. **Numbers** – Integers, floats, and complex numbers.
+2. **Strings** – Sequences of characters used to store text.
+3. **Lists** – Ordered, mutable collections of elements.
+4. **Tuples** – Ordered, immutable collections of elements.
+5. **Dictionaries** – Key-value pairs for fast lookups.
+6. **Sets** – Unordered collections of unique elements.
+7. **Boolean** – Represents `True` or `False` values.
+
+### 1. Numeric Types
+
+Python supports three primary numeric types:
+
+- **Integers (****`int`****)**: Whole numbers (e.g., `10`, `-5`).
+- **Floating-point (****`float`****)**: Decimal numbers (e.g., `3.14`, `-2.7`).
+- **Complex (****`complex`****)**: Numbers with real and imaginary parts (e.g., `2 + 3j`).
+
+Example:
+
+```python
+x = 10  # Integer
+y = 3.14  # Float
+z = 2 + 3j  # Complex
+print(type(x), type(y), type(z))
+```
+
+### 2. Strings (`str`)
+
+Strings are sequences of characters enclosed in quotes.
+
+Example:
+
+```python
+text = "Hello, Python!"
+print(text[0])  # H
+print(text[-1])  # !
+print(text.upper())  # HELLO, PYTHON!
+```
+
+### 3. Lists (`list`)
+
+Lists are mutable (modifiable) collections.
+
+Example:
+
+```python
+my_list = [1, "hello", 3.5]
+print(my_list[0])  # 1
+my_list.append(100)  # Adding an element
+```
+
+### 4. Tuples (`tuple`)
+
+Tuples are like lists but immutable (cannot be modified).
+
+Example:
+
+```python
+my_tuple = (10, 20, 30)
+print(my_tuple[1])  # 20
+```
+
+### 5. Dictionaries (`dict`)
+
+Dictionaries store key-value pairs.
+
+Example:
+
+```python
+person = {"name": "Ali", "age": 25}
+print(person["name"])  # Ali
+```
+
+### 6. Sets (`set`)
+
+Sets contain unique elements and are unordered.
+
+Example:
+
+```python
+A = {1, 2, 3}
+B = {3, 4, 5}
+print(A | B)  # Union: {1, 2, 3, 4, 5}
+```
+
+### 7. Boolean (`bool`)
+
+Boolean values represent truth values.
+
+Example:
+
+```python
+x = 5 > 3
+print(x)  # True
+```
+
+
+### [Chapter 4 Quiz](https://docs.google.com/forms/d/e/1FAIpQLSfHacaagXaUFuYMdvNKEGvtkQIEKjky4GdjH2wH5GU82QTKGQ/viewform)

@@ -173,7 +173,7 @@ Numbers in Python support the normal mathematical operations. For instance, the 
     <h1 class="post-title entry-hint-parent">
       Chapter 4: Object Types
     </h1>
-    <div class="post-meta">10 min
+    <div class="post-meta">11 min
 
 </div>
   </header> <div class="toc">
@@ -226,8 +226,33 @@ Numbers in Python support the normal mathematical operations. For instance, the 
                     <a href="#booleans-and-none" aria-label="Booleans and None">Booleans and None</a></li></ul>
                 </li>
                 <li>
-                    <a href="#examples-object-types" aria-label="Examples (Object Types)">Examples (Object Types)</a>
+                    <a href="#examples-object-types" aria-label="Examples (Object Types)">Examples (Object Types)</a></li>
+                <li>
+                    <a href="#chapter-summary" aria-label="Chapter Summary">Chapter Summary</a><ul>
+                        
+                <li>
+                    <a href="#overview" aria-label="Overview">Overview</a></li>
+                <li>
+                    <a href="#common-object-types-in-python" aria-label="Common Object Types in Python">Common Object Types in Python</a></li>
+                <li>
+                    <a href="#1-numeric-types" aria-label="1. Numeric Types">1. Numeric Types</a></li>
+                <li>
+                    <a href="#2-strings-str" aria-label="2. Strings (str)">2. Strings (str)</a></li>
+                <li>
+                    <a href="#3-lists-list" aria-label="3. Lists (list)">3. Lists (list)</a></li>
+                <li>
+                    <a href="#4-tuples-tuple" aria-label="4. Tuples (tuple)">4. Tuples (tuple)</a></li>
+                <li>
+                    <a href="#5-dictionaries-dict" aria-label="5. Dictionaries (dict)">5. Dictionaries (dict)</a></li>
+                <li>
+                    <a href="#6-sets-set" aria-label="6. Sets (set)">6. Sets (set)</a></li>
+                <li>
+                    <a href="#7-boolean-bool" aria-label="7. Boolean (bool)">7. Boolean (bool)</a></li>
+                <li>
+                    <a href="#chapter-4-quiz" aria-label="Chapter 4 Quiz">Chapter 4 Quiz</a>
                 </li>
+            </ul>
+            </li>
             </ul>
         </div>
     </details>
@@ -663,6 +688,66 @@ Numbers in Python support the normal mathematical operations. For instance, the 
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="n">x</span> <span class="o">%</span> <span class="n">y</span>
 </span></span></code></pre></div></li>
 </ol>
+<h2 id="chapter-summary">Chapter Summary<a hidden class="anchor" aria-hidden="true" href="#chapter-summary">#</a></h2>
+<h3 id="overview">Overview<a hidden class="anchor" aria-hidden="true" href="#overview">#</a></h3>
+<p>Python supports multiple data types, each serving a unique purpose. Understanding these object types is essential for efficient programming and data manipulation.</p>
+<h3 id="common-object-types-in-python">Common Object Types in Python<a hidden class="anchor" aria-hidden="true" href="#common-object-types-in-python">#</a></h3>
+<ol>
+<li><strong>Numbers</strong> – Integers, floats, and complex numbers.</li>
+<li><strong>Strings</strong> – Sequences of characters used to store text.</li>
+<li><strong>Lists</strong> – Ordered, mutable collections of elements.</li>
+<li><strong>Tuples</strong> – Ordered, immutable collections of elements.</li>
+<li><strong>Dictionaries</strong> – Key-value pairs for fast lookups.</li>
+<li><strong>Sets</strong> – Unordered collections of unique elements.</li>
+<li><strong>Boolean</strong> – Represents <code>True</code> or <code>False</code> values.</li>
+</ol>
+<h3 id="1-numeric-types">1. Numeric Types<a hidden class="anchor" aria-hidden="true" href="#1-numeric-types">#</a></h3>
+<p>Python supports three primary numeric types:</p>
+<ul>
+<li><strong>Integers (<strong><strong><code>int</code></strong></strong>)</strong>: Whole numbers (e.g., <code>10</code>, <code>-5</code>).</li>
+<li><strong>Floating-point (<strong><strong><code>float</code></strong></strong>)</strong>: Decimal numbers (e.g., <code>3.14</code>, <code>-2.7</code>).</li>
+<li><strong>Complex (<strong><strong><code>complex</code></strong></strong>)</strong>: Numbers with real and imaginary parts (e.g., <code>2 + 3j</code>).</li>
+</ul>
+<p>Example:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="n">x</span> <span class="o">=</span> <span class="mi">10</span>  <span class="c1"># Integer</span>
+</span></span><span class="line"><span class="cl"><span class="n">y</span> <span class="o">=</span> <span class="mf">3.14</span>  <span class="c1"># Float</span>
+</span></span><span class="line"><span class="cl"><span class="n">z</span> <span class="o">=</span> <span class="mi">2</span> <span class="o">+</span> <span class="mi">3</span><span class="n">j</span>  <span class="c1"># Complex</span>
+</span></span><span class="line"><span class="cl"><span class="nb">print</span><span class="p">(</span><span class="nb">type</span><span class="p">(</span><span class="n">x</span><span class="p">),</span> <span class="nb">type</span><span class="p">(</span><span class="n">y</span><span class="p">),</span> <span class="nb">type</span><span class="p">(</span><span class="n">z</span><span class="p">))</span>
+</span></span></code></pre></div><h3 id="2-strings-str">2. Strings (<code>str</code>)<a hidden class="anchor" aria-hidden="true" href="#2-strings-str">#</a></h3>
+<p>Strings are sequences of characters enclosed in quotes.</p>
+<p>Example:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="n">text</span> <span class="o">=</span> <span class="s2">&#34;Hello, Python!&#34;</span>
+</span></span><span class="line"><span class="cl"><span class="nb">print</span><span class="p">(</span><span class="n">text</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span>  <span class="c1"># H</span>
+</span></span><span class="line"><span class="cl"><span class="nb">print</span><span class="p">(</span><span class="n">text</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">])</span>  <span class="c1"># !</span>
+</span></span><span class="line"><span class="cl"><span class="nb">print</span><span class="p">(</span><span class="n">text</span><span class="o">.</span><span class="n">upper</span><span class="p">())</span>  <span class="c1"># HELLO, PYTHON!</span>
+</span></span></code></pre></div><h3 id="3-lists-list">3. Lists (<code>list</code>)<a hidden class="anchor" aria-hidden="true" href="#3-lists-list">#</a></h3>
+<p>Lists are mutable (modifiable) collections.</p>
+<p>Example:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="n">my_list</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="s2">&#34;hello&#34;</span><span class="p">,</span> <span class="mf">3.5</span><span class="p">]</span>
+</span></span><span class="line"><span class="cl"><span class="nb">print</span><span class="p">(</span><span class="n">my_list</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span>  <span class="c1"># 1</span>
+</span></span><span class="line"><span class="cl"><span class="n">my_list</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="mi">100</span><span class="p">)</span>  <span class="c1"># Adding an element</span>
+</span></span></code></pre></div><h3 id="4-tuples-tuple">4. Tuples (<code>tuple</code>)<a hidden class="anchor" aria-hidden="true" href="#4-tuples-tuple">#</a></h3>
+<p>Tuples are like lists but immutable (cannot be modified).</p>
+<p>Example:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="n">my_tuple</span> <span class="o">=</span> <span class="p">(</span><span class="mi">10</span><span class="p">,</span> <span class="mi">20</span><span class="p">,</span> <span class="mi">30</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="nb">print</span><span class="p">(</span><span class="n">my_tuple</span><span class="p">[</span><span class="mi">1</span><span class="p">])</span>  <span class="c1"># 20</span>
+</span></span></code></pre></div><h3 id="5-dictionaries-dict">5. Dictionaries (<code>dict</code>)<a hidden class="anchor" aria-hidden="true" href="#5-dictionaries-dict">#</a></h3>
+<p>Dictionaries store key-value pairs.</p>
+<p>Example:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="n">person</span> <span class="o">=</span> <span class="p">{</span><span class="s2">&#34;name&#34;</span><span class="p">:</span> <span class="s2">&#34;Ali&#34;</span><span class="p">,</span> <span class="s2">&#34;age&#34;</span><span class="p">:</span> <span class="mi">25</span><span class="p">}</span>
+</span></span><span class="line"><span class="cl"><span class="nb">print</span><span class="p">(</span><span class="n">person</span><span class="p">[</span><span class="s2">&#34;name&#34;</span><span class="p">])</span>  <span class="c1"># Ali</span>
+</span></span></code></pre></div><h3 id="6-sets-set">6. Sets (<code>set</code>)<a hidden class="anchor" aria-hidden="true" href="#6-sets-set">#</a></h3>
+<p>Sets contain unique elements and are unordered.</p>
+<p>Example:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="n">A</span> <span class="o">=</span> <span class="p">{</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">}</span>
+</span></span><span class="line"><span class="cl"><span class="n">B</span> <span class="o">=</span> <span class="p">{</span><span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">}</span>
+</span></span><span class="line"><span class="cl"><span class="nb">print</span><span class="p">(</span><span class="n">A</span> <span class="o">|</span> <span class="n">B</span><span class="p">)</span>  <span class="c1"># Union: {1, 2, 3, 4, 5}</span>
+</span></span></code></pre></div><h3 id="7-boolean-bool">7. Boolean (<code>bool</code>)<a hidden class="anchor" aria-hidden="true" href="#7-boolean-bool">#</a></h3>
+<p>Boolean values represent truth values.</p>
+<p>Example:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="n">x</span> <span class="o">=</span> <span class="mi">5</span> <span class="o">&gt;</span> <span class="mi">3</span>
+</span></span><span class="line"><span class="cl"><span class="nb">print</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>  <span class="c1"># True</span>
+</span></span></code></pre></div><h3 id="chapter-4-quiz"><a href="https://docs.google.com/forms/d/e/1FAIpQLSfHacaagXaUFuYMdvNKEGvtkQIEKjky4GdjH2wH5GU82QTKGQ/viewform">Chapter 4 Quiz</a><a hidden class="anchor" aria-hidden="true" href="#chapter-4-quiz">#</a></h3>
 
 
   </div>

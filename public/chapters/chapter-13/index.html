@@ -114,7 +114,7 @@
     <h1 class="post-title entry-hint-parent">
       Chapter 13: Scopes &amp; Arguments
     </h1>
-    <div class="post-meta">3 min
+    <div class="post-meta">5 min
 
 </div>
   </header> <div class="toc">
@@ -133,8 +133,27 @@
                 <li>
                     <a href="#simulating-output-parameters-and-multiple-results" aria-label="Simulating Output Parameters and Multiple Results">Simulating Output Parameters and Multiple Results</a></li>
                 <li>
-                    <a href="#argument-matching-syntax" aria-label="Argument Matching Syntax">Argument Matching Syntax</a>
+                    <a href="#argument-matching-syntax" aria-label="Argument Matching Syntax">Argument Matching Syntax</a></li>
+                <li>
+                    <a href="#chapter-summary" aria-label="Chapter Summary">Chapter Summary</a><ul>
+                        
+                <li>
+                    <a href="#overview" aria-label="Overview">Overview</a><ul>
+                        
+                <li>
+                    <a href="#1-understanding-scope-in-python" aria-label="1. Understanding Scope in Python">1. Understanding Scope in Python</a></li>
+                <li>
+                    <a href="#2-argument-passing-basics" aria-label="2. Argument-Passing Basics">2. Argument-Passing Basics</a></li>
+                <li>
+                    <a href="#3-default-and-keyword-arguments" aria-label="3. Default and Keyword Arguments">3. Default and Keyword Arguments</a></li>
+                <li>
+                    <a href="#4-argument-packing-and-unpacking-args-and-kwargs" aria-label="4. Argument Packing and Unpacking (*args** and **kwargs)**">4. Argument Packing and Unpacking (*args** and **kwargs)**</a></li></ul>
                 </li>
+                <li>
+                    <a href="#chapter-13-quiz" aria-label="Chapter 13 Quiz">Chapter 13 Quiz</a>
+                </li>
+            </ul>
+            </li>
             </ul>
         </div>
     </details>
@@ -245,6 +264,79 @@
       </tr>
   </tbody>
 </table>
+<hr>
+<h2 id="chapter-summary">Chapter Summary<a hidden class="anchor" aria-hidden="true" href="#chapter-summary">#</a></h2>
+<h3 id="overview">Overview<a hidden class="anchor" aria-hidden="true" href="#overview">#</a></h3>
+<p>This chapter explains <strong>scopes</strong> and <strong>arguments</strong> in Python, focusing on how variables are defined and accessed. Scopes help avoid name clashes, and understanding them improves <strong>code maintainability</strong> and <strong>functionality</strong>.</p>
+<hr>
+<h4 id="1-understanding-scope-in-python"><strong>1. Understanding Scope in Python</strong><a hidden class="anchor" aria-hidden="true" href="#1-understanding-scope-in-python">#</a></h4>
+<p>Scope determines <strong>where a variable can be accessed</strong> in the code. Python follows the <strong>LEGB rule</strong>:</p>
+<ul>
+<li><strong>Local Scope</strong>: Variables defined inside a function.</li>
+<li><strong>Enclosing Scope</strong>: Variables in outer functions (for nested functions).</li>
+<li><strong>Global Scope</strong>: Variables defined at the top level of a script/module.</li>
+<li><strong>Built-in Scope</strong>: Predefined Python functions and keywords (e.g., <code>print()</code>, <code>len()</code>).</li>
+</ul>
+<p><strong>Example:</strong></p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="n">x</span> <span class="o">=</span> <span class="mi">10</span>  <span class="c1"># Global variable</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="k">def</span> <span class="nf">outer_function</span><span class="p">():</span>
+</span></span><span class="line"><span class="cl">    <span class="n">y</span> <span class="o">=</span> <span class="mi">5</span>  <span class="c1"># Enclosing variable</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="k">def</span> <span class="nf">inner_function</span><span class="p">():</span>
+</span></span><span class="line"><span class="cl">        <span class="n">z</span> <span class="o">=</span> <span class="mi">2</span>  <span class="c1"># Local variable</span>
+</span></span><span class="line"><span class="cl">        <span class="nb">print</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">,</span> <span class="n">z</span><span class="p">)</span>  <span class="c1"># Can access all three</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="n">inner_function</span><span class="p">()</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="n">outer_function</span><span class="p">()</span>
+</span></span></code></pre></div><hr>
+<h4 id="2-argument-passing-basics"><strong>2. Argument-Passing Basics</strong><a hidden class="anchor" aria-hidden="true" href="#2-argument-passing-basics">#</a></h4>
+<p>When calling a function, arguments are assigned to local variable names inside the function.</p>
+<ul>
+<li><strong>Immutable arguments (integers, strings, tuples)</strong>: The function <strong>cannot modify</strong> them directly.</li>
+<li><strong>Mutable arguments (lists, dictionaries)</strong>: The function <strong>can modify</strong> them.</li>
+</ul>
+<p><strong>Example:</strong></p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="k">def</span> <span class="nf">modify_list</span><span class="p">(</span><span class="n">lst</span><span class="p">):</span>
+</span></span><span class="line"><span class="cl">    <span class="n">lst</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="mi">4</span><span class="p">)</span>  <span class="c1"># Modifies the original list</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="n">my_list</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">]</span>
+</span></span><span class="line"><span class="cl"><span class="n">modify_list</span><span class="p">(</span><span class="n">my_list</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="nb">print</span><span class="p">(</span><span class="n">my_list</span><span class="p">)</span>  <span class="c1"># Output: [1, 2, 3, 4]</span>
+</span></span></code></pre></div><hr>
+<h4 id="3-default-and-keyword-arguments"><strong>3. Default and Keyword Arguments</strong><a hidden class="anchor" aria-hidden="true" href="#3-default-and-keyword-arguments">#</a></h4>
+<p>Python functions support <strong>default values</strong> for arguments and allow passing arguments by <strong>keywords</strong>.</p>
+<p><strong>Example: Default Arguments</strong></p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="k">def</span> <span class="nf">greet</span><span class="p">(</span><span class="n">name</span><span class="o">=</span><span class="s2">&#34;Guest&#34;</span><span class="p">):</span>
+</span></span><span class="line"><span class="cl">    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&#34;Hello, </span><span class="si">{</span><span class="n">name</span><span class="si">}</span><span class="s2">!&#34;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="n">greet</span><span class="p">()</span>  <span class="c1"># Output: Hello, Guest!</span>
+</span></span><span class="line"><span class="cl"><span class="n">greet</span><span class="p">(</span><span class="s2">&#34;Alice&#34;</span><span class="p">)</span>  <span class="c1"># Output: Hello, Alice!</span>
+</span></span></code></pre></div><p><strong>Example: Keyword Arguments</strong></p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="k">def</span> <span class="nf">display_info</span><span class="p">(</span><span class="n">name</span><span class="p">,</span> <span class="n">age</span><span class="p">):</span>
+</span></span><span class="line"><span class="cl">    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&#34;Name: </span><span class="si">{</span><span class="n">name</span><span class="si">}</span><span class="s2">, Age: </span><span class="si">{</span><span class="n">age</span><span class="si">}</span><span class="s2">&#34;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="n">display_info</span><span class="p">(</span><span class="n">age</span><span class="o">=</span><span class="mi">25</span><span class="p">,</span> <span class="n">name</span><span class="o">=</span><span class="s2">&#34;John&#34;</span><span class="p">)</span>  <span class="c1"># Arguments are passed in any order</span>
+</span></span></code></pre></div><hr>
+<h4 id="4-argument-packing-and-unpacking-args-and-kwargs"><strong>4. Argument Packing and Unpacking (</strong><strong><strong><strong><code>*args</code></strong></strong></strong>** and <strong><strong><strong><strong><code>**kwargs</code></strong></strong></strong></strong>)**<a hidden class="anchor" aria-hidden="true" href="#4-argument-packing-and-unpacking-args-and-kwargs">#</a></h4>
+<ul>
+<li><code>*args</code> allows passing multiple positional arguments.</li>
+<li><code>**kwargs</code> allows passing multiple keyword arguments.</li>
+</ul>
+<p>**Example: Using **<strong><code>*args</code></strong></p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="k">def</span> <span class="nf">sum_numbers</span><span class="p">(</span><span class="o">*</span><span class="n">args</span><span class="p">):</span>
+</span></span><span class="line"><span class="cl">    <span class="k">return</span> <span class="nb">sum</span><span class="p">(</span><span class="n">args</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="nb">print</span><span class="p">(</span><span class="n">sum_numbers</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">))</span>  <span class="c1"># Output: 10</span>
+</span></span></code></pre></div><p>**Example: Using **<strong><code>**kwargs</code></strong></p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="k">def</span> <span class="nf">print_details</span><span class="p">(</span><span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
+</span></span><span class="line"><span class="cl">    <span class="k">for</span> <span class="n">key</span><span class="p">,</span> <span class="n">value</span> <span class="ow">in</span> <span class="n">kwargs</span><span class="o">.</span><span class="n">items</span><span class="p">():</span>
+</span></span><span class="line"><span class="cl">        <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&#34;</span><span class="si">{</span><span class="n">key</span><span class="si">}</span><span class="s2">: </span><span class="si">{</span><span class="n">value</span><span class="si">}</span><span class="s2">&#34;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="n">print_details</span><span class="p">(</span><span class="n">name</span><span class="o">=</span><span class="s2">&#34;Alice&#34;</span><span class="p">,</span> <span class="n">age</span><span class="o">=</span><span class="mi">25</span><span class="p">,</span> <span class="n">city</span><span class="o">=</span><span class="s2">&#34;New York&#34;</span><span class="p">)</span>
+</span></span></code></pre></div><hr>
+<h3 id="chapter-13-quiz"><a href="https://docs.google.com/forms/d/e/1FAIpQLSdmGd2bx9A7V_YQnLwgyP5WGGtuUkxO_cCmkC-m-HR4DEc4bA/viewform">Chapter 13 Quiz</a><a hidden class="anchor" aria-hidden="true" href="#chapter-13-quiz">#</a></h3>
 
 
   </div>

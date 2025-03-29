@@ -143,3 +143,40 @@ Let’s jump right into an example. IDLE is easy to start under Windows—it has
 
 **Figure 3-2:** The main Python shell window of the IDLE development GUI, shown here running on Windows. Use the **File** menu to begin (New Window) or change (Open...) a source file; use the text edit window’s **Run** menu to run the code in that window (Run Module).
 
+## Chapter Summary
+
+### Overview
+
+Python programs can be executed in multiple ways depending on the environment. Whether using an interactive shell, a script file, or an integrated development environment (IDE), understanding these methods is essential for efficient programming.
+
+### Ways to Run Python Programs
+
+1. **Interactive Mode**
+
+   - Runs Python commands one at a time.
+   - Useful for quick testing.
+   - Accessed by typing `python` or `python3` in the terminal.
+
+2. **Script Mode**
+
+   - Saves Python code in `.py` files.
+   - Run using `python filename.py` in the terminal or command prompt.
+
+3. **Using IDLE (Python’s Built-in IDE)**
+
+   - A GUI-based Python environment.
+   - Provides an editor and interactive shell.
+
+4. **Using Advanced IDEs (e.g., PyCharm, VS Code, Jupyter Notebook)**
+
+   - Feature-rich environments for professional development.
+   - Support debugging, syntax highlighting, and version control.
+
+### Running Python in Different Environments
+
+- **Command Line**: Run Python scripts directly via terminal.
+- **Jupyter Notebook**: Useful for data science and interactive programming.
+- **Integrated Development Environments (IDEs)**: Offer debugging and advanced features.
+
+
+### [Chapter 3 Quiz](https://docs.google.com/forms/d/e/1FAIpQLSf_w9L_Bfg7SnBh0wuOkEz5_OXDw7sZl5eW1FYKFnVy1W_TPg/viewform)

@@ -360,3 +360,74 @@ b'\x00\x00\x00\x07spam\x00\x08'
 >>> values
 (7, 'spam', 8)
 ``` 
+---
+## Chapter Summary
+
+### Overview
+
+Lists and tuples are **sequence data types** used to store collections of elements. Lists are **mutable** (modifiable), while tuples are **immutable** (cannot be changed).
+
+### 1. Lists (`list`)
+
+A list is an **ordered, mutable collection** that can store multiple data types.
+
+#### Creating Lists
+
+```python
+my_list = [1, "hello", 3.5, True]
+print(my_list)  # [1, 'hello', 3.5, True]
+```
+
+#### Accessing Elements
+
+```python
+print(my_list[0])  # 1
+print(my_list[-1]) # True (last element)
+```
+
+#### List Operations
+
+```python
+my_list.append(100)  # Add element to end
+my_list.insert(1, "Python")  # Insert at index 1
+my_list.remove("hello")  # Remove element
+my_list.pop()  # Remove last element
+```
+
+#### Sorting and Reversing
+
+```python
+numbers = [3, 1, 4, 1, 5]
+numbers.sort()  # [1, 1, 3, 4, 5]
+numbers.reverse()  # [5, 4, 3, 1, 1]
+```
+
+---
+
+### 2. Tuples (`tuple`)
+
+A tuple is an **ordered, immutable collection** of elements.
+
+#### Creating Tuples
+
+```python
+my_tuple = (10, 20, 30)
+print(my_tuple[1])  # 20
+```
+
+#### Tuple Packing and Unpacking
+
+```python
+tuple_data = ("Alice", 25, "Engineer")
+name, age, job = tuple_data  # Unpacking
+print(name)  # Alice
+```
+
+#### Advantages of Tuples Over Lists
+
+✅ Faster performance\
+✅ Less memory usage\
+✅ Safer (prevents accidental modification)
+
+
+### [Chapter 8 Quiz](https://docs.google.com/forms/d/e/1FAIpQLScVHM-WOqWeH4QtzPaGw97IeD7SH3xCjra7hHpxoEKL5SVcuA/viewform)

@@ -40,14 +40,34 @@ Once your program has been compiled to byte code (or loaded from existing `.pyc`
 
 ## Chapter Summary
 
-- **Python Interpreter:**  
-  Acts as the core software that executes Python programs. It reads your source code and runs the instructions contained within it.
+### Overview
 
-- **The Programmer’s View:**  
-  A Python program is simply a text file of statements. Even a minimal script, like one that prints a message or calculates a power, is a complete program.
+Python is an **interpreted language**, which means that code is executed **line by line** rather than being compiled into a separate machine-executable file. Understanding how Python runs programs is crucial for debugging and performance optimization.
 
-- **Byte Code Compilation:**  
-  Python automatically compiles source code into a lower-level byte code, stored as `.pyc` files, to enhance execution speed.
+### How Python Executes Code
 
-- **Python Virtual Machine (PVM):**  
-  The PVM is the runtime engine that executes the byte code in a continuous loop, forming the final step in running your Python programs.
+Python follows a sequence of steps to execute a program:
+
+1. **Writing the Code** – Python scripts are written in `.py` files.
+2. **Interpreting the Code** – Python converts the script into **bytecode** (`.pyc` files for optimization).
+3. **Executing in Python Virtual Machine (PVM)** – The PVM processes bytecode and runs the program.
+
+### Python vs. Compiled Languages
+
+| **Feature** | **Python (Interpreted)** | **C++/Java (Compiled)**     |
+| ----------- | ------------------------ | --------------------------- |
+| Execution   | Line-by-line             | Full compilation first      |
+| Speed       | Slower                   | Faster after compilation    |
+| Debugging   | Easier, stops at errors  | Requires full recompilation |
+| Portability | High (cross-platform)    | Needs recompilation per OS  |
+
+### Running Python Programs
+
+Python programs can be executed in different ways:
+
+- **Interactive Mode**: Running Python commands directly in a terminal.
+- **Script Mode**: Running full `.py` files using `python filename.py`.
+- **IDLE (Python’s GUI)**: A built-in environment for running Python code.
+- **Using an IDE (e.g., PyCharm, VS Code)**: Allows debugging and advanced features.
+
+### [Chapter 2 Quiz](https://docs.google.com/forms/d/e/1FAIpQLSekcuoC_lfKLxeYCtR7eEKrQvQHy-Nt12MHwaAokSceSSL1Og/viewform)

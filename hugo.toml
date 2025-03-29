@@ -119,15 +119,22 @@ ShowPageNums = true
 ShowToc = true
 # images = [ "images/papermod-cover.png" ]
 #
-#   [params.profileMode]
-#   enabled = false
-#   title = "PaperMod"
+   [params.profileMode]
+   enabled = true
+   title = "Welcome to Our Project"
+   subtitle = "We hope you have fun!"
+
+
 #   imageUrl = "#"
 #   imageTitle = "my image"
 #
-#     [[params.profileMode.buttons]]
-#     name = "Archives"
-#     url = "archives"
+     [[params.profileMode.buttons]]
+     name = "Final Quiz"
+     url = "https://docs.google.com/forms/d/e/1FAIpQLScQJXZoMdlWgCa8iVwGoT5Gx-lLxOMiTBivJguQwKDEBFeHjQ/viewform"
+
+     [[params.profileMode.buttons]]
+     name = "Study Chapters"
+     url = "/my-university-project/chapters/"
 #
 #     [[params.profileMode.buttons]]
 #     name = "Tags"

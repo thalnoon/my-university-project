@@ -218,3 +218,63 @@ print('Bye')
 ```
 
 This example shows how you can nest code to multiple levels if needed.
+
+---
+## Chapter Summary
+
+### Overview
+
+Dictionaries and sets are important data structures in Python. **Dictionaries** store key-value pairs, while **sets** store unique unordered elements.
+
+### 1. Dictionaries (`dict`)
+
+Dictionaries hold data in **key-value pairs** and allow **fast lookups**.
+
+#### Creating a Dictionary
+
+```python
+person = {"name": "Alice", "age": 25, "city": "New York"}
+print(person["name"])  # Alice
+```
+
+#### Modifying a Dictionary
+
+```python
+person["age"] = 26  # Update value
+person["job"] = "Engineer"  # Add new key-value pair
+del person["city"]  # Delete a key-value pair
+```
+
+#### Dictionary Methods
+
+```python
+print(person.keys())  # Get all keys
+print(person.values())  # Get all values
+print(person.items())  # Get all key-value pairs
+```
+
+---
+
+### 2. Sets (`set`)
+
+A set is an **unordered collection** of unique elements.
+
+#### Creating a Set
+
+```python
+my_set = {1, 2, 3, 4, 4}  # Duplicate values are ignored
+print(my_set)  # {1, 2, 3, 4}
+```
+
+#### Set Operations
+
+```python
+A = {1, 2, 3}
+B = {3, 4, 5}
+print(A | B)  # Union: {1, 2, 3, 4, 5}
+print(A & B)  # Intersection: {3}
+print(A - B)  # Difference: {1, 2}
+```
+
+
+### [Chapter 9 Quiz](https://docs.google.com/forms/d/e/1FAIpQLSfjErECx_Jfvhz1mvVaoOxNmnUhV7OmKo8RTwmFEg8A8vV7zw/viewform)

@@ -243,7 +243,7 @@ The single- and double-quoted forms are by far the most common.">
     <h1 class="post-title entry-hint-parent">
       Chapter 6: Strings
     </h1>
-    <div class="post-meta">6 min
+    <div class="post-meta">7 min
 
 </div>
   </header> <div class="toc">
@@ -276,8 +276,25 @@ The single- and double-quoted forms are by far the most common.">
                 <li>
                     <a href="#advanced-string-formatting-expressions" aria-label="Advanced String Formatting Expressions">Advanced String Formatting Expressions</a></li>
                 <li>
-                    <a href="#examples-strings" aria-label="Examples (Strings)">Examples (Strings)</a>
+                    <a href="#examples-strings" aria-label="Examples (Strings)">Examples (Strings)</a></li>
+                <li>
+                    <a href="#chapter-summary" aria-label="Chapter Summary">Chapter Summary</a><ul>
+                        
+                <li>
+                    <a href="#overview" aria-label="Overview">Overview</a></li>
+                <li>
+                    <a href="#how-dynamic-typing-works" aria-label="How Dynamic Typing Works">How Dynamic Typing Works</a></li>
+                <li>
+                    <a href="#dynamic-vs-static-typing" aria-label="Dynamic vs. Static Typing">Dynamic vs. Static Typing</a></li>
+                <li>
+                    <a href="#advantages-of-dynamic-typing" aria-label="Advantages of Dynamic Typing">Advantages of Dynamic Typing</a></li>
+                <li>
+                    <a href="#disadvantages-of-dynamic-typing" aria-label="Disadvantages of Dynamic Typing">Disadvantages of Dynamic Typing</a></li>
+                <li>
+                    <a href="#chapter-6-quiz" aria-label="Chapter 6 Quiz">Chapter 6 Quiz</a>
                 </li>
+            </ul>
+            </li>
             </ul>
         </div>
     </details>
@@ -846,6 +863,62 @@ The single- and double-quoted forms are by far the most common.">
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="nb">print</span><span class="p">(</span><span class="s2">&#34;Hello world&#34;</span><span class="p">[</span><span class="mi">7</span><span class="p">:</span><span class="mi">10</span><span class="p">])</span>
 </span></span></code></pre></div>(This displays &ldquo;orl&rdquo; from &ldquo;Hello world&rdquo; where indexing starts at 0.)</li>
 </ol>
+<h2 id="chapter-summary">Chapter Summary<a hidden class="anchor" aria-hidden="true" href="#chapter-summary">#</a></h2>
+<h3 id="overview">Overview<a hidden class="anchor" aria-hidden="true" href="#overview">#</a></h3>
+<p>Python uses <strong>dynamic typing</strong>, meaning you do not need to specify the type of a variable when declaring it. The type is assigned at runtime based on the value assigned to the variable.</p>
+<h3 id="how-dynamic-typing-works">How Dynamic Typing Works<a hidden class="anchor" aria-hidden="true" href="#how-dynamic-typing-works">#</a></h3>
+<ul>
+<li>In Python, variables are <strong>references to objects</strong>.</li>
+<li>A variable’s type is determined <strong>at runtime</strong>, not before execution.</li>
+<li>The same variable can hold different types of data at different times.</li>
+</ul>
+<p>Example:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="n">x</span> <span class="o">=</span> <span class="mi">10</span>       <span class="c1"># x is an integer</span>
+</span></span><span class="line"><span class="cl"><span class="nb">print</span><span class="p">(</span><span class="nb">type</span><span class="p">(</span><span class="n">x</span><span class="p">))</span>  <span class="c1"># &lt;class &#39;int&#39;&gt;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="n">x</span> <span class="o">=</span> <span class="s2">&#34;Hello&#34;</span>  <span class="c1"># Now x is a string!</span>
+</span></span><span class="line"><span class="cl"><span class="nb">print</span><span class="p">(</span><span class="nb">type</span><span class="p">(</span><span class="n">x</span><span class="p">))</span>  <span class="c1"># &lt;class &#39;str&#39;&gt;</span>
+</span></span></code></pre></div><h3 id="dynamic-vs-static-typing">Dynamic vs. Static Typing<a hidden class="anchor" aria-hidden="true" href="#dynamic-vs-static-typing">#</a></h3>
+<table>
+  <thead>
+      <tr>
+          <th><strong>Feature</strong></th>
+          <th><strong>Dynamic Typing (Python)</strong></th>
+          <th><strong>Static Typing (C++, Java)</strong></th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td>Type Declaration</td>
+          <td>Not required</td>
+          <td>Required</td>
+      </tr>
+      <tr>
+          <td>Flexibility</td>
+          <td>High</td>
+          <td>Low</td>
+      </tr>
+      <tr>
+          <td>Error Detection</td>
+          <td>At runtime</td>
+          <td>At compile time</td>
+      </tr>
+  </tbody>
+</table>
+<h3 id="advantages-of-dynamic-typing">Advantages of Dynamic Typing<a hidden class="anchor" aria-hidden="true" href="#advantages-of-dynamic-typing">#</a></h3>
+<p>✅ <strong>Easier to write and read</strong> – No need to declare variable types.<br>
+✅ <strong>More flexible</strong> – Variables can hold different data types.<br>
+✅ <strong>Faster development</strong> – Reduces boilerplate code.</p>
+<h3 id="disadvantages-of-dynamic-typing">Disadvantages of Dynamic Typing<a hidden class="anchor" aria-hidden="true" href="#disadvantages-of-dynamic-typing">#</a></h3>
+<p>❌ <strong>Runtime Errors</strong> – Type mismatches are only detected during execution.<br>
+❌ <strong>Slower Performance</strong> – Type checking is done at runtime.<br>
+❌ <strong>Harder to Debug</strong> – Bugs may appear later during execution.</p>
+<p>Example of a Type Error:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="n">x</span> <span class="o">=</span> <span class="s2">&#34;5&#34;</span>
+</span></span><span class="line"><span class="cl"><span class="n">y</span> <span class="o">=</span> <span class="n">x</span> <span class="o">+</span> <span class="mi">10</span>  <span class="c1"># ❌ TypeError: can’t add str and int</span>
+</span></span></code></pre></div><p>✅ <strong>Fix:</strong> Convert string to integer:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="n">y</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="n">x</span><span class="p">)</span> <span class="o">+</span> <span class="mi">10</span>  <span class="c1"># ✅ Works fine now</span>
+</span></span></code></pre></div><h3 id="chapter-6-quiz"><a href="https://docs.google.com/forms/d/e/1FAIpQLScSKg9UHd_YSsMaWOoVHvFmg42bW-3J-4O447NmFKRg9TJQgA/viewform">Chapter 6 Quiz</a><a hidden class="anchor" aria-hidden="true" href="#chapter-6-quiz">#</a></h3>
 
 
   </div>

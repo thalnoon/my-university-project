@@ -462,3 +462,54 @@ print(next(E))       # Output: (0, 's')
 print(next(E))       # Output: (1, 'p')
 print(next(E))       # Output: (2, 'a')
 ```
+---
+## Chapter Summary
+
+### Overview
+Loops allow executing a block of code multiple times. Python supports two main types of loops: `for` loops and `while` loops.
+
+### 1. `for` Loop
+Used for iterating over sequences like lists, tuples, and strings.
+```python
+for i in range(5):
+    print(i)  # Output: 0, 1, 2, 3, 4
+```
+
+#### Looping Through a List
+```python
+fruits = ["apple", "banana", "cherry"]
+for fruit in fruits:
+    print(fruit)
+```
+
+### 2. `while` Loop
+Repeats as long as a condition is `True`.
+```python
+x = 0
+while x < 5:
+    print(x)
+    x += 1
+```
+
+### 3. Controlling Loops
+- `break` – Exits the loop.
+- `continue` – Skips the current iteration.
+
+Example using `break`:
+```python
+for i in range(10):
+    if i == 5:
+        break
+    print(i)  # Output: 0, 1, 2, 3, 4
+```
+
+Example using `continue`:
+```python
+for i in range(5):
+    if i == 2:
+        continue
+    print(i)  # Output: 0, 1, 3, 4
+```
+
+
+### [Chapter 11 Quiz](https://docs.google.com/forms/d/e/1FAIpQLSflMYIh5slnc-djgUCEF78qbZQWgp5E2CShVdzyY7BvYf5YGA/viewform)

@@ -46,8 +46,6 @@ For example:&lt;/p&gt;</description>
 &lt;li&gt;Expressions create and process objects.&lt;/li&gt;
 &lt;/ol&gt;
 &lt;h2 id=&#34;pythons-core-data-types&#34;&gt;Python’s Core Data Types&lt;/h2&gt;
-&lt;p&gt;Table 1 previews Python’s built-in object types and some of the syntax used to code their literals—that is, the expressions that generate these objects.&lt;/p&gt;
-&lt;h2 id=&#34;numbers&#34;&gt;Numbers&lt;/h2&gt;
 &lt;table&gt;
   &lt;thead&gt;
       &lt;tr&gt;
@@ -98,6 +96,7 @@ For example:&lt;/p&gt;</description>
       &lt;/tr&gt;
   &lt;/tbody&gt;
 &lt;/table&gt;
+&lt;h2 id=&#34;numbers&#34;&gt;Numbers&lt;/h2&gt;
 &lt;p&gt;Numbers in Python support the normal mathematical operations. For instance, the plus sign (&lt;code&gt;+&lt;/code&gt;) performs addition, a star (&lt;code&gt;*&lt;/code&gt;) is used for multiplication, and two stars (&lt;code&gt;**&lt;/code&gt;) are used for exponentiation:&lt;/p&gt;</description>
     </item>
     <item>

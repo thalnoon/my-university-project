@@ -83,3 +83,112 @@ print(X, L)          # Outputs: (2, [3, 4])
 | def func(**name)      | Function | Matches and collects remaining keyword arguments in a dictionary             |
 | def func(*other, name)| Function | Arguments that must be passed by keyword only in calls (3.X)                |
 | def func(*, name=value)| Function | Arguments that must be passed by keyword only in calls (3.X)                |
+
+---
+## Chapter Summary
+
+### Overview
+
+This chapter explains **scopes** and **arguments** in Python, focusing on how variables are defined and accessed. Scopes help avoid name clashes, and understanding them improves **code maintainability** and **functionality**.
+
+---
+
+#### **1. Understanding Scope in Python**
+
+Scope determines **where a variable can be accessed** in the code. Python follows the **LEGB rule**:
+
+- **Local Scope**: Variables defined inside a function.
+- **Enclosing Scope**: Variables in outer functions (for nested functions).
+- **Global Scope**: Variables defined at the top level of a script/module.
+- **Built-in Scope**: Predefined Python functions and keywords (e.g., `print()`, `len()`).
+
+**Example:**
+
+```python
+x = 10  # Global variable
+
+def outer_function():
+    y = 5  # Enclosing variable
+
+    def inner_function():
+        z = 2  # Local variable
+        print(x, y, z)  # Can access all three
+
+    inner_function()
+
+outer_function()
+```
+
+---
+
+#### **2. Argument-Passing Basics**
+
+When calling a function, arguments are assigned to local variable names inside the function.
+
+- **Immutable arguments (integers, strings, tuples)**: The function **cannot modify** them directly.
+- **Mutable arguments (lists, dictionaries)**: The function **can modify** them.
+
+**Example:**
+
+```python
+def modify_list(lst):
+    lst.append(4)  # Modifies the original list
+
+my_list = [1, 2, 3]
+modify_list(my_list)
+print(my_list)  # Output: [1, 2, 3, 4]
+```
+
+---
+
+#### **3. Default and Keyword Arguments**
+
+Python functions support **default values** for arguments and allow passing arguments by **keywords**.
+
+**Example: Default Arguments**
+
+```python
+def greet(name="Guest"):
+    print(f"Hello, {name}!")
+
+greet()  # Output: Hello, Guest!
+greet("Alice")  # Output: Hello, Alice!
+```
+
+**Example: Keyword Arguments**
+
+```python
+def display_info(name, age):
+    print(f"Name: {name}, Age: {age}")
+
+display_info(age=25, name="John")  # Arguments are passed in any order
+```
+
+---
+
+#### **4. Argument Packing and Unpacking (********`*args`******** and ********`**kwargs`********)**
+
+- `*args` allows passing multiple positional arguments.
+- `**kwargs` allows passing multiple keyword arguments.
+
+\*\*Example: Using \*\***`*args`**
+
+```python
+def sum_numbers(*args):
+    return sum(args)
+
+print(sum_numbers(1, 2, 3, 4))  # Output: 10
+```
+
+\*\*Example: Using \*\***`**kwargs`**
+
+```python
+def print_details(**kwargs):
+    for key, value in kwargs.items():
+        print(f"{key}: {value}")
+
+print_details(name="Alice", age=25, city="New York")
+```
+
+---
+### [Chapter 13 Quiz](https://docs.google.com/forms/d/e/1FAIpQLSdmGd2bx9A7V_YQnLwgyP5WGGtuUkxO_cCmkC-m-HR4DEc4bA/viewform)

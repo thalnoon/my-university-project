@@ -135,8 +135,21 @@ After installation on your machine, the Python package generates a few component
                 <li>
                     <a href="#the-python-virtual-machine-pvm" aria-label="The Python Virtual Machine (PVM)">The Python Virtual Machine (PVM)</a></li>
                 <li>
-                    <a href="#chapter-summary" aria-label="Chapter Summary">Chapter Summary</a>
+                    <a href="#chapter-summary" aria-label="Chapter Summary">Chapter Summary</a><ul>
+                        
+                <li>
+                    <a href="#overview" aria-label="Overview">Overview</a></li>
+                <li>
+                    <a href="#how-python-executes-code" aria-label="How Python Executes Code">How Python Executes Code</a></li>
+                <li>
+                    <a href="#python-vs-compiled-languages" aria-label="Python vs. Compiled Languages">Python vs. Compiled Languages</a></li>
+                <li>
+                    <a href="#running-python-programs" aria-label="Running Python Programs">Running Python Programs</a></li>
+                <li>
+                    <a href="#chapter-2-quiz" aria-label="Chapter 2 Quiz">Chapter 2 Quiz</a>
                 </li>
+            </ul>
+            </li>
             </ul>
         </div>
     </details>
@@ -160,24 +173,56 @@ After installation on your machine, the Python package generates a few component
 <p><strong>Figure 2-1:</strong> Python’s traditional runtime execution model – source code is automatically compiled to byte code, which is then interpreted by the Python Virtual Machine.</p>
 <hr>
 <h2 id="chapter-summary">Chapter Summary<a hidden class="anchor" aria-hidden="true" href="#chapter-summary">#</a></h2>
+<h3 id="overview">Overview<a hidden class="anchor" aria-hidden="true" href="#overview">#</a></h3>
+<p>Python is an <strong>interpreted language</strong>, which means that code is executed <strong>line by line</strong> rather than being compiled into a separate machine-executable file. Understanding how Python runs programs is crucial for debugging and performance optimization.</p>
+<h3 id="how-python-executes-code">How Python Executes Code<a hidden class="anchor" aria-hidden="true" href="#how-python-executes-code">#</a></h3>
+<p>Python follows a sequence of steps to execute a program:</p>
+<ol>
+<li><strong>Writing the Code</strong> – Python scripts are written in <code>.py</code> files.</li>
+<li><strong>Interpreting the Code</strong> – Python converts the script into <strong>bytecode</strong> (<code>.pyc</code> files for optimization).</li>
+<li><strong>Executing in Python Virtual Machine (PVM)</strong> – The PVM processes bytecode and runs the program.</li>
+</ol>
+<h3 id="python-vs-compiled-languages">Python vs. Compiled Languages<a hidden class="anchor" aria-hidden="true" href="#python-vs-compiled-languages">#</a></h3>
+<table>
+  <thead>
+      <tr>
+          <th><strong>Feature</strong></th>
+          <th><strong>Python (Interpreted)</strong></th>
+          <th><strong>C++/Java (Compiled)</strong></th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td>Execution</td>
+          <td>Line-by-line</td>
+          <td>Full compilation first</td>
+      </tr>
+      <tr>
+          <td>Speed</td>
+          <td>Slower</td>
+          <td>Faster after compilation</td>
+      </tr>
+      <tr>
+          <td>Debugging</td>
+          <td>Easier, stops at errors</td>
+          <td>Requires full recompilation</td>
+      </tr>
+      <tr>
+          <td>Portability</td>
+          <td>High (cross-platform)</td>
+          <td>Needs recompilation per OS</td>
+      </tr>
+  </tbody>
+</table>
+<h3 id="running-python-programs">Running Python Programs<a hidden class="anchor" aria-hidden="true" href="#running-python-programs">#</a></h3>
+<p>Python programs can be executed in different ways:</p>
 <ul>
-<li>
-<p><strong>Python Interpreter:</strong><br>
-Acts as the core software that executes Python programs. It reads your source code and runs the instructions contained within it.</p>
-</li>
-<li>
-<p><strong>The Programmer’s View:</strong><br>
-A Python program is simply a text file of statements. Even a minimal script, like one that prints a message or calculates a power, is a complete program.</p>
-</li>
-<li>
-<p><strong>Byte Code Compilation:</strong><br>
-Python automatically compiles source code into a lower-level byte code, stored as <code>.pyc</code> files, to enhance execution speed.</p>
-</li>
-<li>
-<p><strong>Python Virtual Machine (PVM):</strong><br>
-The PVM is the runtime engine that executes the byte code in a continuous loop, forming the final step in running your Python programs.</p>
-</li>
+<li><strong>Interactive Mode</strong>: Running Python commands directly in a terminal.</li>
+<li><strong>Script Mode</strong>: Running full <code>.py</code> files using <code>python filename.py</code>.</li>
+<li><strong>IDLE (Python’s GUI)</strong>: A built-in environment for running Python code.</li>
+<li><strong>Using an IDE (e.g., PyCharm, VS Code)</strong>: Allows debugging and advanced features.</li>
 </ul>
+<h3 id="chapter-2-quiz"><a href="https://docs.google.com/forms/d/e/1FAIpQLSekcuoC_lfKLxeYCtR7eEKrQvQHy-Nt12MHwaAokSceSSL1Og/viewform">Chapter 2 Quiz</a><a hidden class="anchor" aria-hidden="true" href="#chapter-2-quiz">#</a></h3>
 
 
   </div>

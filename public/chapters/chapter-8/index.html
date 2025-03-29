@@ -117,7 +117,7 @@ The last collection type in our survey is the Python tuple. Tuples construct sim
     <h1 class="post-title entry-hint-parent">
       Chapter 8: Tuples, Files, and Everything Else
     </h1>
-    <div class="post-meta">13 min
+    <div class="post-meta">14 min
 
 </div>
   </header> <div class="toc">
@@ -156,8 +156,39 @@ The last collection type in our survey is the Python tuple. Tuples construct sim
                 <li>
                     <a href="#storing-native-python-objects-with-pickle" aria-label="Storing Native Python Objects with pickle">Storing Native Python Objects with pickle</a></li>
                 <li>
-                    <a href="#storing-and-parsing-packed-binary-data-in-files" aria-label="Storing and Parsing Packed Binary Data in Files">Storing and Parsing Packed Binary Data in Files</a>
+                    <a href="#storing-and-parsing-packed-binary-data-in-files" aria-label="Storing and Parsing Packed Binary Data in Files">Storing and Parsing Packed Binary Data in Files</a></li>
+                <li>
+                    <a href="#chapter-summary" aria-label="Chapter Summary">Chapter Summary</a><ul>
+                        
+                <li>
+                    <a href="#overview" aria-label="Overview">Overview</a></li>
+                <li>
+                    <a href="#1-lists-list" aria-label="1. Lists (list)">1. Lists (list)</a><ul>
+                        
+                <li>
+                    <a href="#creating-lists" aria-label="Creating Lists">Creating Lists</a></li>
+                <li>
+                    <a href="#accessing-elements" aria-label="Accessing Elements">Accessing Elements</a></li>
+                <li>
+                    <a href="#list-operations" aria-label="List Operations">List Operations</a></li>
+                <li>
+                    <a href="#sorting-and-reversing" aria-label="Sorting and Reversing">Sorting and Reversing</a></li></ul>
                 </li>
+                <li>
+                    <a href="#2-tuples-tuple" aria-label="2. Tuples (tuple)">2. Tuples (tuple)</a><ul>
+                        
+                <li>
+                    <a href="#creating-tuples" aria-label="Creating Tuples">Creating Tuples</a></li>
+                <li>
+                    <a href="#tuple-packing-and-unpacking" aria-label="Tuple Packing and Unpacking">Tuple Packing and Unpacking</a></li>
+                <li>
+                    <a href="#advantages-of-tuples-over-lists" aria-label="Advantages of Tuples Over Lists">Advantages of Tuples Over Lists</a></li></ul>
+                </li>
+                <li>
+                    <a href="#chapter-8-quiz" aria-label="Chapter 8 Quiz">Chapter 8 Quiz</a>
+                </li>
+            </ul>
+            </li>
             </ul>
         </div>
     </details>
@@ -531,7 +562,43 @@ The last collection type in our survey is the Python tuple. Tuples construct sim
 </span></span><span class="line"><span class="cl"><span class="o">&gt;&gt;&gt;</span> <span class="n">values</span> <span class="o">=</span> <span class="n">struct</span><span class="o">.</span><span class="n">unpack</span><span class="p">(</span><span class="s1">&#39;&gt;i4sh&#39;</span><span class="p">,</span> <span class="n">data</span><span class="p">)</span>  <span class="c1"># Convert to Python objects</span>
 </span></span><span class="line"><span class="cl"><span class="o">&gt;&gt;&gt;</span> <span class="n">values</span>
 </span></span><span class="line"><span class="cl"><span class="p">(</span><span class="mi">7</span><span class="p">,</span> <span class="s1">&#39;spam&#39;</span><span class="p">,</span> <span class="mi">8</span><span class="p">)</span>
-</span></span></code></pre></div>
+</span></span></code></pre></div><hr>
+<h2 id="chapter-summary">Chapter Summary<a hidden class="anchor" aria-hidden="true" href="#chapter-summary">#</a></h2>
+<h3 id="overview">Overview<a hidden class="anchor" aria-hidden="true" href="#overview">#</a></h3>
+<p>Lists and tuples are <strong>sequence data types</strong> used to store collections of elements. Lists are <strong>mutable</strong> (modifiable), while tuples are <strong>immutable</strong> (cannot be changed).</p>
+<h3 id="1-lists-list">1. Lists (<code>list</code>)<a hidden class="anchor" aria-hidden="true" href="#1-lists-list">#</a></h3>
+<p>A list is an <strong>ordered, mutable collection</strong> that can store multiple data types.</p>
+<h4 id="creating-lists">Creating Lists<a hidden class="anchor" aria-hidden="true" href="#creating-lists">#</a></h4>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="n">my_list</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="s2">&#34;hello&#34;</span><span class="p">,</span> <span class="mf">3.5</span><span class="p">,</span> <span class="kc">True</span><span class="p">]</span>
+</span></span><span class="line"><span class="cl"><span class="nb">print</span><span class="p">(</span><span class="n">my_list</span><span class="p">)</span>  <span class="c1"># [1, &#39;hello&#39;, 3.5, True]</span>
+</span></span></code></pre></div><h4 id="accessing-elements">Accessing Elements<a hidden class="anchor" aria-hidden="true" href="#accessing-elements">#</a></h4>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="nb">print</span><span class="p">(</span><span class="n">my_list</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span>  <span class="c1"># 1</span>
+</span></span><span class="line"><span class="cl"><span class="nb">print</span><span class="p">(</span><span class="n">my_list</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">])</span> <span class="c1"># True (last element)</span>
+</span></span></code></pre></div><h4 id="list-operations">List Operations<a hidden class="anchor" aria-hidden="true" href="#list-operations">#</a></h4>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="n">my_list</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="mi">100</span><span class="p">)</span>  <span class="c1"># Add element to end</span>
+</span></span><span class="line"><span class="cl"><span class="n">my_list</span><span class="o">.</span><span class="n">insert</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="s2">&#34;Python&#34;</span><span class="p">)</span>  <span class="c1"># Insert at index 1</span>
+</span></span><span class="line"><span class="cl"><span class="n">my_list</span><span class="o">.</span><span class="n">remove</span><span class="p">(</span><span class="s2">&#34;hello&#34;</span><span class="p">)</span>  <span class="c1"># Remove element</span>
+</span></span><span class="line"><span class="cl"><span class="n">my_list</span><span class="o">.</span><span class="n">pop</span><span class="p">()</span>  <span class="c1"># Remove last element</span>
+</span></span></code></pre></div><h4 id="sorting-and-reversing">Sorting and Reversing<a hidden class="anchor" aria-hidden="true" href="#sorting-and-reversing">#</a></h4>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="n">numbers</span> <span class="o">=</span> <span class="p">[</span><span class="mi">3</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">5</span><span class="p">]</span>
+</span></span><span class="line"><span class="cl"><span class="n">numbers</span><span class="o">.</span><span class="n">sort</span><span class="p">()</span>  <span class="c1"># [1, 1, 3, 4, 5]</span>
+</span></span><span class="line"><span class="cl"><span class="n">numbers</span><span class="o">.</span><span class="n">reverse</span><span class="p">()</span>  <span class="c1"># [5, 4, 3, 1, 1]</span>
+</span></span></code></pre></div><hr>
+<h3 id="2-tuples-tuple">2. Tuples (<code>tuple</code>)<a hidden class="anchor" aria-hidden="true" href="#2-tuples-tuple">#</a></h3>
+<p>A tuple is an <strong>ordered, immutable collection</strong> of elements.</p>
+<h4 id="creating-tuples">Creating Tuples<a hidden class="anchor" aria-hidden="true" href="#creating-tuples">#</a></h4>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="n">my_tuple</span> <span class="o">=</span> <span class="p">(</span><span class="mi">10</span><span class="p">,</span> <span class="mi">20</span><span class="p">,</span> <span class="mi">30</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="nb">print</span><span class="p">(</span><span class="n">my_tuple</span><span class="p">[</span><span class="mi">1</span><span class="p">])</span>  <span class="c1"># 20</span>
+</span></span></code></pre></div><h4 id="tuple-packing-and-unpacking">Tuple Packing and Unpacking<a hidden class="anchor" aria-hidden="true" href="#tuple-packing-and-unpacking">#</a></h4>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="n">tuple_data</span> <span class="o">=</span> <span class="p">(</span><span class="s2">&#34;Alice&#34;</span><span class="p">,</span> <span class="mi">25</span><span class="p">,</span> <span class="s2">&#34;Engineer&#34;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="n">name</span><span class="p">,</span> <span class="n">age</span><span class="p">,</span> <span class="n">job</span> <span class="o">=</span> <span class="n">tuple_data</span>  <span class="c1"># Unpacking</span>
+</span></span><span class="line"><span class="cl"><span class="nb">print</span><span class="p">(</span><span class="n">name</span><span class="p">)</span>  <span class="c1"># Alice</span>
+</span></span></code></pre></div><h4 id="advantages-of-tuples-over-lists">Advantages of Tuples Over Lists<a hidden class="anchor" aria-hidden="true" href="#advantages-of-tuples-over-lists">#</a></h4>
+<p>✅ Faster performance<br>
+✅ Less memory usage<br>
+✅ Safer (prevents accidental modification)</p>
+<h3 id="chapter-8-quiz"><a href="https://docs.google.com/forms/d/e/1FAIpQLScVHM-WOqWeH4QtzPaGw97IeD7SH3xCjra7hHpxoEKL5SVcuA/viewform">Chapter 8 Quiz</a><a hidden class="anchor" aria-hidden="true" href="#chapter-8-quiz">#</a></h3>
+
 
   </div>
 

@@ -373,3 +373,100 @@ The standard library `random` module provides tools for generating random number
 
 The `random` module can be useful for shuffling items, selecting random elements, performing simulations, and more.
 
+## Chapter Summary
+
+### Overview
+
+Python provides various numeric types to handle different mathematical operations efficiently. These types include integers, floating-point numbers, and complex numbers. Additionally, Python offers specialized numeric types such as fractions and decimals for precise calculations.
+
+### Numeric Types in Python
+
+1. **Integers (********`int`********)** – Whole numbers without a decimal point (e.g., `10`, `-5`).
+2. **Floating-Point Numbers (********`float`********)** – Numbers with a decimal point (e.g., `3.14`, `-2.7`).
+3. **Complex Numbers (********`complex`********)** – Numbers with real and imaginary parts (e.g., `2 + 3j`).
+4. **Fractions (********`Fraction`********)** – Rational numbers represented as fractions (e.g., `Fraction(3, 4)`).
+5. **Decimals (********`Decimal`********)** – High-precision decimal values for financial calculations.
+
+### 1. Integer Type (`int`)
+
+Python supports arbitrary-precision integers, meaning the size of an integer is only limited by available memory.
+
+Example:
+
+```python
+x = 100
+print(type(x))  # <class 'int'>
+```
+
+### 2. Floating-Point Type (`float`)
+
+Floating-point numbers represent real numbers with decimal points.
+
+Example:
+
+```python
+pi = 3.14159
+print(type(pi))  # <class 'float'>
+```
+
+### 3. Complex Numbers (`complex`)
+
+Python supports complex numbers with real and imaginary parts.
+
+Example:
+
+```python
+z = 2 + 3j
+print(z.real)  # 2.0
+print(z.imag)  # 3.0
+```
+
+### 4. Fractions (`fractions.Fraction`)
+
+The `fractions` module allows precise representation of rational numbers.
+
+Example:
+
+```python
+from fractions import Fraction
+f = Fraction(3, 4)
+print(f)  # 3/4
+```
+
+### 5. Decimals (`decimal.Decimal`)
+
+The `decimal` module provides precise arithmetic for financial and scientific applications.
+
+Example:
+
+```python
+from decimal import Decimal
+x = Decimal("0.1") + Decimal("0.2")
+print(x)  # 0.3
+```
+
+### Arithmetic Operations in Python
+
+| **Operation**  | **Symbol** | **Example**               |
+| -------------- | ---------- | ------------------------- |
+| Addition       | `+`        | `x + y`                   |
+| Subtraction    | `-`        | `x - y`                   |
+| Multiplication | `*`        | `x * y`                   |
+| Division       | `/`        | `x / y` (returns float)   |
+| Floor Division | `//`       | `x // y` (integer result) |
+| Modulus        | `%`        | `x % y` (remainder)       |
+| Exponentiation | `**`       | `x ** y`                  |
+
+Example:
+
+```python
+a = 10
+b = 3
+print(a + b)  # 13
+print(a // b)  # 3
+print(a ** b)  # 1000
+```
+
+
+
+### [Chapter 5 Quiz](https://docs.google.com/forms/d/e/1FAIpQLSdPttezc_GcTmo0KFJa9u_xngUC1xTRqY1RhPFds5VGOWsE-A/viewform)

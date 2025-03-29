@@ -355,3 +355,66 @@ c 3
 
 ---
 
+## Chapter Summary
+
+### Overview
+
+Strings are sequences of characters used to store and manipulate text in Python. Python provides various methods for handling and processing strings efficiently.
+
+### Creating Strings
+
+Strings in Python can be created using:
+
+```python
+text1 = "Hello, Python!"  # Using double quotes
+text2 = 'Hello, World!'    # Using single quotes
+text3 = '''This is a
+multiline string.'''  # Using triple quotes
+```
+
+### String Indexing and Slicing
+
+Strings are **indexed**, meaning each character has a position starting from `0`.
+
+```python
+text = "Python"
+print(text[0])   # P
+print(text[-1])  # n
+print(text[0:4]) # Pyth (slicing from index 0 to 3)
+```
+
+### Common String Methods
+
+Python provides several built-in string methods:
+
+```python
+text = "hello world"
+print(text.upper())      # HELLO WORLD (convert to uppercase)
+print(text.lower())      # hello world (convert to lowercase)
+print(text.replace("hello", "Hi"))  # Hi world (replace text)
+print(text.split())      # ['hello', 'world'] (split into a list)
+```
+
+### String Concatenation (Joining Strings)
+
+Strings can be combined using the `+` operator or formatted using `f-strings`.
+
+```python
+name = "Alice"
+age = 25
+print("My name is " + name + " and I am " + str(age) + " years old.")
+print(f"My name is {name} and I am {age} years old.")
+```
+
+### Checking String Membership
+
+Use `in` and `not in` operators to check if a substring exists within a string.
+
+```python
+sentence = "Python is fun!"
+print("Python" in sentence)  # True
+print("Java" not in sentence) # True
+```
+
+
+### [Chapter 7 Quiz](https://docs.google.com/forms/d/e/1FAIpQLSeuDBFsVJBohHcRE4_gU40X6oQ3NAL7cCZA9_iepQNAs5E0rQ/viewform)

@@ -116,7 +116,7 @@ In simple terms, the Python if statement selects actions to perform. It is the p
     <h1 class="post-title entry-hint-parent">
       Chapter 10: if Tests and Syntax Rules
     </h1>
-    <div class="post-meta">10 min
+    <div class="post-meta">9 min
 
 </div>
   </header> <div class="toc">
@@ -137,8 +137,23 @@ In simple terms, the Python if statement selects actions to perform. It is the p
                 <li>
                     <a href="#examples-if-statements" aria-label="Examples (if Statements)">Examples (if Statements)</a></li>
                 <li>
-                    <a href="#chapter-10-summary-if-tests-and-syntax-rules" aria-label="Chapter 10 Summary: if Tests and Syntax Rules">Chapter 10 Summary: if Tests and Syntax Rules</a>
+                    <a href="#chapter-summary" aria-label="Chapter Summary">Chapter Summary</a><ul>
+                        
+                <li>
+                    <a href="#overview" aria-label="Overview">Overview</a></li>
+                <li>
+                    <a href="#1-if-statement" aria-label="1. if Statement">1. if Statement</a></li>
+                <li>
+                    <a href="#2-if-else-statement" aria-label="2. if-else Statement">2. if-else Statement</a></li>
+                <li>
+                    <a href="#3-if-elif-else-statement" aria-label="3. if-elif-else Statement">3. if-elif-else Statement</a></li>
+                <li>
+                    <a href="#4-logical-operators" aria-label="4. Logical Operators">4. Logical Operators</a></li>
+                <li>
+                    <a href="#chapter-10-quiz" aria-label="Chapter 10 Quiz">Chapter 10 Quiz</a>
                 </li>
+            </ul>
+            </li>
             </ul>
         </div>
     </details>
@@ -431,44 +446,62 @@ Ask the user to enter 1, 2, or 3.</p>
 </span></span><span class="line"><span class="cl">    <span class="nb">print</span><span class="p">(</span><span class="s2">&#34;Error message&#34;</span><span class="p">)</span>
 </span></span></code></pre></div></li>
 </ol>
-<h2 id="chapter-10-summary-if-tests-and-syntax-rules">Chapter 10 Summary: if Tests and Syntax Rules<a hidden class="anchor" aria-hidden="true" href="#chapter-10-summary-if-tests-and-syntax-rules">#</a></h2>
-<p>This chapter introduces the Python <strong>if</strong> statement as the fundamental tool for making decisions in a program. It explains how conditional tests are used to determine which block of code executes, forming the basis of program logic.</p>
-<p>Key points include:</p>
-<ul>
-<li>
-<p><strong>Compound Statements:</strong><br>
-The <strong>if</strong> statement is the first compound statement discussed. It can include nested statements and even other <strong>if</strong> statements, allowing for complex decision structures.</p>
-</li>
-<li>
-<p><strong>General Structure:</strong><br>
-The chapter describes the standard format for an <strong>if</strong> statement, which consists of:</p>
-<ul>
-<li>An <strong>if</strong> test followed by a block of associated statements.</li>
-<li>Optional <strong>elif</strong> (&ldquo;else if&rdquo;) tests with their own blocks.</li>
-<li>An optional <strong>else</strong> block that executes if none of the tests are true.<br>
-Each block is defined by its indentation rather than explicit markers.</li>
-</ul>
-</li>
-<li>
-<p><strong>Multiway Branching:</strong><br>
-It explains how to implement multiway branching by combining multiple conditions, either through a series of <strong>if/elif/else</strong> statements or by using alternative structures like dictionary indexing for selecting among several options.</p>
-</li>
-<li>
-<p><strong>Default Actions:</strong><br>
-The chapter discusses methods for handling default cases when none of the specified conditions are met, emphasizing the use of an <strong>else</strong> clause or dictionary methods (like <code>get</code>) to supply fallback values.</p>
-</li>
-<li>
-<p><strong>Truth Tests and Boolean Logic:</strong><br>
-The chapter outlines Python’s approach to evaluating truth values:</p>
-<ul>
-<li>Any nonzero number or nonempty object is considered true.</li>
-<li>Zero, empty objects, and <code>None</code> are considered false.</li>
-<li>Comparisons and equality tests produce boolean results.</li>
-<li>Boolean operators (<code>and</code>, <code>or</code>, and <code>not</code>) are used to combine tests and support short-circuit evaluation, meaning that evaluation stops as soon as the outcome is determined.</li>
-</ul>
-</li>
-</ul>
-<p>Overall, the chapter lays a foundation for understanding how Python makes decisions based on conditions, providing the basis for controlling program flow through well-structured, readable syntax.</p>
+<h2 id="chapter-summary">Chapter Summary<a hidden class="anchor" aria-hidden="true" href="#chapter-summary">#</a></h2>
+<h3 id="overview">Overview<a hidden class="anchor" aria-hidden="true" href="#overview">#</a></h3>
+<p>Conditional statements allow Python programs to make decisions based on conditions. The key conditional statements in Python are <code>if</code>, <code>elif</code>, and <code>else</code>.</p>
+<h3 id="1-if-statement">1. <code>if</code> Statement<a hidden class="anchor" aria-hidden="true" href="#1-if-statement">#</a></h3>
+<p>The <code>if</code> statement executes a block of code only if a condition is <code>True</code>.</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="n">age</span> <span class="o">=</span> <span class="mi">18</span>
+</span></span><span class="line"><span class="cl"><span class="k">if</span> <span class="n">age</span> <span class="o">&gt;=</span> <span class="mi">18</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl">    <span class="nb">print</span><span class="p">(</span><span class="s2">&#34;You are an adult.&#34;</span><span class="p">)</span>
+</span></span></code></pre></div><h3 id="2-if-else-statement">2. <code>if-else</code> Statement<a hidden class="anchor" aria-hidden="true" href="#2-if-else-statement">#</a></h3>
+<p>The <code>else</code> block executes if the <code>if</code> condition is <code>False</code>.</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="n">age</span> <span class="o">=</span> <span class="mi">16</span>
+</span></span><span class="line"><span class="cl"><span class="k">if</span> <span class="n">age</span> <span class="o">&gt;=</span> <span class="mi">18</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl">    <span class="nb">print</span><span class="p">(</span><span class="s2">&#34;You are an adult.&#34;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="k">else</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl">    <span class="nb">print</span><span class="p">(</span><span class="s2">&#34;You are a minor.&#34;</span><span class="p">)</span>
+</span></span></code></pre></div><h3 id="3-if-elif-else-statement">3. <code>if-elif-else</code> Statement<a hidden class="anchor" aria-hidden="true" href="#3-if-elif-else-statement">#</a></h3>
+<p>Allows checking multiple conditions.</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="n">score</span> <span class="o">=</span> <span class="mi">75</span>
+</span></span><span class="line"><span class="cl"><span class="k">if</span> <span class="n">score</span> <span class="o">&gt;=</span> <span class="mi">90</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl">    <span class="nb">print</span><span class="p">(</span><span class="s2">&#34;Grade: A&#34;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="k">elif</span> <span class="n">score</span> <span class="o">&gt;=</span> <span class="mi">80</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl">    <span class="nb">print</span><span class="p">(</span><span class="s2">&#34;Grade: B&#34;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="k">elif</span> <span class="n">score</span> <span class="o">&gt;=</span> <span class="mi">70</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl">    <span class="nb">print</span><span class="p">(</span><span class="s2">&#34;Grade: C&#34;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="k">else</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl">    <span class="nb">print</span><span class="p">(</span><span class="s2">&#34;Grade: F&#34;</span><span class="p">)</span>
+</span></span></code></pre></div><h3 id="4-logical-operators">4. Logical Operators<a hidden class="anchor" aria-hidden="true" href="#4-logical-operators">#</a></h3>
+<p>Python supports logical operators for combining conditions.</p>
+<table>
+  <thead>
+      <tr>
+          <th>Operator</th>
+          <th>Description</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td><code>and</code></td>
+          <td>Returns <code>True</code> if both conditions are true</td>
+      </tr>
+      <tr>
+          <td><code>or</code></td>
+          <td>Returns <code>True</code> if at least one condition is true</td>
+      </tr>
+      <tr>
+          <td><code>not</code></td>
+          <td>Reverses the logical value</td>
+      </tr>
+  </tbody>
+</table>
+<p>Example:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="n">x</span> <span class="o">=</span> <span class="mi">10</span>
+</span></span><span class="line"><span class="cl"><span class="n">y</span> <span class="o">=</span> <span class="mi">20</span>
+</span></span><span class="line"><span class="cl"><span class="k">if</span> <span class="n">x</span> <span class="o">&gt;</span> <span class="mi">5</span> <span class="ow">and</span> <span class="n">y</span> <span class="o">&gt;</span> <span class="mi">15</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl">    <span class="nb">print</span><span class="p">(</span><span class="s2">&#34;Both conditions are True&#34;</span><span class="p">)</span>
+</span></span></code></pre></div><h3 id="chapter-10-quiz"><a href="https://docs.google.com/forms/d/e/1FAIpQLSfciqI9X5nkYGHTjG3lB5PHv3cM4QG6-QRel6uOvB3o1IuepA/viewform">Chapter 10 Quiz</a><a hidden class="anchor" aria-hidden="true" href="#chapter-10-quiz">#</a></h3>
 
 
   </div>

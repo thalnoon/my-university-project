@@ -153,8 +153,27 @@
                     <a href="#calls-1" aria-label="Calls">Calls</a></li></ul>
                 </li>
                 <li>
-                    <a href="#polymorphism-revisited" aria-label="Polymorphism Revisited">Polymorphism Revisited</a>
+                    <a href="#polymorphism-revisited" aria-label="Polymorphism Revisited">Polymorphism Revisited</a></li>
+                <li>
+                    <a href="#chapter-summary" aria-label="Chapter Summary">Chapter Summary</a><ul>
+                        
+                <li>
+                    <a href="#overview" aria-label="Overview">Overview</a></li>
+                <li>
+                    <a href="#1-defining-functions" aria-label="1. Defining Functions">1. Defining Functions</a></li>
+                <li>
+                    <a href="#2-function-parameters" aria-label="2. Function Parameters">2. Function Parameters</a></li>
+                <li>
+                    <a href="#3-returning-values" aria-label="3. Returning Values">3. Returning Values</a></li>
+                <li>
+                    <a href="#4-default-parameters" aria-label="4. Default Parameters">4. Default Parameters</a></li>
+                <li>
+                    <a href="#5-lambda-functions" aria-label="5. Lambda Functions">5. Lambda Functions</a></li>
+                <li>
+                    <a href="#chapter-12-quiz" aria-label="Chapter 12 Quiz">Chapter 12 Quiz</a>
                 </li>
+            </ul>
+            </li>
             </ul>
         </div>
     </details>
@@ -315,7 +334,41 @@ Python does not require type declarations. A single function can be applied to d
 <p>Like all functions in Python, <code>intersect</code> is polymorphic. It works on arbitrary types as long as the objects support the operations used (such as membership tests):</p>
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="n">x</span> <span class="o">=</span> <span class="n">intersect</span><span class="p">([</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">],</span> <span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">4</span><span class="p">))</span>  <span class="c1"># Works with a list and a tuple</span>
 </span></span><span class="line"><span class="cl"><span class="nb">print</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>  <span class="c1"># Outputs the common elements (if any)</span>
-</span></span></code></pre></div>
+</span></span></code></pre></div><hr>
+<h2 id="chapter-summary">Chapter Summary<a hidden class="anchor" aria-hidden="true" href="#chapter-summary">#</a></h2>
+<h3 id="overview">Overview<a hidden class="anchor" aria-hidden="true" href="#overview">#</a></h3>
+<p>Functions allow code reuse by grouping statements into callable blocks. Python supports <strong>built-in functions</strong> and <strong>user-defined functions</strong>.</p>
+<h3 id="1-defining-functions">1. Defining Functions<a hidden class="anchor" aria-hidden="true" href="#1-defining-functions">#</a></h3>
+<p>A function is defined using the <code>def</code> keyword.</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="k">def</span> <span class="nf">greet</span><span class="p">():</span>
+</span></span><span class="line"><span class="cl">    <span class="nb">print</span><span class="p">(</span><span class="s2">&#34;Hello, Python!&#34;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="n">greet</span><span class="p">()</span>  <span class="c1"># Calls the function</span>
+</span></span></code></pre></div><h3 id="2-function-parameters">2. Function Parameters<a hidden class="anchor" aria-hidden="true" href="#2-function-parameters">#</a></h3>
+<p>Functions can take arguments to process values.</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="k">def</span> <span class="nf">greet</span><span class="p">(</span><span class="n">name</span><span class="p">):</span>
+</span></span><span class="line"><span class="cl">    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&#34;Hello, </span><span class="si">{</span><span class="n">name</span><span class="si">}</span><span class="s2">!&#34;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="n">greet</span><span class="p">(</span><span class="s2">&#34;Alice&#34;</span><span class="p">)</span>  <span class="c1"># Output: Hello, Alice!</span>
+</span></span></code></pre></div><h3 id="3-returning-values">3. Returning Values<a hidden class="anchor" aria-hidden="true" href="#3-returning-values">#</a></h3>
+<p>Functions can return results using <code>return</code>.</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="k">def</span> <span class="nf">add</span><span class="p">(</span><span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">):</span>
+</span></span><span class="line"><span class="cl">    <span class="k">return</span> <span class="n">a</span> <span class="o">+</span> <span class="n">b</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="n">result</span> <span class="o">=</span> <span class="n">add</span><span class="p">(</span><span class="mi">3</span><span class="p">,</span> <span class="mi">5</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="nb">print</span><span class="p">(</span><span class="n">result</span><span class="p">)</span>  <span class="c1"># Output: 8</span>
+</span></span></code></pre></div><h3 id="4-default-parameters">4. Default Parameters<a hidden class="anchor" aria-hidden="true" href="#4-default-parameters">#</a></h3>
+<p>Default values can be set for parameters.</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="k">def</span> <span class="nf">greet</span><span class="p">(</span><span class="n">name</span><span class="o">=</span><span class="s2">&#34;Guest&#34;</span><span class="p">):</span>
+</span></span><span class="line"><span class="cl">    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&#34;Hello, </span><span class="si">{</span><span class="n">name</span><span class="si">}</span><span class="s2">!&#34;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="n">greet</span><span class="p">()</span>  <span class="c1"># Output: Hello, Guest!</span>
+</span></span></code></pre></div><h3 id="5-lambda-functions">5. Lambda Functions<a hidden class="anchor" aria-hidden="true" href="#5-lambda-functions">#</a></h3>
+<p>Short anonymous functions using <code>lambda</code>.</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="n">square</span> <span class="o">=</span> <span class="k">lambda</span> <span class="n">x</span><span class="p">:</span> <span class="n">x</span> <span class="o">**</span> <span class="mi">2</span>
+</span></span><span class="line"><span class="cl"><span class="nb">print</span><span class="p">(</span><span class="n">square</span><span class="p">(</span><span class="mi">4</span><span class="p">))</span>  <span class="c1"># Output: 16</span>
+</span></span></code></pre></div><h3 id="chapter-12-quiz"><a href="https://docs.google.com/forms/d/e/1FAIpQLSe6BXMTrTozJvNgHztY2lXYGvLfPsUa5ccYAS_pWAArAa_Fng/viewform">Chapter 12 Quiz</a><a hidden class="anchor" aria-hidden="true" href="#chapter-12-quiz">#</a></h3>
+
 
   </div>
 
