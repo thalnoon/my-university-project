@@ -133,6 +133,10 @@ ShowToc = true
      url = "https://docs.google.com/forms/d/e/1FAIpQLScQJXZoMdlWgCa8iVwGoT5Gx-lLxOMiTBivJguQwKDEBFeHjQ/viewform"
 
      [[params.profileMode.buttons]]
+     name = "Youtube Playlist"
+     url = "https://www.youtube.com/watch?v=mvZHDpCHphk&list=PLDoPjvoNmBAyE_gei5d18qkfIe-Z8mocs"
+
+     [[params.profileMode.buttons]]
      name = "Study Chapters"
      url = "/my-university-project/chapters/"
 #

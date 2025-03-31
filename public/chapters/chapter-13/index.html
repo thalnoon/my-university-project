@@ -1,24 +1,24 @@
 <!DOCTYPE html>
 <html lang="en" dir="auto">
 
-<head><script src="/my-university-project/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=my-university-project/livereload" data-no-instant defer></script><meta charset="utf-8">
+<head><meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-<meta name="robots" content="noindex, nofollow">
+<meta name="robots" content="index, follow">
 <title>Chapter 13: Scopes &amp; Arguments | Elite</title>
 <meta name="keywords" content="">
 <meta name="description" content="We will present the details behind Python’s scopes and arguments—the places where variables are defined and looked up. Like module files, scopes help prevent name clashes across your program’s code; names defined in one program unit don’t interfere with names in another. We’ll also see that scope usage can have a major impact on program maintenance; for example, overuse of globals is generally bad. On the plus side, scopes provide a way to retain state information between function calls and can sometimes offer an alternative to classes.">
 <meta name="author" content="">
-<link rel="canonical" href="http://localhost:1313/my-university-project/chapters/chapter-13/">
+<link rel="canonical" href="https://thalnoon.github.io/my-university-project/chapters/chapter-13/">
 <link crossorigin="anonymous" href="/my-university-project/assets/css/stylesheet.45e028aa8ce0961349adf411b013ee39406be2c0bc80d4ea3fc04555f7f4611a.css" integrity="sha256-ReAoqozglhNJrfQRsBPuOUBr4sC8gNTqP8BFVff0YRo=" rel="preload stylesheet" as="style">
-<link rel="icon" href="http://localhost:1313/my-university-project/favicon.ico">
-<link rel="icon" type="image/png" sizes="16x16" href="http://localhost:1313/my-university-project/favicon-16x16.png">
-<link rel="icon" type="image/png" sizes="32x32" href="http://localhost:1313/my-university-project/favicon-32x32.png">
-<link rel="apple-touch-icon" href="http://localhost:1313/my-university-project/apple-touch-icon.png">
-<link rel="mask-icon" href="http://localhost:1313/my-university-project/safari-pinned-tab.svg">
+<link rel="icon" href="https://thalnoon.github.io/my-university-project/favicon.ico">
+<link rel="icon" type="image/png" sizes="16x16" href="https://thalnoon.github.io/my-university-project/favicon-16x16.png">
+<link rel="icon" type="image/png" sizes="32x32" href="https://thalnoon.github.io/my-university-project/favicon-32x32.png">
+<link rel="apple-touch-icon" href="https://thalnoon.github.io/my-university-project/apple-touch-icon.png">
+<link rel="mask-icon" href="https://thalnoon.github.io/my-university-project/safari-pinned-tab.svg">
 <meta name="theme-color" content="#2e2e33">
 <meta name="msapplication-TileColor" content="#2e2e33">
-<link rel="alternate" hreflang="en" href="http://localhost:1313/my-university-project/chapters/chapter-13/">
+<link rel="alternate" hreflang="en" href="https://thalnoon.github.io/my-university-project/chapters/chapter-13/">
 <noscript>
     <style>
         #theme-toggle,
@@ -55,7 +55,67 @@
         }
 
     </style>
-</noscript>
+</noscript><meta property="og:url" content="https://thalnoon.github.io/my-university-project/chapters/chapter-13/">
+  <meta property="og:site_name" content="Elite">
+  <meta property="og:title" content="Chapter 13: Scopes & Arguments">
+  <meta property="og:description" content="We will present the details behind Python’s scopes and arguments—the places where variables are defined and looked up. Like module files, scopes help prevent name clashes across your program’s code; names defined in one program unit don’t interfere with names in another. We’ll also see that scope usage can have a major impact on program maintenance; for example, overuse of globals is generally bad. On the plus side, scopes provide a way to retain state information between function calls and can sometimes offer an alternative to classes.">
+  <meta property="og:locale" content="en">
+  <meta property="og:type" content="article">
+    <meta property="article:section" content="chapters">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Chapter 13: Scopes &amp; Arguments">
+<meta name="twitter:description" content="We will present the details behind Python’s scopes and arguments—the places where variables are defined and looked up. Like module files, scopes help prevent name clashes across your program’s code; names defined in one program unit don’t interfere with names in another. We’ll also see that scope usage can have a major impact on program maintenance; for example, overuse of globals is generally bad. On the plus side, scopes provide a way to retain state information between function calls and can sometimes offer an alternative to classes.">
+
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position":  1 ,
+      "name": "Chapters",
+      "item": "https://thalnoon.github.io/my-university-project/chapters/"
+    }, 
+    {
+      "@type": "ListItem",
+      "position":  2 ,
+      "name": "Chapter 13: Scopes \u0026 Arguments",
+      "item": "https://thalnoon.github.io/my-university-project/chapters/chapter-13/"
+    }
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "headline": "Chapter 13: Scopes \u0026 Arguments",
+  "name": "Chapter 13: Scopes \u0026 Arguments",
+  "description": "We will present the details behind Python’s scopes and arguments—the places where variables are defined and looked up. Like module files, scopes help prevent name clashes across your program’s code; names defined in one program unit don’t interfere with names in another. We’ll also see that scope usage can have a major impact on program maintenance; for example, overuse of globals is generally bad. On the plus side, scopes provide a way to retain state information between function calls and can sometimes offer an alternative to classes.\n",
+  "keywords": [
+    
+  ],
+  "articleBody": "We will present the details behind Python’s scopes and arguments—the places where variables are defined and looked up. Like module files, scopes help prevent name clashes across your program’s code; names defined in one program unit don’t interfere with names in another. We’ll also see that scope usage can have a major impact on program maintenance; for example, overuse of globals is generally bad. On the plus side, scopes provide a way to retain state information between function calls and can sometimes offer an alternative to classes.\nPython Scope Basics When you use a name in a program, Python creates, changes, or looks up the name in a namespace—a place where names live. The term scope refers to this namespace; that is, the location of a name’s assignment in your source code determines its visibility. Functions add an extra namespace layer to minimize collisions among variables of the same name—by default, all names assigned inside a function belong only to that function’s namespace.\nArgument-Passing Basics Key points in passing arguments to functions:\nArguments are passed by automatically assigning objects to local variable names. Assigning to argument names inside a function does not affect the caller. Changing a mutable object argument in a function may impact the caller. Arguments and Shared References To illustrate argument-passing properties, consider the following code:\ndef f(a): # a is assigned to (references) the passed object a = 99 # Changes local variable a only b = 88 f(b) # a and b both initially reference 88 print(b) # b is not changed; outputs: 88 When arguments are passed mutable objects (like lists or dictionaries), in-place changes can persist after the function exits and affect the caller. For example:\ndef changer(a, b): # Arguments assigned references to objects a = 2 # Changes local name's value only b[0] = 'spam' # Changes shared object in place X = 1 L = [1, 2] # Caller changer(X, L) # Pass immutable and mutable objects print(X, L) # X is unchanged; L becomes ['spam', 2] Another example shows that assignment to a local variable does not change the caller’s variable:\nX = 1 a = X a = 2 # Resets 'a' only; 'X' remains 1 print(X) # Outputs: 1 Simulating Output Parameters and Multiple Results Although Python doesn’t support “call by reference” argument passing, you can simulate it by returning tuples and assigning the results back to the original argument names:\ndef multiple(x, y): x = 2 # Changes local names only y = [3, 4] # Creates a new list for y return x, y # Return multiple new values in a tuple X = 1 L = [1, 2] X, L = multiple(X, L) # Assign returned values to caller's names print(X, L) # Outputs: (2, [3, 4]) Argument Matching Syntax Syntax Location Interpretation func(value) Caller Normal argument: matched by position func(name=value) Caller Keyword argument: matched by name func(*iterable) Caller Pass all objects in iterable as individual positional arguments func(**dict) Caller Pass all key/value pairs in dict as individual keyword arguments def func(name) Function Normal argument: matches any passed value by position or name def func(name=value) Function Default argument value, if not passed in the call def func(*name) Function Matches and collects remaining positional arguments in a tuple def func(**name) Function Matches and collects remaining keyword arguments in a dictionary def func(*other, name) Function Arguments that must be passed by keyword only in calls (3.X) def func(*, name=value) Function Arguments that must be passed by keyword only in calls (3.X) Chapter Summary Overview This chapter explains scopes and arguments in Python, focusing on how variables are defined and accessed. Scopes help avoid name clashes, and understanding them improves code maintainability and functionality.\n1. Understanding Scope in Python Scope determines where a variable can be accessed in the code. Python follows the LEGB rule:\nLocal Scope: Variables defined inside a function. Enclosing Scope: Variables in outer functions (for nested functions). Global Scope: Variables defined at the top level of a script/module. Built-in Scope: Predefined Python functions and keywords (e.g., print(), len()). Example:\nx = 10 # Global variable def outer_function(): y = 5 # Enclosing variable def inner_function(): z = 2 # Local variable print(x, y, z) # Can access all three inner_function() outer_function() 2. Argument-Passing Basics When calling a function, arguments are assigned to local variable names inside the function.\nImmutable arguments (integers, strings, tuples): The function cannot modify them directly. Mutable arguments (lists, dictionaries): The function can modify them. Example:\ndef modify_list(lst): lst.append(4) # Modifies the original list my_list = [1, 2, 3] modify_list(my_list) print(my_list) # Output: [1, 2, 3, 4] 3. Default and Keyword Arguments Python functions support default values for arguments and allow passing arguments by keywords.\nExample: Default Arguments\ndef greet(name=\"Guest\"): print(f\"Hello, {name}!\") greet() # Output: Hello, Guest! greet(\"Alice\") # Output: Hello, Alice! Example: Keyword Arguments\ndef display_info(name, age): print(f\"Name: {name}, Age: {age}\") display_info(age=25, name=\"John\") # Arguments are passed in any order 4. Argument Packing and Unpacking (*args** and **kwargs)** *args allows passing multiple positional arguments. **kwargs allows passing multiple keyword arguments. **Example: Using ***args\ndef sum_numbers(*args): return sum(args) print(sum_numbers(1, 2, 3, 4)) # Output: 10 **Example: Using ****kwargs\ndef print_details(**kwargs): for key, value in kwargs.items(): print(f\"{key}: {value}\") print_details(name=\"Alice\", age=25, city=\"New York\") Chapter 13 Quiz ",
+  "wordCount" : "874",
+  "inLanguage": "en",
+  "datePublished": "0001-01-01T00:00:00Z",
+  "dateModified": "0001-01-01T00:00:00Z",
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "https://thalnoon.github.io/my-university-project/chapters/chapter-13/"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "Elite",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://thalnoon.github.io/my-university-project/favicon.ico"
+    }
+  }
+}
+</script>
 </head>
 
 <body class="" id="top">
@@ -73,7 +133,7 @@
 <header class="header">
     <nav class="nav">
         <div class="logo">
-            <a href="http://localhost:1313/my-university-project/" accesskey="h" title="Elite (Alt + H)">Elite</a>
+            <a href="https://thalnoon.github.io/my-university-project/" accesskey="h" title="Elite (Alt + H)">Elite</a>
             <div class="logo-switches">
                 <button id="theme-toggle" accesskey="t" title="(Alt + T)" aria-label="Toggle theme">
                     <svg id="moon" xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 24 24"
@@ -99,7 +159,7 @@
         </div>
         <ul id="menu">
             <li>
-                <a href="http://localhost:1313/my-university-project/search/" title="Search (Alt &#43; /)" accesskey=/>
+                <a href="https://thalnoon.github.io/my-university-project/search/" title="Search (Alt &#43; /)" accesskey=/>
                     <span>Search</span>
                 </a>
             </li>
@@ -110,7 +170,7 @@
 
 <article class="post-single">
   <header class="post-header">
-    <div class="breadcrumbs"><a href="http://localhost:1313/my-university-project/">Home</a>&nbsp;»&nbsp;<a href="http://localhost:1313/my-university-project/chapters/">Chapters</a></div>
+    <div class="breadcrumbs"><a href="https://thalnoon.github.io/my-university-project/">Home</a>&nbsp;»&nbsp;<a href="https://thalnoon.github.io/my-university-project/chapters/">Chapters</a></div>
     <h1 class="post-title entry-hint-parent">
       Chapter 13: Scopes &amp; Arguments
     </h1>
@@ -345,7 +405,7 @@
     <ul class="post-tags">
     </ul>
 <nav class="paginav">
-  <a class="prev" href="http://localhost:1313/my-university-project/chapters/chapter-12/">
+  <a class="prev" href="https://thalnoon.github.io/my-university-project/chapters/chapter-12/">
     <span class="title">« Prev</span>
     <br>
     <span>Chapter 12: Functions Basics</span>
@@ -357,7 +417,7 @@
     </main>
     
 <footer class="footer">
-        <span>&copy; 2025 <a href="http://localhost:1313/my-university-project/">Elite</a></span> · 
+        <span>&copy; 2025 <a href="https://thalnoon.github.io/my-university-project/">Elite</a></span> · 
 
     <span>
         Powered by
